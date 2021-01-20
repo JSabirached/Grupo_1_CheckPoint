@@ -22,7 +22,7 @@ Somos un grupo de apasionados de la programación web que durante la cuarentena 
 - Fan de las hamburguesa con bacon, cheddar, cebollas caramelizadas y huevo frito.
 
 #### [Josue Abi Rached](https://github.com/JSabirached)
-- ? años
+- 24 años
 - Estudiante universitario 
 - Amante de la pizza
 
