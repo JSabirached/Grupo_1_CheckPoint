@@ -1,5 +1,6 @@
 # Check Point Resto Bar
 
+![logo-checkpoint](/design/logo.png)
 
 ## Breve descripción
 Check Point es una plataforma de venta de comida y cervecería artesanal que nace frente a la necesidad de innovación del rubo gastronomico al encontrarse afectado por la pandemia de COVID-19.
@@ -21,7 +22,7 @@ Somos un grupo de apasionados de la programación web que durante la cuarentena 
 - Fan de las hamburguesa con bacon, cheddar, cebollas caramelizadas y huevo frito.
 
 #### [Josue Abi Rached](https://github.com/JSabirached)
-- años
+- ? años
 - Estudiante universitario 
 - Amante de la pizza
 
@@ -43,13 +44,13 @@ Principalmente, nuestra elección se baso en la estetica y la experiencia de usu
 
 
 ## Wireframes
-- [Home]()
-- [Detalle de producto]()
+- [Home](https://github.com/JSabirached/Grupo_1_CheckPoint/blob/master/wireframes/wireframe-home/wireframe-home.png)
+- [Detalle de producto](https://github.com/JSabirached/Grupo_1_CheckPoint/blob/master/wireframes/wireframe-detalles/resto-destopk.png)
 - [Carrito de compras](https://github.com/JSabirached/Grupo_1_CheckPoint/blob/master/wireframes/carrito-de-compras-desktop-tablet.png)
-- [Formulario de registro]()
-- [Formulario de carga de producto]()
+- [Formulario de registro](https://github.com/JSabirached/Grupo_1_CheckPoint/blob/master/wireframes/wireframe-registro/desktop.png)
+- [Formulario de carga de producto](https://github.com/JSabirached/Grupo_1_CheckPoint/blob/master/wireframes/wireframe-admin/agregarplatoescritorio.png)
 
 ## Elementos del diseño
-- [Logo]()
+- [Logo](https://github.com/JSabirached/Grupo_1_CheckPoint/blob/master/design/logo.png)
 - [Paleta de colores]()
 - [Tipografía]()
