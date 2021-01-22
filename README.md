@@ -46,7 +46,7 @@ Principalmente, nuestra elección se baso en la estetica y la experiencia de usu
 ## Wireframes
 - [Home](https://github.com/JSabirached/Grupo_1_CheckPoint/blob/master/wireframes/wireframe-home/wireframe-home.png)
 - [Detalle de producto](https://github.com/JSabirached/Grupo_1_CheckPoint/blob/master/wireframes/wireframe-detalles/resto-destopk.png)
-- [Carrito de compras](https://github.com/JSabirached/Grupo_1_CheckPoint/blob/master/wireframes/carrito-de-compras-desktop-tablet.png)
+- [Carrito de compras](https://github.com/JSabirached/Grupo_1_CheckPoint/blob/master/wireframes/carrito-de-compras/carrito-de-compras-desktop.png)
 - [Formulario de registro](https://github.com/JSabirached/Grupo_1_CheckPoint/blob/master/wireframes/wireframe-registro/desktop.png)
 - [Formulario de carga de producto](https://github.com/JSabirached/Grupo_1_CheckPoint/blob/master/wireframes/wireframe-admin/agregarplatoescritorio.png)
 
