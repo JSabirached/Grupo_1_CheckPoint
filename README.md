@@ -54,3 +54,6 @@ Principalmente, nuestra elección se baso en la estetica y la experiencia de usu
 - [Logo](https://github.com/JSabirached/Grupo_1_CheckPoint/blob/master/design/logo.png)
 - [Paleta de colores](https://colorhunt.co/palette/253094)
 - [Tipografía](https://fonts.google.com/specimen/Playfair+Display?selection.family=Lato|Montserrat|Open+Sans|Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600;1,700;1,800;1,900|Raleway&sidebar)
+
+# Link de referencia de la organizacion del equipo
+- [Trello](https://trello.com/b/KcVtDfjU/grupo-1-check-point)
