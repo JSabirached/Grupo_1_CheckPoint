@@ -1,0 +1,128 @@
+.primer{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width:90% ;
+    height:22vh ;
+    margin:0 auto;
+    background-color:rgb(58, 47, 47);
+    margin-bottom:40px ;
+}
+.segundo{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width:60% ;
+    height:30vh;
+    margin:0 auto;
+    background-color:rgb(247, 233, 233);
+}
+.tacho{
+    margin:auto 10px ;
+    width:30px;
+    
+}
+.burguer{
+width:100px;
+margin: auto 10px;
+padding:10px ;
+}
+
+.primer h4{
+    
+   padding:30px 10px;
+}
+.primer h3{
+    margin-left:0px ;
+    padding:30px 10px;
+}
+.segundo h4{
+    margin:10px auto;
+}
+
+
+.b1{
+    background-color:rgb(0,0,0,0.3);
+    color:seashell;
+    height:40px ;
+   font-size:10px ;
+    border-radius:15px ;
+    width:110px ;
+}
+.b2{
+    background-color:rgb(0,0,0,0.3);
+    color:seashell;
+    width:100px ;
+    height:40px ;
+    border-radius:15px ;
+     font-size:10px ;
+}
+
+.tersero{
+   
+    margin:auto 30% ;
+    
+    
+ }
+ .b3{
+     display:none;
+ }
+ .cant2{
+    height:30px;
+    width:50px ;
+   margin: auto 90px;
+   margin-top:-10px
+}
+.cant{
+    display:none;
+}
+ @media(min-width:768px){
+    
+   
+    
+     .segundo{
+        margin-right:5%;
+        width:50% ;
+    }
+
+.tersero{
+   margin:auto;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction:row-reverse;
+  
+}
+.b1{
+    display:none;
+}
+.b2{
+    
+   
+   height:50px ;
+    width:200px ;
+   margin-right: 49px;
+   margin-top:25px;
+   
+}
+.b3{
+    display:table;
+    background-color:rgb(0,0,0,0.3);
+    color:seashell;
+    height:50px ;
+    width:200px ;
+   margin-left:5% ;
+    border-radius:10px ;
+}
+
+.cant{
+    height:40px;
+    width:60px ;
+   margin:auto;
+   display:flex;
+}
+.cant2{
+    display:none
+}
+
+}
+

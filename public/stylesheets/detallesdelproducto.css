@@ -1,0 +1,83 @@
+body div section.detalleproducto{
+display:flex;
+flex-wrap:wrap;
+flex-direction: column;
+
+}
+body div section.detalleproducto article.foto{
+    display:flex;
+flex-wrap:wrap;
+flex-direction: column;
+
+}
+body div section.detalleproducto article.detalles{
+    display:flex;
+flex-wrap:wrap;
+flex-direction: column;
+
+}
+
+body div section.detalleproducto p{
+    margin-left:32% ;
+    margin-right:30% ;
+   
+}
+
+ body div section.detalleproducto h3{
+    font-size:50px ;
+    margin:0 auto;
+    
+}
+
+
+
+body div section.detalleproducto article .boton{
+width:300px ;
+height:50px ;
+margin:0 auto;
+margin-top:20px ;
+}
+
+body div  p.ingredientes{
+    display:none;
+}
+@media(min-width:768px){
+   
+    
+    body div section.detalleproducto{
+        display:flex;
+        flex-wrap:nowrap;
+        flex-direction: row;
+        
+        }
+        body div section.detalleproducto article.detalles{
+            margin:auto ;
+        }
+        body div section.detalleproducto article.foto{
+    margin:auto;
+}
+
+}
+@media(min-width:1000px){
+body div{
+    display:flex;
+        flex-wrap:nowrap;
+        flex-direction: column;
+       
+       
+}
+body div p.ingredientes{
+    margin:auto;
+    display:table;
+
+  
+}
+body div section.detalleproducto{
+    margin:auto;
+}
+
+}
+
+
+
+
