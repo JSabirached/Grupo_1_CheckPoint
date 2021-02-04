@@ -1,0 +1,45 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+}
+main{
+    padding: 40px 0;
+}
+
+.nombrePlato{
+    color: blue;
+}
+.container-sm{
+    
+    
+    text-align: center;
+    color: black;
+    padding-top: 20px;
+    
+}
+
+
+.marca h2{
+    background-color: blue;
+    text-align: center;
+    color: black;
+    padding-top: 20px;
+   
+  
+}
+img{
+    display:block;
+    margin: auto;
+}
+p{
+    text-align: center;
+    color: rgb(223, 216, 240);
+}
+.portadaSecciones{
+    color: rgb(209, 209, 224);
+    text-align: center;
+}
