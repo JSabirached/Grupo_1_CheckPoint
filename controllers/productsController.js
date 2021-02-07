@@ -11,7 +11,7 @@ seccionBebidas:(req,res)=>{
     })
 },
 seccionHamburguesas:(req,res)=>{
-    res.render("inicioSecciones",{
+    res.render("seccionHamburguesas",{
 
     })
 },
