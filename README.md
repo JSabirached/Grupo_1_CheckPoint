@@ -1,6 +1,6 @@
 # Check Point Resto Bar
 
-![logo-checkpoint](/design/logo.png)
+![logo-checkpoint](/logo/logo.png)
 
 ## Breve descripción
 Check Point es una plataforma de venta de comida y cervecería artesanal que nace frente a la necesidad de innovación del rubo gastronomico al encontrarse afectado por la pandemia de COVID-19.
@@ -16,10 +16,6 @@ Somos un grupo de apasionados de la programación web que durante la cuarentena 
 - Emprendedora
 - La hamburguesería y la cerveza artesanal son su debilidad
 
-#### [Belén Medina Roldán](https://github.com/belenmr)
-- 29 años
-- Estudiante de Tecnicatura en Desarrollo de Software
-- Fan de las hamburguesa con bacon, cheddar, cebollas caramelizadas y huevo frito.
 
 #### [Josue Abi Rached](https://github.com/JSabirached)
 - 24 años
