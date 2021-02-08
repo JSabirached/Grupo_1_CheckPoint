@@ -1,5 +1,8 @@
 module.exports={
-
+    
+ index :  (req,res)=>{
+            res.render('index')
+        },
 detalledecompra:(req,res)=>{
 res.render("detallesdecompra",{
 
