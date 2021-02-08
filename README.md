@@ -1,6 +1,9 @@
 # Check Point Resto Bar
 
-![logo-checkpoint](logo.png)
+![logo-checkpoint](public/logo/logo.png)
+
+
+
 
 ## Breve descripción
 Check Point es una plataforma de venta de comida y cervecería artesanal que nace frente a la necesidad de innovación del rubo gastronomico al encontrarse afectado por la pandemia de COVID-19.
@@ -53,3 +56,6 @@ Principalmente, nuestra elección se baso en la estetica y la experiencia de usu
 
 ## Link de referencia de la organizacion del equipo
 - [Trello](https://trello.com/b/KcVtDfjU/grupo-1-check-point)
+
+## Link de nuestras RETROSPECTIVAS
+- [MURAL] (https://app.mural.co/t/grupo13779)
