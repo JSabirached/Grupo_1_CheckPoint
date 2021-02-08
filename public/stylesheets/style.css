@@ -12,16 +12,20 @@ display: flex;
 flex-flow: row wrap;}
 a{
 text-decoration:none;
-color: rgba(139, 3, 230, 0.884);
+color: rgba(240, 237, 241, 0.884);
 }
-body{ background-color: rgb(249, 247, 255);
+p{color: rgb(255, 238, 238);}
+
+body{ background-image: url("img/fondo.jpg");
+background-size: cover;
 width: 100%;
 height: 100%;
 overflow: hidden;
 margin: 0;
 display:flex;
 flex-direction: column;
-flex-wrap: wrap;  font-family: 'Montserrat', sans-serif;
+flex-wrap: wrap;  
+font-family: 'Montserrat', sans-serif;
 font-family:'Architects Daughter', cursive;
 }
 img.logo {
@@ -33,7 +37,7 @@ img.logo {
   nav{
     /* text-align:center;*/
      position: relative;
-     background-color: rgb(0, 0, 0);
+     background-color: rgba(0, 0, 0, 0.781);
      text-align: center;
  } 
   .nav-menu button {
@@ -49,10 +53,41 @@ color: rgb(240, 235, 250);
 text-decoration:underline overline
 
 }
+header nav button.burger {
+background-color: var(--ColorAzul);
+border: none;
+border-radius: 4px;
+padding: 3px 15px;
+}
 
+header nav button.burger:focus{
+outline: 1px solid white;
+} 
+
+header nav button.burger i{
+color: white;
+}
+.contenido{background-color: rgba(0, 0, 0, 0.459);
+margin: 30px 0 ;
+border: 1px solid gray;
+border-radius: 10px;
+box-shadow: 5px 5px 10px rgb(120, 4, 253);
+padding: 15px;
+align-items: center;
+height: 500px;
+width: 98%;}
+.contenido img{width: 100%;
+}
+
+h2{color: white;}
+h2.oferta{text-align: center;}
+span{color: white;}
+h3{color: white;}
+h4{color: white;}
+.flyer{width: 100%;}
 
 footer{
-  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.568);
 }footer ul{margin: 1px;
 padding: 0;}
 
@@ -83,6 +118,7 @@ footer span{
 .iconos i.fa-qrcode:hover{color:rgb(255, 255, 255)}
 .iconos i.fa-envelope:hover{color:rgb(255, 0, 0);}
 
+              /*TABLET*/
 @media (min-width:768px){ img.logo{width: 200px;
   
 }
@@ -91,5 +127,20 @@ footer span{
 top: 5px;}
 button.btn.btn-outline-dark{position: absolute;;
   right:15px;
-top: 0;} }
-/*@media(min-width:1024px)
+top: 0;}
+header li{
+  padding-left: 120px;
+  
+}
+ }
+               /*LAPTO*/
+@media(min-width:1024px){
+
+li.navi{
+  padding-left: 160px;
+  }
+  li.navi a:hover{
+
+  color:rgb(41, 4, 83) ;
+   }
+  }
