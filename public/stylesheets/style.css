@@ -82,9 +82,10 @@ width: 98%;}
 h2{color: white;}
 h2.oferta{text-align: center;}
 span{color: white;}
-h3{color: white;}
-h4{color: white;}
-.flyer{width: 100%;}
+h3{color: white;
+}
+h4{color: rgb(167, 159, 159);}
+/*.flyer{width: 100%;}*/
 
 footer{
   background-color: rgba(0, 0, 0, 0.568);
@@ -118,6 +119,15 @@ footer span{
 .iconos i.fa-qrcode:hover{color:rgb(255, 255, 255)}
 .iconos i.fa-envelope:hover{color:rgb(255, 0, 0);}
 
+.ic{display: flex;
+margin: 0%;}
+.ic i{color: white;
+border: rgb(0, 0, 0);
+width: 5px;
+text-align: center;
+
+}
+
               /*TABLET*/
 @media (min-width:768px){ img.logo{width: 200px;
   
@@ -128,7 +138,7 @@ top: 5px;}
 button.btn.btn-outline-dark{position: absolute;;
   right:15px;
 top: 0;}
-header li{
+header li.navi{
   padding-left: 120px;
   
 }
