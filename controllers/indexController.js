@@ -1,8 +1,11 @@
 module.exports={
     
- index :  (req,res)=>{
-            res.render('index')
-        },
+    index :  (req,res)=>{
+        res.render('index')
+    },
+    novedades :  (req,res)=>{
+        res.render('novedades')
+    },
 detalledecompra:(req,res)=>{
 res.render("detallesdecompra",{
 

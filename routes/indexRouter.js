@@ -6,7 +6,9 @@ let indexController=require("../controllers/indexController.js")
 router.get('/', function(req, res ) {
     res.render('index', { title: 'Express' });
   });
-  
+  router.get('/novedades', function(req, res ) {
+    res.render('novedades',indexController.novedades);
+  });
 router.get("/detalledelproducto",indexController.detallesdelproducto)
 
 module.exports = router;
