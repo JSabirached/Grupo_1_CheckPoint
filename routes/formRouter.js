@@ -1,11 +1,11 @@
 var express = require('express');
-const indexController = require('../controllers/indexController');
+const formscontroller = require('../controllers/formscontroller');
 var router = express.Router();
 
 /* GET users listing. */
-router.get('/detalledecompra',indexController.detalledecompra );
+router.get('/detallesdecompra',formscontroller.detallesdecompra);
+router.get('/detallesdeproducto',formscontroller.detallesdelproducto);
+router.get('/login',formscontroller.login );
+router.get('/registro',formscontroller.registro );
 
-router.get('/login',indexController.login );
-router.get('/registro',indexController.registro );
-router.get('/agregarproducto',indexController.agregarproducto );
 module.exports = router;

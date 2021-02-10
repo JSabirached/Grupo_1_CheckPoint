@@ -4,7 +4,7 @@ const productsController = require('../controllers/productsController');
 var router = express.Router();
 
 /* GET users listing. */
-router.get('/detalledecompra',indexController.detalledecompra );
+
 /* routes iniciosecciones */
 router.get('/inicioSecciones',productsController.inicioSecciones );
 router.get('/seccionBebidas',productsController.seccionBebidas );

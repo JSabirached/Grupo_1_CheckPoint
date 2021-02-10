@@ -5,10 +5,10 @@ let indexController=require("../controllers/indexController.js")
 
 
 router.get("/",indexController.index)
-router.get("/detalledelproducto",indexController.detallesdelproducto)
+
 router.get('/cartadelivery',indexController.cartadelivery );
 router.get('/locales',indexController.locales );
 router.get('/reservas',indexController.reservas );
 router.get('/promociones',indexController.promociones );
-router.get('/novedades',indexController.novedades );
+
 module.exports = router;
