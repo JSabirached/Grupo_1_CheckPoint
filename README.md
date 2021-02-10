@@ -58,4 +58,4 @@ Principalmente, nuestra elección se baso en la estetica y la experiencia de usu
 - [Trello](https://trello.com/b/KcVtDfjU/grupo-1-check-point)
 
 ## Link de nuestras RETROSPECTIVAS
-- [MURAL] (https://app.mural.co/t/grupo13779)
+- [Retrospectiva](https://app.mural.co/t/grupo13779)
