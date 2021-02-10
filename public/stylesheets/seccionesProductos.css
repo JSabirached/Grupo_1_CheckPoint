@@ -4,7 +4,7 @@
 
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background-color: black;
+    background-image: url("/logo/fondo.jpg");
 }
 main{
     padding: 40px 0;
