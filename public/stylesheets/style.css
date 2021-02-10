@@ -32,7 +32,7 @@ img.logo {
   position: relative;
   width: 150px;
  /*height:18vh;*/
- left: 31px;px;
+ left: 31px;
   top: 0px;
 justify-content: space-around;}
   nav{
@@ -80,7 +80,7 @@ span{color: white;}
 h3{color: white;
  
 }
-h4{color: rgba(248, 244, 244, 0.74);
+h4{color: rgb(229, 230, 235);
 }
 /*.flyer{width: 100%;}*/
 
@@ -118,8 +118,9 @@ footer span{
 .iconos i.fa-envelope:hover{color:rgb(255, 0, 0);}
 
 .ic{display: flex;
-margin: 0%;}
-.ic i{color: white;
+margin: 0%;
+background-color: rgba(0, 0, 0, 0.171);}
+.ic i{color: rgb(253, 251, 255);
 border: rgb(0, 0, 0);
 width: 5px;
 text-align: center;
