@@ -1,0 +1,59 @@
+nav .logos {
+  background-color: black;
+}
+nav.navigator {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px 0;
+}
+
+nav {
+  text-align: center;
+}
+
+header nav .box-1 button {
+  color: rgb(240, 235, 250);
+  text-decoration: underline overline;
+  text-align: center;
+}
+.burger {
+  border: none;
+  border-radius: 4px;
+  padding: 3px 15px;
+}
+
+header nav button.burger:focus {
+  outline: 1px solid white;
+}
+
+header nav button.burger i {
+  color: white;
+}
+
+header li.navi {
+  margin: 15px 0;
+}
+
+@media (min-width: 768px) {
+  header li.navi {
+    width: 120px;
+  }
+  .menu {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  ul.usuario {
+    margin: 30px 0;
+   
+  }
+}
+
+@media (min-width: 1024px) {
+  li.navi a:hover {
+    color: rgb(41, 4, 83);
+  }
+  ul.usuario {
+    margin: 60px 0;
+    display: flex;
+    justify-content: space-around;
+  }
+}

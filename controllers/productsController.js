@@ -1,5 +1,5 @@
 module.exports={
-
+/*iniciosecciones*/
 inicioSecciones:(req,res)=>{
     res.render("inicioSecciones",{
 
@@ -33,4 +33,6 @@ seccionPizzaEmpa:(req,res)=>{
 
     })
 }
+
+
 }

@@ -1,0 +1,60 @@
+
+  
+  body {
+    background-image: url("/logo/fondo.jpg");
+    font-family: "Montserrat", sans-serif;
+    font-family: "Architects Daughter", cursive;
+    background-attachment: fixed;
+    position: relative;
+    }
+  
+  .contenido {
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 30px 0;
+    border: 1px solid gray;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgb(120, 4, 253);
+    padding: 30px;
+    align-items: center;
+    height: 480px;
+    width: 98%;
+  }
+  .contenido figure{
+    height: 50%;
+
+  }
+  .contenido img {
+    width: 100%;
+    height: 100%;
+  }
+  .contenido h2{
+    text-align: right;
+  }
+  .contenido h2.title{
+    font-size: 2em;
+  }
+  .contenido span{
+    font-size: 0.5em;
+    color: rgb(120, 4, 253)
+  }
+  
+  article h2, span {
+    color: white;
+  }
+
+  .oferta{
+    text-align: center;
+    color: white;
+    margin: 20px 0;
+  }
+
+  @media(min-width:768px){
+    .contenido {
+      height: 350px;
+      padding: 20px;
+
+    }
+    .contenido h2.title{
+      font-size: 1.2em;
+    }
+  }
