@@ -29,7 +29,7 @@ seccionPostres:(req,res)=>{
     })
 },
 seccionPizzaEmpa:(req,res)=>{
-    res.render("secionPizzaEmpa",{
+    res.render("seccionPizzaEmpa",{
 
     })
 },
