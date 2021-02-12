@@ -1,11 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<%- include('partials/head') %>
 	<title>registro</title>
 </head>
+<%- include('partials/header') %>
+
 <body>
-	<h1>registrarse</h1>
+	<div class="container">
+		<div class="row"><div class="dropdown-menu">
+		<form class="px-4 py-3"><div class="mb-3">
+			<label for="exampleDropdownFormName1" class="form-label">Nombre</label>
+			<input type="text" class="form-control" id="exampleDropdownFormName1" placeholder="Ingresa tu nombre">
+		  </div>
+		  <div class="mb-3">
+			<label for="exampleDropdownFormEmail1" class="form-label">Direccion Email</label>
+			<input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+		  </div>
+		  <div class="mb-3">
+			<label for="exampleDropdownFormPassword1" class="form-label">Contraseña</label>
+			<input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
+		  </div>
+		  <div class="mb-3">
+			<div class="form-check">
+			  <input type="checkbox" class="form-check-input" id="dropdownCheck">
+			  <label class="form-check-label" for="dropdownCheck">
+				Recordar
+			  </label>
+			</div>
+		  </div>
+		  <button type="submit" class="btn btn-primary">Registrar</button>
+		</form>
+		<div class="dropdown-divider"></div>
+		<a class="dropdown-item" href="/login">¿ya estas registrado? Inicia session</a>
+		<a class="dropdown-item" href="#">¿Olvidaste tu contraseña?</a>
+	  </div>
+    	
+    </div>
+</div>
+<%- include('partials/footer') %>
+
 </body>
 </html>
