@@ -62,5 +62,15 @@ novedades:(req,res)=>{
     res.render("novedades",{
 
     })
+},
+nosotros:(req,res)=>{
+    res.render("nosotros",{
+
+    })
+},
+recetas:(req,res)=>{
+    res.render("recetas",{
+
+    })
 }
 }

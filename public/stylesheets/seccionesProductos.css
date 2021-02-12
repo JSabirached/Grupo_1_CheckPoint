@@ -3,15 +3,44 @@
 }
 
 body{
-    font-family: Arial, Helvetica, sans-serif;
     background-image: url("/logo/fondo.jpg");
+    font-family: "Montserrat", sans-serif;
+    font-family: "Architects Daughter", cursive;
+    background-attachment: fixed;
+    position: relative;
 }
+
+.plato{
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 30px 0;
+    border: 1px solid gray;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgb(120, 4, 253);
+    padding: 30px;
+    align-items: center;
+    height: 480px;
+    width: 98%;
+}
+.contenido{
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 30px 0;
+    border: 1px solid gray;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgb(120, 4, 253);
+    padding: 30px;
+    align-items: center;
+    height: 480px;
+    width: 98%;
+}
+ .contenido figure{
+    height: 50%;
+ }
 main{
     padding: 40px 0;
 }
 
 .nombrePlato{
-    color: blue;
+    color: rgb(140, 0, 255);
 }
 .container-sm{
     
