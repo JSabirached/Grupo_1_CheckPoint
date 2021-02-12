@@ -32,7 +32,11 @@ seccionPizzaEmpa:(req,res)=>{
     res.render("secionPizzaEmpa",{
 
     })
-}
+},
+seccionParrrillada:(req,res)=>{
+    res.render("seccionParrillada",{
 
+    })
+}
 
 }
