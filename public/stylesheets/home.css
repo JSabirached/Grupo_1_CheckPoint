@@ -35,16 +35,17 @@
   }
   .contenido span{
     font-size: 0.5em;
-    color: rgb(120, 4, 253)
+    color: rgb(120, 4, 253);
   }
   
   article h2, span {
-    color: white;
+  
+    color: rgb(120, 4, 253);
   }
 
   .oferta{
     text-align: center;
-    color: white;
+    color:rgb(120, 4, 253);
     margin: 20px 0;
   }
 

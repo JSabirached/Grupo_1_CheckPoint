@@ -19,102 +19,71 @@
 		rel=" hoja de estilo ">
 
 </head>
-  <%- include('partials/header') %>
+  
 <body>
-	
+	<%- include('partials/header') %>
 		<!--menu-->
 		 <menu class="container">
 			<section class="row">
 			  <div class="titulo col-12">
-				<h2 class="oferta">-CONOCÉ NUESTROS PRODUCTOS-</h2>
+				<h2 class="oferta">-CONOCÉ NUESTROS PRODUCTOS-<br>Hace CheckPoint en cada foto y descubrí nuestro menu</h2>
 		      </div>
 
-			  
 			  <div class="col-12 col-md-6 col-lg-3 ">
-					<article class="producto"><!-- 1 bebidas-->
-						<div class="contenido">
-							<figure><a href="/productos/seccionBebidas"><img src="images/cerveza-artesanal.jpg" alt=""></a></figure>
+				<article class="producto"><!-- 1 bebidas-->
+					<div class="contenido">
+						<figure><a href="/productos/seccionBebidas"><img src="images/cerveza-artesanal.jpg" alt=""></a></figure>
 
-							<h2 class="title">BEBIDAS</h2>
-							<h2><span></span></h2>
-
-							<div class="detalle mt-3 text-center">
-								<hr>
-								<p></p>
-							</div>
+						<h2 class="title">BEBIDAS</h2>
+						<h2><span></span></h2>
+						<div class="detalle">
+							<p>Contamos con la mejor cerveza artesanal de la zona.<br> DESCUBRILA</p>
+							<p></p>
 						</div>
-					</article>
-				</div>
-				<div class="col-12 col-md-6 col-lg-3 ">
-					<article class="producto"><!-- 1 bebidas-->
-						<div class="contenido">
-							<figure><a href="/productos/seccionBebidas"><img src="images/cerveza-artesanal.jpg" alt=""></a></figure>
+					 </div>
+				</article>
+			</div>
 
-							<h2 class="title">BEBIDAS</h2>
-							<h2><span></span></h2>
-
-							<div class="detalle mt-3 text-center">
-								<hr>
-								<p></p>
-							</div>
-						</div>
-					</article>
-				</div>
-
-
-
-
-				<div class="col-12 col-md-6 col-lg-3 ">
+			<div class="col-12 col-md-6 col-lg-3 ">
 					<article class="producto"><!-- 2 postres-->
 						<div class="contenido">
 							<figure><a href="/productos/seccionPostres"><img src="images/helados.jpg" alt=""></a></figure>
-							<h2> </h2>
+							<h2 class="title"> POSTRES</h2>
 
 							<div class="detalle">
-								<p> POSTRES </p>
+								<p>Hacemos los mas ricos postres caseros con recetas originales.<br>ENDULZATE </p>
+								<hr>
 								<p></p>
 							</div>
 						</div>
 					</article>
 				</div>
-
-
+				
 				<div class="col-12 col-md-6 col-lg-3 ">
 					<article class="producto"><!--3 HAMBURGUESAS-->
 						<div class="contenido">
 							<figure><a href="/productos/seccionHamburguesas"><img src="images/hamburPortada.jpg" alt=""></a></figure>
 			
-							<h2></h2>
+							<h2 class="title">HAMBUR</h2>
                             <div class="detalle">
-								<p>HAMBURGUESAS</p>
+								<p>Si todavía no probaste nuestras burguer, no sabes lo que te perdes.<br></p>
 								<p></p>
 							</div>
 						</div>
 					</article>
 				</div>
-				</section>
-				
-				
-
-		     
-		                          <!---separacion para productos destacados-->
-	     	 <menu class="container">
-			<section class="row">
-                <div class="titulo col-12">
-					<h2 class="oferta">-SECCIONES DE PRODUCTOS DESTACADOS-</h2>
-				</div>
-
+			
 				<div class="col-12 col-md-6 col-lg-3">
 					<article class="producto"><!--5 PIZZA Y EMPANADAS-->
 						<div class="contenido">
 							<figure><a href="/productos/seccionPizzaEmpa"><img src="images/pizzaEmpaPortada.jpg" alt=""></a></figure>
 
-							<h2></h2>
+							<h2>ROTISERIA</h2>
 							<span></span>
 
 
 							<div class="detalle">
-								<p>PIZZAS Y EMPANADAS</p>
+								<p>Variedades de pizzas y empanadas que no lo vas a pode creer.</p>
 								<p></p>
 							</div>
 						</div>
@@ -122,56 +91,12 @@
 				</div>
 
 
-				<div class="col-12 col-md-6 col-lg-3 ">
-					<article class="producto">
-						<div class="contenido">
-							<figure><a href="/productos/seccionplatosPrincipales"><img src="images/principalPortada.jpg" alt=""></a></figure>
-							<h2> </h2>
-
-							<div class="detalle">
-								<p>NUESTROS PLATOS PRINCIPALES</p>
-								<p> </p>
-							</div>
-						</div>
-					</article>
 				
-				</div>
-
-				<div class="col-12 col-md-6 col-lg-3 ">
-					<article class="producto">
-						<div class="contenido">
-							<figure><a href="/productos/seccionplatosPrincipales"><img src="images/principalPortada.jpg" alt=""></a></figure>
-							<h2> </h2>
-
-							<div class="detalle">
-								<p>NUESTROS PLATOS PRINCIPALES</p>
-								<p> </p>
-							</div>
-						</div>
-					</article>
-				
-				</div>
-
-				<div class="col-12 col-md-6 col-lg-3 ">
-					<article class="producto">
-						<div class="contenido">
-							<figure><a href="/productos/seccionParrillada"><img src="images/parrillada1.jpg" alt=""></a></figure>
-							<h2> </h2>
-
-							<div class="detalle">
-								<p>NUESTRA PARRILLA</p>
-								<p> </p>
-							</div>
-						</div>
-					</article>
-				
-				</div>
-
 			</section>
 
 
-
+			<%- include('partials/footer') %> 
 		
 </body>
-<%- include('partials/footer') %> 
+
 </html>
