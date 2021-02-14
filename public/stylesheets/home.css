@@ -48,13 +48,11 @@
     margin: 20px 0;
   }
 
-  @media(min-width:768px){
-    .contenido {
-      height: 350px;
-      padding: 20px;
-
+ 
+  @supports(object-fit: cover){
+    .box img{
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
     }
-    .contenido h2.title{
-      font-size: 1.2em;
-    }
-  }
+}
