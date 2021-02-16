@@ -26,3 +26,6 @@ h4{
    background-color: rgba(27, 26, 26, 0.479);
   padding: 15px;}
   .novedades{background-color: white;}
+  body menu section div h4{
+    color:rgb(120, 4, 253);
+}
