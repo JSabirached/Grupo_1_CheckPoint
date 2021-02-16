@@ -13,3 +13,16 @@ li {
 p {
   color: rgb(255, 238, 238);
 }
+h5{
+  color: rgb(255, 245, 245);
+}
+h3{
+  color: rgb(216, 211, 211);
+}
+h4{
+  color: rgb(163, 162, 162);
+}
+.titulo{
+   background-color: rgba(27, 26, 26, 0.479);
+  padding: 15px;}
+  .novedades{background-color: white;}

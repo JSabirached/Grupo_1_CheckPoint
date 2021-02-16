@@ -1,46 +1,20 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-  }
+
    
-  body{
-    background: #3a0ae6;
-  }
+  
    
-  .container{
-    width: 100%;
-    height: 100vh;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  
    
-  .login-container{
-    display: flex;
-    width: 650px;
-    height: auto;
-    background: #fff;
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .2);
-  }
-   
-  .register, .login{
-    flex: 1;
-  }
-   
-  .register{
-    padding: 40px;
-    position: relative;
+  .register{background-color: rgba(0, 0, 0, 0.342);
+    padding: 35px;
+    
   }
    
   .register h2{
-    color: #4d13d4;
-    margin-bottom: 30px;
+    color:rgb(53, 15, 223);
+    
   }
    
-  .register input{
+  /*.register input{
     width: 100%;
     padding: 5px;
     font-size: 16px;
@@ -50,43 +24,22 @@
     border-right-style: none;
     border-bottom: 1px solid #a8a8a8;
     color: #333;
-  }
+  }*/
    
-  .register input:active,
-  .register input:focus{
-    outline: none;
-  }
-   
-  .register .submit{
-    width: auto;
+  .submit{
+    
     padding: 10px;
-    background: #3a08f1;
+    background: #1a01ff;
     color: #fff;
-    font-size: 12px;
-    box-shadow: 0 0 3px 0 rgba(0, 0, 0, .2);
+    font-size: 15px;
+    
     cursor: pointer;
   }
-   
-  .register::after{
-    content: '';
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    top: 50%;
-    right: -23px;
-    padding: 10px;
-    text-align: center;
-    font-size: 19px;
-    background: #f1f1f1;
-    border-radius: 50%;
-    transform: translateY(-50%);
-    box-shadow: -1px 1px 3px 1px rgba(0, 0, 0, .2);
-    color: #530ed4;
-  }
-   
+
   .login{
-    background-image: linear-gradient(to bottom right, #070a0a, #0a140e);
-    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.425);
+    padding: 35px;
+    
   }
    
   .login h2{
@@ -110,7 +63,7 @@
   }
    
   .login .fb{
-    background: #3b5999;
+    background: #0707e9;
     border-style: none;
     color: #fff;
   }
@@ -122,7 +75,7 @@
   }
    
   .login .correo{
-    background: #0b918c;
+    background: #ff0b02;
     border-style: none;
     color: #fff;
   }
