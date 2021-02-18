@@ -1,25 +1,51 @@
-{"bebidas":[{"titulo":"bebida1","precio":"preciobebida1","imagen":"imgbebida1"},{"titulo":"titulobebida2","precio":"preciobebida2","imagen":"bebida2"}],
+{"bebidas":
+    [
+        {"id":1,"name":"gaseosa","price":200.00,"image":"bebida1.jpg","category":"bebidas", "description":"linea cocacola"},
+        {"id":2,"name":"cerveza tirada","price":200.00,"image":"bebida2","category":"bebidas", "description":"chompera 3/4"},
+        {"id":3,"name":"cerveza artesanal checkpoint","price":350.00,"image":"bebida3.jpg","category":"bebidas", "description":"artesanal de litro"},
+        {"id":4,"name":"daikiri","price":300.00,"image":"bebidaA.jpg","category":"bebidas", "description":"frutales"},
+        {"id":5,"name":"fernet","price":250.00,"image":"bebida4.jpg","category":"bebidas", "description":"jarrito"},
+        {"id":6,"name":"fernet","price":600.00,"image":"bebida5.jpg","category":"bebidas", "description":"jarra de litro"},
+        {"id":7,"name":"vino","price":400.00,"image":"bebida7.jpg","category":"bebidas", "description":"de la casa"},
+        {"id":8,"name":"campari","price":400.00,"image":"bebidaE.jpg","category":"bebidas", "description":"copa"},
+
+        {"id":9,"name":"","price":2546.83,"image":"","category":"", "description":""},
+{"id":10,"name":"","price":2546.83,"image":"","category":"", "description":""},
+{"id":11,"name":"","price":2546.83,"image":"","category":"", "description":""},
+{"id":12,"name":"","price":2546.83,"image":"","category":"", "description":""},
+{"id":13,"name":"","price":2546.83,"image":"","category":"", "description":""},
+{"id":14,"name":"","price":2546.83,"image":"","category":"", "description":""},
+{"id":15,"name":"","price":2546.83,"image":"","category":"", "description":""},
+{"id":16,"name":"","price":2546.83,"image":"","category":"", "description":""},   
+{"id":17,"name":"","price":2546.83,"image":"","category":"", "description":""},
+{"id":18,"name":"","price":2546.83,"image":"","category":"", "description":""},
+{"id":19,"name":"","price":2546.83,"image":"","category":"", "description":""},
+{"id":20,"name":"","price":2546.83,"image":"","category":"", "description":""},
+{"id":21,"name":"","price":2546.83,"image":"","category":"", "description":""},
+{"id":22,"name":"","price":2546.83,"image":"","category":"", "description":""},
+{"id":23,"name":"","price":2546.83,"image":"","category":"", "description":""},
+{"id":24,"name":"","price":2546.83,"image":"","category":"", "description":""},
+{"id":25,"name":"","price":2546.83,"image":"","category":"", "description":""},
+{"id":26,"name":"","price":2546.83,"image":"","category":"", "description":""},
+{"id":27,"name":"","price":2546.83,"image":"","category":"", "description":""},
+{"id":28,"name":"","price":2546.83,"image":"","category":"", "description":""},
+{"id":29,"name":"","price":2546.83,"image":"","category":"", "description":""},
+{"id":30,"name":"","price":2546.83,"image":"","category":"", "description":""},
+{"id":31,"name":"","price":2546.83,"image":"","category":"", "description":""},
+{"id":32,"name":"","price":2546.83,"image":"","category":"", "description":""} 
+    ]}
+   
 
 
 
 
 
-"hamburguesas":[{"titulo":"combo1","precio":"preciocombo1","imagen":"imgconbo1"},{"titulo":"combo2","precio":"preciocombo2","imagen":"imgcombo2"}],
 
 
 
 
 
-"pizzaempanada":[{"titulo":"titulo1","precio":"precio1","imagen":"img1"},{"titulo":"titulo1","precio":"precio1","imagen":"img1"}],
 
 
 
 
-
-"postres":[{"titulo":"postre1","precio":"precio1","imagen":"img1"},{"titulo":"titulo2","precio":"precio2","imagen":"img2"}]
-
-
-
-
-
-}
