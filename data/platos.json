@@ -1,51 +1,41 @@
 {"bebidas":
     [
         {"id":1,"name":"gaseosa","price":200.00,"image":"bebida1.jpg","category":"bebidas", "description":"linea cocacola"},
-        {"id":2,"name":"cerveza tirada","price":200.00,"image":"bebida2.jpg","category":"bebidas", "description":"chompera 3/4"},
+        {"id":2,"name":"cerveza tirada","price":200.00,"image":"bebida2","category":"bebidas", "description":"chompera 3/4"},
         {"id":3,"name":"cerveza artesanal checkpoint","price":350.00,"image":"bebida3.jpg","category":"bebidas", "description":"artesanal de litro"},
-        {"id":4,"name":"daikiri","price":300.00,"image":"bebida4.jpg","category":"bebidas", "description":"frutales"},
+        {"id":4,"name":"daikiri","price":300.00,"image":"bebidaA.jpg","category":"bebidas", "description":"frutales"},
         {"id":5,"name":"fernet","price":250.00,"image":"bebida4.jpg","category":"bebidas", "description":"jarrito"},
         {"id":6,"name":"fernet","price":600.00,"image":"bebida5.jpg","category":"bebidas", "description":"jarra de litro"},
         {"id":7,"name":"vino","price":400.00,"image":"bebida7.jpg","category":"bebidas", "description":"de la casa"},
         {"id":8,"name":"campari","price":400.00,"image":"bebidaE.jpg","category":"bebidas", "description":"copa"},
+       
 
-        {"id":9,"name":"","price":2546.83,"image":"","category":"", "description":""},
-{"id":10,"name":"","price":2546.83,"image":"","category":"", "description":""},
-{"id":11,"name":"","price":2546.83,"image":"","category":"", "description":""},
-{"id":12,"name":"","price":2546.83,"image":"","category":"", "description":""},
-{"id":13,"name":"","price":2546.83,"image":"","category":"", "description":""},
-{"id":14,"name":"","price":2546.83,"image":"","category":"", "description":""},
-{"id":15,"name":"","price":2546.83,"image":"","category":"", "description":""},
-{"id":16,"name":"","price":2546.83,"image":"","category":"", "description":""},   
-{"id":17,"name":"","price":2546.83,"image":"","category":"", "description":""},
-{"id":18,"name":"","price":2546.83,"image":"","category":"", "description":""},
-{"id":19,"name":"","price":2546.83,"image":"","category":"", "description":""},
-{"id":20,"name":"","price":2546.83,"image":"","category":"", "description":""},
-{"id":21,"name":"","price":2546.83,"image":"","category":"", "description":""},
-{"id":22,"name":"","price":2546.83,"image":"","category":"", "description":""},
-{"id":23,"name":"","price":2546.83,"image":"","category":"", "description":""},
-{"id":24,"name":"","price":2546.83,"image":"","category":"", "description":""},
-{"id":25,"name":"","price":2546.83,"image":"","category":"", "description":""},
-{"id":26,"name":"","price":2546.83,"image":"","category":"", "description":""},
-{"id":27,"name":"","price":2546.83,"image":"","category":"", "description":""},
-{"id":28,"name":"","price":2546.83,"image":"","category":"", "description":""},
-{"id":29,"name":"","price":2546.83,"image":"","category":"", "description":""},
-{"id":30,"name":"","price":2546.83,"image":"","category":"", "description":""},
-{"id":31,"name":"","price":2546.83,"image":"","category":"", "description":""},
-{"id":32,"name":"","price":2546.83,"image":"","category":"", "description":""} 
+        {"id":9,"name":"","price":2546.83,"image":"","category":"pizzas y empanadas", "description":""},
+        {"id":10,"name":"combo1  completas","price": 800.00,"image":"hambur1.jpg","category":"hamburguesas", "description":"completa con papas x2"},
+        {"id":11,"name":"combo2  especial","price":450.00,"image":"hambur2.jpg","category":"hamburguesas", "description":"completa anana con papas"},          
+        {"id":12,"name":"combo3 completas","price":1200.00,"image":"hambur3.jpg","category":"hamburguesas", "description":"tres completas con papas fritas"},
+        {"id":13,"name":"cajita checkpoint","price":1200.00,"image":"hambur4.jpg","category":"hamburguesas", "description":"cajita individual completa con papas y gaseosa"},
+        {"id":14,"name":"completa con papas","price":500.00,"image":"hambur5.jpg","category":"hamburguesas", "description":"hamburguesa completa con papas y gaseosa"},
+        {"id":15,"name":"simple","price":350.00,"image":"hambur6.jpg","category":"hamburguesas", "description":"hamburguesa sola con cheddar"},
+        {"id":16,"name":"doble","price":450.00,"image":"hamburguesa.bmp","category":"hamburguesas", "description":"doble carne"},  
+       
+         
+        {"id":17,"name":"","price":2546.83,"image":"pizzaEmpa1.jpg","category":"pizzas y empanadas", "description":""},
+        {"id":18,"name":"","price":2546.83,"image":"pizzaEmpa2.jpg","category":"pizzas y empanadas", "description":""},
+        {"id":19,"name":"","price":2546.83,"image":"pizzaEmps3.jpg","category":"pizzas y empanadas", "description":""}, 
+        {"id":20,"name":"","price":2546.83,"image":"pizzaEmpa.jpg","category":"pizzas y empanadas", "description":""},         
+        {"id":21,"name":"","price":2546.83,"image":"pizzaEmpa6.jpg","category":"pizzas y empanadas", "description":""},
+        {"id":22,"name":"","price":2546.83,"image":"pizzaEmps5.jpg","category":"pizzas y empanadas", "description":""},
+        {"id":23,"name":"","price":2546.83,"image":"pizzaEmpanada.jpg","category":"pizzas y empanadas", "description":""},  
+        {"id":24,"name":"","price":2546.83,"image":"pizzaEmpaPortada.jpg","category":"pizzas y empanadas", "description":""},
+       
+
+        {"id":25,"name":"frutos del bosque","price":400.00,"image":"","category":"postres", "description":"frutos del bosque con crema"},        
+        {"id":26,"name":"Brownie de chocolate","price":250.00,"image":"","category":"postres", "description":"brownie con chocolate blanco y negro"},
+        {"id":27,"name":"dulce","price":300.00,"image":"","category":"postres", "description":"Dulce caramelizado de calabaza"},
+        {"id":28,"name":"strudell","price":300.00,"image":"","category":"postres", "description":"strudell de manzana"},  
+        {"id":29,"name":"helado","price":700.00,"image":"","category":"postres", "description":"kilo de helado artesanal"},
+        {"id":30,"name":"budin individual","price":350.00,"image":"","category":"postres", "description":"budin de chocolate con dulce de leche"},
+        {"id":31,"name":"flan","price":350.00,"image":"","category":"postres", "description":"flan casero con crema mixta"},
+        {"id":12,"name":"banana","price":350.00,"image":"","category":"postres","descripcion":"banana con cereales y azucar negra quemada"}
     ]}
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
