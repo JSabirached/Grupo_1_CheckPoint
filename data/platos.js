@@ -1,4 +1,4 @@
-const fs=require("fs")
+const fs=require("fs");
 
 
-module.exports=json.parse(fs.readFileSync(__dirname+"/autos.json"))
+module.exports=JSON.parse(fs.readFileSync(__dirname+"/platos.json"));

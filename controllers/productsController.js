@@ -1,3 +1,4 @@
+var platos=require("../data/platos.js")
 module.exports={
 /*iniciosecciones*/
 inicioSecciones:(req,res)=>{
@@ -6,7 +7,7 @@ inicioSecciones:(req,res)=>{
     })
 },
 seccionBebidas:(req,res)=>{
-    res.render("seccionBebidas",{
+    res.render("seccionBebidas",{platos
 
     })
 },

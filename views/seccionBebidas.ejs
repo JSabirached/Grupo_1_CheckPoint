@@ -9,13 +9,16 @@
 				<div class="titulo col-12">
 					<h2 class="oferta">-NUESTRAS BEBIDAS-</h2>
 				</div>
-				<div class="col-12 col-md-6 col-lg-3">
+				
+				<%for (let index = 0; index <platos.bebidas.length; index++) {%>
+					
+					<div class="col-12 col-md-6 col-lg-3">
 					<article class="producto"><!-- 1 bebidas-->
 						<div class="contenido">
-							<figure><a href=""><img src="/images/bebida1.jpg" alt=""></a></figure>
+							<figure><a href=""><img src="/images/<%=platos.bebidas[index].image%>" alt=""></a></figure>
 
-							<h4 class="title">GASEOSA</h4>
-							<h4><span>200$</span></h4>
+							<h4 class="title"><%=platos.bebidas[index].name%></h4>
+							<h4><span><%=platos.bebidas[index].price%></span></h4>
 
 							<div class="detalle mt-3 text-center">
 								<hr>
@@ -28,65 +31,12 @@
 						</div>
 					</article>
 				</div>
+			<% } %> 
+				
 
-				<div class="col-12 col-md-6 col-lg-3">
-					<article class="producto"><!-- 2 bebidas-->
-						<div class="contenido">
-							<figure><img src="/images/bebida2.jpg" alt=""></figure>
-							<h4 class="title">TIRADA</h4>
-							<h4><span>200$</span></h4>
-							<div class="detalle mt-3 text-center">
-								<hr>
-							
-							<p>Chomp</p>
-							</div>
-							<div class="d-grid gap-2 d-md-block">
-								<a href="/"><button class="btn btn-primary" type="button">Atrás</button></a>
-								<button class="btn btn-primary" type="button">Pedir</button>
-							</div>
-						</div>
-					</article>
-				</div>
-
-				<div class="col-12 col-md-6 col-lg-3">
-					<article class="producto"><!-- 3 bebidas-->
-						<div class="contenido">
-							<figure><a href=""><img src="/images/bebida3.jpg" alt=""></a></figure>
-
-							<h4 class="title">CHECKPOINT</h4>
-							<h2><span>350$</span></h2>
-
-							<div class="detalle mt-3 text-center">
-								<hr>
-								<p>Artesanal</p>
-							</div>
-							<div class="d-grid gap-2 d-md-block">
-								<a href="/"><button class="btn btn-primary" type="button">Atrás</button></a>
-								<button class="btn btn-primary" type="button">Pedir</button>
-							</div>
-						</div>
-					</article>
-				</div>
+				
 				</section>
-				<div class="col-12 col-md-6 col-lg-3">
-					<article class="producto"><!-- 3 bebidas-->
-						<div class="contenido">
-							<figure><a href=""><img src="/images/bebidaA.jpg" alt=""></a></figure>
-
-							<h4 class="title">DAIKIRI</h4>
-							<h2><span>300$</span></h2>
-
-							<div class="detalle mt-3 text-center">
-								<hr>
-								<p>Frutales</p>
-							</div>
-							<div class="d-grid gap-2 d-md-block">
-								<a href="/"><button class="btn btn-primary" type="button">Atrás</button></a>
-								<button class="btn btn-primary" type="button">Pedir</button>
-							</div>
-						</div>
-					</article>
-				</div>
+				
 				<section class="row">
 					<div class="titulo col-12">
 						<h4 class="oferta">-DESCUENTOS ESPECIALES-</h4>
