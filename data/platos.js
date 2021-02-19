@@ -1,4 +1,10 @@
 const fs=require("fs");
 
 
-module.exports=JSON.parse(fs.readFileSync(__dirname+"/platos.json"));
+module.exports={
+getproductos:()=>{return JSON.parse(fs.readFileSync(__dirname+"/platos.json"));
+
+}
+
+
+}

@@ -10,19 +10,19 @@
 					<h2 class="oferta">-NUESTRAS BEBIDAS-</h2>
 				</div>
 				
-				<%for (let index = 0; index <platos.bebidas.length; index++) {%>
+				<%for (let index = 0; index <8; index++) {%>
 					
 					<div class="col-12 col-md-6 col-lg-3">
 					<article class="producto"><!-- 1 bebidas-->
 						<div class="contenido">
-							<figure><a href=""><img src="/images/<%=platos.bebidas[index].image%>" alt=""></a></figure>
+							<figure><a href=""><img src="/images/<%=platos.getproductos().bebidas[index].image%>" alt=""></a></figure>
 
-							<h4 class="title"><%=platos.bebidas[index].name%></h4>
-							<h4><span><%=platos.bebidas[index].price%></span></h4>
+							<h4 class="title"><%=platos.getproductos().bebidas[index].name%></h4>
+							<h4><span><%=platos.getproductos().bebidas[index].price%></span></h4>
 
 							<div class="detalle mt-3 text-center">
 								<hr>
-								<p><%=platos.bebidas[index].description%></p>
+								<p><%=platos.getproductos().bebidas[index].description%></p>
 							</div>
 							<div class="d-grid gap-2 d-md-block">
 								<a href="/"><button class="btn btn-primary" type="button">Atrás</button></a>
