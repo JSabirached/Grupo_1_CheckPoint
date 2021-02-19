@@ -11,34 +11,36 @@
     ],
 "hamburguesas":
 [
-{"id":9,"name":"x2completa","price":800,"image":"hambur1.jpg","category":"", "description":""},
-{"id":10,"name":"especial","price":450,"image":"hambur2.jpg","category":"", "description":""},
-{"id":11,"name":"x3completa","price":1200,"image":"hambur3.jpg","category":"", "description":""},
-{"id":12,"name":"cajita","price":1200,"image":"hambur4.jpg","category":"", "description":""},
-{"id":13,"name":"completa","price":500,"image":"hambur5.jpg","category":"", "description":""},
-{"id":14,"name":"simple","price":350,"image":"hambur6.jpg","category":"", "description":""},
-{"id":15,"name":"doble","price":450,"image":"hamburguesa.bmp","category":"", "description":""},
-{"id":16,"name":"somple","price":300,"image":"hamburPortada.jpg","category":"", "description":""} 
+{"id":9,"name":"x2completa","price":800,"image":"hambur1.jpg","category":"", "description":"Con papas"},
+{"id":10,"name":"especial","price":450,"image":"hambur2.jpg","category":"", "description":"Ananá"},
+{"id":11,"name":"x3completa","price":1200,"image":"hambur3.jpg","category":"Completa", "description":"Con papas"},
+{"id":12,"name":"cajita","price":1200,"image":"hambur4.jpg","category":"", "description":"completa"},
+{"id":13,"name":"completa","price":500,"image":"hambur5.jpg","category":"", "description":"Con papas"},
+{"id":14,"name":"simple","price":350,"image":"hambur6.jpg","category":"", "description":"Chedar"},
+{"id":15,"name":"doble","price":450,"image":"hamburguesa.bmp","category":"", "description":"Carne"},
+{"id":16,"name":"somple","price":300,"image":"hamburPortada.jpg","category":"", "description":"Picante"} 
 ],
 
-"postres":[{"id":17,"name":"frutos","price":400,"image":"postre1.jpg","category":"", "description":""},
-{"id":18,"name":"brownie","price":2546.83,"image":"postre2.jpg","category":"", "description":""},
-{"id":19,"name":"dulce","price":2546.83,"image":"postre3.jpg","category":"", "description":""},
-{"id":20,"name":"strudell","price":2546.83,"image":"postre4.jpg","category":"", "description":""},
-{"id":21,"name":"helado","price":2546.83,"image":"postre5.jpg","category":"", "description":""},
-{"id":22,"name":"budin","price":2546.83,"image":"postre6.jpg","category":"", "description":""},
-{"id":23,"name":"flan ","price":2546.83,"image":"postreA.jpg","category":"", "description":""},
-{"id":24,"name":"banana","price":2546.83,"image":"postreB.jpg","category":"", "description":""}
+"postres":[{"id":17,"name":"frutos","price":400,"image":"postre1.jpg","category":"", "description":"Del bosque"},
+{"id":18,"name":"brownie","price":2546.83,"image":"postre2.jpg","category":"", "description":"de chocolate"},
+{"id":19,"name":"dulce","price":2546.83,"image":"postreA.jpg","category":"", "description":"de calabasa"},
+{"id":20,"name":"strudell","price":2546.83,"image":"postreB.jpg","category":"", "description":"de manzana"},
+{"id":21,"name":"helado","price":2546.83,"image":"postre4.jpg","category":"", "description":"artesanal"},
+{"id":22,"name":"budin","price":2546.83,"image":"postre5.jpg","category":"", "description":"chocolate"},
+{"id":23,"name":"flan ","price":2546.83,"image":"postre6.jpg","category":"", "description":"Casero"},
+{"id":24,"name":"banana","price":2546.83,"image":"postrec.jpg","category":"", "description":"Cereales"}
 ],
-"pizzas":[{"id":25,"name":"","price":2546.83,"image":"","category":"", "description":""},
-{"id":26,"name":"muzzarella","price":500,"image":"pizzaEmpa1.jpg","category":"", "description":""},
-{"id":27,"name":"combo1","price":800,"image":"pizzaempa2.png","category":"", "description":""},
-{"id":28,"name":"combo2","price":1200,"image":"pizzaEmps3.jpg","category":"", "description":""},
-{"id":29,"name":"1docena","price":800,"image":"pizzaEmpa4.jpg","category":"", "description":""},
-{"id":30,"name":"combo3","price":1200,"image":"pizzaEmpa6.jpg","category":"", "description":""},
-{"id":31,"name":"vegana","price":450,"image":"pizzaEmps5.jpg","category":"", "description":""},
-{"id":32,"name":"colombiana","price":2546.83,"image":"pizzaempanada.png","category":"", "description":""} 
-    ]
+"pizzas":[
+{"id":26,"name":"muzzarella","price":500,"image":"pizzaEmpa1.jpg","category":"", "description":"Grande"},
+{"id":27,"name":"combo1","price":800,"image":"pizzaempa2.png","category":"", "description":"6Empanadas 1Napo"},
+{"id":28,"name":"combo2","price":1200,"image":"pizzaEmps3.jpg","category":"", "description":"12Emp. y Muzza"},
+{"id":29,"name":"1docena","price":800,"image":"pizzaEmpa4.jpg","category":"", "description":"carne"},
+{"id":30,"name":"combo3","price":1200,"image":"pizzaEmpa6.jpg","category":"", "description":"1Napo 6pollo"},
+{"id":31,"name":"vegana","price":450,"image":"pizzaEmps5.jpg","category":"", "description":"Mix verduras"},
+{"id":32,"name":"colombiana","price":2546.83,"image":"pizzaempanada.png","category":"", "description":"palmito/tomate"}, 
+{"id":25,"name":"mix16","price":1400,"image":"pizzaEmpaPortada.jpg","category":"", "description":"Car,ver y pollo"}
+
+]
    
 
 }
