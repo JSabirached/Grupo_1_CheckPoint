@@ -12,7 +12,7 @@ seccionBebidas:(req,res)=>{
     })
 },
 seccionHamburguesas:(req,res)=>{
-    res.render("seccionHamburguesas",{
+    res.render("seccionHamburguesas",{platos
 
     })
 },
@@ -25,12 +25,12 @@ seccionPlatosPrincipales:(req,res)=>{
 
 
 seccionPostres:(req,res)=>{
-    res.render("seccionPostres",{
+    res.render("seccionPostres",{platos
 
     })
 },
 seccionPizzaEmpa:(req,res)=>{
-    res.render("seccionPizzaEmpa",{
+    res.render("seccionPizzaEmpa",{platos
 
     })
 },

@@ -1,42 +1,47 @@
 {"bebidas":
     [
         {"id":1,"name":"gaseosa","price":200.00,"image":"bebida1.jpg","category":"bebidas", "description":"linea cocacola"},
-        {"id":2,"name":"cerveza tirada","price":200.00,"image":"bebida2","category":"bebidas", "description":"chompera 3/4"},
+        {"id":2,"name":"cerveza tirada","price":200.00,"image":"bebida2.jpg","category":"bebidas", "description":"chompera 3/4"},
         {"id":3,"name":"cerveza artesanal checkpoint","price":350.00,"image":"bebida3.jpg","category":"bebidas", "description":"artesanal de litro"},
         {"id":4,"name":"daikiri","price":300.00,"image":"bebidaA.jpg","category":"bebidas", "description":"frutales"},
         {"id":5,"name":"fernet","price":250.00,"image":"bebida4.jpg","category":"bebidas", "description":"jarrito"},
         {"id":6,"name":"fernet","price":600.00,"image":"bebida5.jpg","category":"bebidas", "description":"jarra de litro"},
         {"id":7,"name":"vino","price":400.00,"image":"bebida7.jpg","category":"bebidas", "description":"de la casa"},
-        {"id":8,"name":"campari","price":400.00,"image":"bebidaE.jpg","category":"bebidas", "description":"copa"},
+        {"id":8,"name":"campari","price":400.00,"image":"bebidaE.jpg","category":"bebidas", "description":"copa"}
+    ],
+"hamburguesas":
+[
+{"id":9,"name":"x2completa","price":800,"image":"hambur1.jpg","category":"", "description":""},
+{"id":10,"name":"especial","price":450,"image":"hambur2.jpg","category":"", "description":""},
+{"id":11,"name":"x3completa","price":1200,"image":"hambur3.jpg","category":"", "description":""},
+{"id":12,"name":"cajita","price":1200,"image":"hambur4.jpg","category":"", "description":""},
+{"id":13,"name":"completa","price":500,"image":"hambur5.jpg","category":"", "description":""},
+{"id":14,"name":"simple","price":350,"image":"hambur6.jpg","category":"", "description":""},
+{"id":15,"name":"doble","price":450,"image":"hamburguesa.bmp","category":"", "description":""},
+{"id":16,"name":"somple","price":300,"image":"hamburPortada.jpg","category":"", "description":""} 
+],
 
-        {"id":9,"name":"","price":2546.83,"image":"","category":"", "description":""},
-{"id":10,"name":"","price":2546.83,"image":"","category":"", "description":""},
-{"id":11,"name":"","price":2546.83,"image":"","category":"", "description":""},
-{"id":12,"name":"","price":2546.83,"image":"","category":"", "description":""},
-{"id":13,"name":"","price":2546.83,"image":"","category":"", "description":""},
-{"id":14,"name":"","price":2546.83,"image":"","category":"", "description":""},
-{"id":15,"name":"","price":2546.83,"image":"","category":"", "description":""},
-{"id":16,"name":"","price":2546.83,"image":"","category":"", "description":""},   
-{"id":17,"name":"","price":2546.83,"image":"","category":"", "description":""},
-{"id":18,"name":"","price":2546.83,"image":"","category":"", "description":""},
-{"id":19,"name":"","price":2546.83,"image":"","category":"", "description":""},
-{"id":20,"name":"","price":2546.83,"image":"","category":"", "description":""},
-{"id":21,"name":"","price":2546.83,"image":"","category":"", "description":""},
-{"id":22,"name":"","price":2546.83,"image":"","category":"", "description":""},
-{"id":23,"name":"","price":2546.83,"image":"","category":"", "description":""},
-{"id":24,"name":"","price":2546.83,"image":"","category":"", "description":""},
-{"id":25,"name":"","price":2546.83,"image":"","category":"", "description":""},
-{"id":26,"name":"","price":2546.83,"image":"","category":"", "description":""},
-{"id":27,"name":"","price":2546.83,"image":"","category":"", "description":""},
-{"id":28,"name":"","price":2546.83,"image":"","category":"", "description":""},
-{"id":29,"name":"","price":2546.83,"image":"","category":"", "description":""},
-{"id":30,"name":"","price":2546.83,"image":"","category":"", "description":""},
-{"id":31,"name":"","price":2546.83,"image":"","category":"", "description":""},
-{"id":32,"name":"","price":2546.83,"image":"","category":"", "description":""} 
-    ]}
+"postres":[{"id":17,"name":"frutos","price":400,"image":"postre1.jpg","category":"", "description":""},
+{"id":18,"name":"brownie","price":2546.83,"image":"postre2.jpg","category":"", "description":""},
+{"id":19,"name":"dulce","price":2546.83,"image":"postre3.jpg","category":"", "description":""},
+{"id":20,"name":"strudell","price":2546.83,"image":"postre4.jpg","category":"", "description":""},
+{"id":21,"name":"helado","price":2546.83,"image":"postre5.jpg","category":"", "description":""},
+{"id":22,"name":"budin","price":2546.83,"image":"postre6.jpg","category":"", "description":""},
+{"id":23,"name":"flan ","price":2546.83,"image":"postreA.jpg","category":"", "description":""},
+{"id":24,"name":"banana","price":2546.83,"image":"postreB.jpg","category":"", "description":""}
+],
+"pizzas":[{"id":25,"name":"","price":2546.83,"image":"","category":"", "description":""},
+{"id":26,"name":"muzzarella","price":500,"image":"pizzaEmpa1.jpg","category":"", "description":""},
+{"id":27,"name":"combo1","price":800,"image":"pizzaempa2.png","category":"", "description":""},
+{"id":28,"name":"combo2","price":1200,"image":"pizzaEmps3.jpg","category":"", "description":""},
+{"id":29,"name":"1docena","price":800,"image":"pizzaEmpa4.jpg","category":"", "description":""},
+{"id":30,"name":"combo3","price":1200,"image":"pizzaEmpa6.jpg","category":"", "description":""},
+{"id":31,"name":"vegana","price":450,"image":"pizzaEmps5.jpg","category":"", "description":""},
+{"id":32,"name":"colombiana","price":2546.83,"image":"pizzaempanada.png","category":"", "description":""} 
+    ]
    
 
-
+}
 
 
 
