@@ -1,4 +1,4 @@
-{"bebidas":
+{"productos":
     [
         {"id":1,"name":"gaseosa","price":200.00,"image":"bebida1.jpg","category":"bebidas", "description":"linea cocacola"},
         {"id":2,"name":"cerveza tirada","price":200.00,"image":"bebida2","category":"bebidas", "description":"chompera 3/4"},
