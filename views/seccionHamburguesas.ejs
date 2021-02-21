@@ -1,22 +1,26 @@
 <%- include('partials/header') %>
 <%- include('partials/head') %>
+<title>Hamburguesas</title>
 	<body>
 		<menu class="container">
 			<section class="row">
 				<div class="titulo col-12">
-					<h2 class="oferta">-NUESTRAS HAMBURGUESAS-</h2>
+					<h2 class="oferta">-NUESTRAS BURGER-</h2>
 				</div>
-				<div class="col-12 col-md-6 col-lg-3">
-					<article class="producto"><!-- 1 hamburs-->
+				
+				<%for (let index = 0; index <8; index++) {%>
+					
+					<div class="col-12 col-md-6 col-lg-3">
+					<article class="producto"><!-- 1 bebidas-->
 						<div class="contenido">
-							<figure><a href=""><img src="/images/hambur1.jpg" alt=""></a></figure>
+							<figure><a href=""><img src="/images/<%=platos.getproductos().hamburguesas[index].image%>" alt=""></a></figure>
 
-							<h4 class="title">X2COMPLETA</h4>
-							<h2><span>800$</span></h2>
+							<h4 class="title"><%=platos.getproductos().hamburguesas[index].name%></h4>
+							<h4><span><%=platos.getproductos().hamburguesas[index].price%></span></h4>
 
 							<div class="detalle mt-3 text-center">
 								<hr>
-								<p>Con papas</p>
+								<p><%=platos.getproductos().hamburguesas[index].description%></p>
 							</div>
 							<div class="d-grid gap-2 d-md-block">
 								<a href="/"><button class="btn btn-primary" type="button">Atrás</button></a>
@@ -25,146 +29,9 @@
 						</div>
 					</article>
 				</div>
-
-				<div class="col-12 col-md-6 col-lg-3">
-					<article class="producto"><!-- 2-->
-						<div class="contenido">
-							<figure><a href=""><img src="/images/hambur2.jpg" alt=""></a></figure>
-
-							<h4 class="title">ESPECIAL</h4>
-							<h2><span>450$</span></h2>
-
-							<div class="detalle mt-3 text-center">
-								<hr>
-								<p>Ananá</p>
-							</div>
-							<div class="d-grid gap-2 d-md-block">
-								<a href="/"><button class="btn btn-primary" type="button">Atrás</button></a>
-								<button class="btn btn-primary" type="button">Pedir</button>
-							</div>
-						</div>
-					</article>
-				</div>
-				<div class="col-12 col-md-6 col-lg-3">
-					<article class="producto"><!--3-->
-						<div class="contenido">
-							<figure><a href=""><img src="/images/hambur3.jpg" alt=""></a></figure>
-
-							<h4 class="title">X3COMPLETA</h4>
-							<h2><span>1200$</span></h2>
-
-							<div class="detalle mt-3 text-center">
-								<hr>
-								<p>Con papas</p>
-							</div>
-							<div class="d-grid gap-2 d-md-block">
-								<a href="/"><button class="btn btn-primary" type="button">Atrás</button></a>
-								<button class="btn btn-primary" type="button">Pedir</button>
-							</div>
-						</div>
-					</article>
-				</div>
-				<div class="col-12 col-md-6 col-lg-3">
-					<article class="producto"><!--3-->
-						<div class="contenido">
-							<figure><a href=""><img src="/images/hambur4.jpg" alt=""></a></figure>
-
-							<h4 class="title"> CAJITA </h4>
-							<h2><span>1200$</span></h2>
-
-							<div class="detalle mt-3 text-center">
-								<hr>
-								<p>Completa</p>
-							</div>
-							<div class="d-grid gap-2 d-md-block">
-								<a href="/"><button class="btn btn-primary" type="button">Atrás</button></a>
-								<button class="btn btn-primary" type="button">Pedir</button>
-							</div>
-						</div>
-					</article>
-				</div>
-				<section class="row">
-					<div class="titulo col-12">
-						<h4 class="oferta">-PROMO DE LA SEMANA-</h4>
-					</div>
-					<div class="col-12 col-md-6 col-lg-3">
-						<article class="producto"><!-- 4-->
-							<div class="contenido">
-								<figure><a href=""><img src="/images/hambur5.jpg" alt=""></a></figure>
-	
-								<h4 class="title">COMPLETA</h4>
-								<h2><span>500$</span></h2>
-	
-								<div class="detalle mt-3 text-center">
-									<hr>
-									<p>Con papas</p>
-								</div>
-								<div class="d-grid gap-2 d-md-block">
-									<a href="/"><button class="btn btn-primary" type="button">Atrás</button></a>
-									<button class="btn btn-primary" type="button">Pedir</button>
-								</div>
-							</div>
-						</article>
-					</div>
-	
-					<div class="col-12 col-md-6 col-lg-3">
-						<article class="producto"><!-- 5-->
-							<div class="contenido">
-								<figure><a href=""><img src="/images/hambur6.jpg" alt=""></a></figure>
-	
-								<h4 class="title">SIMPLE</h4>
-								<h2><span>350$</span></h2>
-	
-								<div class="detalle mt-3 text-center">
-									<hr>
-									<p>Chedar</p>
-								</div>
-								<div class="d-grid gap-2 d-md-block">
-									<a href="/"><button class="btn btn-primary" type="button">Atrás</button></a>
-									<button class="btn btn-primary" type="button">Pedir</button>
-								</div>
-							</div>
-						</article>
-					</div>
-					<div class="col-12 col-md-6 col-lg-3">
-						<article class="producto"><!-- 6-->
-							<div class="contenido">
-								<figure><a href=""><img src="/images/hamburguesa.bmp" alt=""></a></figure>
-	
-								<h4 class="title">DOBLE</h4>
-								<h2><span>450</span></h2>
-	
-								<div class="detalle mt-3 text-center">
-									<hr>
-									<p>Carne</p>
-								</div>
-								<div class="d-grid gap-2 d-md-block">
-									<a href="/"><button class="btn btn-primary" type="button">Atrás</button></a>
-									<button class="btn btn-primary" type="button">Pedir</button>
-								</div>
-							</div>
-						</article>
-					</div>
-					<div class="col-12 col-md-6 col-lg-3">
-						<article class="producto"><!-- 6-->
-							<div class="contenido">
-								<figure><a href=""><img src="/images/hamburPortada.jpg" alt=""></a></figure>
-	
-								<h4 class="title">SIMPLE</h4>
-								<h2><span>300$</span></h2>
-	
-								<div class="detalle mt-3 text-center">
-									<hr>
-									<p>Picante</p>
-								</div>
-								<div class="d-grid gap-2 d-md-block">
-									<a href="/"><button class="btn btn-primary" type="button">Atrás</button></a>
-									<button class="btn btn-primary" type="button">Pedir</button>
-								</div>
-							</div>
-						</article>
-					</div>
-			</menu>		
+			<% } %> 
+			
+				</menu>		
 
 	</body>	<!--menu-->
 		

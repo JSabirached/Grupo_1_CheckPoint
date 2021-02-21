@@ -1,22 +1,26 @@
 <%- include('partials/header') %>
 <%- include('partials/head') %>
+<title>postres</title>
 	<body>
 		<menu class="container">
 			<section class="row">
 				<div class="titulo col-12">
-					<h2 class="oferta">-NUESTROS POSTRES-</h2>
+					<h2 class="oferta">-POSTRES-</h2>
 				</div>
-				<div class="col-12 col-md-6 col-lg-3">
-					<article class="producto"><!-- 1 -->
+				
+				<%for (let index = 0; index <8; index++) {%>
+					
+					<div class="col-12 col-md-6 col-lg-3">
+					<article class="producto"><!-- 1 bebidas-->
 						<div class="contenido">
-							<figure><a href=""><img src="/images/postre1.jpg" alt=""></a></figure>
+							<figure><a href=""><img src="/images/<%=platos.getproductos().postres[index].image%>" alt=""></a></figure>
 
-							<h4 class="title">FRUTOS</h4>
-							<h2><span>400$</span></h2>
+							<h4 class="title"><%=platos.getproductos().postres[index].name%></h4>
+							<h4><span><%=platos.getproductos().postres[index].price%></span></h4>
 
 							<div class="detalle mt-3 text-center">
 								<hr>
-								<p>Del bosque</p>
+								<p><%=platos.getproductos().postres[index].description%></p>
 							</div>
 							<div class="d-grid gap-2 d-md-block">
 								<a href="/"><button class="btn btn-primary" type="button">Atrás</button></a>
@@ -25,144 +29,11 @@
 						</div>
 					</article>
 				</div>
-
-				<div class="col-12 col-md-6 col-lg-3">
-					<article class="producto"><!-- 2 -->
-						<div class="contenido">
-							<figure><img src="/images/postre2.jpg" alt=""></figure>
-							<h4 class="title">BROWNIE</h4>
-							<h2><span>250$</span></h2>
-							<div class="detalle mt-3 text-center">
-								<hr>
-								<p>Cocolate</p>
-							</div>
-							<div class="d-grid gap-2 d-md-block">
-								<a href="/"><button class="btn btn-primary" type="button">Atrás</button></a>
-								<button class="btn btn-primary" type="button">Pedir</button>
-							</div>
-						</div>
-					</article>
-				</div>
-
-				<div class="col-12 col-md-6 col-lg-3">
-					<article class="producto"><!-- 3 -->
-						<div class="contenido">
-							<figure><a href=""><img src="/images/postreA.jpg" alt=""></a></figure>
-
-							<h4 class="title">DULCE</h4>
-							<h2><span>300$</span></h2>
-
-							<div class="detalle mt-3 text-center">
-								<hr>
-								<p>Calabaza</p>
-							</div>
-							<div class="d-grid gap-2 d-md-block">
-								<a href="/"><button class="btn btn-primary" type="button">Atrás</button></a>
-								<button class="btn btn-primary" type="button">Pedir</button>
-							</div>
-						</div>
-					</article>
-				</div>
-				<div class="col-12 col-md-6 col-lg-3">
-					<article class="producto"><!-- 3 -->
-						<div class="contenido">
-							<figure><a href=""><img src="/images/postreB.jpg" alt=""></a></figure>
-
-							<h4 class="title">STRUDELL</h4>
-							<h2><span>300$</span></h2>
-
-							<div class="detalle mt-3 text-center">
-								<hr>
-								<p>De manzana</p>
-							</div>
-							<div class="d-grid gap-2 d-md-block">
-								<a href="/"><button class="btn btn-primary" type="button">Atrás</button></a>
-								<button class="btn btn-primary" type="button">Pedir</button>
-							</div>
-						</div>
-					</article>
-				</div>    
-				<section class="row">
-					<div class="titulo col-12">
-						<h2 class="oferta">-DESCUENTOS ESPECIALES-</h2>
-					</div>
-					<div class="col-12 col-md-6 col-lg-3">
-						<article class="producto"><!-- 4-->
-							<div class="contenido">
-								<figure><img src="/images/postre4.jpg" alt=""></figure>
-	
-								<h4 class="title"> HELADO</h4>
-								<h2><span>700$ Kg</span></h2>
-	
-								<div class="detalle mt-3 text-center">
-									<hr>
-									<p>Artesanal</p>
-								</div>
-								<div class="d-grid gap-2 d-md-block">
-									<a href="/"><button class="btn btn-primary" type="button">Atrás</button></a>
-									<button class="btn btn-primary" type="button">Pedir</button>
-								</div>
-							</div>
-						</article>
-					</div>
-	
-					<div class="col-12 col-md-6 col-lg-3">
-						<article class="producto"><!-- 5 -->
-							<div class="contenido">
-								<figure><img src="/images/postre5.jpg" alt=""></figure>
-	
-								<h4 class="title">BUDIN </h4>
-								<h2><span>350$</span></h2>
-	
-								<div class="detalle mt-3 text-center">
-									<hr>
-									<p>Chocolate</p>
-								</div>
-								<div class="d-grid gap-2 d-md-block">
-									<a href="/"><button class="btn btn-primary" type="button">Atrás</button></a>
-									<button class="btn btn-primary" type="button">Pedir</button>
-								</div>
-							</div>
-						</article>
-					</div>
-					<div class="col-12 col-md-6 col-lg-3">
-						<article class="producto"><!-- 6 -->
-							<div class="contenido">
-								<figure><img src="/images/postre6.jpg" alt=""></figure>
-	
-								<h4 class="title">FLAN</h4>
-								<h2><span>350$</span></h2>
-	
-								<div class="detalle mt-3 text-center">
-									<hr>
-									<p>Casero</p>
-								</div>
-								<div class="d-grid gap-2 d-md-block">
-									<a href="/"><button class="btn btn-primary" type="button">Atrás</button></a>
-									<button class="btn btn-primary" type="button">Pedir</button>
-								</div>
-							</div>
-						</article>
-					</div>
-					<div class="col-12 col-md-6 col-lg-3">
-						<article class="producto"><!-- 6 -->
-							<div class="contenido">
-								<figure><img src="/images/postreC.jpg" alt=""></figure>
-	
-								<h4 class="title">BANANA</h4>
-								<h2><span>350$</span></h2>
-	
-								<div class="detalle mt-3 text-center">
-									<hr>
-									<p>Cereales</p>
-								</div>
-								<div class="d-grid gap-2 d-md-block">
-									<a href="/"><button class="btn btn-primary" type="button">Atrás</button></a>
-									<button class="btn btn-primary" type="button">Pedir</button>
-								</div>
-							</div>
-						</article>
-					</div>
+			<% } %> 
+			</section>
+		
+		
+			
 				</menu>		
 
 	</body>	<!--menu-->

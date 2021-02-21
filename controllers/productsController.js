@@ -1,17 +1,17 @@
+var platos=require("../data/platos.js");
 module.exports={
 /*iniciosecciones*/
 inicioSecciones:(req,res)=>{
-    res.render("inicioSecciones",{
+    res.render("inicioSecciones",{ platos
 
     })
 },
 seccionBebidas:(req,res)=>{
-    res.render("seccionBebidas",{
-
+    res.render("seccionBebidas",{platos
     })
 },
 seccionHamburguesas:(req,res)=>{
-    res.render("seccionHamburguesas",{
+    res.render("seccionHamburguesas",{platos
 
     })
 },
@@ -25,18 +25,17 @@ seccionPlatosPrincipales:(req,res)=>{
 
 seccionPostres:(req,res)=>{
     res.render("seccionPostres",{
-
+platos
     })
 },
 seccionPizzaEmpa:(req,res)=>{
-    res.render("seccionPizzaEmpa",{
+    res.render("seccionPizzaEmpa",{platos
 
-    })
+})
 },
 seccionParrrillada:(req,res)=>{
     res.render("seccionParrillada",{
 
     })
 }
-
 }

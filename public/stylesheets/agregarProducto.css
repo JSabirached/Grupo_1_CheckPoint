@@ -1,0 +1,25 @@
+@media(max-width:768px){
+    #formFile{
+        width:170px;
+       
+    }
+.submit{
+    width: 170px;
+    margin-top:20px;
+}
+}
+h4{
+    text-align: center;
+}
+.container{
+    
+    text-align: center;
+}
+
+@supports(object-fit: cover){
+    .box img{
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+}
