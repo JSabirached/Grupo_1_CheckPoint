@@ -1,5 +1,5 @@
 const fs=require("fs");
-
+  //< ! -- json se puede editar -- > //
 function platosFilter (category){
  let platosFiltrados = platos.filter(platos=>platos.category==category)
  return platosFiltrados
