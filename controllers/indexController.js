@@ -29,11 +29,7 @@ registro:(req,res)=>{
 
     })
 },
-agregarproducto:(req,res)=>{
-    res.render("agregarproducto",{
 
-    })
-},
 /*index*/
 cartadelivery:(req,res)=>{
     res.render("carta",{

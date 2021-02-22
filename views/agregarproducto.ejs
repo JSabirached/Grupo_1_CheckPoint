@@ -15,17 +15,25 @@
             <div class="col-3"></div>
             <div class="register col-4 col-md-6 ">
                       <h2>Registrarse</h2><br>
-                          <form action="" method="POST" enctype="multipart/form-data">
-                             <input type="text" placeholder="usuario de administrador" class="admin"><br><br>
-                             <input type="password" placeholder="Contraseña" class="pass"><br><br>
-                             <input type="text" placeholder="titulo del plato" class="titulo"><br><br>
-                             <input type="text" placeholder="descripcion del plato" class="descripcion"><br><br>
-                             <input type="text" placeholder="precio del plato" class="precio"><br><br>
-                             <imput type="file" name="imagen">
+                          <form action="" method="POST" >
+                             <input  type="text" placeholder="usuario de administrador" class="admin"><br><br>
+                             <input name="nombrePlato" type="password" placeholder="Contraseña" class="pass"><br><br>
+                             <input name="tituloPlato" type="text" placeholder="titulo del plato" class="titulo"><br><br>
+                             <input name="descripcionPlato" type="text" placeholder="descripcion del plato" class="descripcion"><br><br>
+                             <input name="precioPlato" type="text" placeholder="precio del plato" class="precio"><br><br>
+                             <imput name="imgplato" type="file" name="imagen">
                              <label for="formFile" class="form-label">ENTRADA DE ARCHIVO</label>
-                             <input class="form-control" type="file" id="formFile">
-                             <button class="submit" value="volver atras" ><a href="/">volver atras</button>
-                             <input type="submit" class="submit" value="guardar">
+                            
+                            
+                             <select name="cantidad" class="cant">
+                                <option value=1>1</option>
+                                <option value=2>2</option>
+                     </select>
+                            
+                            
+                            
+                             <button class="submit" action="" value="volver atras" ><a href="/">volver atras</button>
+                             <input type="submit" action="" class="submit" value="guardar">
                              <input type="submit" class="submit" value="borrar existente">
                              
                           </form>
