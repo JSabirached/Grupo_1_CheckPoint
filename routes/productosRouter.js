@@ -3,9 +3,12 @@ const indexController = require('../controllers/indexController');
 const productsController = require('../controllers/productsController');
 var router = express.Router();
 
-/* GET users listing. */
-router.get('/detalledecompra',indexController.detalledecompra );
-/* routes iniciosecciones */
+/* agregarproducto */
+router.get('/agregarproducto',productsController.agregarproducto );
+router.post('/agregarproducto',productsController.crearPlato);
+
+
+/* routes secciones */
 router.get('/inicioSecciones',productsController.inicioSecciones );
 router.get('/seccionBebidas',productsController.seccionBebidas );
 router.get('/seccionHamburguesas',productsController.seccionHamburguesas );

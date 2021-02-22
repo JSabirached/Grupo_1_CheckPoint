@@ -1,17 +1,58 @@
-var platos=require("../data/platos.js");
+var {getproductos,setproductos}=require("C:/Users/matias/Desktop/New folder (34)/Grupo_1_CheckPoint/data/platos.js");
+const fs = require('fs');
+let plato=getproductos();
+
 module.exports={
 /*iniciosecciones*/
+
+crearPlato:(req,res)=>{
+  var {nombrePlato,tituloPlato, description,precioPlato,descripcionPlato,cantidad}=req.body
+        
+  
+  var platos={
+            
+           id:"",
+           name: tituloPlato,
+           price: precioPlato,
+           image:"",
+           category:"bebidas",
+           description:descripcionPlato,
+           cantidad,
+          
+           
+        }
+       if(cantidad==1){
+ plato.bebidas.push(platos)
+}else
+if(cantidad==2){
+    plato.hamburguesas.push(platos)
+   }else
+   if(cantidad==3){
+    plato.postres.push(platos)
+   }else
+   if(cantidad==4){
+    plato.pizzas.push(platos)
+   }
+    setproductos(plato)
+
+res.redirect("agregarproducto",)
+},
+agregarproducto:(req,res)=>{
+    res.render("agregarproducto",{
+
+    })
+},
 inicioSecciones:(req,res)=>{
-    res.render("inicioSecciones",{ platos
+    res.render("inicioSecciones",{ 
 
     })
 },
 seccionBebidas:(req,res)=>{
-    res.render("seccionBebidas",{platos
+    res.render("seccionBebidas",{getproductos
     })
 },
 seccionHamburguesas:(req,res)=>{
-    res.render("seccionHamburguesas",{platos
+    res.render("seccionHamburguesas",{getproductos
 
     })
 },
@@ -24,12 +65,12 @@ seccionPlatosPrincipales:(req,res)=>{
 
 
 seccionPostres:(req,res)=>{
-    res.render("seccionPostres",{
-platos
+    res.render("seccionPostres",{getproductos
+
     })
 },
 seccionPizzaEmpa:(req,res)=>{
-    res.render("seccionPizzaEmpa",{platos
+    res.render("seccionPizzaEmpa",{getproductos
 
 })
 },
