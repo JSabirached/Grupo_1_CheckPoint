@@ -72,13 +72,13 @@ module.exports = {
                     return res.redirect('/user/profile')
                 }
             }
-              /*     if (recordar != 'undefined'){
+                if (recordar){
                        res.cookie('usercom4',req.session.user,{
-                           maxAge :1000*60
+                           maxAge : 1000 * 60
                        })
-                   }*/
                   
-            }
+                    }}  
+            
             return res.render('login',{
                 errores : [
                     {

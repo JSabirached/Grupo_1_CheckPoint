@@ -2,7 +2,7 @@
 var express = require('express');
 var router = express.Router();
 //extraemos  los archivos de controller metodos del controlador cada metodo hace un trabajo distinto
-const { register, processRegister, login, processLogin,profile } = require('../controllers/usersController');
+const { register, processRegister, login, processLogin,profile, fatality } = require('../controllers/usersController');
 
 
 /* middleware */
@@ -23,6 +23,8 @@ router.post('/login', processLogin);
 router.get('/profile', profile);
 router.get('/profile',checkUser,profile);
 
+//router.get('/delete/:id',eliminar);
 
+router.get('/logout',fatality);
 
 module.exports = router;
