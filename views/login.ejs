@@ -6,26 +6,21 @@
 
     <div class="container">
         <div class="row">
-              <div class="register col-12 col-md-6 ">
-                      <h2>Registrarse</h2><br>
-                          <form action="">
-                             <input type="text" placeholder="Nombre" class="nombre"><br><br>
-                             <input type="text" placeholder="Correo" class="mail"><br><br>
-                             <input type="password" placeholder="Contraseña" class="pass"><br><br>
-                             <input type="password" placeholder="Confirma contraseña" class="repass"><br><br>
-                             <input type="submit" class="submit" value="REGISTRARSE">
-                          </form>
-               </div>
-              <div class="login col-12 col-md-6 ">
+             
+              <div class="login col-12 ">
               <h2>Iniciar Sesión</h2>
-                <form action="">
-                        <input type="text" placeholder="Correo" class="mail"><br><br>
-                        <input type="password" placeholder="Contraseña" class="pass"><br><br>
-                        <input type="submit" class="submit" value="Iniciar">
+              <form action="" method="post">
+                <input type="email" placeholder="tu email" name="email"><br><br>
+                <input type="password" placeholder="tu contraseña" name="pass"><br><br>
+                <input type="checkbox" placeholder="tu contraseña" name="recordar" id="recordar">
+                <label for="recordar">Recordarme</label>
+                <button class="btn btn-primary" type="submit">Ingresar</button>
+            </form>
                     <div class="login-items col-12 col-md-12  ">
                          <button class="fb"><i class="fab fa-facebook-f"></i>   Acceder con Facebook</button>
                          <button class="tw"><i class="fab fa-twitter"></i>   Acceder con Twitter</button>
-                         <button class="correo"><i class="fas fa-envelope"></i>   Acceder con Correo</button>
+                         <button class="correo"><i class="fas fa-envelope"></i>   Acceder con Correo</button><br>
+                        <a href="/views/registro.ejs"> ¿no estas registrado? registrate aca</a>
                     </div>
                 </form>
               </div>

@@ -13,4 +13,7 @@ router.get('/promociones',indexController.promociones );
 router.get('/novedades',indexController.novedades );
 router.get('/nosotros',indexController.nosotros );
 router.get('/recetas',indexController.recetas );
+
+
+
 module.exports = router;

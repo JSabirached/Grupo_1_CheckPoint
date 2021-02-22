@@ -1,12 +1,31 @@
 <%- include('partials/head') %>
 	<title>registro</title>
 </head>
-<%- include('partials/header') %>
 
 <body>
+	<%- include('partials/header') %>
 	<div class="container">
-		<div class="row"><div class="dropdown-menu">
-		<form class="px-4 py-3"><div class="mb-3">
+		<div class="row">
+			<div class="col-12">
+			     <h1>registro</h1><!--method post creamos un formulario -->
+			        <form action="" method="post" enctype="multipart/form-data">
+				        <input type="text" placeholder="Nombre de usuario"  name="username">
+			          	<input type="email" placeholder="email"  name="email">
+			         	<input type="password" placeholder="contraseña"  name="pass">
+			         	<input type="password" placeholder="reingrese la contraseña"  name="pass2">
+			         	<input type="file" name="avatar">
+			            	<button type="submit">Registrarme</button><br>
+			       	<a href="/views/login.ejs">ya sos parte de CheckPoint ingresa aca</a>
+		        	</form>
+    	    </div>
+        </div>
+    </div>
+<%- include('partials/footer') %>
+
+</body>
+</html>	
+
+   <!--<div class="dropdown-menu"><form class="px-4 py-3"><div class="mb-3">
 			<label for="exampleDropdownFormName1" class="form-label">Nombre</label>
 			<input type="text" class="form-control" id="exampleDropdownFormName1" placeholder="Ingresa tu nombre">
 		  </div>
@@ -31,6 +50,7 @@
 		<div class="dropdown-divider"></div>
 		<a class="dropdown-item" href="/login">¿ya estas registrado? Inicia session</a>
 		<a class="dropdown-item" href="#">¿Olvidaste tu contraseña?</a>
+<<<<<<< HEAD
 	    </div>
     	
     </div>
@@ -39,3 +59,6 @@
 
 </body>
 </html>
+=======
+	  </div>
+>>>>>>> develop
