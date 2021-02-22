@@ -6,24 +6,34 @@ module.exports={
 /*iniciosecciones*/
 
 crearPlato:(req,res)=>{
-  var {nombrePlato,tituloPlato, description,precioPlato,descripcionPlato}=req.body
-        var platos={
+  var {nombrePlato,tituloPlato, description,precioPlato,descripcionPlato,cantidad}=req.body
+        
+  
+  var platos={
             
            id:"",
            name: tituloPlato,
            price: precioPlato,
            image:"",
            category:"bebidas",
-           description:descripcionPlato
-           
+           description:descripcionPlato,
+           cantidad,
           
            
         }
-       
+       if(cantidad==1){
  plato.bebidas.push(platos)
-       
- 
-   setproductos(plato)
+}else
+if(cantidad==2){
+    plato.hamburguesas.push(platos)
+   }else
+   if(cantidad==3){
+    plato.postres.push(platos)
+   }else
+   if(cantidad==4){
+    plato.pizzas.push(platos)
+   }
+    setproductos(plato)
 
 res.redirect("agregarproducto",)
 },

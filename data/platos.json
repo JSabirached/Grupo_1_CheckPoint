@@ -129,6 +129,15 @@
       "image": "",
       "category": "bebidas",
       "description": "aaaaaaaaaa"
+    },
+    {
+      "id": "",
+      "name": "",
+      "price": "",
+      "image": "",
+      "category": "bebidas",
+      "description": "",
+      "cantidad": "2"
     }
   ],
   "hamburguesas": [
@@ -195,6 +204,15 @@
       "image": "hamburPortada.jpg",
       "category": "hamburguesas",
       "description": "Picante"
+    },
+    {
+      "id": "",
+      "name": "",
+      "price": "",
+      "image": "",
+      "category": "bebidas",
+      "description": "",
+      "cantidad": "2"
     }
   ],
   "postres": [
@@ -327,6 +345,15 @@
       "image": "pizzaEmpaPortada.jpg",
       "category": "pizzaEmpa",
       "description": "Car,Ver y Pollo"
+    },
+    {
+      "id": "",
+      "name": "",
+      "price": "",
+      "image": "",
+      "category": "bebidas",
+      "description": "",
+      "cantidad": "4"
     }
   ]
 }
