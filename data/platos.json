@@ -138,6 +138,33 @@
       "category": "bebidas",
       "description": "",
       "cantidad": "2"
+    },
+    {
+      "id": "",
+      "name": "",
+      "price": "",
+      "image": "",
+      "category": "bebidas",
+      "description": "",
+      "cantidad": "1"
+    },
+    {
+      "id": "",
+      "name": "",
+      "price": "",
+      "image": "",
+      "category": "bebidas",
+      "description": "",
+      "cantidad": "1"
+    },
+    {
+      "id": "",
+      "name": "",
+      "price": "",
+      "image": "avatar-1614040514423.png",
+      "category": "bebidas",
+      "description": "",
+      "cantidad": "1"
     }
   ],
   "hamburguesas": [

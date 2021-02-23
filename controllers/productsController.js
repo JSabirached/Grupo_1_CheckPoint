@@ -14,7 +14,7 @@ crearPlato:(req,res)=>{
            id:"",
            name: tituloPlato,
            price: precioPlato,
-           image:"",
+           image:req.files[0].filename,
            category:"bebidas",
            description:descripcionPlato,
            cantidad,

@@ -2,10 +2,26 @@ var express = require('express');
 const indexController = require('../controllers/indexController');
 const productsController = require('../controllers/productsController');
 var router = express.Router();
+var multer=require('multer');
+var path=require('path');
+var storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+      cb(null, 'public/images2')
+    },
+    filename: function (req, file, cb) {
+      cb(null, file.fieldname + '-' + Date.now()+path.extname(file.originalname))
+    }
+  })
+   
+  var upload = multer({ storage: storage })
+
+
+
+
 
 /* agregarproducto */
 router.get('/agregarproducto',productsController.agregarproducto );
-router.post('/agregarproducto',productsController.crearPlato);
+router.post('/agregarproducto',upload.any(),productsController.crearPlato);
 
 
 /* routes secciones */
@@ -18,3 +34,5 @@ router.get('/seccionPizzaEmpa',productsController.seccionPizzaEmpa );
 /*router index */
 router.get('/seccionParrillada',productsController.seccionParrrillada );
 module.exports = router;
+
+
