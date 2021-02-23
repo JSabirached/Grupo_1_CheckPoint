@@ -66,104 +66,11 @@
     },
     {
       "id": "",
-      "name": "fernet",
-      "price": "$200",
-      "image": "",
-      "category": "bebidas"
-    },
-    {
-      "id": "",
-      "name": "",
-      "price": "",
-      "image": "",
-      "category": "bebidas"
-    },
-    {
-      "id": "",
-      "name": "",
-      "price": "",
-      "image": "",
-      "category": "bebidas"
-    },
-    {
-      "id": "",
-      "name": "",
-      "price": "",
-      "image": "",
+      "name": "fsdfs",
+      "price": "cxvxcv",
+      "image": "avatar-1614041122619.png",
       "category": "bebidas",
-      "description": ""
-    },
-    {
-      "id": "",
-      "name": "",
-      "price": "",
-      "image": "",
-      "category": "bebidas"
-    },
-    {
-      "id": "",
-      "name": "",
-      "price": "",
-      "image": "",
-      "category": "bebidas"
-    },
-    {
-      "id": "",
-      "name": "",
-      "price": "",
-      "image": "",
-      "category": "bebidas"
-    },
-    {
-      "id": "",
-      "name": "",
-      "price": "",
-      "image": "",
-      "category": "bebidas",
-      "description": ""
-    },
-    {
-      "id": "",
-      "name": "",
-      "price": "bbbbbbbbb",
-      "image": "",
-      "category": "bebidas",
-      "description": "aaaaaaaaaa"
-    },
-    {
-      "id": "",
-      "name": "",
-      "price": "",
-      "image": "",
-      "category": "bebidas",
-      "description": "",
-      "cantidad": "2"
-    },
-    {
-      "id": "",
-      "name": "",
-      "price": "",
-      "image": "",
-      "category": "bebidas",
-      "description": "",
-      "cantidad": "1"
-    },
-    {
-      "id": "",
-      "name": "",
-      "price": "",
-      "image": "",
-      "category": "bebidas",
-      "description": "",
-      "cantidad": "1"
-    },
-    {
-      "id": "",
-      "name": "",
-      "price": "",
-      "image": "avatar-1614040514423.png",
-      "category": "bebidas",
-      "description": "",
+      "description": "dvsdv",
       "cantidad": "1"
     }
   ],
@@ -306,6 +213,15 @@
       "image": "postrec.jpg",
       "category": "postres",
       "description": "Cereales"
+    },
+    {
+      "id": "",
+      "name": "cxfbvxcv",
+      "price": "cxc",
+      "image": "avatar-1614041505950.jpg",
+      "category": "bebidas",
+      "description": "vcbxcfb",
+      "cantidad": "3"
     }
   ],
   "pizzas": [
