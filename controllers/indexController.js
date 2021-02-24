@@ -1,5 +1,5 @@
 
-var {getproductos,setproductos}=require("../data/platosmaster.js");
+var {getproductos,setproductos}=require("../data/platos.js");
 const fs = require('fs');
 let plato=getproductos();
 
@@ -35,8 +35,9 @@ registro:(req,res)=>{
 
     })
 },
+/*agregar plato */
 agregarproducto:(req,res)=>{
-    res.render("agregarproductomaster",{plato
+    res.render("agregarproducto",{plato
 
     })
 },
@@ -71,7 +72,7 @@ crearPlato:(req,res)=>{
      }
       setproductos(plato)
   
-  res.redirect("agregarproductomaster")
+  res.redirect("agregarproducto")
   },
 /*index*/
 cartadelivery:(req,res)=>{
