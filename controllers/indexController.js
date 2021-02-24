@@ -1,3 +1,9 @@
+
+var {getproductos,setproductos}=require("../data/platosmaster.js");
+const fs = require('fs');
+let plato=getproductos();
+
+
 module.exports={
     
     index :  (req,res)=>{
@@ -30,10 +36,43 @@ registro:(req,res)=>{
     })
 },
 agregarproducto:(req,res)=>{
-    res.render("agregarproducto",{
+    res.render("agregarproductomaster",{plato
 
     })
 },
+
+crearPlato:(req,res)=>{
+    var {nombrePlato,tituloPlato, description,precioPlato,descripcionPlato,cantidad}=req.body
+          
+    
+    var platos={
+              
+             id:"",
+             name: tituloPlato,
+             price: precioPlato,
+             image:req.files[0].filename,
+             category:"bebidas",
+             description:descripcionPlato,
+             
+            
+             
+          }
+         if(cantidad==1){
+   plato.bebidas.push(platos)
+  }else
+  if(cantidad==2){
+      plato.hamburguesas.push(platos)
+     }else
+     if(cantidad==3){
+      plato.postres.push(platos)
+     }else
+     if(cantidad==4){
+      plato.pizzas.push(platos)
+     }
+      setproductos(plato)
+  
+  res.redirect("agregarproductomaster")
+  },
 /*index*/
 cartadelivery:(req,res)=>{
     res.render("carta",{

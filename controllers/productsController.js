@@ -1,4 +1,4 @@
-var platos=require("../data/platos.js");
+var platos=require("../data/platosmaster.js");
 module.exports={
 /*iniciosecciones*/
 inicioSecciones:(req,res)=>{
