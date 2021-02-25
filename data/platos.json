@@ -95,6 +95,14 @@
       "image": "avatar-1614210121468.png",
       "category": "bebidas",
       "description": "cxzczx"
+    },
+    {
+      "id": "",
+      "name": "hamburguesa",
+      "price": "200",
+      "image": "avatar-1614210427108.jpg",
+      "category": "bebidas",
+      "description": "completa"
     }
   ],
   "hamburguesas": [

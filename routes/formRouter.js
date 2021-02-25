@@ -14,4 +14,7 @@ router.get('/registro',indexController.registro );
 router.get('/agregarproducto',indexController.agregarproducto );
 router.post('/agregarproducto',uploadImages.any(),indexController.crearPlato);
 
+/* agregar producto. */
+router.get('/editar',indexController.editarfront );
+router.post('/editar',indexController.editarback);
 module.exports = router;

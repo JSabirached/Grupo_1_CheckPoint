@@ -2,10 +2,16 @@
 var {getproductos,setproductos}=require("../data/platos.js");
 const fs = require('fs');
 let plato=getproductos();
-
+var menu=require("../data/platos.js");
 
 module.exports={
-    
+    editarfront :  (req,res)=>{
+        res.render('editar',{menu
+    })
+},
+    editarback:  (req,res)=>{
+        res.render('editar')
+    },
     index :  (req,res)=>{
         res.render('index')
     },
