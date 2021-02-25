@@ -14,8 +14,8 @@ router.get('/novedades',indexController.novedades );
 router.get('/nosotros',indexController.nosotros );
 router.get('/recetas',indexController.recetas );
 
-const express = require('express');
-const router = express.Router();
+
+
 
 
 

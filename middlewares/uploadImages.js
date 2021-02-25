@@ -5,7 +5,7 @@ const path = require('path');
 //una variable recibe el metodo storage de multerrecibe un objeto literal uno es el destino dond se guarda y el otro toma el fielname osea el avatar o onmbre de campo nombre de la img mas 
 const storage = multer.diskStorage({
     destination : (req,file,cb) => {
-        cb(null, 'public/img')
+        cb(null, 'public/images')
     },
     filename : (req,file,cb) => {
         cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))

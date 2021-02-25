@@ -10,7 +10,7 @@ module.exports = [
     .isEmail().withMessage('debe ser un mail valido'),
 //validame su en userdb buscame usuarios . mail es igual al value que es email retorname falso
     body('email').custom(value => {
-        let result = user_db.find(user => user.mail === value);
+        let result = users_db.find(user => user.mail === value);
        
         if(result){
             return false

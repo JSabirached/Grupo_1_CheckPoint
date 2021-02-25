@@ -1,6 +1,7 @@
-var {getproductos,setproductos}=require("C:/Users/matias/Desktop/New folder (34)/Grupo_1_CheckPoint/data/platos.js");
 const fs = require('fs');
-let plato=getproductos();
+const {getproductos,setproductos}=require("../data/platos");
+
+let plato =getproductos();
 
 module.exports={
 /*iniciosecciones*/

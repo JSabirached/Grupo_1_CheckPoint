@@ -14,8 +14,8 @@ const registerValidator= require ('../validations/registerValidator');
 const checkUser = require('../middlewares/checkUser');
 
 //1-se ocupa de rendelizar una vista pedidos uno por get y uno por post
-router.get('/register', register);
-router.post('/register',uploadImages.any(),registerValidator,processRegister);
+router.get('/registro', register);
+router.post('/registro',uploadImages.any(),registerValidator,processRegister);
 
 router.get('/login', login);
 router.post('/login', processLogin);

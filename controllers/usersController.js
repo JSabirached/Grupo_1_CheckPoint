@@ -7,14 +7,14 @@ const{validationResult} = require('express-validator')
 module.exports = {
     register :  (req,res)=>{
     //renderiza una vista
-        res.render('register')
+        res.render('registro')
     },
     processRegister : (req,res)=>{
         let errores = validationResult(req);
-        const {username, email, pass} = req.body;
+         
 //isEmpty significa que si errores no esta vacio return los errores
         if(!errores.isEmpty()){
-            return res.render('register',{
+            return res.render('registro',{
                 errores : errores.errors
             })
         }else{//si no hay un error recirre user id y agarre el ultimo id para crear el ultimo id empieza en  entonces si user.id es igual crear nuevo usuario +1 osea que va ir siempre contando
