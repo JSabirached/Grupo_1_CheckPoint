@@ -5,11 +5,11 @@ const bcrypt = require('bcrypt');
 const{validationResult} = require('express-validator')
 //2-creamosy exportamos un objeto literal con propiedades que usaremos
 module.exports = {
-    register :  (req,res)=>{
+    registro :  (req,res)=>{
     //renderiza una vista
         res.render('registro')
     },
-    processRegister : (req,res)=>{
+    processRegistro : (req,res)=>{
         let errores = validationResult(req);
          
 //isEmpty significa que si errores no esta vacio return los errores
@@ -69,7 +69,7 @@ module.exports = {
                        avatar : result.avatar
                    }
              
-                    return res.redirect('.')
+                    return res.redirect('./')
                 }
             }
                 if (recordar){

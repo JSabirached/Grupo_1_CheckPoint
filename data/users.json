@@ -1,3 +1,9 @@
 [
-    
+  {
+    "id": 1,
+    "username": "josue",
+    "email": "josueabirached@gmail.com",
+    "pass": "$2b$12$/4gG3IcV3O2Rw2.Foiel3u7CwqTm65CyMIAtDT41ck6F.Mylgk1ZG",
+    "avatar": "avatar-1614368577980.jpg"
+  }
 ]
