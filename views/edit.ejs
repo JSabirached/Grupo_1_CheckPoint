@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<title>Carrito de compras</title>
+<html lang="en">
+    <%- include('partials/head') %>
+<body>
+    <%- include('partials/header') %>
+   
+            <h2>bebidas:</h2>
+            <%for (let index = 0; index<menu.getproductos().bebidas.length; index++) {%>
+               
+                <h4 class="title"><%=menu.getproductos().bebidas[index].name%></h4>
+                <p>  <a href="/">editar </p>
+                    <p>  <a href="/">eliminar </p>
+                    
+        <% } %> 
+        <h2>Hamburguesas:</h2>
+        <%for (let index = 0; index<menu.getproductos().hamburguesas.length; index++) {%>
+           
+            <h4 class="title"><%=menu.getproductos().hamburguesas[index].name%></h4>
+            <p>  <a href="/">editar </p>
+                <p>  <a href="/">eliminar </p>
+                
+    <% } %> 
+    <h2>pizzas:</h2>
+    <%for (let index = 0; index<menu.getproductos().pizzas.length; index++) {%>
+       
+        <h4 class="title"><%=menu.getproductos().pizzas[index].name%></h4>
+        <p>  <a href="/">editar </p>
+            <p>  <a href="/">eliminar </p>
+            
+<% } %> 
+<h2>postres:</h2>
+<%for (let index = 0; index<menu.getproductos().postres.length; index++) {%>
+       
+    <h4 class="title"><%=menu.getproductos().postres[index].name%></h4>
+  <p>  <a href="/">editar </p>
+    <p>  <a href="/">eliminar </p>
+        
+<% } %> 
+  
+            <%- include('partials/footer') %>
+</body>
+</html>
