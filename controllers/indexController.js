@@ -3,7 +3,7 @@ var {getproductos,setproductos}=require("../data/platos.js");
 const fs = require('fs');
 let plato=getproductos();
 var menu=require("../data/platos.js");
-
+var path=require('path');
 module.exports={
 
    editarfront :  (req,res)=>{
@@ -139,30 +139,40 @@ recetas:(req,res)=>{
     })
 },
 delete:(req,res)=>{
+    
+    
     for(i=0;i<plato.bebidas.length;i++){
        if( req.params.id==plato.bebidas[i].id){
-          
+        if(fs.existsSync(path.join('public','images',plato.bebidas[i].image))){
+            fs.unlinkSync(path.join('public','images',plato.bebidas[i].image))
+        }
                 plato.bebidas.splice(i,1);
        }
         
     }
     for(i=0;i<plato.hamburguesas.length;i++){
        if( req.params.id==plato.hamburguesas[i].id){
-          
+        if(fs.existsSync(path.join('public','images',plato.hamburguesas[i].image))){
+            fs.unlinkSync(path.join('public','images',plato.hamburguesas[i].image))
+        }
                 plato.hamburguesas.splice(i,1);
        }
        
     }
     for(i=0;i<plato.pizzas.length;i++){
        if( req.params.id==plato.pizzas[i].id){
-          
+        if(fs.existsSync(path.join('public','images',plato.pizzas[i].image))){
+            fs.unlinkSync(path.join('public','images',plato.pizzas[i].image))
+        }
                 plato.pizzas.splice(i,1);
        }
        
     }
     for(i=0;i<plato.postres.length;i++){
        if( req.params.id==plato.postres[i].id){
-          
+        if(fs.existsSync(path.join('public','images',plato.postres[i].image))){
+            fs.unlinkSync(path.join('public','images',plato.postres[i].image))
+        }
                 plato.postres.splice(i,1);
        }
        
