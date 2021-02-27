@@ -5,18 +5,12 @@ let plato=getproductos();
 var menu=require("../data/platos.js");
 
 module.exports={
-<<<<<<< HEAD
+
    editarfront :  (req,res)=>{
         res.render('editar',{plato})
-=======
-    editarfront :  (req,res)=>{
-        res.render('editar',{menu
-    })
-},
-    editarback:  (req,res)=>{
-        res.render('editar')
->>>>>>> f2c3a78adb630243d237ee303e00a57af5961b95
-    },
+   },
+   
+   
     index :  (req,res)=>{
         res.render('index')
     },
@@ -129,6 +123,27 @@ delete:(req,res)=>{
        if( req.params.id==plato.bebidas[i].id){
           
                 plato.bebidas.splice(i,1);
+       }
+        
+    }
+    for(i=0;i<plato.hamburguesas.length;i++){
+       if( req.params.id==plato.hamburguesas[i].id){
+          
+                plato.hamburguesas.splice(i,1);
+       }
+       
+    }
+    for(i=0;i<plato.pizzas.length;i++){
+       if( req.params.id==plato.pizzas[i].id){
+          
+                plato.pizzas.splice(i,1);
+       }
+       
+    }
+    for(i=0;i<plato.postres.length;i++){
+       if( req.params.id==plato.postres[i].id){
+          
+                plato.postres.splice(i,1);
        }
        
     }

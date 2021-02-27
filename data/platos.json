@@ -1,14 +1,6 @@
 {
   "bebidas": [
     {
-      "id": 6,
-      "name": "Fernet",
-      "price": 600,
-      "image": "bebida5.jpg",
-      "category": "bebidas",
-      "description": "Jarra de litro"
-    },
-    {
       "id": 7,
       "name": "Vino",
       "price": 400,
@@ -23,14 +15,6 @@
       "image": "bebidaE.jpg",
       "category": "bebidas",
       "description": "Copa"
-    },
-    {
-      "id": 6,
-      "name": "Fernet",
-      "price": 600,
-      "image": "bebida5.jpg",
-      "category": "bebidas",
-      "description": "Jarra de litro"
     },
     {
       "id": 7,
@@ -277,14 +261,6 @@
       "image": "pizzaempanada.png",
       "category": "pizzaEmpa",
       "description": "Palmito/Tomate"
-    },
-    {
-      "id": 25,
-      "name": "Mix16",
-      "price": 1400,
-      "image": "pizzaEmpaPortada.jpg",
-      "category": "pizzaEmpa",
-      "description": "Car,Ver y Pollo"
     }
   ]
 }
