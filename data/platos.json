@@ -63,7 +63,16 @@
       "image": "bebidaE.jpg",
       "category": "bebidas",
       "description": "Copa"
-    }],
+    },
+    {
+      "id": 33,
+      "name": "",
+      "price": "",
+      "image": "avatar-1614434348370.png",
+      "category": "bebidas",
+      "description": ""
+    }
+  ],
   "hamburguesas": [
     {
       "id": 9,

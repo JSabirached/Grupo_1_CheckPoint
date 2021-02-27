@@ -47,22 +47,42 @@ agregarproducto:(req,res)=>{
     })
 },
 
+       
 crearPlato:(req,res)=>{
     var {nombrePlato,tituloPlato, description,precioPlato,descripcionPlato,cantidad}=req.body
-          
-    
+          let lastID = 0;
+        for(i=0;i<plato.bebidas.length;i++){
+            if(plato.bebidas[i].id > lastID){
+                lastID = plato.bebidas[i].id
+            }
+        }    
+        for(i=0;i<plato.hamburguesas.length;i++){
+            if(plato.hamburguesas[i].id > lastID){
+                lastID = plato.hamburguesas[i].id
+            }
+        }for(i=0;i<plato.postres.length;i++){
+            if(plato.postres[i].id > lastID){
+                lastID = plato.postres[i].id
+            }
+        }
+        for(i=0;i<plato.pizzas.length;i++){
+            if(plato.pizzas[i].id > lastID){
+                lastID = plato.pizzas[i].id
+            }
+        }
+
     var platos={
               
-             id:"",
+             id:lastID+1,
              name: tituloPlato,
              price: precioPlato,
              image:req.files[0].filename,
              category:"bebidas",
              description:descripcionPlato,
-             
+    }
             
              
-          }
+          
          if(cantidad==1){
    plato.bebidas.push(platos)
   }else
@@ -78,7 +98,7 @@ crearPlato:(req,res)=>{
       setproductos(plato)
   
   res.redirect("agregarproducto")
-  },
+    },
 /*index*/
 cartadelivery:(req,res)=>{
     res.render("carta",{
