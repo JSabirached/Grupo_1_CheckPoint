@@ -1,5 +1,4 @@
-{
-  "bebidas": [
+ [
     {
       "id": 1,
       "name": "Gaseosa",
@@ -63,8 +62,48 @@
       "image": "bebidaE.jpg",
       "category": "bebidas",
       "description": "Copa"
-    }],
-  "hamburguesas": [
+    },
+    {
+      "id": "",
+      "name": " ",
+      "price": "cc cx ",
+      "image": "avatar-1614209568624.jpg",
+      "category": "bebidas",
+      "description": " "
+    },
+    {
+      "id": "",
+      "name": "ffffffffff",
+      "price": "fffffff",
+      "image": "avatar-1614209642057.jpg",
+      "category": "bebidas",
+      "description": "ffffffffff"
+    },
+    {
+      "id": "",
+      "name": "dfsfsdf",
+      "price": "sdfs",
+      "image": "avatar-1614209961827.png",
+      "category": "bebidas",
+      "description": "sdfsdf"
+    },
+    {
+      "id": "",
+      "name": "czxvxcv",
+      "price": "cxv xcv",
+      "image": "avatar-1614210121468.png",
+      "category": "bebidas",
+      "description": "cxzczx"
+    },
+    {
+      "id": "",
+      "name": "hamburguesa",
+      "price": "200",
+      "image": "avatar-1614210427108.jpg",
+      "category": "bebidas",
+      "description": "completa"
+    },
+  
     {
       "id": 9,
       "name": "X2completa",
@@ -79,7 +118,7 @@
       "price": 450,
       "image": "hambur2.jpg",
       "category": "hamburguesas",
-      "description": "Ananá"
+      "description": "AnanÃ¡"
     },
     {
       "id": 11,
@@ -128,9 +167,8 @@
       "image": "hamburPortada.jpg",
       "category": "hamburguesas",
       "description": "Picante"
-    }
-  ],
-  "postres": [
+    },
+  
     {
       "id": 17,
       "name": "Frutos",
@@ -194,9 +232,8 @@
       "image": "postrec.jpg",
       "category": "postres",
       "description": "Cereales"
-    }
-  ],
-  "pizzas": [
+    },
+  
     {
       "id": 26,
       "name": "Muzzarella",
@@ -252,6 +289,13 @@
       "image": "pizzaempanada.png",
       "category": "pizzaEmpa",
       "description": "Palmito/Tomate"
+    },
+    {
+      "id": 25,
+      "name": "Mix16",
+      "price": 1400,
+      "image": "pizzaEmpaPortada.jpg",
+      "category": "pizzaEmpa",
+      "description": "Car,Ver y Pollo"
     }
   ]
-}
