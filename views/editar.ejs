@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<title>Carrito de compras</title>
+<html lang="en">
+    <%- include('partials/head') %>
+<body>
+    <%- include('partials/header') %>
+   
+            <h2>bebidas:</h2>
+            <%for (let index = 0; index<plato.bebidas.length; index++) {%>
+               
+                <h4 class="title"><%=plato.bebidas[index].name%></h4>
+               <form method="POST" action="/formularios/delete/<%=plato.bebidas[index].id%>?_method=DELETE">
+            <button type="submit">eliminar</button>
+            </form>
+                    
+        <% } %> 
+       
+  
+            <%- include('partials/footer') %>
+</body>
+</html>

@@ -9,7 +9,7 @@ var indexRouter = require('./routes/indexRouter');
 var formRouter = require('./routes/formRouter');
 var productosRouter = require('./routes/productosRouter');
 var usersRouter = require('./routes/usersRouter');
-
+var methodOverride = require('method-override');
 var app = express();
 
 // view engine setup
@@ -21,7 +21,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+//metodo para put y delete//
 
+app.use(methodOverride('_method'));
 
 //app.use(session({
  //  secret :"mi secreto"

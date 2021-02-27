@@ -5,9 +5,7 @@ let plato=getproductos();
 
 
 module.exports={
-   editarfront :  (req,res)=>{
-        res.render('editar',{plato})
-    },
+    
     index :  (req,res)=>{
         res.render('index')
     },
@@ -114,17 +112,5 @@ recetas:(req,res)=>{
     res.render("recetas",{
 
     })
-},
-delete:(req,res)=>{
-    
-    for(i=0;i<plato.bebidas.length;i++){
-       if( req.params.id==plato.bebidas[i].id){
-          
-                plato.bebidas.splice(i,1);
-       }
-       
-    }
-   setproductos(plato);
-    res.redirect("/formularios/editar")
 }
 }

@@ -1,44 +1,12 @@
 {
   "bebidas": [
     {
-      "id": 1,
-      "name": "Gaseosa",
-      "price": 200,
-      "image": "bebida1.jpg",
-      "category": "bebidas",
-      "description": "Linea cocacola"
-    },
-    {
       "id": 2,
       "name": "Cerveza tirada",
       "price": 200,
       "image": "bebida2.jpg",
       "category": "bebidas",
       "description": "Chompera 3/4"
-    },
-    {
-      "id": 3,
-      "name": "Checkpoint",
-      "price": 350,
-      "image": "bebida3.jpg",
-      "category": "bebidas",
-      "description": "Artesanal de litro"
-    },
-    {
-      "id": 4,
-      "name": "Daikiri",
-      "price": 300,
-      "image": "bebidaA.jpg",
-      "category": "bebidas",
-      "description": "Frutales"
-    },
-    {
-      "id": 5,
-      "name": "Fernet",
-      "price": 250,
-      "image": "bebida4.jpg",
-      "category": "bebidas",
-      "description": "Jarrito"
     },
     {
       "id": 6,
@@ -95,6 +63,14 @@
       "image": "avatar-1614210121468.png",
       "category": "bebidas",
       "description": "cxzczx"
+    },
+    {
+      "id": "",
+      "name": "hamburguesa",
+      "price": "200",
+      "image": "avatar-1614210427108.jpg",
+      "category": "bebidas",
+      "description": "completa"
     }
   ],
   "hamburguesas": [
