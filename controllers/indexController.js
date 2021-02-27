@@ -138,6 +138,58 @@ recetas:(req,res)=>{
 
     })
 },
+/* editar producto. (falta editarback) */
+editfront : (req,res) => {
+    for(i=0;i<plato.bebidas.length;i++){
+        if( req.params.id==plato.bebidas[i].id){
+            
+            var editarplato=plato.bebidas[i]
+            res.render('editarplato',{
+                editarplato
+                 
+        })
+    }  
+     }
+     for(i=0;i<plato.postres.length;i++){
+        if( req.params.id==plato.postres[i].id){
+           var editarplato=plato.postres[i]
+            res.render('editarplato',{
+               editarplato
+            })
+                 
+        }
+         
+     }
+     for(i=0;i<plato.hamburguesas.length;i++){
+        if( req.params.id==plato.hamburguesas[i].id){
+var editarplato=plato.hamburguesas[i]
+            res.render('editarplato',{
+               editarplato
+            })
+                 
+        }
+    }
+        for(i=0;i<plato.pizzas.length;i++){
+            if( req.params.id==plato.pizzas[i].id){
+                var editarplato=plato.pizzas[i]
+                res.render('editarplato',{
+                   editarplato
+                })
+                     
+            }
+             
+         }
+     
+
+   
+},
+
+editarback:{
+
+},
+
+
+/* borrar producto. */
 delete:(req,res)=>{
     
     

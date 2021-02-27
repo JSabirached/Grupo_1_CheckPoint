@@ -24,7 +24,8 @@ router.delete('/delete/:id',indexController.delete );
 
 
 
-router.get('/editar',indexController.editarfront );
-
+/* editar producto. */
+router.get('/edit/:id',indexController.editfront);
+router.put('/update/:id'/*,indexController.editback*/);
 
 module.exports = router;

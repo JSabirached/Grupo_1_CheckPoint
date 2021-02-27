@@ -13,6 +13,7 @@
                <form method="POST" action="/formularios/delete/<%=plato.bebidas[index].id%>?_method=DELETE">
             <button type="submit">eliminar</button>
             </form>
+            <a href="/formularios/edit/<%=plato.bebidas[index].id%> " class="btn btn-primary">ver más</a>
                     
         <% } %> 
        
@@ -23,7 +24,7 @@
                <form method="POST" action="/formularios/delete/<%=plato.postres[index].id%>?_method=DELETE">
             <button type="submit">eliminar</button>
             </form>
-                    
+            <a href="/formularios/edit/<%=plato.postres[index].id%>" class="btn btn-primary">ver más</a>
         <% } %> 
         <h2>hamburguesas:</h2>
             <%for (let index = 0; index<plato.hamburguesas.length; index++) {%>
@@ -32,7 +33,7 @@
                <form method="POST" action="/formularios/delete/<%=plato.hamburguesas[index].id%>?_method=DELETE">
             <button type="submit">eliminar</button>
             </form>
-                    
+            <a href="/formularios/edit/<%=plato.hamburguesas[index].id%>" class="btn btn-primary">ver más</a>
         <% } %> 
         <h2>pizzas:</h2>
             <%for (let index = 0; index<plato.pizzas.length; index++) {%>
@@ -41,7 +42,7 @@
                <form method="POST" action="/formularios/delete/<%=plato.pizzas[index].id%>?_method=DELETE">
             <button type="submit">eliminar</button>
             </form>
-                    
+            <a href="/formularios/edit/<%=plato.pizzas[index].id%> " class="btn btn-primary">ver más</a>
         <% } %> 
 
            
