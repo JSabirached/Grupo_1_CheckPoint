@@ -15,6 +15,7 @@ router.get('/agregarproducto',indexController.agregarproducto );
 router.post('/agregarproducto',uploadImages.any(),indexController.crearPlato);
 
 /* agregar producto. */
+<<<<<<< HEAD
 router.get('/editar',indexController.editarfront);
 
 
@@ -22,4 +23,8 @@ router.get('/editar',indexController.editarfront);
 router.delete('/delete/:id',indexController.delete );
 
 
+=======
+router.get('/editar',indexController.editarfront );
+router.post('/editar',indexController.editarback);
+>>>>>>> f2c3a78adb630243d237ee303e00a57af5961b95
 module.exports = router;
