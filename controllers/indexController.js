@@ -116,7 +116,6 @@ recetas:(req,res)=>{
     })
 },
 delete:(req,res)=>{
-    
     for(i=0;i<plato.bebidas.length;i++){
        if( req.params.id==plato.bebidas[i].id){
           

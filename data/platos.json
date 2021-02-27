@@ -1,12 +1,28 @@
 {
   "bebidas": [
     {
-      "id": 2,
-      "name": "Cerveza tirada",
-      "price": 200,
-      "image": "bebida2.jpg",
+      "id": 6,
+      "name": "Fernet",
+      "price": 600,
+      "image": "bebida5.jpg",
       "category": "bebidas",
-      "description": "Chompera 3/4"
+      "description": "Jarra de litro"
+    },
+    {
+      "id": 7,
+      "name": "Vino",
+      "price": 400,
+      "image": "bebida7.jpg",
+      "category": "bebidas",
+      "description": "De la casa"
+    },
+    {
+      "id": 8,
+      "name": "Campari",
+      "price": 400,
+      "image": "bebidaE.jpg",
+      "category": "bebidas",
+      "description": "Copa"
     },
     {
       "id": 6,
