@@ -54,20 +54,24 @@ crearPlato:(req,res)=>{
         for(i=0;i<plato.bebidas.length;i++){
             if(plato.bebidas[i].id > lastID){
                 lastID = plato.bebidas[i].id
+                var seccion="bebidas"
             }
         }    
         for(i=0;i<plato.hamburguesas.length;i++){
             if(plato.hamburguesas[i].id > lastID){
                 lastID = plato.hamburguesas[i].id
+                var seccion="hamburguesas"
             }
         }for(i=0;i<plato.postres.length;i++){
             if(plato.postres[i].id > lastID){
                 lastID = plato.postres[i].id
+                var seccion="postres"
             }
         }
         for(i=0;i<plato.pizzas.length;i++){
             if(plato.pizzas[i].id > lastID){
                 lastID = plato.pizzas[i].id
+                var seccion="pizzas"
             }
         }
 
@@ -77,7 +81,7 @@ crearPlato:(req,res)=>{
              name: tituloPlato,
              price: precioPlato,
              image:req.files[0].filename,
-             category:"bebidas",
+             category:seccion,
              description:descripcionPlato,
     }
             
@@ -185,22 +189,15 @@ var editarplato=plato.hamburguesas[i]
 },
 
 editback :  (req,res)=>{
-    var {nombrePlato,tituloPlato, description,precioPlato,descripcionPlato,cantidad}=req.body
+   var indice=""
+    var {nombrePlato,tituloPlato, description,precioPlato,descripcionPlato,cantidad,img}=req.body
 
-    var platos={
-                  
-        id:req.params.id,
-        name: tituloPlato,
-        price: precioPlato,
-        image:"",
-        category:seccion,
-        description:descripcionPlato,
-    }
+   
     for(i=0;i<plato.bebidas.length;i++){
        if(req.params.id==plato.bebidas[i].id){
        var seccion="bebidas"
-       plato.bebidas.splice(i,1);
-       plato.bebidas.push(platos)
+       indice=i
+      
 
    }
 }
@@ -208,27 +205,63 @@ editback :  (req,res)=>{
     for(i=0;i<plato.postres.length;i++){
        if(req.params.id==plato.postres[i].id){
        var seccion="postres"
-       plato.postres.splice(i,1);
-       plato.postres.push(platos)
+       indice=i
    }
    
    }
    for(i=0;i<plato.pizzas.length;i++){
     if(req.params.id==plato.pizzas[i].id){
     var seccion="pizzas"
-    plato.pizzas.splice(i,1);
-    plato.pizzas.push(platos)
+    indice=i
 }
 
 }
 for(i=0;i<plato.hamburguesas.length;i++){
     if(req.params.id==plato.hamburguesas[i].id){
     var seccion="hamburguesas"
-    plato.hamburguesas.splice(i,1);
-    plato.hamburguesas.push(platos)
+    indice=i
 }
 
 }
+var platos={
+                  
+    id:req.params.id,
+    name: tituloPlato,
+    price: precioPlato,
+    image:img,
+    category:seccion,
+    description:descripcionPlato,
+}
+
+
+    if(platos.seccion=="bebidas"){
+        plato.bebidas[indice]=platos
+    
+   
+
+
+}
+
+ 
+    if(platos.seccion="postres"){
+    
+    plato.postres[indice]=platos
+}
+
+
+
+ if(platos.seccion=="pizzas"){
+ 
+ plato.pizzas[indice]=platos
+}
+
+
+
+ if(platos.seccion=="hamburguesas"){
+ 
+ plato.hamburguesas[indice]=platos
+}
+
 
 
 
