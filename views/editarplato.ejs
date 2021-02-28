@@ -16,23 +16,24 @@
             <div class="register col-4 col-md-6 ">
                 
                 <h2>Editar plato</h2><br>
-                          <form action="" method="POST" enctype="multipart/form-data">
-                             <input  type="text" placeholder="usuario de administrador" class="admin"><br><br>
-                             <input name="nombrePlato" type="password" placeholder="Contraseña" class="pass"><br><br>
-                             <input name="tituloPlato" type="text" placeholder="<%=editarplato.name%>" class="titulo"><br><br>
-                             <input name="descripcionPlato" type="text" placeholder="<%=editarplato.description%>" class="descripcion"><br><br>
-                             <input name="precioPlato" type="text" placeholder="<%=editarplato.price%>" class="precio"><br><br>
+ 
+                <form action="/formularios/update/<%=editarplato.id%>?_method=PUT" method="POST" >
+                             <input  type="text" value="usuario de administrador" class="admin"><br><br>
+                             <input name="nombrePlato" type="password" value="Contraseña" class="pass"><br><br>
+                             <input name="tituloPlato" type="text" value="<%=editarplato.name%>" class="titulo"><br><br>
+                             <input name="descripcionPlato" type="text" value="<%=editarplato.description%>" class="descripcion"><br><br>
+                             <input name="precioPlato" type="text" value="<%=editarplato.price%>" class="precio"><br><br>
                              <label for="formFile" class="form-label"><%=editarplato.image%></label>
                              <input name="avatar" class="form-control" type="file" id="formFile">
+                             <input name="id" type="hidden" value="<%=editarplato.id%>" class="titulo"><br><br>
                              
-                            
                             
                              
                      </select>
                             
                             
                             
-                             <button class="submit" action="" value="volver atras" ><a href="/">guardar</button>
+                             <button type="submit">guardar</button>
                              
                           </form>
 

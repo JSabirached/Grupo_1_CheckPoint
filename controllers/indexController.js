@@ -184,8 +184,59 @@ var editarplato=plato.hamburguesas[i]
    
 },
 
-editarback:{
+editback :  (req,res)=>{
+    var {nombrePlato,tituloPlato, description,precioPlato,descripcionPlato,cantidad}=req.body
 
+    var platos={
+                  
+        id:req.params.id,
+        name: tituloPlato,
+        price: precioPlato,
+        image:"",
+        category:seccion,
+        description:descripcionPlato,
+    }
+    for(i=0;i<plato.bebidas.length;i++){
+       if(req.params.id==plato.bebidas[i].id){
+       var seccion="bebidas"
+       plato.bebidas.splice(i,1);
+       plato.bebidas.push(platos)
+
+   }
+}
+   
+    for(i=0;i<plato.postres.length;i++){
+       if(req.params.id==plato.postres[i].id){
+       var seccion="postres"
+       plato.postres.splice(i,1);
+       plato.postres.push(platos)
+   }
+   
+   }
+   for(i=0;i<plato.pizzas.length;i++){
+    if(req.params.id==plato.pizzas[i].id){
+    var seccion="pizzas"
+    plato.pizzas.splice(i,1);
+    plato.pizzas.push(platos)
+}
+
+}
+for(i=0;i<plato.hamburguesas.length;i++){
+    if(req.params.id==plato.hamburguesas[i].id){
+    var seccion="hamburguesas"
+    plato.hamburguesas.splice(i,1);
+    plato.hamburguesas.push(platos)
+}
+
+}
+
+
+
+setproductos(plato)
+
+
+
+res.render('editar',{plato})
 },
 
 

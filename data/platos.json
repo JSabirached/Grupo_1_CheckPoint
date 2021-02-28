@@ -63,16 +63,7 @@
       "image": "bebidaE.jpg",
       "category": "bebidas",
       "description": "Copa"
-    },
-    {
-      "id": 33,
-      "name": "",
-      "price": "",
-      "image": "avatar-1614434348370.png",
-      "category": "bebidas",
-      "description": ""
-    }
-  ],
+    }],
   "hamburguesas": [
     {
       "id": 9,
@@ -141,14 +132,6 @@
   ],
   "postres": [
     {
-      "id": 17,
-      "name": "Frutos",
-      "price": 400,
-      "image": "postre1.jpg",
-      "category": "postres",
-      "description": "Del bosque"
-    },
-    {
       "id": 18,
       "name": "Brownie",
       "price": 250,
@@ -173,14 +156,6 @@
       "description": "de manzana"
     },
     {
-      "id": 21,
-      "name": "Helado",
-      "price": 700,
-      "image": "postre4.jpg",
-      "category": "postres",
-      "description": "Artesanal"
-    },
-    {
       "id": 22,
       "name": "Budin",
       "price": 350,
@@ -203,6 +178,20 @@
       "image": "postrec.jpg",
       "category": "postres",
       "description": "Cereales"
+    },
+    {
+      "id": "17",
+      "name": "Frutos",
+      "price": "4000",
+      "image": "",
+      "description": "Del bosque"
+    },
+    {
+      "id": "21",
+      "name": "Helados",
+      "price": "700",
+      "image": "",
+      "description": "Artesanal"
     }
   ],
   "pizzas": [
@@ -221,14 +210,6 @@
       "image": "pizzaempa2.png",
       "category": "pizzaEmpa",
       "description": "6Empanadas 1Napo"
-    },
-    {
-      "id": 28,
-      "name": "Combo2",
-      "price": 1200,
-      "image": "pizzaEmps3.jpg",
-      "category": "pizzaEmpa",
-      "description": "12Emp. y Muzza"
     },
     {
       "id": 29,
@@ -262,5 +243,6 @@
       "category": "pizzaEmpa",
       "description": "Palmito/Tomate"
     }
+    
   ]
 }
