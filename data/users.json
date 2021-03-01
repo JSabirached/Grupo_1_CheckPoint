@@ -5,5 +5,12 @@
     "email": "josueabirached@gmail.com",
     "pass": "$2b$12$/4gG3IcV3O2Rw2.Foiel3u7CwqTm65CyMIAtDT41ck6F.Mylgk1ZG",
     "avatar": "avatar-1614368577980.jpg"
+  },
+  {
+    "id": 2,
+    "username": "juan",
+    "email": "juan@gmail.com",
+    "pass": "$2b$12$B1c.IdK9qi.UNOnD6HCj9OPAoq7nNYpiSfZko3DNQepuFlVjXyxTu",
+    "avatar": "avatar-1614550505818.png"
   }
 ]

@@ -1,9 +1,9 @@
 var createError = require('http-errors');
- express=require('express');
+ express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
+const session = require( 'express-session');
 
 var indexRouter = require('./router/indexRouter');
 var formRouter = require('./router/formRouter');
@@ -23,9 +23,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-//app.use(session({
- //  secret :"mi secreto"
-//}));
+app.use(session( {secret :"mi secreto"}));
 
 app.use('/', indexRouter);
 app.use('/formularios', formRouter);

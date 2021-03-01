@@ -18,7 +18,7 @@ module.exports = {
                 errores : errores.errors
             })
         }else{//si no hay un error recirre user id y agarre el ultimo id para crear el ultimo id empieza en  entonces si user.id es igual crear nuevo usuario +1 osea que va ir siempre contando
-        const {username, email, pass}= req.body;
+        const { name, email, pass}= req.body;
     
             let lastID = 0;
             user_db.forEach(user => {
@@ -31,7 +31,7 @@ module.exports = {
 //en el 33 +lastID el + significa mas uno
             let newUser = {
                 id : +lastID + 1,
-                username,
+                name,
                 email,
                 pass: hashPass,
                 avatar: req.files[0].filename ||'sin imagen'
@@ -65,7 +65,7 @@ module.exports = {
                  //levantamos session en login
                     req.session.user ={
                        id :result.id,
-                       username:result.username,
+                       name:result.name,
                        avatar : result.avatar
                    }
              
