@@ -204,16 +204,8 @@
       "image": "postrec.jpg",
       "category": "postres",
       "description": "Cereales"
-    },
-    {
-      "id": "",
-      "name": "cxfbvxcv",
-      "price": "cxc",
-      "image": "avatar-1614041505950.jpg",
-      "category": "bebidas",
-      "description": "vcbxcfb",
-      "cantidad": "3"
     }
+   
   ],
   "pizzas": [
     {
@@ -279,15 +271,7 @@
       "image": "pizzaEmpaPortada.jpg",
       "category": "pizzaEmpa",
       "description": "Car,Ver y Pollo"
-    },
-    {
-      "id": "",
-      "name": "",
-      "price": "",
-      "image": "",
-      "category": "bebidas",
-      "description": "",
-      "cantidad": "4"
     }
+   
   ]
 }
