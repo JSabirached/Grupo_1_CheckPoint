@@ -17,17 +17,19 @@
       "description": "Chompera 3/4"
     },
     {
-      "id": "3",
-      "name": "Checkpoint3",
-      "price": "350",
-      "image": "",
+      "id": 3,
+      "name": "Checkpoint",
+      "price": 350,
+      "image": "bebida3.jpg",
+      "category": "bebidas",
       "description": "Artesanal de litro"
     },
     {
-      "id": "4",
+      "id": 4,
       "name": "Daikiri",
-      "price": "30000",
-      "image": "",
+      "price": 300,
+      "image": "bebidaA.jpg",
+      "category": "bebidas",
       "description": "Frutales"
     },
     {
@@ -47,26 +49,29 @@
       "description": "Jarra de litro"
     },
     {
-      "id": "8",
-      "name": "Campari",
-      "price": "40dfdsfsdfs",
-      "image": "bebidaE.jpg",
-      "description": "Copa"
+      "id": 7,
+      "name": "Vino",
+      "price": 400,
+      "image": "bebida7.jpg",
+      "category": "bebidas",
+      "description": "De la casa"
     },
     {
-      "id": "7",
-      "name": "Vino",
-      "price": "4000",
-      "image": "",
-      "description": "De la casa"
+      "id": 8,
+      "name": "Campari",
+      "price": 400,
+      "image": "bebidaE.jpg",
+      "category": "bebidas",
+      "description": "Copa"
     }
   ],
   "hamburguesas": [
     {
-      "id": "9",
+      "id": 9,
       "name": "X2completa",
-      "price": "8000",
+      "price": 800,
       "image": "hambur1.jpg",
+      "category": "hamburguesas",
       "description": "Con papas"
     },
     {
@@ -126,15 +131,24 @@
       "description": "Picante"
     },
     {
-      "id": "32111",
-      "name": "fgsdfdfdfd",
-      "price": "222222222",
-      "image": "avatar-1614533000494.jpg",
-      "category": "postres",
-      "description": "11111111111"
+      "id": "",
+      "name": "",
+      "price": "",
+      "image": "",
+      "category": "bebidas",
+      "description": "",
+      "cantidad": "2"
     }
   ],
   "postres": [
+    {
+      "id": 17,
+      "name": "Frutos",
+      "price": 400,
+      "image": "postre1.jpg",
+      "category": "postres",
+      "description": "Del bosque"
+    },
     {
       "id": 18,
       "name": "Brownie",
@@ -160,22 +174,28 @@
       "description": "de manzana"
     },
     {
-      "id": "12",
-      "name": "Cajita",
-      "price": "1200",
-      "image": "hambur4.jpg",
-      "category": "hamburguesas",
-      "description": "Cajita",
-      "seccion": "postres"
+      "id": 21,
+      "name": "Helado",
+      "price": 700,
+      "image": "postre4.jpg",
+      "category": "postres",
+      "description": "Artesanal"
     },
     {
-      "id": "23",
+      "id": 22,
+      "name": "Budin",
+      "price": 350,
+      "image": "postre5.jpg",
+      "category": "postres",
+      "description": "Chocolate"
+    },
+    {
+      "id": 23,
       "name": "Flan ",
-      "price": "3503",
+      "price": 350,
       "image": "postre6.jpg",
       "category": "postres",
-      "description": "Casero",
-      "seccion": "postres"
+      "description": "Casero"
     },
     {
       "id": 24,
@@ -184,46 +204,8 @@
       "image": "postrec.jpg",
       "category": "postres",
       "description": "Cereales"
-    },
-    {
-      "id": "17",
-      "name": "Frutos",
-      "price": "4000",
-      "image": "",
-      "description": "Del bosque"
-    },
-    {
-      "id": "21",
-      "name": "Helados",
-      "price": "700",
-      "image": "",
-      "description": "Artesanal"
-    },
-    {
-      "id": "32",
-      "name": "Colombiana",
-      "price": "2546 ",
-      "image": "pizzaempanada.png",
-      "category": "pizzas",
-      "description": "Palmito/Tomate",
-      "seccion": "postres"
-    },
-    {
-      "id": "321",
-      "name": "aaaaaaaaaaa",
-      "price": "xxxx",
-      "image": "avatar-1614532770688.bmp",
-      "category": "postres",
-      "description": "fdfff"
-    },
-    {
-      "id": "3211",
-      "name": "sdfdsv",
-      "price": "cv cx xc",
-      "image": "avatar-1614532924620.bmp",
-      "category": "postres",
-      "description": "dxvfdxv"
     }
+   
   ],
   "pizzas": [
     {
@@ -241,6 +223,14 @@
       "image": "pizzaempa2.png",
       "category": "pizzaEmpa",
       "description": "6Empanadas 1Napo"
+    },
+    {
+      "id": 28,
+      "name": "Combo2",
+      "price": 1200,
+      "image": "pizzaEmps3.jpg",
+      "category": "pizzaEmpa",
+      "description": "12Emp. y Muzza"
     },
     {
       "id": 29,
@@ -273,6 +263,15 @@
       "image": "pizzaempanada.png",
       "category": "pizzaEmpa",
       "description": "Palmito/Tomate"
+    },
+    {
+      "id": 25,
+      "name": "Mix16",
+      "price": 1400,
+      "image": "pizzaEmpaPortada.jpg",
+      "category": "pizzaEmpa",
+      "description": "Car,Ver y Pollo"
     }
+   
   ]
 }
