@@ -1,119 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/stylesheets/agregarProducto.css" rel=StyleSheet >
-    <title>agregar</title>
-</head>
-<body>
     <%- include('partials/head') %>
+<body>
+    <%- include('partials/header') %>
     
 <div class="container">
-    <br>
-    <br>
-    <h4>ADMINISTRADOR DE PRODUCTOS</h4>
-    <br>
-    <br>
-
-    <div class="row">
-        <h3>ALTAS Y BAJAS DE PLATOS</h3>
-            <br>
-            <br>
-     <form action="" method="POST" enctype="multipart/form-data">
+  <h4>ADMINISTRADOR DE PRODUCTOS</h4>  
+  <div class="row">
+    <h3>ALTAS Y BAJAS DE PLATOS</h3>    
+    <form action="" method="POST" enctype="multipart/form-data">
       <div class="input-group mb-3">
-        <input type="file" class="form-control" id="inputGroupFile02">
-        <label class="input-group-text" for="inputGroupFile02">Upload</label>
+        <input type="file" class="form-control" name="image" id="inputGroupFile02">
       </div> 
-
       <div class="input-group">
-
-        <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
-          <option selected>Choose...</option>
-          <option value=1>bebidas</option>
+        <select class="form-select" id="inputGroupSelect04" name="category" aria-label="Example select with button addon">
+          <option selected hidden>Choose...</option>
+          <option value="1">bebidas</option>
           <option value="2">hamburguesas</option>
           <option value="3">Postres</option>
           <option value="4">Pizzas</option>
         </select>
-        <button class="btn btn-outline-secondary" type="button">Button</button>
-      </div>
-     
+      </div>          
       <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Titulo</label>
-        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Titulo del tituloPlato">
+        <input type="text" class="form-control" id="formGroupExampleInput2" name="tituloPlato" placeholder="Titulo del tituloPlato">
       </div>
       <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">descripcion</label>
-        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Descripcion del plato">
+        <input type="text" class="form-control" id="formGroupExampleInput2" name="descripcionPlato" placeholder="Descripcion del plato">
       </div>
       <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Precio</label>
-        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Precio del plato">
+        <input type="text" class="form-control" id="formGroupExampleInput2" name="precioPlato" placeholder="Precio del plato">
       </div>
-       
-        <button class="submit" action="" value="volver atras" ><a href="/">volver atras</button>
-        <input type="submit" action="" class="submit" value="guardar">
-        <button class="submit" action="" value="volver atras" ><a href="/formularios/editar">editar</button>
-       
-   
-     </form>
-    </div>
+      <div class="botones">
+        <a href="/" class="btn-volver">volver atras</a> 
+        <button type="submit" class="submit">Guardar</button>
+        <a href="/formularios/editar">editar</a>
+      </div>  
+    </form>
+  </div>
 </div>
+
 <div class="row">
     <div class="register col-12 col-md-6 ">
            -IR AL PANEL DE ELIMINAR PLATOS-
     </div>
-   
-  </div>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<!--Se define entre uno y otro en el caso de que funcione-->
-
- 
-   <h4>NUEVO PRODUCTO</h4>
-    <div class="container">
-        <div class="row">
-            <div class="col-3"></div>
-            <div class="register col-4 col-md-6 ">
-                      
-                          <form action="" method="POST" enctype="multipart/form-data">
-                             
-                             <input name="tituloPlato" type="text" placeholder="titulo del plato" class="titulo"><br><br>
-                             <input name="descripcionPlato" type="text" placeholder="descripcion del plato" class="descripcion"><br><br>
-                             <input name="precioPlato" type="text" placeholder="precio del plato" class="precio"><br><br>
-                             <label for="formFile" class="form-label">ENTRADA DE ARCHIVO</label>
-                             <input name="avatar" class="form-control" type="file" id="formFile">
-                             
-                            
-                            
-                             <select name="cantidad" class="cant">
-                                <option value=1>bebidas</option>
-                                <option value=2>hamburguesas</option>
-                                <option value=3>postres</option>
-                                <option value=4>pizza</option>
-                     </select>
-                            
-                            
-                            
-                             <button class="submit" action="" value="volver atras" ><a href="/">volver atras</button>
-                             <input type="submit" action="" class="submit" value="guardar">
-                            <button class="submit" action="" value="volver atras" ><a href="/formularios/editar">editar</button>
-                             
-                          </form>
-
-               </div>
-               <div class="col-5"></div>
-               <div class="row">
-                  <div class="register col-12 col-md-6 ">
-                         -IR AL PANEL-
-                  </div>
-                </div>
+</div>
 
 </body>
+
 </html>

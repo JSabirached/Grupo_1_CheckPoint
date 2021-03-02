@@ -1,107 +1,135 @@
 
-var {getproductos,setproductos}=require("../data/platos.js");
 const fs = require('fs');
-let plato=getproductos();
-var menu=require("../data/platos.js");
-var path=require('path');
-module.exports={
+let {getproductos, setproductos}=require("../data/platos.js");
 
-   editarfront :  (req,res)=>{
+let db_platos = getproductos();
+const path = require('path');
+
+module.exports={
+    editarfront :  (req,res)=>{
         res.render('editar',{plato})
-   },
-   
-   
+    },
+    
     index :  (req,res)=>{
         res.render('index')
     },
+    
     novedades :  (req,res)=>{
         res.render('novedades')
     },
-detalledecompra:(req,res)=>{
-res.render("detallesdecompra",{
+    
+    detalledecompra:(req,res)=>{
+        res.render("detallesdecompra",{
 
     
-})
-},
-detallesdelproducto:(req,res)=>{
-    res.render("detallesdeproducto",{
-    
+        })
+    },
+
+    detallesdelproducto:(req,res)=>{
+        res.render("detallesdeproducto",{
         
-    
-})
-},
-login:(req,res)=>{
-    res.render("login",{
-
-    })
-},
-registro:(req,res)=>{
-    res.render("registro",{
-
-    })
-},
-/*agregar plato */
-agregarproducto:(req,res)=>{
-    res.render("agregarproducto",{plato
-
-    })
-},
-
-       
-crearPlato:(req,res)=>{
-    var {nombrePlato,tituloPlato, description,precioPlato,descripcionPlato,cantidad}=req.body
-          let lastID = 0;
-        for(i=0;i<plato.bebidas.length;i++){
-            if(plato.bebidas[i].id > lastID){
-                lastID = plato.bebidas[i].id
-                var seccion="bebidas"
-            }
-        }    
-        for(i=0;i<plato.hamburguesas.length;i++){
-            if(plato.hamburguesas[i].id > lastID){
-                lastID = plato.hamburguesas[i].id
-                var seccion="hamburguesas"
-            }
-        }for(i=0;i<plato.postres.length;i++){
-            if(plato.postres[i].id > lastID){
-                lastID = plato.postres[i].id
-                var seccion="postres"
-            }
-        }
-        for(i=0;i<plato.pizzas.length;i++){
-            if(plato.pizzas[i].id > lastID){
-                lastID = plato.pizzas[i].id
-                var seccion="pizzas"
-            }
-        }
-
-    var platos={
-              
-             id:lastID+1,
-             name: tituloPlato,
-             price: precioPlato,
-             image:req.files[0].filename,
-             category:seccion,
-             description:descripcionPlato,
-    }
             
-             
-          
-         if(cantidad==1){
-   plato.bebidas.push(platos)
-  }else
-  if(cantidad==2){
-      plato.hamburguesas.push(platos)
-     }else
-     if(cantidad==3){
-      plato.postres.push(platos)
-     }else
-     if(cantidad==4){
-      plato.pizzas.push(platos)
-     }
-      setproductos(plato)
-  
-  res.redirect("agregarproducto")
+        
+        })
+    },
+
+    login:(req,res)=>{
+        res.render("login",{
+
+        })
+    },
+    registro:(req,res)=>{
+        res.render("registro",{
+
+        })
+    },
+    /*agregar plato */
+    agregarproducto:(req,res)=>{
+        res.render("agregarproducto",{db_platos
+
+        })
+    },     
+    crearPlato:(req,res)=>{
+
+        let lastID = 1;
+        db_platos.forEach(plato => {
+            if (plato.id > lastID) {
+                lastID = plato.id
+            }
+        });
+
+        const {tituloPlato, precioPlato, category, descripcionPlato, image} = req.body;
+
+        let nuevoPlato = {
+            id: Number(lastID + 1),
+            name : tituloPlato,
+            price : precioPlato,
+            image : image,
+            category : category,
+            description : descripcionPlato
+        }
+
+        db_platos.push(nuevoPlato);
+
+        setproductos(db_platos);
+        
+        res.redirect('/formularios/editar')
+    
+            /* var {nombrePlato,tituloPlato, description,precioPlato,descripcionPlato,cantidad}=req.body
+
+                let lastID = 0;
+
+                for(i=0;i<plato.bebidas.length;i++){
+                    if(plato.bebidas[i].id > lastID){
+                        lastID = plato.bebidas[i].id
+                        var seccion="bebidas"
+                    }
+                }    
+                for(i=0;i<plato.hamburguesas.length;i++){
+                    if(plato.hamburguesas[i].id > lastID){
+                        lastID = plato.hamburguesas[i].id
+                        var seccion="hamburguesas"
+                    }
+                }for(i=0;i<plato.postres.length;i++){
+                    if(plato.postres[i].id > lastID){
+                        lastID = plato.postres[i].id
+                        var seccion="postres"
+                    }
+                }
+                for(i=0;i<plato.pizzas.length;i++){
+                    if(plato.pizzas[i].id > lastID){
+                        lastID = plato.pizzas[i].id
+                        var seccion="pizzas"
+                    }
+                }
+
+            var platos={
+                    
+                    id:lastID+1,
+                    name: tituloPlato,
+                    price: precioPlato,
+                    image:req.files[0].filename,
+                    category:seccion,
+                    description:descripcionPlato,
+            }
+                    
+                    
+                
+                if(cantidad==1){
+        plato.bebidas.push(platos)
+        }else
+        if(cantidad==2){
+            plato.hamburguesas.push(platos)
+            }else
+            if(cantidad==3){
+            plato.postres.push(platos)
+            }else
+            if(cantidad==4){
+            plato.pizzas.push(platos)
+            }
+            setproductos(plato)
+        
+        res.redirect("agregarproducto") */
     },
 /*index*/
 cartadelivery:(req,res)=>{
