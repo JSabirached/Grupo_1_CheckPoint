@@ -72,7 +72,7 @@ module.exports={
         db_platos.push(nuevoPlato);
 
         setproductos(db_platos);
-        
+
         res.redirect('/formularios/editar')
     
             /* var {nombrePlato,tituloPlato, description,precioPlato,descripcionPlato,cantidad}=req.body
@@ -172,10 +172,10 @@ recetas:(req,res)=>{
 },
 /* editar producto. (falta editarback) */
 editfront : (req,res) => {
-    for(i=0;i<plato.bebidas.length;i++){
+    for(i=0;i<db_platos.bebidas.length;i++){
         if( req.params.id==plato.bebidas[i].id){
             
-            var editarplato=plato.bebidas[i]
+            var editarplato=db_platos.bebidas[i]
             res.render('editarplato',{
                 editarplato
                  

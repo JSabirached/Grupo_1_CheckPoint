@@ -14,18 +14,23 @@ router.get('/registro',indexController.registro );
 router.get('/agregarproducto',indexController.agregarproducto );
 router.post('/agregarproducto',uploadImages.any(),indexController.crearPlato);
 
-/* agregar producto. */
+/* listar productos. */
 
 router.get('/editar',indexController.editarfront);
+/* router.get('/listar',indexController.listar); lista los productos */
 
+/* Editar producto */
+
+/* editar producto. */
+router.get('/edit/:id',indexController.editfront);
+router.put('/update/:id',indexController.editback);
+/* router.get('/editar/:id',indexController.editarfront); muestra el producto a editar (formulario) */
+/* router.put('/editar/:id',indexController.editarPLato); edita el plato en la base de datos */
 
 /* eliminar producto. */
 router.delete('/delete/:id',indexController.delete );
 
 
 
-/* editar producto. */
-router.get('/edit/:id',indexController.editfront);
-router.put('/update/:id',indexController.editback);
 
 module.exports = router;
