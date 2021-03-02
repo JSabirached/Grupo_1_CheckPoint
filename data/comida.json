@@ -1,1 +1,258 @@
-[]
+[
+    {
+    "id": 1,
+    "name": "Gaseosa",
+    "price": 200,
+    "image": "bebida1.jpg",
+    "category": "bebidas",
+    "description": "Linea cocacola"
+  },
+  {
+    "id": 2,
+    "name": "Cerveza tirada",
+    "price": 200,
+    "image": "bebida2.jpg",
+    "category": "bebidas",
+    "description": "Chompera 3/4"
+  },
+  {
+    "id": 3,
+    "name": "Checkpoint",
+    "price": 350,
+    "image": "bebida3.jpg",
+    "category": "bebidas",
+    "description": "Artesanal de litro"
+  },
+  {
+    "id": 4,
+    "name": "Daikiri",
+    "price": 300,
+    "image": "bebidaA.jpg",
+    "category": "bebidas",
+    "description": "Frutales"
+  },
+  {
+    "id": 5,
+    "name": "Fernet",
+    "price": 250,
+    "image": "bebida4.jpg",
+    "category": "bebidas",
+    "description": "Jarrito"
+  },
+  {
+    "id": 6,
+    "name": "Fernet",
+    "price": 600,
+    "image": "bebida5.jpg",
+    "category": "bebidas",
+    "description": "Jarra de litro"
+  },
+  {
+    "id": 7,
+    "name": "Vino",
+    "price": 400,
+    "image": "bebida7.jpg",
+    "category": "bebidas",
+    "description": "De la casa"
+  },
+  {
+    "id": 8,
+    "name": "Campari",
+    "price": 400,
+    "image": "bebidaE.jpg",
+    "category": "bebidas",
+    "description": "Copa"
+  }
+,
+
+  {
+    "id": 9,
+    "name": "X2completa",
+    "price": 800,
+    "image": "hambur1.jpg",
+    "category": "hamburguesas",
+    "description": "Con papas"
+  },
+  {
+    "id": 10,
+    "name": "Especial",
+    "price": 450,
+    "image": "hambur2.jpg",
+    "category": "hamburguesas",
+    "description": "Ananá"
+  },
+  {
+    "id": 11,
+    "name": "X3completa",
+    "price": 1200,
+    "image": "hambur3.jpg",
+    "category": "hamburguesas",
+    "description": "Con papas"
+  },
+  {
+    "id": 12,
+    "name": "Cajita",
+    "price": 1200,
+    "image": "hambur4.jpg",
+    "category": "hamburguesas",
+    "description": "Completa"
+  },
+  {
+    "id": 13,
+    "name": "Completa",
+    "price": 500,
+    "image": "hambur5.jpg",
+    "category": "hamburguesas",
+    "description": "Con papas"
+  },
+  {
+    "id": 14,
+    "name": "Simple",
+    "price": 350,
+    "image": "hambur6.jpg",
+    "category": "hamburguesas",
+    "description": "Chedar"
+  },
+  {
+    "id": 15,
+    "name": "Doble",
+    "price": 450,
+    "image": "hamburguesa.bmp",
+    "category": "hamburguesas",
+    "description": "Carne"
+  },
+  {
+    "id": 16,
+    "name": "Simple",
+    "price": 300,
+    "image": "hamburPortada.jpg",
+    "category": "hamburguesas",
+    "description": "Picante"
+  },{
+    "id": 17,
+    "name": "Frutos",
+    "price": 400,
+    "image": "postre1.jpg",
+    "category": "postres",
+    "description": "Del bosque"
+  },
+  {
+    "id": 18,
+    "name": "Brownie",
+    "price": 250,
+    "image": "postre2.jpg",
+    "category": "postres",
+    "description": "De chocolate"
+  },
+  {
+    "id": 19,
+    "name": "Dulce",
+    "price": 300,
+    "image": "postreA.jpg",
+    "category": "postres",
+    "description": "De calabasa"
+  },
+  {
+    "id": 20,
+    "name": "Strudell",
+    "price": 300,
+    "image": "postreB.jpg",
+    "category": "postres",
+    "description": "de manzana"
+  },
+  {
+    "id": 21,
+    "name": "Helado",
+    "price": 700,
+    "image": "postre4.jpg",
+    "category": "postres",
+    "description": "Artesanal"
+  },
+  {
+    "id": 22,
+    "name": "Budin",
+    "price": 350,
+    "image": "postre5.jpg",
+    "category": "postres",
+    "description": "Chocolate"
+  },
+  {
+    "id": 23,
+    "name": "Flan ",
+    "price": 350,
+    "image": "postre6.jpg",
+    "category": "postres",
+    "description": "Casero"
+  },
+  {
+    "id": 24,
+    "name": "Banana",
+    "price": 350,
+    "image": "postrec.jpg",
+    "category": "postres",
+    "description": "Cereales"
+  },
+  {"id": 26,
+  "name": "Muzzarella",
+  "price": 500,
+  "image": "pizzaEmpa1.jpg",
+  "category": "pizzaEmpa",
+  "description": "Grande"
+},
+{
+  "id": 27,
+  "name": "Combo1",
+  "price": 800,
+  "image": "pizzaempa2.png",
+  "category": "pizzaEmpa",
+  "description": "6Empanadas 1Napo"
+},
+{
+  "id": 28,
+  "name": "Combo2",
+  "price": 1200,
+  "image": "pizzaEmps3.jpg",
+  "category": "pizzaEmpa",
+  "description": "12Emp. y Muzza"
+},
+{
+  "id": 29,
+  "name": "1docena",
+  "price": 800,
+  "image": "pizzaEmpa4.jpg",
+  "category": "pizzaEmpa",
+  "description": "Carne"
+},
+{
+  "id": 30,
+  "name": "Combo3",
+  "price": 1200,
+  "image": "pizzaEmpa6.jpg",
+  "category": "pizzaEmpa",
+  "description": "1Napo 6pollo"
+},
+{
+  "id": 31,
+  "name": "Vegana",
+  "price": 450,
+  "image": "pizzaEmps5.jpg",
+  "category": "pizzaEmpa",
+  "description": "Mix verduras"
+},
+{
+  "id": 32,
+  "name": "Colombiana",
+  "price": 2546.83,
+  "image": "pizzaempanada.png",
+  "category": "pizzaEmpa",
+  "description": "Palmito/Tomate"
+},
+{
+  "id": 25,
+  "name": "Mix16",
+  "price": 1400,
+  "image": "pizzaEmpaPortada.jpg",
+  "category": "pizzaEmpa",
+  "description": "Car,Ver y Pollo"
+}
+]
