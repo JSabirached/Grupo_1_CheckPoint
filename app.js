@@ -11,7 +11,7 @@ const indexRouter = require('./router/indexRouter');
 const formRouter = require('./router/formRouter');
 const productosRouter = require('./router/productosRouter');
 const usersRouter = require('./router/usersRouter');
-const adminRouter = require('./routes/adminRouter');
+const adminRouter = require('./router/adminRouter');
 
 var app = express();
 

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head')  %> 
+<body>
+   
+
+    <main class="container">
+        <form action="/admin/store" method="POST">
+          <h3>Agregar</h3>
+          <hr>
+          <div class="row">
+            <div class="col-md-6 col-lg-4">
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="name" placeholder="name" name="name">
+                <label for="modelo">name</label>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="price" placeholder="price" name="price">
+                <label for="price">price</label>
+              </div>
+            </div>
+           
+            <div class="col-md-6">
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="description" placeholder="description" name="description">
+                <label for="description">description</label>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="imagen" placeholder="imagen" name="img">
+                <label for="imagen">Imagen</label>
+              </div>
+            </div>
+          
+          </div>
+        
+          <div class="d-grid gap-2">
+            <button class="btn btn-primary" type="submit">Guardar</button>
+          </div>
+        
+         
+          </form>
+        </main>
+    <%- include('../partials/footer')  %> 
+
+</body>
+</html>
