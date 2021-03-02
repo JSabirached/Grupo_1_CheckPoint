@@ -8,7 +8,7 @@ router.get('/',index);
 router.get('/admin/list',comidaList);
 
 router.get('/admin/create',comidaCreate);
-router.post('/admin/store',comidaStore);
+router.post('/admin/create',comidaStore);
 
 router.get('/admin/edit/:id',comidaEdit);
 router.put('/admin/update/:id',comidaUpdate);

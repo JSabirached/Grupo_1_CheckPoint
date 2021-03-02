@@ -1,4 +1,4 @@
-const comida = require('../data/comida');
+var comidas = require('../data/comida');
 const fs = require('fs');
 
 module.exports = {
@@ -8,7 +8,7 @@ module.exports = {
     comidaList : (req,res) => {
 
         res.render('admin/comidaList',{
-            comida
+            comidas
         })
     },
     comidaCreate : (req,res) => {
@@ -36,10 +36,10 @@ module.exports = {
         
         
     
-        comida.push(comida)
+        comidas.push(comida)
 
-        fs.writeFileSync('./data/comida.json',JSON.stringify(comida),'utf-8');
-        res.redirect('/admin/list');
+        fs.writeFileSync('./data/comida.json',JSON.stringify(comidas),'utf-8');
+        res.redirect('/');
 
     },
     comidaEdit : (req,res) => {
