@@ -5,6 +5,7 @@ let indexController=require("../controllers/indexController.js")
 
 
 router.get("/",indexController.index)
+router.get("/a",indexController.indexA)
 router.get("/detalledelproducto",indexController.detallesdelproducto)
 router.get('/cartadelivery',indexController.cartadelivery );
 router.get('/locales',indexController.locales );

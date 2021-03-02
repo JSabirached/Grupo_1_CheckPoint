@@ -1,7 +1,7 @@
 var {getproductos,setproductos}=require("../data/platos.js");
 const fs = require('fs');
-let plato=getproductos();
-var menu=require("../data/platos.js");
+let plato = getproductos();
+var menu = require("../data/platos.js");
 
 module.exports={
     editarfront :  (req,res)=>{
@@ -117,5 +117,10 @@ recetas:(req,res)=>{
     res.render("recetas",{
 
     })
-}
+},
+indexA:(req,res)=>{
+    res.render("indexA",{
+
+    })
+},
 }

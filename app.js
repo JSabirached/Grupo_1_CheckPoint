@@ -4,11 +4,14 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const session = require( 'express-session');
+const methodOverride =require ('method-override') ;
 
-var indexRouter = require('./router/indexRouter');
-var formRouter = require('./router/formRouter');
-var productosRouter = require('./router/productosRouter');
-var usersRouter = require('./router/usersRouter');
+//rutas
+const indexRouter = require('./router/indexRouter');
+const formRouter = require('./router/formRouter');
+const productosRouter = require('./router/productosRouter');
+const usersRouter = require('./router/usersRouter');
+const adminRouter = require('./routes/adminRouter');
 
 var app = express();
 
@@ -21,14 +24,19 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(methodOverride('_method'));
 
 
 app.use(session( {secret :"mi secreto"}));
+
+
 
 app.use('/', indexRouter);
 app.use('/formularios', formRouter);
 app.use('/productos', productosRouter);
 app.use('/users', usersRouter);
+app.use('/admin',adminRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

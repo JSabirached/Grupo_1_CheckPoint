@@ -1,0 +1,136 @@
+<%- include('partials/head') %>
+  <title>Inicio</title>
+<body>
+	<header>
+        <nav class="container-fluid ">
+           <!--logo-->
+           <div class="row ">
+              <div class="col-6 logos">
+                 <img src="../logo/logo.png" alt="logotipo" class="img-fluid">
+              </div>
+              <!--pedi online-->
+              <div class="col-6 logos">
+                 <div class="col-12 ">
+                    <div class="box-1">
+                       <button type="button" class="btn btn-outline-dark mt-4">PEDI ONLINE</button>
+                    </div>
+                 </div>
+                 <div class="col-12">
+                    <ul class="p-0 usuario">
+                       <li><a href="">Lista de productos<br><i class="fas fa-sign-in-alt "></i></a></li>
+                       <li><a href="https://checkpoint-restobar.blogspot.com/">Nuestro<br>Blog<i class="far fa-address-card "></i></a></li>
+                      
+                       <li><a href="../agregarproducto.ejs">agregar productos<br><i class="fas fa-sign-in-alt "></i></a></li>
+                    </ul>
+                 </div>
+              </div>
+             
+           </div>
+     
+              <!--secciones-->
+              <div class="row ">
+                 <nav class="navbar navbar-expand-md navbar-dark navigator">
+                    <div class="container-fluid">
+     
+                       <button class="navbar-toggler mx-auto" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                          aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon burger"></span>
+                       </button>
+                       <div class="collapse navbar-collapse menu" id="navbarSupportedContent">
+     
+                          <li class="navi"> <a class="" href="/cartadelivery ">CARTA</a></li >
+                          <li class="navi"> <a class="" href="/locales">LOCALES</a> </li >
+                          <li class="navi"> <a class="" href="/reservas">RESERVAS</a> </li >
+                          <li class="navi"> <a class="" href="/promociones">PROMOCIONES</a></li>
+                          <li class="navi"> <a class="" href="/novedades">NOVEDADES</a> </li >
+     
+     
+     
+                          <form class="d-flex">
+     
+                          </form>
+                       </div>
+                    </div>
+                 </nav>
+              </div>
+        </nav>
+     </header>
+		<!--menu-->
+		 <menu class="container">
+			<section class="row">
+			  <div class="titulo col-12">
+			<h2 class="oferta">-CONOCÉ NUESTROS PRODUCTOS-<br>Hace CheckPoint en cada foto y descubrí nuestro menu</h2>
+		      </div>
+
+			  <div class="col-12 col-md-6 col-lg-3 ">
+				<article class="producto"><!-- 1 bebidas-->
+					<div class="contenido">
+						<figure><a href="/productos/seccionBebidas"><img src="images/cerveza-artesanal.jpg" alt=""></a></figure>
+
+						<h2 class="title">BEBIDAS</h2>
+						<h2><span></span></h2>
+						<div class="detalle">
+							<p>Contamos con la mejor cerveza artesanal de la zona.<br> DESCUBRILA</p>
+							<p></p>
+						</div>
+					 </div>
+				</article>
+			</div>
+
+			<div class="col-12 col-md-6 col-lg-3 ">
+					<article class="producto"><!-- 2 postres-->
+						<div class="contenido">
+							<figure><a href="/productos/seccionPostres"><img src="images/helados.jpg" alt=""></a></figure>
+							<h2 class="title"> POSTRES</h2>
+
+							<div class="detalle">
+								<p>Hacemos los mas ricos postres caseros con recetas originales.<br>ENDULZATE </p>
+								<hr>
+								<p></p>
+							</div>
+						</div>
+					</article>
+				</div>
+				
+				<div class="col-12 col-md-6 col-lg-3 ">
+					<article class="producto"><!--3 HAMBURGUESAS-->
+						<div class="contenido">
+							<figure><a href="/productos/seccionHamburguesas"><img src="images/hamburPortada.jpg" alt=""></a></figure>
+			
+							<h2 class="title">HAMBUR</h2>
+                            <div class="detalle">
+								<p>Si todavía no probaste nuestras burguer, no sabes lo que te perdes.<br>PROBALOS</p>
+								<p></p>
+							</div>
+						</div>
+					</article>
+				</div>
+			
+				<div class="col-12 col-md-6 col-lg-3">
+					<article class="producto"><!--5 PIZZA Y EMPANADAS-->
+						<div class="contenido">
+							<figure><a href="/productos/seccionPizzaEmpa"><img src="images/pizzaEmpaPortada.jpg" alt=""></a></figure>
+
+							<h2>ROTISERIA</h2>
+							<span></span>
+
+
+							<div class="detalle">
+								<p>Variedades de pizzas y empanadas que no lo vas a pode creer.<br>DISFRUTALAS</p>
+								<p></p>
+							</div>
+						</div>
+					</article>
+				</div>
+
+
+				
+			</section>
+
+
+			<%- include('partials/footer') %> 
+		
+</body>
+
+</html>
