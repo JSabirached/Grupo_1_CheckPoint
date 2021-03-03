@@ -13,11 +13,11 @@ module.exports = {
     },
     comidaCreate : (req,res) => {
 
-        res.render('admin/comidaCreate')
+        res.render('admin/comidaCreate',{comidas})
     },
     comidaStore : (req,res) => {
         let lastID = 1;
-        comida.forEach(comida => {
+        comidas.forEach(comida => {
             if (comida.id > lastID) {
                 lastID = comida.id
             }
@@ -31,7 +31,7 @@ module.exports = {
             price,
             category,
             description,
-            img:req.files[0].filename,
+            img:"",
         }
         
         
