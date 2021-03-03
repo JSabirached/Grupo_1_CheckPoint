@@ -44,7 +44,7 @@ module.exports = {
     },
     comidaEdit : (req,res) => {
         
-        const comida = comida.find(comida => comida.id === +req.params.id);
+        const comida = comidas.find(comida => comida.id === +req.params.id);
 
         res.render('admin/comidaEdit',{
             comida
