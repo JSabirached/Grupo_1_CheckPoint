@@ -68,14 +68,14 @@ module.exports = {
         res.redirect('/');
     },
     comidaDelete : (req,res) => {
-        comida.forEach(comida => {
+        comidas.forEach(comida => {
             if(comida.id === +req.params.id){
-                var aEliminar = comida.indexOf(comida);
-                comida.splice(aEliminar,1)
+                var aEliminar = comidas.indexOf(comida);
+                comidas.splice(aEliminar,1)
             }
         });
         
-        fs.writeFileSync('./data/comida.json',JSON.stringify(comida),'utf-8');
-        res.redirect('/admin/comida/list');
+        fs.writeFileSync('./data/comida.json',JSON.stringify(comidas),'utf-8');
+        res.redirect('/admin/admin/list');
     }
 }
