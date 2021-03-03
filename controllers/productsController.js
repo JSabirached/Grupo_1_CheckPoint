@@ -55,7 +55,8 @@ seccionBebidas:(req,res)=>{
     })
 },
 seccionHamburguesas:(req,res)=>{
-    res.render("seccionHamburguesas",{comidas
+    let result  = comidas.filter(comida => comida.category=="hamburguesas");
+    res.render("seccionHamburguesas",{result
 
     })
 },
@@ -68,12 +69,14 @@ seccionPlatosPrincipales:(req,res)=>{
 
 
 seccionPostres:(req,res)=>{
-    res.render("seccionPostres",{comidas
+    let result  = comidas.filter(comida => comida.category=="postres");
+    res.render("seccionPostres",{result
 
     })
 },
 seccionPizzaEmpa:(req,res)=>{
-    res.render("seccionPizzaEmpa",{comidas
+    let result  = comidas.filter(comida => comida.category=="pizzaEmpa");
+    res.render("seccionPizzaEmpa",{result
 
 })
 },

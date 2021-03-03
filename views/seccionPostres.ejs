@@ -8,19 +8,19 @@
 					<h2 class="oferta">-POSTRES-</h2>
 				</div>
 				
-				<%for (let index = 0; index <getproductos().postres.length; index++) {%>
+				<% result.forEach(comida=> { %>
 					
 					<div class="col-12 col-md-6 col-lg-3">
 					<article class="producto"><!-- 1 bebidas-->
 						<div class="contenido">
-							<figure><a href=""><img src="/images/<%=getproductos().postres[index].image%>" alt=""></a></figure>
+							<figure><a href=""><img src="/images/<%=comida.image%>" alt=""></a></figure>
 
-							<h4 class="title"><%=getproductos().postres[index].name%></h4>
-							<h4><span><%=getproductos().postres[index].price%></span></h4>
+							<h4 class="title"><%=comida.name%></h4>
+							<h4><span><%=comida.price%></span></h4>
 
 							<div class="detalle mt-3 text-center">
 								<hr>
-								<p><%=getproductos().postres[index].description%></p>
+								<p><%=comida.description%></p>
 							</div>
 							<div class="d-grid gap-2 d-md-block">
 								<a href="/"><button class="btn btn-primary" type="button">Atrás</button></a>
@@ -29,7 +29,7 @@
 						</div>
 					</article>
 				</div>
-			<% } %> 
+				<% }) %>
 			</section>
 		
 		
