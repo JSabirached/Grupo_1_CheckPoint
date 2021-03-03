@@ -39,7 +39,7 @@ module.exports = {
         comidas.push(comida)
 
         fs.writeFileSync('./data/comida.json',JSON.stringify(comidas),'utf-8');
-        res.redirect('/');
+        res.redirect('/admin');
 
     },
     comidaEdit : (req,res) => {
@@ -65,7 +65,7 @@ module.exports = {
         });
 
         fs.writeFileSync('./data/comida.json',JSON.stringify(comidas),'utf-8');
-        res.redirect('/');
+        res.redirect('/admin');
     },
     comidaDelete : (req,res) => {
         comidas.forEach(comida => {
@@ -76,6 +76,6 @@ module.exports = {
         });
         
         fs.writeFileSync('./data/comida.json',JSON.stringify(comidas),'utf-8');
-        res.redirect('/admin/admin/list');
+        res.redirect('/admin');
     }
 }
