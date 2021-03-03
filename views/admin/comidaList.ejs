@@ -2,80 +2,26 @@
 <html lang="en">
 <%- include('../partials/head')  %> 
 <body>
-    <header>
-        <nav class="container-fluid ">
-           <!--logo-->
-           <div class="row ">
-              <div class="col-6 logos">
-                 <img src="../logo/logo.png" alt="logotipo" class="img-fluid">
-              </div>
-              <!--pedi online-->
-              <div class="col-6 logos">
-                 <div class="col-12 ">
-                    <div class="box-1">
-                       <button type="button" class="btn btn-outline-dark mt-4">PEDI ONLINE</button>
-                    </div>
-                 </div>
-                 <div class="col-12">
-                    <ul class="p-0 usuario">
-                       <li><a href="">Lista de productos<br><i class="fas fa-sign-in-alt "></i></a></li>
-                       <li><a href="https://checkpoint-restobar.blogspot.com/">Nuestro<br>Blog<i class="far fa-address-card "></i></a></li>
-                      
-                       <li><a href="/admin/admin/create">agregar productos<br><i class="fas fa-sign-in-alt "></i></a></li>
-                    </ul>
-                 </div>
-              </div>
-             
-           </div>
-     
-              <!--secciones-->
-              <div class="row ">
-                 <nav class="navbar navbar-expand-md navbar-dark navigator">
-                    <div class="container-fluid">
-     
-                       <button class="navbar-toggler mx-comida" type="button" data-bs-toggle="collapse"
-                          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                          aria-expanded="false" aria-label="Toggle navigation">
-                          <span class="navbar-toggler-icon burger"></span>
-                       </button>
-                       <div class="collapse navbar-collapse menu" id="navbarSupportedContent">
-     
-                          <li class="navi"> <a class="" href="/cartadelivery ">CARTA</a></li >
-                          <li class="navi"> <a class="" href="/locales">LOCALES</a> </li >
-                          <li class="navi"> <a class="" href="/reservas">RESERVAS</a> </li >
-                          <li class="navi"> <a class="" href="/promociones">PROMOCIONES</a></li>
-                          <li class="navi"> <a class="" href="/novedades">NOVEDADES</a> </li >
-     
-     
-     
-                          <form class="d-flex">
-     
-                          </form>
-                       </div>
-                    </div>
-                 </nav>
-              </div>
-        </nav>
-     </header>
-
-    <main class="container">
+  <%- include("../partials/header") %> 
+   
+  <main class="container">
         <section class="row ">
           <% comidas.forEach(comida=> { %>
             <article class="col-12 col-md-4 col-lg-3 ">
               <ul class="list-group list-group-flush my-3 ">
                 <li class="list-group-item">
-                  <h4>
+                  <h6>
                       <%= comida.name %> 
-                  </h4>
-                </li>
-                <li class="list-group-item">
-                  <h5>
-                    <%= comida.price %> 
-                  </h5>
+                  </h6>
                 </li>
                 <li class="list-group-item">
                   <h6>
-                    <%= comida.category %> 
+                    <%= comida.price %> 
+                  </h6>
+                </li>
+                <li class="list-group-item">
+                  <h6>
+                    <%= comida.description%> 
                   </h6>
                 </li>
                 <li class="list-group-item">
