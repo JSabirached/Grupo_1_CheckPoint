@@ -44,7 +44,7 @@ module.exports = {
     },
     comidaEdit : (req,res) => {
         
-        const comida = comidas.find(comida => comida.id === +req.params.id);
+        let comida = comidas.find(comida => comida.id === +req.params.id);
 
         res.render('admin/comidaEdit',{
             comida
@@ -53,7 +53,7 @@ module.exports = {
     comidaUpdate : (req,res) => {
         const {name,price,category,description,img} = req.body;
 
-        comida.forEach(comida => {
+        comidas.forEach(comida => {
             if(comida.id === +req.params.id){
                 comida.id = Number(req.params.id);
                 comida.name = name;
@@ -64,8 +64,8 @@ module.exports = {
             }
         });
 
-        fs.writeFileSync('./data/comida.json',JSON.stringify(comida),'utf-8');
-        res.redirect('/admin/comida/list');
+        fs.writeFileSync('./data/comida.json',JSON.stringify(comidas),'utf-8');
+        res.redirect('/');
     },
     comidaDelete : (req,res) => {
         comida.forEach(comida => {

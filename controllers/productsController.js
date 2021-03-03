@@ -1,7 +1,7 @@
 const fs = require('fs');
-const {getproductos,setproductos}=require("../data/platos");
+const comidas=require("../data/comida");
 
-let plato =getproductos();
+let plato ="";
 
 module.exports={
 /*iniciosecciones*/
@@ -49,11 +49,13 @@ inicioSecciones:(req,res)=>{
     })
 },
 seccionBebidas:(req,res)=>{
-    res.render("seccionBebidas",{getproductos
+    
+    let result  = comidas.filter(comida => comida.category=="bebidas");
+    res.render("seccionBebidas",{result
     })
 },
 seccionHamburguesas:(req,res)=>{
-    res.render("seccionHamburguesas",{getproductos
+    res.render("seccionHamburguesas",{comidas
 
     })
 },
@@ -66,12 +68,12 @@ seccionPlatosPrincipales:(req,res)=>{
 
 
 seccionPostres:(req,res)=>{
-    res.render("seccionPostres",{getproductos
+    res.render("seccionPostres",{comidas
 
     })
 },
 seccionPizzaEmpa:(req,res)=>{
-    res.render("seccionPizzaEmpa",{getproductos
+    res.render("seccionPizzaEmpa",{comidas
 
 })
 },
