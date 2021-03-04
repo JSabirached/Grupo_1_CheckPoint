@@ -23,7 +23,7 @@ module.exports = {
             }
         });
 
-        const {name,price,category,description,img} = req.body;
+        const {name,price,category,description,image} = req.body;
 
         const comida = {
             id: Number(lastID + 1),
@@ -31,7 +31,7 @@ module.exports = {
             price,
             category,
             description,
-            img:"",
+            image:"",
         }
         
         
@@ -51,7 +51,7 @@ module.exports = {
         })
     },
     comidaUpdate : (req,res) => {
-        const {name,price,category,description,img} = req.body;
+        const {name,price,category,description,image} = req.body;
 
         comidas.forEach(comida => {
             if(comida.id === +req.params.id){
@@ -60,7 +60,7 @@ module.exports = {
                 comida.price = price;
                 comida.category = category;
                 comida.description = description;
-                comida.img = img
+                comida.image = image
             }
         });
 

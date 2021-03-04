@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('../partials/head')  %> 
+  <%- include('../partials/head')  %> 
 <body>
   <%- include("../partials/header") %> 
-   
+  <h2 class="oferta">-LISTAR PLATOS-</h2>
   <main class="container">
-        <section class="row ">
+        <section class="row">
           <% comidas.forEach(comida=> { %>
             <article class="col-12 col-md-4 col-lg-3 ">
               <ul class="list-group list-group-flush my-3 ">
@@ -26,13 +26,13 @@
                 </li>
                 <li class="list-group-item">
                   <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal-<%= comida.id %> ">
-                  <%= comida.img %></a>
+                  <%= comida.image %></a>
                 </li>
                 <li class="list-group-item">
                   <div class="m-2 d-flex justify-content-around">
-                   <a href="/admin/admin/edit/<%= comida.id %> " class="btn btn-sm btn-success">Editar</a>
+                   <a href="/admin/admin/edit/<%= comida.id %> " class="btn btn-primary">Editar</a>
                    <form action="/admin/admin/delete/<%= comida.id %>?_method=DELETE " method="POST">
-                     <button class="btn btn-sm btn-danger" type="submit">Eliminar</button>
+                     <button class="btn btn-primary" type="submit">Eliminar</button>
                    </form>
                   </div>
                 </li>
@@ -45,10 +45,10 @@
                 <div class="modal-content">
                   <div class="modal-header">
                     <h6 class="modal-title" id="exampleModalLabel"><%= comida.name %> - <%= comida.precio %> </h6>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
-                    <img src="/images/<%= comida.img %> " class="img-fluid" alt="">
+                    <img src="/images/<%= comida.image %> "class="img-fluid" alt="">
                   </div>
                  
                 </div>
