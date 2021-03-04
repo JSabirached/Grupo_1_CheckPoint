@@ -54,8 +54,7 @@ Principalmente, nuestra elección se baso en la estetica y la experiencia de usu
 - [Paleta de colores](https://colorhunt.co/palette/253094)
 - [Tipografía](https://fonts.google.com/specimen/Architects+Daughter?selection.family=Lato|Montserrat|Open+Sans|Raleway&sidebar=&query=in&preview.text=%20check%20point%20%20todas%20%20%20%20%20pasta%20fresca&preview.text_type=custom&sidebar.open=true)
 
-## Link de referencia de la organizacion del equipo
-- [Trello](https://trello.com/b/KcVtDfjU/grupo-1-check-point)
 
-## Link de nuestras RETROSPECTIVAS
-- [Retrospectiva](https://app.mural.co/t/grupo13779)
+  #### [TRELLO: Tablero de trabajo]  (https://trello.com/b/KcVtDfjU/grupo-1-check-point)
+
+Principalmente, la organizacion de tareas se desprende desde ésta plataforma, TRELLO, luego de una reunion participativa discutimos roles y tareas de cada uno, y asignamos la cooperacion de desarrollo en conjunto más la comunicacion constante en nuestros teléfonos particulares.
