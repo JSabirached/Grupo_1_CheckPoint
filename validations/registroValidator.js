@@ -1,16 +1,16 @@
 const fs =require('fs')
 const {check, body} = require('express-validator');
-const users_db = JSON.parse(fs.readFileSync('./data/users.json','utf-8'));
+const user_db = JSON.parse(fs.readFileSync ('data/users.json','utf-8'));
 //recibe como parametro el formulario el input con un mensaje de valicion
 module.exports = [
-    check('username')
+    check('name')
     .notEmpty().withMessage('el usuario es requerido'),
 
     check('email')
     .isEmail().withMessage('debe ser un mail valido'),
 //validame su en userdb buscame usuarios . mail es igual al value que es email retorname falso
     body('email').custom(value => {
-        let result = users_db.find(user => user.mail === value);
+        let result = user_db.find(user => user.mail === value);
        
         if(result){
             return false
