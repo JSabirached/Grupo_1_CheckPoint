@@ -19,5 +19,12 @@
     "email": "luis@gmail.com",
     "pass": "$2b$12$zOeeUmH7Iry5pstxS//9QeGW6MOZjFxFK0TU8By6KeOFm2h/PBQGO",
     "avatar": "avatar-1614829244303.png"
+  },
+  {
+    "id": 4,
+    "name": "jonatan",
+    "email": "jonatan@gmail.com",
+    "pass": "$2b$12$RbjVi22QyckQpEqsvLJyIOb2CVIwfUMuu/p74ze3gx1ddCEIiCNGW",
+    "avatar": "avatar-1614873480120.png"
   }
 ]
