@@ -63,33 +63,33 @@
           <h3>Editar</h3>
           <hr>
           <div class="row">
-            <div class="col-md-6 col-lg-4">
-              <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="modelo" placeholder="nombre" name="nombre" value="<%= comida.nombre %> ">
-                <label for="name">nombre</label>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-              <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="modelo" placeholder="price" name="price" value="<%= comida.price %> ">
-                <label for="price">price</label>
-              </div>
-            </div>
-           
-            <div class="col-md-6">
-              <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="category" placeholder="category" name="category" value="<%= comida.category %> ">
-                <label for="category">category</label>
-              </div>
-            </div>
-            <div class="col-md-6">
-               <div class="form-floating mb-3">
-                 <input type="text" class="form-control" id="description" placeholder="description" name="description" value="<%= comida.description %> ">
-                 <label for="description">description</label>
-               </div>
-            <div class="col-lg-6">
-              <div class="form-floating mb-3">
-               <input type="file" name="img">
+            <div class="col-12 col-md-6  col-lg-3">
+              
+               <input type="text" class="form-control" id="name" placeholder="name" name="name">
+              <br>
+             </div>
+           </div>
+           <div class="col-md-6 col-lg-4">
+             <div class="form-floating mb-3">
+               <input type="text" class="form-control" id="price" placeholder="price" name="price">
+               <label for="price">price</label>
+             </div>
+           </div>
+          
+           <div class="col-md-6">
+             <div class="form-floating mb-3">
+               <input type="text" class="form-control" id="description" placeholder="description" name="description">
+               <label for="description">description</label>
+             </div>
+           </div>
+           <div class="col-2 col-md-4  col-lg-10"><div class="form-floating mb-3"></div>
+              <input type="file" name="img">
+             <select name="category" id="category">elegi tu categoria
+               <option value="hamburguesas">hamburguesas</option>
+               <option value="bebidas">bebidas</option>
+               <option value="postres">postres</option>
+               <option value="pizzaEmpa">pizzaEmpa</option>
+             </select>
               </div>
             </div>
           
