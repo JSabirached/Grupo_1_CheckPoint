@@ -26,5 +26,12 @@
     "email": "jonatan@gmail.com",
     "pass": "$2b$12$RbjVi22QyckQpEqsvLJyIOb2CVIwfUMuu/p74ze3gx1ddCEIiCNGW",
     "avatar": "avatar-1614873480120.png"
+  },
+  {
+    "id": 5,
+    "name": "Ana ",
+    "email": "ana@gmail.com",
+    "pass": "$2b$12$cWdG3DpSILx9QKCBXSb8kOqEdKWwpEkg5zKv0Y28XN6JGq6Vfg5RS",
+    "avatar": "avatar-1614968758218.png"
   }
 ]
