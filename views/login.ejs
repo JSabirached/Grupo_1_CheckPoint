@@ -1,8 +1,8 @@
-  <%- include('partials/head') %>
-    <title>login</title>
-</head>
+  
+<title>login</title>
+    <%- include('partials/header') %>
 <body>
-  <%- include('partials/header') %>
+  <%- include('partials/head') %>
 
     <div class="container">
         <div class="row">
@@ -14,12 +14,11 @@
                 <input type="password" placeholder="tu contraseña" name="pass"><br><br>
                 <input type="checkbox" placeholder="tu contraseña" name="recordar" id="recordar">
                 <label for="recordar">Recordarme</label>
-                <button class="btn btn-primary" type="submit">Ingresar</button>
-            </form>
+                <input class="btn btn-primary" type="submit" value="ingresar">
                     <div class="login-items col-12 col-md-12  ">
-                         <button class="fb"><i class="fab fa-facebook-f"></i>   Acceder con Facebook</button>
-                         <button class="tw"><i class="fab fa-twitter"></i>   Acceder con Twitter</button>
-                         <button class="correo"><i class="fas fa-envelope"></i>   Acceder con Correo</button><br>
+                         <input class="fb" value="Acceder con Facebook" <i class="fab fa-facebook-f"></i>><i class="fab fa-facebook-f"></i>  
+                         <input class="tw"><i class="fab fa-twitter"></i>   Acceder con Twitter >
+                         <input class="correo"><i class="fas fa-envelope"></i>   Acceder con Correo ><br>
                         <a href="/users/registro"> ¿no estas registrado? registrate aca</a>
                     </div>
                 </form>
