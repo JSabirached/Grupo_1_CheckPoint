@@ -33,5 +33,12 @@
     "email": "ana@gmail.com",
     "pass": "$2b$12$cWdG3DpSILx9QKCBXSb8kOqEdKWwpEkg5zKv0Y28XN6JGq6Vfg5RS",
     "avatar": "avatar-1614968758218.png"
+  },
+  {
+    "id": 6,
+    "name": "matias",
+    "email": "matss_91@hotmail.com",
+    "pass": "$2b$12$kx1rMBtVz/PMcrTecVKrI.EY9nYb/pVvGG7POQsRDbM28QF0.Aaza",
+    "avatar": "avatar-1615416678467.png"
   }
 ]

@@ -69,7 +69,7 @@ module.exports = {
                        avatar : result.avatar
                    }
              
-                    return res.redirect('/')
+                    return res.redirect('/admin')
                 }
             }
                 if (recordar){
