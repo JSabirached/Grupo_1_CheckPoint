@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <%- include('../partials/head')  %> 
@@ -59,26 +62,29 @@
      </header>
 
     <main class="container">
-        <form action="/admin/admin/update/<%= comida.id %>?_method=PUT " method="POST">
+        <form action="/admin/admin/update/<%=id%>?_method=PUT " method="POST">
           <h3>Editar</h3>
           <hr>
           <div class="row">
             <div class="col-12 col-md-6  col-lg-3">
               
-               <input type="text" class="form-control" id="name" placeholder="name" name="name">
-              <br>
+               <input type="text" class="form-control" id="name" placeholder="name" name="name" value="<%=(typeof old!="undefined"&& old.name) ? old.name:"" %>">
+               <spam class="text-danger"><%=(typeof errores!="undefined" && errores.name)? errores.name.msg:""%></spam>
+               <br>
              </div>
            </div>
            <div class="col-md-6 col-lg-4">
              <div class="form-floating mb-3">
-               <input type="text" class="form-control" id="price" placeholder="price" name="price">
+               <input type="text" class="form-control" id="price" placeholder="price" name="price" value="<%=(typeof old!="undefined"&& old.price) ? old.price:"" %>">
+               <spam class="text-danger"><%=(typeof errores!="undefined" && errores.price)? errores.price.msg:""%></spam>
                <label for="price">price</label>
              </div>
            </div>
           
            <div class="col-md-6">
              <div class="form-floating mb-3">
-               <input type="text" class="form-control" id="description" placeholder="description" name="description">
+               <input type="text" class="form-control" id="description" placeholder="description" name="description" value="<%=(typeof old!="undefined"&& old.description) ? old.description:"" %>">
+               <spam class="text-danger"><%=(typeof errores!="undefined" && errores.description)? errores.description.msg:""%></spam>
                <label for="description">description</label>
              </div>
            </div>

@@ -1,6 +1,6 @@
 var comidas = require('../data/comida');
 const fs = require('fs');
-
+const {check,validationResult,body}=require('express-validator');
 module.exports = {
     index : (req,res) => {
         res.render('admin/index')
@@ -16,7 +16,15 @@ module.exports = {
         res.render('admin/comidaCreate',{comidas})
     },
     comidaStore : (req,res) => {
+        var errores=validationResult(req)
         let lastID = 1;
+       
+        
+        if(!errores.isEmpty()){
+            
+return res.render("admin/comidaCreate",{errores:errores.mapped(),old:req.body})
+    
+        }
         comidas.forEach(comida => {
             if (comida.id > lastID) {
                 lastID = comida.id
@@ -47,10 +55,11 @@ module.exports = {
         let comida = comidas.find(comida => comida.id === +req.params.id);
 
         res.render('admin/comidaEdit',{
-            comida
+           id:req.params.id
         })
     },
     comidaUpdate : (req,res) => {
+        
         const {name,price,category,description,image} = req.body;
 
         comidas.forEach(comida => {
@@ -63,7 +72,12 @@ module.exports = {
                 comida.image = image
             }
         });
-
+        var errores=validationResult(req)
+        if(!errores.isEmpty()){
+            
+            return res.render("admin/comidaEdit",{errores:errores.mapped(),old:req.body, id:req.params.id})
+                
+                    }
         fs.writeFileSync('./data/comida.json',JSON.stringify(comidas),'utf-8');
         res.redirect('/admin');
     },

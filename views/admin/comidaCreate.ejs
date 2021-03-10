@@ -11,26 +11,30 @@
           <div class="row">
             <div class="col-12 col-md-6  col-lg-3">
               
-                <input type="text" class="form-control" id="name" placeholder="name" name="name">
-               <br>
+                <input type="text" class="form-control" id="name" placeholder="name" name="name"value="<%=(typeof old!="undefined"&& old.name) ? old.name:"" %>">
+                <br>
+              <spam class="text-danger"><%=(typeof errores!="undefined" && errores.name)? errores.name.msg:""%></spam>
               </div>
             </div>
             <div class="col-md-6 col-lg-4">
               <div class="form-floating mb-3">
                 <input type="text" class="form-control" id="price" placeholder="price" name="price">
+                <spam class="text-danger"><%=(typeof errores!="undefined" && errores.price)? errores.price.msg:""%></spam>
                 <label for="price">price</label>
               </div>
             </div>
            
             <div class="col-md-6">
               <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="description" placeholder="description" name="description">
+                <input type="text" class="form-control" id="description" placeholder="description" name="description" value="<%=(typeof old!="undefined"&& old.description) ? old.description:"" %>">
                 <label for="description">description</label>
+                <spam class="text-danger"><%=(typeof errores!="undefined" && errores.description)? errores.description.msg:""%></spam>
               </div>
             </div>
             <div class="col-2 col-md-4  col-lg-10"><div class="form-floating mb-3"></div>
                <input type="file" name="img">
-              <select name="category" id="category">elegi tu categoria
+               
+               <select name="category" id="category">elegi tu categoria
                 <option value="hamburguesas">hamburguesas</option>
                 <option value="bebidas">bebidas</option>
                 <option value="postres">postres</option>
@@ -50,6 +54,9 @@
         
          
           </form>
+       
+       
+        
         </main>
     <%- include('../partials/footer')  %> 
 
