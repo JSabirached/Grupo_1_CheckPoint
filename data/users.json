@@ -4,48 +4,75 @@
     "username": "josue",
     "email": "josueabirached@gmail.com",
     "pass": "$2b$12$/4gG3IcV3O2Rw2.Foiel3u7CwqTm65CyMIAtDT41ck6F.Mylgk1ZG",
-    "avatar": "avatar-1614368577980.jpg"
+    "avatar": "avatar-1614368577980.jpg",
+    "category": "Admin"
   },
   {
     "id": 2,
     "username": "juan",
     "email": "juan@gmail.com",
     "pass": "$2b$12$B1c.IdK9qi.UNOnD6HCj9OPAoq7nNYpiSfZko3DNQepuFlVjXyxTu",
-    "avatar": "avatar-1614550505818.png"
+    "avatar": "avatar-1614550505818.png",
+    "category": "Usuario"
   },
   {
     "id": 3,
     "name": "luis",
     "email": "luis@gmail.com",
     "pass": "$2b$12$zOeeUmH7Iry5pstxS//9QeGW6MOZjFxFK0TU8By6KeOFm2h/PBQGO",
-    "avatar": "avatar-1614829244303.png"
+    "avatar": "avatar-1614829244303.png",
+    "category": "Usuario"
   },
   {
     "id": 4,
     "name": "jonatan",
     "email": "jonatan@gmail.com",
     "pass": "$2b$12$RbjVi22QyckQpEqsvLJyIOb2CVIwfUMuu/p74ze3gx1ddCEIiCNGW",
-    "avatar": "avatar-1614873480120.png"
+    "avatar": "avatar-1614873480120.png",
+    "category": "Usuario"
   },
   {
     "id": 5,
     "name": "Ana ",
     "email": "ana@gmail.com",
     "pass": "$2b$12$cWdG3DpSILx9QKCBXSb8kOqEdKWwpEkg5zKv0Y28XN6JGq6Vfg5RS",
-    "avatar": "avatar-1614968758218.png"
+    "avatar": "avatar-1614968758218.png",
+    "category": "Usuario"
   },
   {
     "id": 6,
     "name": "matias",
     "email": "matss_91@hotmail.com",
     "pass": "$2b$12$kx1rMBtVz/PMcrTecVKrI.EY9nYb/pVvGG7POQsRDbM28QF0.Aaza",
-    "avatar": "avatar-1615416678467.png"
+    "avatar": "avatar-1615416678467.png",
+    "category": "Usuario"
   },
   {
     "id": 7,
     "name": "matias",
     "email": "matss_91@hotmail.com",
     "pass": "$2b$12$LpE/M6xijPE8HSGPLV33HOxSOK/bQKlTVAjs0COcNMIa2l0CHUBmK",
-    "avatar": "avatar-1615421641143.png"
+    "avatar": "avatar-1615421641143.png",
+    "category": "Usuario"
+  },
+  {
+    "id": 8,
+    "name": "gato",
+    "email": "gato@gmail.com",
+    "pass": "$2b$12$SKNIYk9QvROhjqN62ge8FebF2h/Spuc1XwOOcVeyqGXrKf7TK9kIy",
+    "avatar": "avatar-1615570571540.jpg",
+    "category": "Usuario"
+  },
+  {
+    "id": 9,
+    "name": "perro",
+    "email": "perro@gmail.com",
+    "pass": "$2b$12$xvwz2qgapPROl78NDFcS7O0UIrMmiN1fwEQkkLaWpEXYkSjG4ZnVm",
+    "avatar": "avatar-1615761600272.jpg",
+    "category": "Usuario",
+    "provincia": "",
+    "localidad": "",
+    "direccion": "",
+    "telefono": ""
   }
 ]

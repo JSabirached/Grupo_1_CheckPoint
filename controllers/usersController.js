@@ -34,7 +34,12 @@ module.exports = {
                 name,
                 email,
                 pass: hashPass,
-                avatar: req.files[0].filename ||'sin imagen'
+                avatar: req.files[0].filename ||'sin imagen',
+                category:"Usuario",
+                provincia:"",
+                localidad:"",
+                direccion:"",
+                telefono:"",
             };
 //pushear el new user con fs.whiteFileSinc el primer parametro es donde se va a guardar el segundo es una estringnificacion un objeto literal y ponemos null,2 para preformar el codigo 
             user_db.push(newUser);
@@ -45,11 +50,14 @@ module.exports = {
 
         
     },
+    //login
+
     login : (req,res)=>{
         res.render('login')
     },
+    //procesos del login
     processLogin : (req,res)=>{ 
-        let errores = validationResult(req);
+        const errores = validationResult(req);
 
         if(!errores.isEmpty()){
             return res.render('login',{
@@ -71,12 +79,12 @@ module.exports = {
              
                     return res.redirect('/admin')
                 }
-            }
+            }//cokiies (recordar)
                 if (recordar){
                        res.cookie('usercom4',req.session.user,{
-                           maxAge : 1000 * 60
+                           maxAge : 1000 * 60 * 60
                        })
-                  
+                 return  res.redirect('/')
                     }}  
             
             return res.render('login',{
@@ -88,17 +96,67 @@ module.exports = {
             })
         },
    
-
+  //perfil del usuario
     profile : (req,res)=>{
-        res.render('profile')
+        let profileUser = users_db.find(element=> element.id == req.params.id);
+        res.render('users/profile'),{profileUser,}
     },
-    fatality : (req,res)=> {
+
+
+    cerrarSession : (req,res)=> {
         req.session.destroy();
-        if(req.cookies.usercom4){
-            res.cookie('usercom4','',{
+        if(req.cookies.recordar){
+            res.cookie('recordar','',{
                 maxAge :-1
             })
         }
-         res.redirect()
-      }
+         res.redirect('/')
+      },}
+      /* 
+//editar
+  edit : (req,res)=>{
+      res.render('users/edit');
+  }
+  //formulario de editar cuenta
+  editprofile:(req,res)=>{
+      const{nombre ,mail}=req.body;
+      users_db.forEach(user =>{
+          if (user.id ===Numbre (req.params.id)){
+              user.name=name.trim(),
+              user.email = email.trim()
+          },
+
+      });
+  }
+  viewEdit :(req,res) =>{
+      res.render('users/editProfile,{edit})
+  }
+ viewEditProfile:(req,res)=>{
+     const{provincia,localidad,direccion,telefono}=req.body;
+
+       users_db.forEach(user => {
+           if(user.id=== Numbre(req.params.id)){
+               user.provincia = provincia.trim()
+               user.localidad = localidad.trim()
+               user.direccion = direccion.trim()
+               user.telefono = telefono.trim()
+           }
+       });
+       fs.writeFileSync('./data.users.json',JSON.stringify(users_db,null,2);
  }
+
+
+     eliminar : (req,res)=>{ 
+            user_db.forEach(user=>{
+                              if (user.id===Number(req.params.id)){
+                                if(fs.existsSync(path.join('public','images',users.avatar))){
+                                  if(fs.unlinkSync(path.join('public','images',users.avatar))  ) 
+                                                                                            
+          
+        borrarUser = users_db.indexOf(user)
+        users_db.splice(borrarUser,1)
+                            }
+                                  };
+
+        }
+        */

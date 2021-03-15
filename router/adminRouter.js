@@ -1,14 +1,16 @@
 const express = require('express');
 const router = express.Router();
 const {index, comidaList, comidaCreate, comidaEdit, comidaStore, comidaDelete, comidaUpdate} = require('../controllers/adminController');
+const { values } = require('../validations/addValidator');
 const addValidator=require("../validations/addValidator")
 router.get('/',function logged(req,res,next){if(req.session.user){
     next()
 }res.redirect("/")},index);
 
-router.get('/admin/list',function logged(req,res,next){if(req.session.user){
+router.get('/admin/list',function logged(req,res,next){if(req.session.user ){
     next()
-}res.redirect("/")},comidaList);
+}else{res.redirect("/")}
+res.redirect("/")},comidaList);
 
 router.get('/admin/create',function logged(req,res,next){if(req.session.user){
     next()
