@@ -16,7 +16,7 @@ const registroValidator= require ('../validations/registroValidator');
 
 const checkUser = require('../middlewares/checkUser');
 
-const checkAdmin = require('../middlewares/checkAdmin');
+const checkRutas = require('../middlewares/checkRutas');
 
 //const checkRutas = require (path.join('..','middleWare','checkRutas'))
 
@@ -26,7 +26,7 @@ router.get('/registro', registro);
 router.post('/registro',uploadUser.any(),processRegistro);
 
 router.get('/login',login);
-router.post('/login',processLogin);
+router.post('/login',checkRutas,processLogin);
 
 
 

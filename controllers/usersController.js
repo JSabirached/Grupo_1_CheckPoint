@@ -82,7 +82,7 @@ module.exports = {
             }//cokiies (recordar)
                 if (recordar){
                        res.cookie('usercom4',req.session.user,{
-                           maxAge : 1000 * 60 * 60
+                           maxAge : 1000 * 60 * 60 * 2
                        })
                  return  res.redirect('/')
                     }}  

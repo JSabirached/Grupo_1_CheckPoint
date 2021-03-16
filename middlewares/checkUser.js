@@ -1,6 +1,6 @@
   module.exports = (req,res,next) =>{
-      if(req.session.newUser){//si esta levantado session
-         res.locals.newUser =req.newUser //poneme en locals user lo que esta en req.session user
+      if(req.session.user){//si esta levantado session
+         res.locals.user =req.user //poneme en locals user lo que esta en req.session user
       }
       next()
   }

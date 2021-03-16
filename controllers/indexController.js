@@ -18,7 +18,7 @@ module.exports={
         res.render('novedades')
     },
 detalledecompra:(req,res)=>{
-res.render("detallesdecompra",{
+res.render("detalledecompra",{
 
     
 })
