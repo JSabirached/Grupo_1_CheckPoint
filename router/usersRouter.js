@@ -16,17 +16,17 @@ const registroValidator= require ('../validations/registroValidator');
 
 const checkUser = require('../middlewares/checkUser');
 
-const checkRutas = require('../middlewares/checkRutas');
+const Rutas = require('../middlewares/checkRutas');
 
 //const checkRutas = require (path.join('..','middleWare','checkRutas'))
 
 
 //1-se ocupa de rendelizar una vista pedidos uno por get y uno por post
 router.get('/registro', registro);
-router.post('/registro',uploadUser.any(),processRegistro);
+router.post('/registro',uploadUser.any(),registroValidator,processRegistro);
 
 router.get('/login',login);
-router.post('/login',checkRutas,processLogin);
+router.post('/login',loginValidation,processLogin);
 
 
 

@@ -42,17 +42,19 @@ header li.navi {
 .btn-primary{
   color: #8827d8;
 }
-
+li.usuario{display: flex;
+  font-size: 20px; 
+}
 @media (min-width: 768px) {
-  header li.navi {
-    width: 120px;
-  }
+  
   .menu {
     display: flex;
     justify-content: space-evenly;
   }
-  ul.usuario {
+  li.usuario {
+    
     margin: 30px 0;
+    
    
   }
 }
@@ -61,7 +63,7 @@ header li.navi {
   li.navi a:hover {
     color: rgb(41, 4, 83);
   }
-  ul.usuario {
+  li.usuario {
     margin: 60px 0;
     display: flex;
     justify-content: space-around;

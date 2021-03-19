@@ -118,9 +118,5 @@ recetas:(req,res)=>{
 
     })
 },
-indexA:(req,res)=>{
-    res.render("indexA",{
 
-    })
-},
 }

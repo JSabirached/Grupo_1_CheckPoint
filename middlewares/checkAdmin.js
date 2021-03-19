@@ -3,7 +3,7 @@
 
 
 module.exports = (req,res,next) => {
-    if (req.session.user.category==="Admin"){
+    if (req.session.users.category==="Admin"){
         next()
     }else{
         res.redirect('/')

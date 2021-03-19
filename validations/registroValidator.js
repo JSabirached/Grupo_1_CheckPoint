@@ -4,7 +4,7 @@ const user_db = JSON.parse(fs.readFileSync ('data/users.json','utf-8'));
 //recibe como parametro el formulario el input con un mensaje de valicion
 module.exports = [
     check('name')
-    .notEmpty().withMessage('el usuario es requerido'),
+    .notEmpty().withMessage('el nombre es requerido'),
 
     check('email')
     .isEmail().withMessage('debe ser un mail valido'),

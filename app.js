@@ -12,6 +12,7 @@ const formRouter = require('./router/formRouter');
 const productosRouter = require('./router/productosRouter');
 const usersRouter = require('./router/usersRouter');
 const adminRouter = require('./router/adminRouter');
+const localsCheck = require('./middlewares/localsCheck');
 
 var app = express();
 
@@ -24,11 +25,15 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(methodOverride('_method'));
+
+
 
 
 app.use(session( {secret :"checkpoint", resave : true ,saveUninitialized:true}));
 
+app.use(methodOverride('_method'));
+
+app.use(localsCheck);
 
 
 

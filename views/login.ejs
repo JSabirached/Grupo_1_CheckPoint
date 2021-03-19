@@ -13,15 +13,24 @@
                 <input type="email" placeholder="tu email" name="email"><br><br>
                 <input type="password" placeholder="tu contraseña" name="pass"><br><br>
                 <input type="checkbox" placeholder="tu contraseña" name="recordar" id="recordar">
-                <label for="recordar">Recordarme</label>
-                <input class="btn btn-primary" type="submit" value="ingresar">
+                <label for="recordar">Recordarme</label><br><br>
+                <input class="btn btn-danger" type="submit" value="ingresar">
                     <div class="login-items col-12 col-md-12  ">
-                         <input class="fb"  >acede a Facebook<i class="fab fa-facebook-f"></i>  
-                         <input class="tw"><i class="fab fa-twitter"></i>   Acceder con Twitter >
-                         <input class="correo"><i class="fas fa-envelope"></i>   Acceder con Correo ><br>
+                         <button class="fb">  <i class="fab fa-facebook-f"></i>acede a Facebook</button> <br>
+                         <button class="tw"><i class="fab fa-twitter"></i>   Acceder con Twitter ></button><br>
+                         <button class="correo"><i class="fas fa-envelope"></i>   Acceder con Correo ></button><br>
                         <a href="/users/registro"> ¿no estas registrado? registrate aca</a>
                     </div>
                 </form>
+                <% if (typeof errores != 'undefined') { %>
+                  <ul>
+                    <%errores.forEach(error =>  { %>
+                      <li><%=error.msg %> </li>
+                      
+                      <% }) %>
+                  </ul>
+                 
+                <% } %>
               </div>
         </div>
       </div>

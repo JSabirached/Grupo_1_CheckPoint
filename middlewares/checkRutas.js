@@ -1,10 +1,9 @@
-module.exports = (req,res,next) => {
-    if (req.session.user.category!="Usuario"){
-        next()
-    }else{
+module.exports = (req , res , next ) => {
+    if (typeof req.session.users.category != "Usuario"){
+        next();
+    } else {
         res.redirect('/')
-    }
-}
-
+  }
+};
 
 

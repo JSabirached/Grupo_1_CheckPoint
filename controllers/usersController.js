@@ -34,7 +34,7 @@ module.exports = {
                 name,
                 email,
                 pass: hashPass,
-                avatar: req.files[0].filename ||'sin imagen',
+                avatar: req.files[0].filename || 'sin imagen',
                 category:"Usuario",
                 provincia:"",
                 localidad:"",
@@ -57,6 +57,7 @@ module.exports = {
     },
     //procesos del login
     processLogin : (req,res)=>{ 
+        
         const errores = validationResult(req);
 
         if(!errores.isEmpty()){
@@ -74,10 +75,11 @@ module.exports = {
                     req.session.user ={
                        id :result.id,
                        name:result.name,
-                       avatar : result.avatar
+                       avatar : result.avatar,
+                       category:result.category
                    }
              
-                    return res.redirect('/admin')
+                   
                 }
             }//cokiies (recordar)
                 if (recordar){
@@ -85,7 +87,7 @@ module.exports = {
                            maxAge : 1000 * 60 * 60 * 2
                        })
                  return  res.redirect('/')
-                    }}  
+                    }}   return res.redirect('/')
             
             return res.render('login',{
                 errores : [
@@ -98,8 +100,9 @@ module.exports = {
    
   //perfil del usuario
     profile : (req,res)=>{
+        
         let profileUser = users_db.find(element=> element.id == req.params.id);
-        res.render('users/profile'),{profileUser,}
+        res.render('profile'),{profileUser}
     },
 
 

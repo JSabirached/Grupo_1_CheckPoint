@@ -9,14 +9,23 @@
 			<div class="col-12">
 			     <h1>REGISTRATE</h1><!--method post creamos un formulario -->
 			        <form action="/users/registro" method="post" enctype="multipart/form-data">
-				        <input type="text" placeholder="Nombre "  name="name">
-			          	<input type="email" placeholder="email"  name="email">
-			         	<input type="password" placeholder="contraseña"  name="pass">
-			         	<input type="password" placeholder="reingrese la contraseña"  name="pass2">
-			         	<input type="file" name="avatar">
-			            	<button type="submit">Registrarme</button><br>
+				        <input type="text" placeholder="Nombre "  name="name"><br><br>
+			          	<input type="email" placeholder="email"  name="email"><br><br>
+			         	<input type="password" placeholder="contraseña"  name="pass"><br><br>
+			         	<input type="password" placeholder="reingrese la contraseña"  name="pass2"><br><br>
+			         	<input type="file" name="avatar"><br><br>
+			            	<button class="btn btn-danger" type="submit">Registrarme</button><br>
 			       	<a href="/users/login">ya sos parte de CheckPoint ingresa aca</a>
 		        	</form>
+			<% if (typeof errores != 'undefined') { %>
+				<ul>
+					<%errores.forEach(error =>  { %>
+						<li><%=error.msg %> </li>
+						
+						<% }) %>
+				</ul>
+			 
+			<% } %>
     	    </div>
         </div>
     </div>
