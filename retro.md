@@ -71,7 +71,7 @@
  - Organizar reuniones fijas en dias y horarios
 
 #### HACER MENOS
- -Postergar tareas
+ - Postergar tareas
 
 #### DEJAR DE HACER
 - Distracciones y procastinar
