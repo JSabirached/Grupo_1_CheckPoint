@@ -1,4 +1,4 @@
-## RETROSPECTIVAS 1
+## RETROSPECTIVAS SPRINT 1
 
 #### SEGUIR HACIENDO
  - Division del trabajo
@@ -28,7 +28,9 @@
 - saber en que estan los integrantes
 
 
-## RETROSPECTIVA 2 y 3
+
+
+## RETROSPECTIVA SPRINT 2 y 3
 - Inconvenientes técnicos (ya resueltos)
 - Compañerismo y solucion en tiempo record
 
@@ -55,6 +57,33 @@
 #### HACER MAS
 - Diseños
 - Investigar tecnologias aplicables 
+- Saber en que estan los integrantes
+
+## RETROSPECTIVA SPRINT 4
+- Inconvenientes técnicos (ya resueltos)
+- Compañerismo y solucion en tiempo record
+
+#### SEGUIR HACIENDO
+ - Division del trabajo
+ - Definir responsabilidades
+ - Compañerismo
+ - Disposicion a ayudar a los compañeros
+ - Trabajar en ramas
+ - Mejorar el front
+ - Organizar reuniones fijas en dias y horarios
+
+#### HACER MENOS
+ -Postergar tareas
+
+#### DEJAR DE HACER
+- Distracciones y procastinar
+
+#### EMPEZAR HACER
+- Más funcionalidades
+- Pensar en cosas que podemos optimizar
+- Integrar nuevas tecnologías
+
+#### HACER MAS
 - Saber en que estan los integrantes
 
 
