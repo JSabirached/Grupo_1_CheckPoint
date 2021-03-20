@@ -60,8 +60,6 @@
 - Saber en que estan los integrantes
 
 ## RETROSPECTIVA SPRINT 4
-- Inconvenientes técnicos (ya resueltos)
-- Compañerismo y solucion en tiempo record
 
 #### SEGUIR HACIENDO
  - Division del trabajo
