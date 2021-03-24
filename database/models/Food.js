@@ -1,12 +1,12 @@
 //const config = require("../config/config")
 
 module.exports = (sequelize , DataTypes) => {
-    const alias = 'Comida';
+    const alias = 'Comidas';
 
     const cols = { 
         id : {
-            type : DataTypes.INTERGER.UNSIGNED,
-            primarykey : true ,
+            type : DataTypes.INTEGER.UNSIGNED,
+            primaryKey : true,
             allowNull : false ,
             autoIncrement :true 
         },
@@ -35,12 +35,14 @@ module.exports = (sequelize , DataTypes) => {
     }
 
     const config = {
-       tableName :'foods',
+       tableName :'food',
        timestamps : true,
        underscored : true
 
     }
 
 const Food = sequelize.define(alias, cols, config)
+
+return Food
 
 }

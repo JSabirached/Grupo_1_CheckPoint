@@ -4,8 +4,8 @@ module.exports = (sequelize , DataTypes) => {
 
     const cols = { 
       id : {
-          type : DataTypes.INTERGER.UNSIGNED,
-          primarykey : true ,
+          type : DataTypes.INTEGER.UNSIGNED,
+          primaryKey : true ,
           allowNull : false ,
           autoIncrement :true 
       },
@@ -49,12 +49,14 @@ module.exports = (sequelize , DataTypes) => {
     }
 
     const config = {
-       tableName :'users',
+       tableName :'user',
        timestamps : true,
        underscored : true
 
     }
 
 const User = sequelize.define(alias, cols, config)
+
+return User
 
 }

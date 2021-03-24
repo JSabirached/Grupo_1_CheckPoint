@@ -1,15 +1,22 @@
-var comidas = require('../data/comida');
-const fs = require('fs');
 const {check,validationResult,body}=require('express-validator');
+const db = require('../database/models');
+
+
 module.exports = {
     index : (req,res) => {
         res.render('admin/index')
     },
     comidaList : (req,res) => {
 
-        res.render('admin/comidaList',{
-            comidas
+        db.Comidas.findAll()
+        .then(comidas => {
+            res.send(comidas)
+            return res.render('admin/comidaList',{
+                comidas
+            })
         })
+
+       
     },
     comidaCreate : (req,res) => {
 
