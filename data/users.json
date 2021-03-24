@@ -1,19 +1,27 @@
 [
   {
     "id": 1,
-    "username": "josue",
+    "name": "josue",
     "email": "josueabirached@gmail.com",
     "pass": "$2b$12$/4gG3IcV3O2Rw2.Foiel3u7CwqTm65CyMIAtDT41ck6F.Mylgk1ZG",
     "avatar": "avatar-1614368577980.jpg",
-    "category": "Admin"
+    "category": "Admin",
+    "provincia": "",
+    "localidad": "",
+    "direccion": "",
+    "telefono": ""
   },
   {
     "id": 2,
-    "username": "juan",
+    "name": "juan",
     "email": "juan@gmail.com",
     "pass": "$2b$12$B1c.IdK9qi.UNOnD6HCj9OPAoq7nNYpiSfZko3DNQepuFlVjXyxTu",
     "avatar": "avatar-1614550505818.png",
-    "category": "Usuario"
+    "category": "Usuario",
+    "provincia": "",
+    "localidad": "",
+    "direccion": "",
+    "telefono": ""
   },
   {
     "id": 3,
@@ -21,7 +29,11 @@
     "email": "luis@gmail.com",
     "pass": "$2b$12$zOeeUmH7Iry5pstxS//9QeGW6MOZjFxFK0TU8By6KeOFm2h/PBQGO",
     "avatar": "avatar-1614829244303.png",
-    "category": "Usuario"
+    "category": "Usuario",
+    "provincia": "",
+    "localidad": "",
+    "direccion": "",
+    "telefono": ""
   },
   {
     "id": 4,
@@ -29,7 +41,11 @@
     "email": "jonatan@gmail.com",
     "pass": "$2b$12$RbjVi22QyckQpEqsvLJyIOb2CVIwfUMuu/p74ze3gx1ddCEIiCNGW",
     "avatar": "avatar-1614873480120.png",
-    "category": "Usuario"
+    "category": "Usuario",
+    "provincia": "",
+    "localidad": "",
+    "direccion": "",
+    "telefono": ""
   },
   {
     "id": 5,
@@ -37,7 +53,11 @@
     "email": "ana@gmail.com",
     "pass": "$2b$12$cWdG3DpSILx9QKCBXSb8kOqEdKWwpEkg5zKv0Y28XN6JGq6Vfg5RS",
     "avatar": "avatar-1614968758218.png",
-    "category": "Usuario"
+    "category": "Usuario",
+    "provincia": "",
+    "localidad": "",
+    "direccion": "",
+    "telefono": ""
   },
   {
     "id": 6,
@@ -45,7 +65,11 @@
     "email": "matss_91@hotmail.com",
     "pass": "$2b$12$kx1rMBtVz/PMcrTecVKrI.EY9nYb/pVvGG7POQsRDbM28QF0.Aaza",
     "avatar": "avatar-1615416678467.png",
-    "category": "Usuario"
+    "category": "Usuario",
+    "provincia": "",
+    "localidad": "",
+    "direccion": "",
+    "telefono": ""
   },
   {
     "id": 7,
@@ -53,7 +77,11 @@
     "email": "matss_91@hotmail.com",
     "pass": "$2b$12$LpE/M6xijPE8HSGPLV33HOxSOK/bQKlTVAjs0COcNMIa2l0CHUBmK",
     "avatar": "avatar-1615421641143.png",
-    "category": "Usuario"
+    "category": "Usuario",
+    "provincia": "",
+    "localidad": "",
+    "direccion": "",
+    "telefono": ""
   },
   {
     "id": 8,
@@ -61,7 +89,11 @@
     "email": "gato@gmail.com",
     "pass": "$2b$12$SKNIYk9QvROhjqN62ge8FebF2h/Spuc1XwOOcVeyqGXrKf7TK9kIy",
     "avatar": "avatar-1615570571540.jpg",
-    "category": "Usuario"
+    "category": "Usuario",
+    "provincia": "",
+    "localidad": "",
+    "direccion": "",
+    "telefono": ""
   },
   {
     "id": 9,
