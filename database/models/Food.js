@@ -5,8 +5,8 @@ module.exports = (sequelize , DataTypes) => {
 
     const cols = { 
         id : {
-            type : DataTypes.INTERGER.UNSIGNED,
-            primarykey : true ,
+            type : DataTypes.INTEGER.UNSIGNED,
+            primaryKey : true ,
             allowNull : false ,
             autoIncrement :true 
         },
@@ -35,7 +35,7 @@ module.exports = (sequelize , DataTypes) => {
     }
 
     const config = {
-       tableName :'foods',
+       tableName :'food',
        timestamps : true,
        underscored : true
 
@@ -44,3 +44,4 @@ module.exports = (sequelize , DataTypes) => {
 const Food = sequelize.define(alias, cols, config)
 
 }
+return Food

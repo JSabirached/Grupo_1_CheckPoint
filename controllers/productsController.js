@@ -1,5 +1,5 @@
 const fs = require('fs');
-const comidas=require("../data/comida");
+const db = require('../database/models')
 
 let plato ="";
 

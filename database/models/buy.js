@@ -3,8 +3,8 @@ module.exports = (sequelize , DataTypes) => {
 
     const cols = { 
         id : {
-            type : DataTypes.INTERGER.UNSIGNED,
-            primarykey : true ,
+            type : DataTypes.INTEGER.UNSIGNED,
+            primaryKey : true,
             allowNull : false ,
             autoIncrement :true 
         },
@@ -17,7 +17,7 @@ module.exports = (sequelize , DataTypes) => {
             allowNull : false ,
         },
        horario_Entrega: {
-            type : DataTypes.DATETIME,
+            type : DataTypes.DATE,
             allowNull : false ,
         },
        total : {
@@ -36,7 +36,7 @@ module.exports = (sequelize , DataTypes) => {
     }
 
     const config = {
-       tableName :'buys',
+       tableName :'buy',
        timestamps : true,
        underscored : true
 
@@ -45,3 +45,4 @@ module.exports = (sequelize , DataTypes) => {
 const Buy = sequelize.define(alias, cols, config)
 
 }
+return Buy
