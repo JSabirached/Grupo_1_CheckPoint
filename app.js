@@ -1,5 +1,5 @@
 var createError = require('http-errors');
- express = require('express');
+var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
@@ -12,6 +12,7 @@ const formRouter = require('./router/formRouter');
 const productosRouter = require('./router/productosRouter');
 const usersRouter = require('./router/usersRouter');
 const adminRouter = require('./router/adminRouter');
+
 const localsCheck = require('./middlewares/localsCheck');
 
 var app = express();

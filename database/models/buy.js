@@ -2,10 +2,10 @@ module.exports = (sequelize , DataTypes) => {
     const alias = 'Compras';
 
     const cols = { 
-        id : {
-            type : DataTypes.INTEGER.UNSIGNED,
+        id: {
+            type : DataTypes.INTEGER(10).UNSIGNED,
             primaryKey : true,
-            allowNull : false ,
+            allowNull : false,
             autoIncrement :true 
         },
         fecha_Compra : {
@@ -44,5 +44,7 @@ module.exports = (sequelize , DataTypes) => {
 
 const Buy = sequelize.define(alias, cols, config)
 
-}
 return Buy
+
+}
+

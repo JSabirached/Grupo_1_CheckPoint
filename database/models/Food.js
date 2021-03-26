@@ -1,12 +1,12 @@
 //const config = require("../config/config")
 
 module.exports = (sequelize , DataTypes) => {
-    const alias = 'Comida';
+    const alias = 'Comidas';
 
     const cols = { 
         id : {
             type : DataTypes.INTEGER.UNSIGNED,
-            primaryKey : true ,
+            primaryKey : true,
             allowNull : false ,
             autoIncrement :true 
         },
@@ -43,5 +43,6 @@ module.exports = (sequelize , DataTypes) => {
 
 const Food = sequelize.define(alias, cols, config)
 
-}
 return Food
+
+}
