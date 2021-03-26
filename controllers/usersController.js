@@ -27,7 +27,7 @@ module.exports = {
                 }
             });
 //hasspaas es igual a pass y el numero que deseamos osea que lo encrypta recibe pass como paramtro y el 12 es el nivel encryptacion
-            let hashPass = bcrypt.hashSync(pass,12);
+            let hashPass =bcrypt.hashSync(pass,12);
 //en el 33 +lastID el + significa mas uno
             let newUser = {
                 id : +lastID + 1,

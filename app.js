@@ -6,6 +6,7 @@ var logger = require('morgan');
 const session = require( 'express-session');
 const methodOverride =require ('method-override') ;
 
+
 //rutas
 const indexRouter = require('./router/indexRouter');
 const formRouter = require('./router/formRouter');
@@ -14,6 +15,8 @@ const usersRouter = require('./router/usersRouter');
 const adminRouter = require('./router/adminRouter');
 
 const localsCheck = require('./middlewares/localsCheck');
+//const cookies = require('/middlewares/cookiesCheck');
+
 
 var app = express();
 

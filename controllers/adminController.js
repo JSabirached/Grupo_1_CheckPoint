@@ -18,8 +18,12 @@ module.exports = {
        
     },
     comidaCreate : (req,res) => {
-        let errors = validationResult(req);
+       res.render('admin/comidaCreate')
 
+      
+    
+    },
+    comidaStore : (req,res) =>{
         if(errors.isEmpty()){
             db.Comidas.create({
                 name: req.name,
@@ -30,10 +34,12 @@ module.exports = {
             })
             .then(()=>{
                 res.redirect('/')
-            })
+           })
+           .catch(error=> res.send(error))
+
         }
-    
     },
+
     comidaEdit : (req,res) => {
         
         let comida = comidas.find(comida => comida.id === +req.params.id);
