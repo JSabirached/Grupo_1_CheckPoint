@@ -1,5 +1,6 @@
-const {check,validationResult,body}=require('express-validator');
+const {validationResult}=require('express-validator');
 const db = require('../database/models');
+const {Op} = require('sequelize');
 
 module.exports = {
     index : (req,res) => {
@@ -7,16 +8,26 @@ module.exports = {
     },
     comidaList : (req,res) => {
 
-        db.Comidas.findAll()
-        .then(comidas => {
-            res.send(comidas)
-            return res.render('admin/comidaList',{
-                comidas
-            })
-        })
+        let Food = db.Food.findAll({include:[
+            {association: 'category'},
+        ]})
+        let category = db.category.findAll();
 
-       
-    },
+        Promise.all([categorias, food])
+        .then(([categorias, food]) => {
+                res.render("admin/productoLista", {
+                    title: "Lista de food",
+                    Food: food,
+                    imagen:food,
+                    category:food,
+                    category
+
+                })
+            })
+            .catch(error => console.log(error))
+    }
+    ,
+   
     comidaCreate : (req,res) => {
        res.render('admin/comidaCreate')
 
@@ -33,13 +44,13 @@ module.exports = {
                 description: req.description
             })
             .then(()=>{
-                res.redirect('/')
+                res.redirect('/admin')
            })
            .catch(error=> res.send(error))
 
         }
-    },
-
+    }
+/*
     comidaEdit : (req,res) => {
         
         let comida = comidas.find(comida => comida.id === +req.params.id);
@@ -83,3 +94,4 @@ module.exports = {
         res.redirect('/admin');
     }
 }
+/*/}

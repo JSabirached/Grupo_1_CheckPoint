@@ -1,6 +1,6 @@
 const fs =require('fs')
 const {check, body} = require('express-validator');
-const user_db = JSON.parse(fs.readFileSync ('data/users.json','utf-8'));
+const user_db = JSON.parse(fs.readFileSync ('data/users.json','utf-8'));//
 //recibe como parametro el formulario el input con un mensaje de valicion
 module.exports = [
     check('name')

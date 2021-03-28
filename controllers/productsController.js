@@ -1,7 +1,7 @@
 const fs = require('fs');
 const db = require('../database/models')
 
-let plato ="";
+
 
 module.exports={
 /*iniciosecciones*/

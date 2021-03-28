@@ -3,8 +3,8 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-const session = require( 'express-session');
-const methodOverride =require ('method-override') ;
+var session = require( 'express-session');
+var methodOverride =require ('method-override') ;
 
 
 //rutas
@@ -12,11 +12,11 @@ const indexRouter = require('./router/indexRouter');
 const formRouter = require('./router/formRouter');
 const productosRouter = require('./router/productosRouter');
 const usersRouter = require('./router/usersRouter');
-const adminRouter = require('./router/adminRouter');
+const adminRouter = require('');
 
-const localsCheck = require('./middlewares/localsCheck');
-//const cookies = require('/middlewares/cookiesCheck');
-
+const localCheck = require("./middlewares/localCheck");
+const cookieCkeck = require("./middlewares/cookieCheck")
+const adminCheck = require("./middlewares/adminCheck");
 
 var app = express();
 
@@ -29,23 +29,22 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
-
-
-
 app.use(session( {secret :"checkpoint", resave : true ,saveUninitialized:true}));
 
 app.use(methodOverride('_method'));
 
-app.use(localsCheck);
 
+
+app.use(session({secret: "CheckPoint", resave: false, saveUninitialized: true}));
+app.use(localCheck);
+app.use(cookieCkeck);
 
 
 app.use('/', indexRouter);
 app.use('/formularios', formRouter);
 app.use('/productos', productosRouter);
 app.use('/users', usersRouter);
-app.use('/admin',adminRouter);
+//app.use("/admin",adminCheck, adminRouter);
 
 
 // catch 404 and forward to error handler

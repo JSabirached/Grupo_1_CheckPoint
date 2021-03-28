@@ -20,6 +20,7 @@
     "mysql2": "^2.2.5",
     "nodemon": "^2.0.7",
     "sequelize": "^6.5.1",
+    "sequelize-paginate": "^1.1.6",
     "session": "^0.1.0"
   }
 }

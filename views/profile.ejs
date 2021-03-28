@@ -1,24 +1,28 @@
-<%- include('partials/head') %>
-	<title>profile</title>
+<!DOCTYPE html>
+<html lang="es">
+<%- include("partials/head") %>
 
-
-<body>
-	<%- include('partials/header') %>
-	<div class="container">
-		<div class="row">
-			<div class="col-12">
-			 <h1>Profile</h1>
-             <p>Nombre de usuario <span><%= user.name  %> </span></p>
-             <img src="/public/images/users/<%=user.avatar %> " alt="">
-             <form action="/users/delete/<%= user.id %>?_method=DELETE " method="POST">
-             <button type="submit">Eliminar Cuenta</button>
-</form>
-    	    </div>
-        </div>
+  <body>
+    <%- include("partials/header") %>
+    <div class="container-fluid">
+      <div class="profile row ">
+        <img src="/images/userAvatar/<%= result.avatar %> " alt="">
+        <ul class="list-group col-10 col-lg-8">
+          <li class="list-group-item"><p>Nombre : <%= result.name  %></p></li>
+          <li class="list-group-item"><p>Apellido : <%=  result.last_name  %></p></li>
+          <li class="list-group-item"><p>Email : <%=  result.email  %></p></li>
+        </ul>
+        <button class="btn-profile col-3 col-lg-2"><a href="/users/edit/<%=  result.id  %>">Editar perfil</a></button>
+      </div>
     </div>
-<%- include('partials/footer') %>
+      
 
-</body>
-</html>	
 
-  
+
+      <%- include("partials/footer") %>
+        <%- include("partials/scriptBS") %>
+
+
+  </body>
+
+</html>
