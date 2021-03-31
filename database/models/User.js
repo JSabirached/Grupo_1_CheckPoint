@@ -26,8 +26,8 @@ module.exports = (sequelize , DataTypes) => {
         defaultValue : null
       },
       category : {
-        type : DataTypes.STRING(20),
-        allowNull : false ,
+        type : DataTypes.INTEGER.UNSIGNED,
+        allowNull : true ,
       },
       provincia : {
         type : DataTypes.STRING(45),
@@ -45,6 +45,10 @@ module.exports = (sequelize , DataTypes) => {
         type : DataTypes.STRING(10),
         defaultValue : null
       },
+       surname : {
+        type : DataTypes.STRING(15),
+        allowNull : false ,
+    }
       
     }
 

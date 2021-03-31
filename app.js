@@ -12,11 +12,11 @@ const indexRouter = require('./router/indexRouter');
 const formRouter = require('./router/formRouter');
 const productosRouter = require('./router/productosRouter');
 const usersRouter = require('./router/usersRouter');
-const adminRouter = require('');
+const adminRouter = require("./router/adminRouter");
 
 const localCheck = require("./middlewares/localCheck");
 const cookieCkeck = require("./middlewares/cookieCheck")
-const adminCheck = require("./middlewares/adminCheck");
+
 
 var app = express();
 
@@ -38,13 +38,14 @@ app.use(methodOverride('_method'));
 app.use(session({secret: "CheckPoint", resave: false, saveUninitialized: true}));
 app.use(localCheck);
 app.use(cookieCkeck);
+//app.use(cookieCkeck);
 
 
 app.use('/', indexRouter);
 app.use('/formularios', formRouter);
 app.use('/productos', productosRouter);
 app.use('/users', usersRouter);
-//app.use("/admin",adminCheck, adminRouter);
+app.use('/admin', adminRouter);
 
 
 // catch 404 and forward to error handler
