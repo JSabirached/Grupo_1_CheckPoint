@@ -192,7 +192,7 @@ module.exports = {
         
 
     },
-    logout: (req, res) => {
+  /*  logout: (req, res) => {
 
         //cuando cierro sesion, finalizo el req.session
         req.session.destroy();
@@ -204,5 +204,5 @@ module.exports = {
 
         //finalizo redireccionando
         res.redirect("/");
-    }
+    }*/
 }
