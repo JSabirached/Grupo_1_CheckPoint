@@ -68,7 +68,7 @@ seccionPostres:(req,res)=>{
             res.render("seccionPostres",{result:categorias})
         })
         .catch(error =>res.send(error))
-        console.log(categorias)
+       //  console.log(categorias)
     },
 
 

@@ -41,7 +41,7 @@ module.exports = {
 
 
             })
-            res.send(telefono)
+           
             .then(() => {res.redirect("/users/login")})
         }
 

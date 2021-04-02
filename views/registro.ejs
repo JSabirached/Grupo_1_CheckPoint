@@ -15,15 +15,16 @@
 			         	<input type="password" placeholder="contraseña"  name="pass"><br><br>
 			         	<input type="password" placeholder="reingrese la contraseña"  name="pass2"><br><br>
 			         	<input type="file" name="avatar"><br><br> 
-						 <input type="text" placeholder="Nombre " value="null"  name="provincia"><br><br>
-			        	<input type="text" placeholder="Nombre " value="null"  name="localidad"><br><br>
-						 <input type="text" placeholder="Nombre " value="null"  name="direccion"><br><br> 
-						 <input type="number" placeholder="Nombre " value="null"  name="telefono"><br><br>
+						 <span>↓↓↓Para envios a domicilio completa aca↓↓↓</span><br><br>
+						<input type="text" placeholder="provincia"   name="provincia"><br><br>
+			        	<input type="text" placeholder="localidad"   name="localidad"><br><br>
+						<input type="text" placeholder="direccion"   name="direccion"><br><br> 
+						<input type="tel" placeholder="telefono"    name="telefono"><br><br>
 
 			            	<button class="btn btn-danger" type="submit">Registrarme</button><br>
 			       	<a href="/users/login">ya sos parte de CheckPoint ingresa aca</a>
 		        	</form>
-			<% if (typeof errores != 'undefined') { %>
+	      <% if (typeof errores != 'undefined') { %>
 				<ul>
 					<%errores.forEach(error =>  { %>
 						<li><%=error.msg %> </li>
