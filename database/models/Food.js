@@ -22,8 +22,8 @@ module.exports = (sequelize , DataTypes) => {
             type : DataTypes.BLOB,
             
         },
-        category : {
-            type : DataTypes.STRING(20),
+        id_category : {
+            type : DataTypes.INTEGER,
             allowNull : false ,
         },
         description : {
@@ -42,6 +42,13 @@ module.exports = (sequelize , DataTypes) => {
     }
 
 const Food = sequelize.define(alias, cols, config)
+Food.associate = function(models){
+    Food.belongsTo(models.Category,{
+        as:'categorias',
+        foreignKey:'id_category'
+    })
+}
+
 
 return Food
 

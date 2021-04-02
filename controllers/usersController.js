@@ -1,10 +1,10 @@
 const fs = require("fs");
 const path = require("path");
-
+const db = require("../database/models");
 const { validationResult } = require('express-validator');
 const bcrypt = require('bcrypt')
 
-const db = require("../database/models");
+
 
 module.exports = {
     
@@ -32,7 +32,9 @@ module.exports = {
                 surname : surname.trim(),
                 email: email.trim(),
                 pass : bcrypt.hashSync(pass, 12),
-                avatar : (req.files[0]) ? req.files[0].filename : "default.png"
+                avatar : (req.files[0]) ? req.files[0].filename : "default.png",
+                category : category =='0'
+
             })
             .then(() => {res.redirect("/users/login")})
         }

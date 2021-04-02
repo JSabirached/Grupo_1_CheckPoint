@@ -10,15 +10,15 @@ module.exports = (sequelize , DataTypes) => {
           autoIncrement :true 
       },
       name : {
-          type : DataTypes.STRING(10),
+          type : DataTypes.STRING(45),
           allowNull : false ,
       },
       email : {
-        type : DataTypes.STRING(20),
+        type : DataTypes.STRING(45),
         allowNull : false ,
       },
       pass : {
-        type : DataTypes.STRING(12),
+        type : DataTypes.STRING(70),
         allowNull : false ,
       },
       avatar : {
@@ -42,11 +42,11 @@ module.exports = (sequelize , DataTypes) => {
         defaultValue : null
       },
       telefono : {
-        type : DataTypes.STRING(10),
+        type : DataTypes.STRING(45),
         defaultValue : null
       },
        surname : {
-        type : DataTypes.STRING(15),
+        type : DataTypes.STRING(45),
         allowNull : false ,
     }
       

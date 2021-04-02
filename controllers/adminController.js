@@ -50,7 +50,7 @@ module.exports = {
 
         }
     }
-/*
+,
     comidaEdit : (req,res) => {
         
         let comida = comidas.find(comida => comida.id === +req.params.id);
@@ -79,7 +79,7 @@ module.exports = {
             return res.render("admin/comidaEdit",{errores:errores.mapped(),old:req.body, id:req.params.id})
                 
                     }
-        fs.writeFileSync('./data/comida.json',JSON.stringify(comidas),'utf-8');
+        fs.writeFileSync('./database/models',JSON.stringify(Comidas),'utf-8');
         res.redirect('/admin');
     },
     comidaDelete : (req,res) => {
@@ -90,9 +90,8 @@ module.exports = {
             }
         });
         
-        fs.writeFileSync('./data/comida.json',JSON.stringify(comidas),'utf-8');
+        fs.writeFileSync('./database/models',JSON.stringify(Comidas),'utf-8');
         res.redirect('/admin');
     }
 }
  
-/*/}
