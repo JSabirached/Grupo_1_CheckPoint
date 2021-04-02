@@ -33,9 +33,15 @@ module.exports = {
                 email: email.trim(),
                 pass : bcrypt.hashSync(pass, 12),
                 avatar : (req.files[0]) ? req.files[0].filename : "default.png",
-                category : category =='0'
+                category : '0',
+                provincia : provincia.trim(),
+                localidad : localidad.trim(),
+                direccion : direccion.trim(),
+                telefono : telefono.trim(),
+
 
             })
+            res.send(telefono)
             .then(() => {res.redirect("/users/login")})
         }
 
