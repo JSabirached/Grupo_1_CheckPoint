@@ -26,7 +26,7 @@ inicioSecciones:(req,res)=>{
 
 
 seccionBebidas:(req,res)=>{ db.Category.findOne({
-    include : [{associate : 'Comidas'}],
+    include : [{association : 'Comidas'}],
     where :{
         name : 'bebidas'
     }
@@ -40,7 +40,7 @@ seccionBebidas:(req,res)=>{ db.Category.findOne({
 
 
 seccionHamburguesas:(req,res)=>{ db.Category.findOne({
-    include : [{associate : 'Comidas'}],
+    include : [{association : 'Comidas'}],
     where :{
         name : 'hamburguesas'
     }
@@ -59,7 +59,7 @@ seccionPostres:(req,res)=>{
          where :{
             name : 'postres'
         },
-        include : [{associate : 'Comidas'}]
+        include : [{association : 'Comidas'}]
       
     })  
     
@@ -73,7 +73,7 @@ seccionPostres:(req,res)=>{
 
 
 seccionPizzaEmpa: (req,res) => { db.Category.findOne({
-    include : [{associate : 'Comidas'}],
+    include : [{association : 'Comidas'}],
     where :{
         name : 'PizzaEmpa'
     }
