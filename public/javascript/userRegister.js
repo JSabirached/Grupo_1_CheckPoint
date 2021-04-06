@@ -38,15 +38,15 @@ window.addEventListener('load', function() {
         switch (true) {
             case !$inputNombre.value.trim():
                 $nombreErrors.innerHTML = 'El campo nombre es obligatorio';
-                $inputNombre.classList.add('invalido')
+                $inputNombre.classList.add('is-invalid')
                 break;
             case !regExAlpha.test($inputNombre.value):
                 $nombreErrors.innerHTML = 'Debes ingresar un nombre válido'
-                $inputNombre.classList.add('invalido')
+                $inputNombre.classList.add('is-invalido')
                 break;
             default:
-                $inputNombre.classList.remove('invalido');
-                $inputNombre.classList.add('valido');
+                $inputNombre.classList.remove('is-invalido');
+                $inputNombre.classList.add('is-valid');
                 $nombreErrors.innerHTML = ''
                 break;
         }
@@ -56,15 +56,15 @@ window.addEventListener('load', function() {
         switch (true) {
             case !$inputApellido.value.trim():
                 $apellidoErrors.innerHTML = 'El campo apellido es obligatorio';
-                $inputApellido.classList.add('invalido')
+                $inputApellido.classList.add('is-invalid')
                 break;
             case !regExAlpha.test($inputApellido.value):
                 $apellidoErrors.innerHTML = 'Debes ingresar un nombre válido'
-                $inputApellido.classList.add('invalido')
+                $inputApellido.classList.add('is-invalid')
                 break;
             default:
-                $inputApellido.classList.remove('invalido');
-                $inputApellido.classList.add('valido');
+                $inputApellido.classList.remove('is-invalid');
+                $inputApellido.classList.add('is-valid');
                 $apellidoErrors.innerHTML = ''
                 break;
         }
@@ -74,15 +74,15 @@ window.addEventListener('load', function() {
         switch (true) {
             case !$inputEmail.value.trim():
                 $emailErrors.innerHTML = 'El campo email es obligatorio';
-                $inputEmail.classList.add('invalido')
+                $inputEmail.classList.add('is-invalid')
                 break;
             case !regExEmail.test($inputEmail.value):
                 $emailErrors.innerHTML = 'Debes ingresar un Email válido'
-                $inputEmail.classList.add('invalido')
+                $inputEmail.classList.add('is-invalid')
                 break;
             default:
-                $inputEmail.classList.remove('invalido');
-                $inputEmail.classList.add('valido');
+                $inputEmail.classList.remove('is-invalid');
+                $inputEmail.classList.add('is-valid');
                 $emailErrors.innerHTML = ''
                 break;
         }
@@ -92,15 +92,15 @@ window.addEventListener('load', function() {
         switch (true) {
             case !$Pass.value.trim():
                 $passErrors.innerHTML = 'El campo contraseña es obligatorio';
-                $Pass.classList.add('invalido')
+                $Pass.classList.add('is-invalid')
                 break;
             case !regExPass.test($Pass.value):
                 $passErrors.innerHTML = 'Debe tener entre 6 y 12 caracteres, al menos una mayúscula, una minúscula y un número'
-                $Pass.classList.add('invalido')
+                $Pass.classList.add('is-invalid')
                 break;
             default:
-                $Pass.classList.remove('invalido');
-                $Pass.classList.add('valido');
+                $Pass.classList.remove('is-invalid');
+                $Pass.classList.add('is-valid');
                 $passErrors.innerHTML = ''
                 break;
         }
@@ -110,15 +110,15 @@ window.addEventListener('load', function() {
         switch (true) {
             case !$Pass2.value.trim():
                 $pass2Errors.innerHTML = 'Debes reingresar la contraseña';
-                $Pass2.classList.add('invalido')
+                $Pass2.classList.add('is-invalid')
                 break;
             case $Pass2.value != $Pass2.value:
                 $pass2Errors.innerHTML = 'Las contraseñas no coinciden'
-                $Pass2.classList.add('invalido')
+                $Pass2.classList.add('is-invalid')
                 break;
             default:
-                $Pass2.classList.remove('invalido');
-                $Pass2.classList.add('valido');
+                $Pass2.classList.remove('is-invalid');
+                $Pass2.classList.add('is-valid');
                 $pass2Errors.innerHTML = ''
                 break;
         }
