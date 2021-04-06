@@ -8,7 +8,11 @@ const {Op} = require('sequelize');
 
 module.exports={
 /*iniciosecciones*/
+detallesdeproducto:(req,res)=>{
+    res.render("detallesdeproducto",{
 
+    })
+},
 
 
 
