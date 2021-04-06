@@ -39,6 +39,11 @@ cartadelivery:(req,res)=>{
             id_category : 1
         }
     })
+    let postres = db.Food.findAll({
+        where : {
+            id_category : 2
+        }
+    })
     let hamburguesas = db.Food.findAll({
         where : {
             id_category : 3
@@ -49,13 +54,10 @@ cartadelivery:(req,res)=>{
             id_category : 4
         }
     })
-    let postres = db.Food.findAll({
-        where : {
-            id_category : 2
-        }
-    }),
+    promise.all([bebidas,hamburguesas,pizzas,postres])
+   .then(([bebidas,hamburguesas,pizzas,postres]))
     res.render("carta",{
-
+        bebidas,hamburguesas,pizzas,postres
     })
 }
 
@@ -93,3 +95,4 @@ recetas:(req,res)=>{
     })
 },
 
+}
