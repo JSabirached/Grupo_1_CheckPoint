@@ -38,26 +38,27 @@ cartadelivery:(req,res)=>{
         where : {
             id_category : 1
         }
-    },
+    })
     let hamburguesas = db.Food.findAll({
-        where : {
-            id_category : 2
-        }
-    },
-    let pizzas = db.Food.findAll({
         where : {
             id_category : 3
         }
-    },
-    let postres = db.Food.findAll({
+    })
+    let pizzas = db.Food.findAll({
         where : {
             id_category : 4
         }
-    },
+    })
+    let postres = db.Food.findAll({
+        where : {
+            id_category : 2
+        }
+    }),
     res.render("carta",{
 
     })
-},
+}
+
 locales:(req,res)=>{
     res.render("locales",{
 
@@ -92,4 +93,3 @@ recetas:(req,res)=>{
     })
 },
 
-}
