@@ -34,10 +34,35 @@ agregarproducto:(req,res)=>{
 
 /*index*/
 cartadelivery:(req,res)=>{
-    res.render("carta",{
-
+    let bebibas = db.Food.findAll({
+        where : {
+            id_category : 1
+        }
     })
-},
+    let postres = db.Food.findAll({
+        where : {
+            id_category : 2
+        }
+    })
+    let hamburguesas = db.Food.findAll({
+        where : {
+            id_category : 3
+        }
+    })
+    let pizzas = db.Food.findAll({
+        where : {
+            id_category : 4
+        }
+    })
+    Promise.all([bebibas,hamburguesas,pizzas,postres])
+   .then(([bebibas,hamburguesas,pizzas,postres])=>{
+    res.render("carta",{
+        bebibas,hamburguesas,pizzas,postres
+    })
+   })
+   
+}
+
 locales:(req,res)=>{
     res.render("locales",{
 
