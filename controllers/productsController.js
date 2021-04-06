@@ -17,10 +17,21 @@ agregarproducto:(req,res)=>{
 
     })
 },
-inicioSecciones:(req,res)=>{
-    res.render("inicioSecciones",{ 
+secciones:(req,res)=>{
+    db.Category.findOne({
+        where : {
+            id:req.params.id
+        },
+    include : [{association : 'Comidas'}],
+    
+})
+.then(categoria =>{
+    return res.send(categoria)
+    res.render("secciones",{categoria})
+})
 
-    })
+
+    
 },
 
 
