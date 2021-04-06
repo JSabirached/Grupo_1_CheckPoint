@@ -34,6 +34,26 @@ agregarproducto:(req,res)=>{
 
 /*index*/
 cartadelivery:(req,res)=>{
+    let bebibas = db.Food.findAll({
+        where : {
+            id_category : 1
+        }
+    },
+    let hamburguesas = db.Food.findAll({
+        where : {
+            id_category : 2
+        }
+    },
+    let pizzas = db.Food.findAll({
+        where : {
+            id_category : 3
+        }
+    },
+    let postres = db.Food.findAll({
+        where : {
+            id_category : 4
+        }
+    },
     res.render("carta",{
 
     })
