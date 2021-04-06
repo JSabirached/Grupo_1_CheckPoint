@@ -20,7 +20,7 @@ module.exports = {
         if (!errores.isEmpty()) {
             
             return res.render('registro', {
-                errores: errores.errors,
+                errores: errores.mapped(),
                 title: 'Registro de Usuario'
             })
         } else {
