@@ -10,11 +10,13 @@
 			     <h1>REGISTRATE</h1><!--method post creamos un formulario -->
 			        <form action="/users/registro" method="post" enctype="multipart/form-data" id="form">
 				        <div class="d-flex flex-column justify-content-center align-items-center">
-							<input class="form-control w-25 mb-2" type="text" placeholder="Nombre "  name="name" id="nombre" >
+							<input class="form-control w-25 mb-4" type="text" placeholder="Nombre "  name="name" id="nombre" >
 							<span id="nombreErrors"></span>
 						</div>
-						<input type="text" placeholder="Apellido "  name="surname" id="apellido" ><br><br>
-						<span id="apellidoErrors"></span>
+				        <div class="d-flex flex-column justify-content-center align-items-center">
+							<input class="form-control w-25 mb-4" type="text" placeholder="Apellido "  name="surname" id="apellido" ><br><br>
+							<span id="apellidoErrors"></span>
+						</div>
 						<input type="email" placeholder="Email"  name="email" id="email" ><br><br>
 						<span id="emailErrors"></span>
 						<input type="password" placeholder="Contraseña"  name="pass" id="pass" ><br><br>

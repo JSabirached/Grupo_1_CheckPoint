@@ -67,14 +67,14 @@ module.exports = {
 
             const { email, pass, recordar } = req.body;
 
-            db.Users.findOne({
+            db.Usuario.findOne({
                 where: {
                     email : email
                 }
             })
             .then(user => {
                 if(!user == ""){
-                    if (bcrypt.compareSync(pass, user.password)) {
+                    if (bcrypt.compareSync(pass, user.pass)) {
                         req.session.user = {
                             id : user.id,
                             name : user.name,
@@ -89,7 +89,7 @@ module.exports = {
                         if(recordar){
                             res.cookie("user", req.session.user, {maxAge: 1000 * 60 * 60 * 2}); 
                         }
-                        return res.redirect("/login");
+                        return res.redirect("/");
                     }else{
                         return res.render('login',{
                             errores :{

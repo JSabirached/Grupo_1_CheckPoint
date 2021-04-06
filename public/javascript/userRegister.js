@@ -38,15 +38,15 @@ window.addEventListener('load', function() {
         switch (true) {
             case !$inputNombre.value.trim():
                 $nombreErrors.innerHTML = 'El campo nombre es obligatorio';
-                $inputNombre.classList.add('invalido')
+                $inputNombre.classList.add('is-invalid')
                 break;
             case !regExAlpha.test($inputNombre.value):
                 $nombreErrors.innerHTML = 'Debes ingresar un nombre válido'
-                $inputNombre.classList.add('invalido')
+                $inputNombre.classList.add('is-invalid')
                 break;
             default:
-                $inputNombre.classList.remove('invalido');
-                $inputNombre.classList.add('valido');
+                $inputNombre.classList.remove('is-invalid');
+                $inputNombre.classList.add('is-valid');
                 $nombreErrors.innerHTML = ''
                 break;
         }
