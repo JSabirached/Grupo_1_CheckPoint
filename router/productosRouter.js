@@ -12,6 +12,7 @@ router.get('/seccionBebidas',productsController.seccionBebidas );
 router.get('/seccionHamburguesas',productsController.seccionHamburguesas );
 router.get('/seccionPostres',productsController.seccionPostres );
 router.get('/seccionPizzaEmpa',productsController.seccionPizzaEmpa );
+router.get('/detalles',productsController.detallesdeproducto );
 /*router index */
 
 
