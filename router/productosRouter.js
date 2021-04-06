@@ -7,11 +7,13 @@ const upload = require('../middlewares/uploadImages')
 
 
 /* routes secciones */
-router.get('/inicioSecciones',productsController.inicioSecciones );
+
 router.get('/seccionBebidas',productsController.seccionBebidas );
 router.get('/seccionHamburguesas',productsController.seccionHamburguesas );
 router.get('/seccionPostres',productsController.seccionPostres );
 router.get('/seccionPizzaEmpa',productsController.seccionPizzaEmpa );
+router.get('/secciones/:id',productsController.secciones);
+router.get('/detalles',productsController.detallesdeproducto);
 /*router index */
 
 
