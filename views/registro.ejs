@@ -11,14 +11,14 @@
 			        <form action="/users/registro" method="post" enctype="multipart/form-data" id="form">
 				       
 						<div class="d-flex flex-column justify-content-center align-items-center mb-4">
-							<input class="form-control w-25" type="text" placeholder="Nombre "  name="name" id="nombre" >
+							<input class="form-control w-25" type="text" placeholder="Nombre "  name="name" id="name" >
 							<span class="text-danger" 
 							id="nombreErrors"><%= (typeof errores != 'undefined' && errores.name ? errores.name.msg : null) %> 
 						</span>
 						</div>
 						
 						<div class="d-flex flex-column justify-content-center align-items-center mb-4">
-							<input class="form-control w-25" type="text" placeholder="Apellido"  name="surname" id="apellido" >
+							<input class="form-control w-25" type="text" placeholder="Apellido"  name="surname" id="surname" >
 							<span class="text-danger"
 							id="apellidoErrors"><%= (typeof errores != 'undefined' && errores.surname ? errores.surname.msg : null) %> 
 						</span>
