@@ -21,10 +21,21 @@ agregarproducto:(req,res)=>{
 
     })
 },
-inicioSecciones:(req,res)=>{
-    res.render("inicioSecciones",{ 
+secciones:(req,res)=>{
+    db.Category.findOne({
+        where : {
+            id:req.params.id
+        },
+    include : [{association : 'Comidas'}],
+    
+})
+.then(categoria =>{
+    return res.send(categoria)
+    res.render("secciones",{categoria})
+})
 
-    })
+
+    
 },
 
 
@@ -37,7 +48,7 @@ seccionBebidas:(req,res)=>{ db.Category.findOne({
 })
     .then(categorias =>{
         res.send(categorias)
-        res.render("seccionBebidas",{result:categorias})
+        res.render("secciones",{result:categorias})
     })
 },
 
@@ -51,7 +62,7 @@ seccionHamburguesas:(req,res)=>{ db.Category.findOne({
 })
     .then(categorias =>{
         res.send(categorias)
-        res.render("seccionHamburguesas",{result:categorias})
+        res.render("secciones",{result:categorias})
     })
 
 },
@@ -69,7 +80,7 @@ seccionPostres:(req,res)=>{
     
         .then(categorias =>{
             res.send(categorias)
-            res.render("seccionPostres",{result:categorias})
+            res.render("secciones",{result:categorias})
         })
         .catch(error =>res.send(error))
        //  console.log(categorias)
@@ -84,7 +95,7 @@ seccionPizzaEmpa: (req,res) => { db.Category.findOne({
 })
     .then(categorias =>{
         res.send(categorias)
-        res.render("seccionPizzaEmpa",{result:categorias})
+        res.render("secciones",{result:categorias})
     })
 
 
