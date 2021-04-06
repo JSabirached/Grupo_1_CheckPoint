@@ -30,7 +30,7 @@ secciones:(req,res)=>{
     
 })
 .then(categoria =>{
-    return res.send(categoria)
+  //  return res.send(categoria),
     res.render("secciones",{categoria})
 })
 
