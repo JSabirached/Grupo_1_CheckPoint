@@ -26,9 +26,8 @@ window.addEventListener('load', function() {
     $imgErrors = qs('#imgErrors'),
 
     $form = qs('#form'),
-
-
-    //Faltan id de envíos//
+    
+    submitErrors = qs('#submitErrors'),
 
     regExAlpha = /^[a-zA-Z\sñáéíóúü]*$/,
     regExEmail = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i,
@@ -42,10 +41,16 @@ window.addEventListener('load', function() {
                 break;
             case !regExAlpha.test($inputNombre.value):
                 $nombreErrors.innerHTML = 'Debes ingresar un nombre válido'
-                $inputNombre.classList.add('is-invalido')
+
+                $inputNombre.classList.add('is-invalid')
                 break;
             default:
-                $inputNombre.classList.remove('is-invalido');
+                $inputNombre.classList.remove('is-invalid');
+
+                $inputNombre.classList.add('is-invalid')
+                break;
+            default:
+                $inputNombre.classList.remove('is-invalid');
                 $inputNombre.classList.add('is-valid');
                 $nombreErrors.innerHTML = ''
                 break;
@@ -142,9 +147,9 @@ window.addEventListener('load', function() {
         let elementosForm = this.elements 
         for (let index = 0; index < 6; index++){ 
             if(elementosForm[index].value == ""){
-                 elementosForm[index].classList.add('invalido');
+                 elementosForm[index].classList.add('is-invalid');
                  submitErrors.innerHTML = "Los campos señalados son obligatorios.";
-                 error = true; } 
+                 errors = true; } 
                 } 
                 if(!error){
                     console.log('Todo bien');

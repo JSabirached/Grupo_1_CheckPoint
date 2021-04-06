@@ -9,47 +9,55 @@
 			<div class="col-12">
 			     <h1>REGISTRATE</h1><!--method post creamos un formulario -->
 			        <form action="/users/registro" method="post" enctype="multipart/form-data" id="form">
-				        <div class="d-flex flex-column justify-content-center align-items-center">
-							<input class="form-control w-25 mb-2" type="text" placeholder="Nombre "  name="name" id="nombre" >
+				       
+						<div class="d-flex flex-column justify-content-center align-items-center">
+							<input class="form-control w-25 mb-4" type="text" placeholder="Nombre "  name="name" id="nombre" >
 							<span id="nombreErrors"></span>
 						</div>
 						
 						<div class="d-flex flex-column justify-content-center align-items-center">
-							<input class="form-control w-25 mb-2" type="text" placeholder="Apellido"  name="name" id="apellido" >
+							<input class="form-control w-25 mb-4" type="text" placeholder="Apellido"  name="name" id="apellido" >
 							<span id="apellidoErrors"></span>
 						</div>
 
 						<div class="d-flex flex-column justify-content-center align-items-center">
-							<input class="form-control w-25 mb-2" type="amail" placeholder="Email"  name="email" id="email" >
+							<input class="form-control w-25 mb-4" type="amail" placeholder="Email"  name="email" id="email" >
 							<span id="emailErrors"></span>
 						</div>
 						
 						<div class="d-flex flex-column justify-content-center align-items-center">
-							<input class="form-control w-25 mb-2" type="text" placeholder="Contraseña"  name="Contraseña" id="pass" >
+							<input class="form-control w-25 mb-4" type="text" placeholder="Contraseña"  name="Contraseña" id="pass" >
 							<span id="passErrors"></span>
 						</div>
 
 						<div class="d-flex flex-column justify-content-center align-items-center">
-							<input class="form-control w-25 mb-2" type="text" placeholder="Reingrese Contraseña"  name="contraseña" id="pass2" >
+							<input class="form-control w-25 mb-4" type="text" placeholder="Reingrese Contraseña"  name="contraseña" id="pass2" >
 							<span id="pass2Errors"></span>
 						</div>
 
 						<div class="d-flex flex-column justify-content-center align-items-center">
-							<input class="form-control w-25 mb-2" type="file" placeholder="Carga tu imagen"  name="imagen" id="img" >
+							<input class="form-control w-25 mb-4" type="file" placeholder="Carga tu imagen"  name="imagen" id="img" >
 							<span id="imgErrors"></span>
 						</div>
 
+						<span>↓↓↓PARA ENVÍOS A DOMICILIO↓↓↓</span>
+					
+						<div class="d-flex flex-column justify-content-center align-items-center">
+							<input class="form-control w-25 mb-2" type="text" placeholder="Provincia"  name="provincia" id="Province" >
+						</div>
+						<div class="d-flex flex-column justify-content-center align-items-center">
+							<input class="form-control w-25 mb-2" type="text" placeholder="localidad"  name="localidad" id="location" >
+						</div>
+						<div class="d-flex flex-column justify-content-center align-items-center">
+							<input class="form-control w-25 mb-2" type="text" placeholder="direccion"  name="direccion" id="address" >
+						</div>
+						<div class="d-flex flex-column justify-content-center align-items-center">
+							<input class="form-control w-25 mb-2" type="text" placeholder="Teléfono"  name="telefono" id="phonenumber" >
+						</div>
 						
-
-						 <span>↓↓↓Para envios a domicilio completa aca↓↓↓</span><br><br>
-						<input type="text" placeholder="Province"   name="provincia" id="Province"><br><br>
-			        	<input type="text" placeholder="Localidad"   name="localidad" id="location"><br><br>
-						<input type="text" placeholder="Dirección"   name="direccion" id="address"><br><br> 
-						<input type="tel" placeholder="Teléfono"    name="telefono" id="phonenumber"><br><br>
-						<span id="submitErrors"></span>
-			            	<button class="btn btn-danger" type="submit">Registrarme</button><br>
-			       	<a href="/users/login">ya sos parte de CheckPoint ingresa aca</a>
-		        	</form>
+			            	<button class="btn btn-danger" type="submit">Registrarme</button>
+							<span id="submitErrors"></span>
+						</form>
 	      <% if (typeof errores != 'undefined') { %>
 				<ul>
 					<% errores.forEach(error =>  { %>
