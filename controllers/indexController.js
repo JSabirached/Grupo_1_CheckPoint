@@ -54,11 +54,13 @@ cartadelivery:(req,res)=>{
             id_category : 4
         }
     })
-    promise.all([bebidas,hamburguesas,pizzas,postres])
-   .then(([bebidas,hamburguesas,pizzas,postres]))
+    Promise.all([bebibas,hamburguesas,pizzas,postres])
+   .then(([bebibas,hamburguesas,pizzas,postres])=>{
     res.render("carta",{
-        bebidas,hamburguesas,pizzas,postres
+        bebibas,hamburguesas,pizzas,postres
     })
+   })
+   
 }
 
 locales:(req,res)=>{
