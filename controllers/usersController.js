@@ -18,14 +18,15 @@ module.exports = {
         let errores = validationResult(req);
         
         if (!errores.isEmpty()) {
+            
             return res.render('registro', {
-                errores: errores.mapped(),
+                errores: errores.errors,
                 title: 'Registro de Usuario'
             })
         } else {
 
 
-            const { name, surname, email, pass } = req.body;
+            const { name, surname, email, pass, provincia, localidad, direccion, telefono } = req.body;
 
             db.Usuario.create({
                 name : name.trim(),
@@ -38,10 +39,7 @@ module.exports = {
                 localidad : localidad.trim(),
                 direccion : direccion.trim(),
                 telefono : telefono.trim(),
-
-
             })
-           
             .then(() => {res.redirect("/users/login")})
         }
 

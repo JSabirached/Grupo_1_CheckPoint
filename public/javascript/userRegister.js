@@ -1,3 +1,5 @@
+console.log('Vinculado')
+
 let qs = function(element) {
     return document.querySelector(element)
 }
@@ -22,6 +24,9 @@ window.addEventListener('load', function() {
 
     $img = qs('#img'),
     $imgErrors = qs('#imgErrors'),
+
+    $form = qs('#form'),
+
 
     //Faltan id de envíos//
 
@@ -129,5 +134,22 @@ window.addEventListener('load', function() {
 
         }
     })
+
+    $form.addEventListener('submit', function(event) { 
+        let error = false;
+        event.preventDefault() 
+        console.log($form.elements) 
+        let elementosForm = this.elements 
+        for (let index = 0; index < 6; index++){ 
+            if(elementosForm[index].value == ""){
+                 elementosForm[index].classList.add('invalido');
+                 submitErrors.innerHTML = "Los campos señalados son obligatorios.";
+                 error = true; } 
+                } 
+                if(!error){
+                    console.log('Todo bien');
+                    $form.submit() 
+                }
+        })
  //faltan cargar validaciones de envío a domicilio//
 })

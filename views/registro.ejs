@@ -8,26 +8,34 @@
 		<div class="row">
 			<div class="col-12">
 			     <h1>REGISTRATE</h1><!--method post creamos un formulario -->
-			        <form action="/users/registro" method="post" enctype="multipart/form-data">
-				        <input type="text" placeholder="Nombre "  name="name" id="nombre" ><br><br>
-			            <input type="text" placeholder="Apellido "  name="surname" id="apellido" ><br><br>
+			        <form action="/users/registro" method="post" enctype="multipart/form-data" id="form">
+				        <div class="d-flex flex-column justify-content-center align-items-center">
+							<input class="form-control w-25 mb-2" type="text" placeholder="Nombre "  name="name" id="nombre" >
+							<span id="nombreErrors"></span>
+						</div>
+						<input type="text" placeholder="Apellido "  name="surname" id="apellido" ><br><br>
+						<span id="apellidoErrors"></span>
 						<input type="email" placeholder="Email"  name="email" id="email" ><br><br>
-			         	<input type="password" placeholder="Contraseña"  name="pass" id="pass" ><br><br>
-			         	<input type="password" placeholder="Reingrese la contraseña"  name="pass2" id="pass2"><br><br>
-			         	<input type="file" name="avatar"><br><br> 
+						<span id="emailErrors"></span>
+						<input type="password" placeholder="Contraseña"  name="pass" id="pass" ><br><br>
+			         	<span id="passErrors"></span>
+						<input type="password" placeholder="Reingrese la contraseña"  name="pass2" id="pass2"><br><br>
+						<span id="pass2Errors"></span>
+						<input type="file" name="avatar" id="img"><br><br> 
+						<span id="imgErrors"></span>
 						 <span>↓↓↓Para envios a domicilio completa aca↓↓↓</span><br><br>
 						<input type="text" placeholder="Province"   name="provincia" id="Province"><br><br>
 			        	<input type="text" placeholder="Localidad"   name="localidad" id="location"><br><br>
 						<input type="text" placeholder="Dirección"   name="direccion" id="address"><br><br> 
 						<input type="tel" placeholder="Teléfono"    name="telefono" id="phonenumber"><br><br>
-
+						<span id="submitErrors"></span>
 			            	<button class="btn btn-danger" type="submit">Registrarme</button><br>
 			       	<a href="/users/login">ya sos parte de CheckPoint ingresa aca</a>
 		        	</form>
 	      <% if (typeof errores != 'undefined') { %>
 				<ul>
-					<%errores.forEach(error =>  { %>
-						<li><%=error.msg %> </li>
+					<% errores.forEach(error =>  { %>
+						<li><%= error.msg %> </li>
 						
 						<% }) %>
 				</ul>
@@ -37,7 +45,7 @@
         </div>
     </div>
 <%- include('partials/footer') %>
-<script src="/public/javascript/userRegister.js"></script>
+<script src="/javascript/userRegister.js"></script>
 </body>
 </html>	
 
