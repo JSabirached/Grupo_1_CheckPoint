@@ -1,4 +1,4 @@
-console.log('Vinculado user regirter')
+console.log('Vinculado user register')
 
 let qs = function (element) {
     return document.querySelector(element)

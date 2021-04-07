@@ -1,7 +1,8 @@
+require("dotenv").config()
 module.exports = {
   development: {
     username: "root",
-    password: "root",
+    password: process.env.DB_PASS,
     database: "checkpoint",
     host: "127.0.0.1",
     dialect: "mysql",

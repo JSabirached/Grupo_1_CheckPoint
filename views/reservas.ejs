@@ -6,52 +6,30 @@
 
   <%- include('partials/header') %>      <!--header-->
             <!--menu-->
-<div class="container"> 
-	<div class="row">
-                             <h1>-RESERVÁ Y DISFRUTÁ-</h1>
 
- <div class="container">
-        <div class="login-container">
-          <div class="register">
-            <h2>Registrarse</h2>
-            <form action="">
-              <input type="text" placeholder="Nombre" class="nombre"><br><br>
-              <input type="text" placeholder="Correo" class="correo"><br><br>
-              <input type="password" placeholder="Contraseña" class="pass"><br><br>
-              <input type="password" placeholder="Confirma contraseña" class="repass"><br><br>
-              <input type="submit" class="btn btn-primary" value="REGISTRARSE"><br><br>
-            </form>
-          </div>
-          <div class="container">
-           <div class="login">
-            <h2>Iniciar Sesión</h2>
-            <form action="/users/login" method="post">
-              <input type="email" placeholder="tu email" name="email"><br><br>
-              <input type="password" placeholder="tu contraseña" name="pass"><br><br>
-              <input type="checkbox" placeholder="tu contraseña" name="recordar" id="recordar">
-              <input class="btn btn-primary" type="submit" value="ACEPTAR">
-            </form>
-           </div>
-          </div>
+                             
 
-          <div class="container">
-            <div class="turno">
-             </form>
-               <h1>¿Cuando queres venir?</h1>
+   <div class="container">
+     <div><h1>-RESERVÁ Y DISFRUTÁ-</h1>
+        <div class="container">
+          <div class="turno">
+            </form>
                <form action="">
                <p>Elige el dia</p>
-               <input type="text" placeholder="Elegi fecha" class="text">
-               <br><p>Selecciona la hora</p>
-               <input type="text" placeholder="Elegi tu horario" class="text"><br><br>
-               <button class="btn btn-primary" type="submit">Confirmar</button>
+               <div class="d-flex flex-column justify-content-center align-items-center mb-4">
+                <input class="form-control w-25" type="text" placeholder="Martes a Domingo"  name="pass" id="pass" >
+               </div>
+               <p>Selecciona la hora</p>
+               <div class="d-flex flex-column justify-content-center align-items-center mb-4">
+                <input class="form-control w-25" type="text" placeholder="De 19:00 a 02:00"  name="pass" id="pass" >
+               </div>
              </form>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
+      
+
  <%- include('partials/footer') %>  
 
 </body> 

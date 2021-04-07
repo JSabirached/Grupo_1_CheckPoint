@@ -1,3 +1,5 @@
+console.log ("vinculado user login")
+
 let qs = function(element) {
     return document.querySelector(element)
 

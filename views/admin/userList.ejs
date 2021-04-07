@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %>
+
+    <body>
+        <%- include("../partials/header") %>
+            <h2 class="oferta">-LISTA DE USUARIO-</h2>
+
+<div class="container">
+            <table class="table table-dark table-striped">
+                <thead>
+                    <tr>
+                        <th class="" scope="col">ID</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Apellido</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Categoria</th>
+                        <th scope="col">Editar/Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% users.forEach(user=> { %>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>
+                                <%= user.name %>
+                            </td>
+                            <td>
+                                <%=user.surname%>
+                            </td>
+                            <td>
+                                <%=user.email%>
+                            </td>
+                            <td>
+                                <%=user.category%>
+                            </td>
+
+
+
+                            <td class="d-flex justify-content-around">
+                                <form action="">
+                                    <a href="user/admin/edit/<%= user.id%> "><button type="submit"
+                                            class="btn btn-primary btn-sm"><i class="fas fa-edit text-white"></i>
+                                        </button></a>
+                                </form>
+
+                                <form action="/user/admin/remove/<%=user.id%>?_method=DELETE" method="POST" id="delete">
+                                    <button type="submit" class="btn btn-danger btn-sm"><i
+                                            class="fas fa-trash"></i></button>
+                                </form>
+                            </td>
+                        </tr>
+
+                        <% }); %>
+
+                </tbody>
+            </table>
+</div>
+
+
+
+
+
+
+
+
+            <%- include('../partials/footer') %>
+
+
+    </body>
+
+</html>
