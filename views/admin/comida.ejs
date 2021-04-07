@@ -1,30 +1,31 @@
 <!DOCTYPE html>
-<html lang="es">
-<%- include('../partials/head') %>
+<title>Nuestros productos</title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/stylesheets/detallesdelproducto.css" rel=StyleSheet >
+    <title>document</title>
+</head>
+<body>
+    <div>
+    <section class="detalleproducto">
+    <article class="foto">
+        <h3><%=producto.title%></h3>
+        <img src="/images/<%=producto.image%>">
+    </article>
+        <article class="detalles">
+        <p><%=producto.description%></p>
+        <h3><%=producto.price%></h3>
+        <input type="button" value="delivery online" class="boton">
+        <input type="button" value="registrarse" class="boton">
+        </article>
+    
 
-    <body>
-      
-
-            <main>
-                <div class="container mt-5">
-                    <h1><%= title %> </h1>
-                    <div class="row">
-                        <% comida.forEach(comida => { %>
-                            <div class="col-12 col-md-6 col-lg-3 my-3">
-                                <div class="card" style="width: 98%">
-                                    <img src="/images/<%= comida.img %>"  class="card-img-top" alt="..." />
-                                    <div class="card-body">
-                                        <h5 class="card-title"><%= comida.name %> </h5>
-                                        <a href="/comida/<%= comida.id %> " class="btn btn-primary">ver más</a>
-                                    </div>
-                                </div>
-                            </div>
-                        <% }) %>
-                    </div>
-                </div>
-            </main>
-
-            <%- include('../partials/footer') %>
-    </body>
-
+</section>
+<p class="ingredientes">
+    pase el puntero del mause para ver los ingredientes
+</p>
+</div>
+</body>
 </html>

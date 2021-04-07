@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const {index, comidaList, comidaCreate,comidaStore, ventasList,userList,categorias,detalleProducto, editarProducto, actualizarProducto, borrarProducto} = require("../controllers/adminController");
+const {index, comidaList, comidaCreate,comidaStore, ventasList,userList,categorias,detalleProducto, editarProducto, actualizarProducto, borrarProducto,comidas} = require("../controllers/adminController");
 
 const addValidator = require("../validations/addValidator");
 const admin = require("../middlewares/adminCheck");
@@ -20,5 +20,8 @@ router.post('/create',comidaStore);
 
 //router.delete('/delete/:id',comidaDelete);
 
+
+
+router.get('/comidas/:id',comidas);
 
 module.exports = router;
