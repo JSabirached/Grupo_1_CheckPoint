@@ -3,9 +3,57 @@
   <%- include('../partials/head')  %> 
 <body>
   <%- include("../partials/header") %> 
-  <h2 class="oferta">-LISTAR PLATOS-</h2>
-  <main class="container">
-        <section class="row">
+  <h2 class="oferta">-LISTA DE COMIDAS-</h2>
+ 
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td colspan="2">Larry the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
           <% comidas.forEach(comida=> { %>
             <article class="col-12 col-md-4 col-lg-3 ">
               <ul class="list-group list-group-flush my-3 ">
@@ -58,8 +106,7 @@
             <% }) %>
 
             
-        </section>
-      </main>
+       
       <%- include('../partials/footer') %> 
     
 

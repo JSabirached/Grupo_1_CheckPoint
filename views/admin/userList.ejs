@@ -1,96 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('../partials/head')  %> 
-<body>
-  <%- include("../partials/header") %> 
-  <h2 class="oferta">-LISTA DE USUARIO-</h2>
-  <main class="container">
-        <section class="row">
-          <% Usuario.forEach(Usuario=> { %>
-            <article class="col-12 col-md-4 col-lg-3 ">
-              <ul class="list-group list-group-flush my-3 ">
-                <li class="list-group-item">
-                  <h6>
-                      <%= Usuario.name %> 
-                  </h6>
-                </li>
-                <li class="list-group-item">
-                    <h6>
-                      <%= Usuario.surname%> 
-                    </h6>
-                  </li>
-                <li class="list-group-item">
-                  <h6>
-                    <%= Usuario.email %> 
-                  </h6>
-                </li>
-                <li class="list-group-item">
-                  <h6>
-                    <%= Usuario.category%> 
-                  </h6>
-                </li>
-                <li class="list-group-item">
-                  <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal-<%= Usuario.id %> ">
-                  <%= Usuario.avatar %></a>
-                </li>
-                <li class="list-group-item">
-                    <h6>
-                      <%= Usuario.provincia%> 
-                    </h6>
-                  </li>
-                  <li class="list-group-item">
-                    <h6>
-                      <%= Usuario.localidad%> 
-                    </h6>
-                  </li>
-                  <li class="list-group-item">
-                    <h6>
-                      <%= Usuario.telefono%> 
-                    </h6>
-                  </li>
-                  <li class="list-group-item">
-                    <h6>
-                      <%= Usuario.direccion%> 
-                    </h6>
-                  </li>
+<%- include('../partials/head') %>
+
+    <body>
+        <%- include("../partials/header") %>
+            <h2 class="oferta">-LISTA DE USUARIO-</h2>
+
+<div class="container">
+            <table class="table table-dark table-striped">
+                <thead>
+                    <tr>
+                        <th class="" scope="col">ID</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Apellido</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Categoria</th>
+                        <th scope="col">Editar/Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% users.forEach(user=> { %>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>
+                                <%= user.name %>
+                            </td>
+                            <td>
+                                <%=user.surname%>
+                            </td>
+                            <td>
+                                <%=user.email%>
+                            </td>
+                            <td>
+                                <%=user.category%>
+                            </td>
+
+
+
+                            <td class="d-flex justify-content-around">
+                                <form action="">
+                                    <a href="user/admin/edit/<%= user.id%> "><button type="submit"
+                                            class="btn btn-primary btn-sm"><i class="fas fa-edit text-white"></i>
+                                        </button></a>
+                                </form>
+
+                                <form action="/user/admin/remove/<%=user.id%>?_method=DELETE" method="POST" id="delete">
+                                    <button type="submit" class="btn btn-danger btn-sm"><i
+                                            class="fas fa-trash"></i></button>
+                                </form>
+                            </td>
+                        </tr>
+
+                        <% }); %>
+
+                </tbody>
+            </table>
+</div>
 
 
 
 
-                <li class="list-group-item">
-                  <div class="m-2 d-flex justify-content-around">
-                   <a href="/admin/admin/edit/<%= Usuario.id %> " class="btn btn-primary">Editar</a>
-                   <form action="/admin/admin/delete/<%= Usuario.id %>?_method=DELETE " method="POST">
-                     <button class="btn btn-primary" type="submit">Eliminar</button>
-                   </form>
-                  </div>
-                </li>
-              </ul>
-            </article>  
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal-<%= Usuario.id %>" tabindex="-1" aria-labelledby="exampleModalLabel"
-              aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h6 class="modal-title" id="exampleModalLabel"><%= Usuario.name %> - <%= Usuario.precio %> </h6>
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    <img src="/images/<%= Usuario.image %> "class="img-fluid" alt="">
-                  </div>
-                 
-                </div>
-              </div>
-            </div>
-        
-            <% }) %>
 
-            
-        </section>
-      </main>
-      <%- include('../partials/footer') %> 
-    
 
-</body>
+
+
+            <%- include('../partials/footer') %>
+
+
+    </body>
+
 </html>
