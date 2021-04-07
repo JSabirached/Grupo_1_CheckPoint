@@ -1,40 +1,46 @@
-  
 <title>login</title>
-    <%- include('partials/header') %>
-<body>
-  <%- include('partials/head') %>
+<%- include('partials/header') %>
 
-    <div class="container">
+  <body>
+    <%- include('partials/head') %>
+
+      <div class="container">
         <div class="row">
-             
-              <div class="login col-12 ">
-              <h2>Iniciar Sesión</h2>
-              <form action="/users/login" method="post">
-                <input type="email" placeholder="tu email" name="email"><br><br>
-                <input type="password" placeholder="tu contraseña" name="pass"><br><br>
-                <input type="checkbox" placeholder="tu contraseña" name="recordar" id="recordar">
-                <label for="recordar">Recordarme</label><br><br>
-                <input class="btn btn-danger" type="submit" value="ingresar">
-                    <div class="login-items col-12 col-md-12  ">
-                         <button class="fb">  <i class="fab fa-facebook-f"></i>acede a Facebook</button> <br>
-                         <button class="tw"><i class="fab fa-twitter"></i>   Acceder con Twitter ></button><br>
-                         <button class="correo"><i class="fas fa-envelope"></i>   Acceder con Correo ></button><br>
-                        <a href="/users/registro"> ¿no estas registrado? registrate aca</a>
-                    </div>
-                </form>
-                <% if (typeof errores != 'undefined') { %>
-                  <ul>
-                    <%errores.forEach(error =>  { %>
-                      <li><%=error.msg %> </li>
-                      
-                      <% }) %>
-                  </ul>
-                 
-                <% } %>
+
+          <div class="login col-12 ">
+            <h2>Iniciar Sesión</h2>
+            <form action="/users/login" method="post">
+
+              <div class="d-flex flex-column justify-content-center align-items-center mb-4">
+                <input class="form-control w-25" type="email" placeholder="Email" name="email" id="email">
+                <span class="text-danger" id="emailErrors">
+                  <%= (typeof errores !='undefined' && errores.email ? errores.email.msg : null) %>
+                </span>
               </div>
+
+              <div class="d-flex flex-column justify-content-center align-items-center mb-4">
+                <input class="form-control w-25" type="text" placeholder="Contraseña" name="pass" id="pass">
+                <span class="text-danger" id="passErrors">
+                  <%= (typeof errores !='undefined' && errores.pass ? errores.pass.msg : null) %>
+                </span>
+              </div>
+
+              <input type="checkbox" placeholder="tu contraseña" name="recordar" id="recordar">
+              <label for="recordar">Recordarme</label><br><br>
+              <input class="btn btn-danger" type="submit" value="ingresar">
+              <div class="login-items col-12 col-md-12  ">
+                <button class="fb w-25"> <i class="fab fa-facebook-f"></i>Accede con Facebook</button> <br>
+                <button class="tw w-25"><i class="fab fa-twitter"></i> Acceder con Twitter ></button><br>
+                <button class="correo w-25"><i class="fas fa-envelope"></i> Acceder con Correo ></button><br>
+                <a href="/users/registro"> ¿no estas registrado? registrate aca</a>
+              </div>
+            </form>
+
+          </div>
         </div>
       </div>
-      <%- include('partials/footer') %>    
-      <script src="/public/javascript/userLogin.js"></script>
-</body>
-</html>
+      <%- include('partials/footer') %>
+        <script src="/public/javascript/userLogin.js"></script>
+  </body>
+
+  </html>
