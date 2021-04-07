@@ -5,97 +5,75 @@
  
  <body> 
         <div class="container">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+        <div class="col-xs-12 col-sm-6 col-md-3">
 	
-        <div class="col"><h5>BEBIDAS</h5>
-		<hr>
-		<ul>
-		 <a class="col" href="/productos/seccionBebidas">CocaCola 1l 1/2</a>
-        <br>
-		 <a class="col" href="/productos/seccionBebidas">Cerveza Tirada en Chomp</a>
-		  <br>
-         <a class="col" href="/productos/seccionBebidas">Cerveza Artesanal Botella litro</a>
-      <br>
-         <a class="col" href="/productos/seccionBebidas">Fernet Branca en Jarrito</a>
-        <br>
-         <a class="col" href="/productos/seccionBebidas">Fernet Branca x litro</a>
-         <br>
-         <a class="col" href="/productos/seccionBebidas">Daikiri</a>
-	  <br>
-         <a class="col" href="/productos/seccionBebidas">Vinos Variedad de La casa</a>
-	  <br>
-         <a class="col" href="/productos/seccionBebidas">Campari</a>
-         </ul>
-		</div>
-	
-        <div class="col"><h5>POSTRES</h5>
-		<hr>
-		<ul>
-		 <a class="col" href="/productos/seccionPostres">Frutos del bosque</a>
-         <br>
-		 <a class="col" href="/productos/seccionPostres">Brownie de Chocolate</a>
-		 <br>
-         <a class="col" href="/productos/seccionPostres">Dulce de Calabaza</a>
-		 <br>
-         <a class="col" href="/productos/seccionPostres">Strudell de Manzana</a>
-         <br>
-          <a class="col" href="/productos/seccionPostres">Helados Artesanales</a>
-         <br>
-         <a class="col" href="/productos/seccionPostres">Budin de Chocolates</a>
-         <br>
-         <a class="col" href="/productos/seccionPostres">flan Casero</a>
-         <br>
-         <a class="col" href="/productos/seccionPostres">Banana mouse con cereales</a>
-		 </ul>
-		 </div>
+        <h5>BEBIDAS</h5>
+           <ul>
+          <%bebibas.forEach(bebida => {%>
+            
+       
         
-        <div class="col"> <h5>HAMBURGUESAS</h5>
-		<hr>
-		<ul>
-		 <a class="" href="/productos/seccionHamburguesas">X2 Completa Con Papas</a>
-         <br>
-		 <a class="" href="/productos/seccionHamburguesas">Especial Ananá</a>
-		 <br>
-         <a class="" href="/productos/seccionHamburguesas">X3 Completa Con Papas</a>
-         <br>
-         <a class="" href="/productos/seccionHamburguesas">Cajita niños Completa  </a>
-         <br>
-         <a class="" href="/productos/seccionHamburguesas">X1 Completa Con Papas</a>
-         <br>
-         <a class="" href="/productos/seccionHamburguesas">Simple Chedar</a>
-         <br>
-         <a class="" href="/productos/seccionHamburguesas">Doble Carne</a>
-         <br>
-         <a class="" href="/productos/seccionHamburguesas">Simple Picante</a>
-         <br>
-	     </ul>
-		</div>
+          
 		
-        <div class="col"><h5>PIZZA Y EMPA</h5>
-		<hr>
-		<ul>
-		 <a class="" href="/productos/seccionPizzaEmpa">Muzzarella</a>
-		 <br>
-		 <a class="" href="/productos/seccionPizzaEmpa">Combo 1</a>
-		 <br>
-		 <a class="" href="/productos/seccionPizzaEmpa">Combo 2</a>
-		 <br>
-         <a class="" href="/productos/seccionPizzaEmpa">1 Docena</a>
-         <br>
-         <a class="" href="/productos/seccionPizzaEmpa">Combo 3</a>
-         <br>
-         <a class="" href="/productos/seccionPizzaEmpa">Vegana</a>
-         <br>
-         <a class="" href="/productos/seccionPizzaEmpa">Combinada</a>
-         <br>
-         <a class="" href="/productos/seccionPizzaEmpa">Mix 16 Empanadas</a>
-	 	 </ul>
+                <li><a class="col" href="/productos/seccionBebidas"><%=bebida.name%></a></li>
+              
+                  
+          <% });%>
+        </ul>
 		</div>
-		</div>
-		</div>
+  </div>
+	
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <h5>POSTRES</h5>
+           <ul>
+          <%postres.forEach(bebida => {%>
+            
+       
+        
+          
+		
+              <li>  <a class="col" href="/productos/seccionBebidas"><%=bebida.name%></a></li>
+              <br>
+                   
+          <% });%>
+        </ul>
+        </div>
+      </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+           <h5>HAMBURGUESAS</h5>
+           <ul>
+          <%hamburguesas.forEach(bebida => {%>
+            
+       
+        
+          
+		
+              <li>  <a class="col" href="/productos/seccionBebidas"><%=bebida.name%></a></li>
+              
+                   
+          <% });%>
+        </ul>
+        </div>
+      </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <h5>PIZZA Y EMPA</h5>
+          <ul>
+          <%pizzas.forEach(bebida => {%>
+            
+       
+        
+          
+		
+               <li> <a class="col" href="/productos/seccionBebidas"><%=bebida.name%></a></li>
+              
+                   
+          <% });%>
+        </ul>
+        </div></div></div>
 
   </body>
 
 	<%- include('partials/footer') %> 
  
 </html>
+

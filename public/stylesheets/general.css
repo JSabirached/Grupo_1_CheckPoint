@@ -32,3 +32,6 @@ p.card-text{color: rgba(0, 0, 0, 0.795);}
 }
 .card{margin-right:50px ;
 text-align: center;}
+ul{
+  padding:0 ;
+}

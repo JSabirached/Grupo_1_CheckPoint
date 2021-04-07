@@ -1,39 +1,39 @@
-console.log('Vinculado')
+console.log('Vinculado user register')
 
-let qs = function(element) {
+let qs = function (element) {
     return document.querySelector(element)
 }
 
-window.addEventListener('load', function() {
+window.addEventListener('load', function () {
 
 
-    let $inputNombre = qs('#nombre'),
-    $nombreErrors = qs('#nombreErrors'),
+    let $inputNombre = qs('#name'),
+        $nombreErrors = qs('#nombreErrors'),
 
-    $inputApellido = qs('#apellido'),
-    $apellidoErrors = qs('#apellidoErrors'),
+        $inputApellido = qs('#surname'),
+        $apellidoErrors = qs('#apellidoErrors'),
 
-    $inputEmail = qs('#email'),
-    $emailErrors = qs('#emailErrors'),
+        $inputEmail = qs('#email'),
+        $emailErrors = qs('#emailErrors'),
 
-    $Pass = qs('#pass'),
-    $passErrors = qs('#passErrors'),
+        $Pass = qs('#pass'),
+        $passErrors = qs('#passErrors'),
 
-    $Pass2 = qs('#pass2'),
-    $pass2Errors = qs('#pass2Errors'),
+        $Pass2 = qs('#pass2'),
+        $pass2Errors = qs('#pass2Errors'),
 
-    $img = qs('#img'),
-    $imgErrors = qs('#imgErrors'),
+        $img = qs('#img'),
+        $imgErrors = qs('#imgErrors'),
 
-    $form = qs('#form'),
-    
-    submitErrors = qs('#submitErrors'),
+        $form = qs('#form'),
 
-    regExAlpha = /^[a-zA-Z\sñáéíóúü]*$/,
-    regExEmail = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i,
-    regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}$/;
+        submitErrors = qs('#submitErrors'),
 
- $inputNombre.addEventListener('blur', function(){
+        regExAlpha = /^[a-zA-Z\sñáéíóúü]*$/,
+        regExEmail = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i,
+        regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}$/;
+
+    $inputNombre.addEventListener('blur', function () {
         switch (true) {
             case !$inputNombre.value.trim():
                 $nombreErrors.innerHTML = 'El campo nombre es obligatorio';
@@ -43,12 +43,7 @@ window.addEventListener('load', function() {
                 $nombreErrors.innerHTML = 'Debes ingresar un nombre válido'
 
                 $inputNombre.classList.add('is-invalid')
-                break;
-            default:
-                $inputNombre.classList.remove('is-invalid');
-
-                $inputNombre.classList.add('is-invalid')
-                break;
+                break
             default:
                 $inputNombre.classList.remove('is-invalid');
                 $inputNombre.classList.add('is-valid');
@@ -57,7 +52,7 @@ window.addEventListener('load', function() {
         }
     })
 
-    $inputApellido.addEventListener('blur', function(){
+    $inputApellido.addEventListener('blur', function () {
         switch (true) {
             case !$inputApellido.value.trim():
                 $apellidoErrors.innerHTML = 'El campo apellido es obligatorio';
@@ -75,7 +70,7 @@ window.addEventListener('load', function() {
         }
     })
 
-    $inputEmail.addEventListener('blur', function(){
+    $inputEmail.addEventListener('blur', function () {
         switch (true) {
             case !$inputEmail.value.trim():
                 $emailErrors.innerHTML = 'El campo email es obligatorio';
@@ -93,7 +88,7 @@ window.addEventListener('load', function() {
         }
     })
 
-    $Pass.addEventListener('blur', function(){
+    $Pass.addEventListener('blur', function () {
         switch (true) {
             case !$Pass.value.trim():
                 $passErrors.innerHTML = 'El campo contraseña es obligatorio';
@@ -111,7 +106,7 @@ window.addEventListener('load', function() {
         }
     })
 
-    $Pass2.addEventListener('blur', function(){
+    $Pass2.addEventListener('blur', function () {
         switch (true) {
             case !$Pass2.value.trim():
                 $pass2Errors.innerHTML = 'Debes reingresar la contraseña';
@@ -131,30 +126,32 @@ window.addEventListener('load', function() {
 
     $img.addEventListener("change", function fileValidation() {
         let filePath = $img.value,
-          allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i 
-        if (!allowedExtensions.exec(filePath)) { 
-          $imgErrors.innerHTML = "Carga un archivo de imagen valido, con las extensiones (.jpg - .jpeg - .png - .gif)"
-          $img.value = "";
-          return false
+            allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i
+        if (!allowedExtensions.exec(filePath)) {
+            $imgErrors.innerHTML = "Carga un archivo de imagen valido, con las extensiones (.jpg - .jpeg - .png - .gif)"
+            $img.value = "";
+            return false
 
         }
     })
 
-    $form.addEventListener('submit', function(event) { 
+    $form.addEventListener('submit', function (event) {
         let error = false;
-        event.preventDefault() 
-        console.log($form.elements) 
-        let elementosForm = this.elements 
-        for (let index = 0; index < 6; index++){ 
-            if(elementosForm[index].value == ""){
-                 elementosForm[index].classList.add('is-invalid');
-                 submitErrors.innerHTML = "Los campos señalados son obligatorios.";
-                 errors = true; } 
-                } 
-                if(!error){
-                    console.log('Todo bien');
-                    $form.submit() 
-                }
-        })
- //faltan cargar validaciones de envío a domicilio//
+        event.preventDefault()
+        console.log($form.elements)
+        let elementosForm = this.elements
+        for (let index = 0; index < 6; index++) {
+            if (elementosForm[index].value == "") {
+                elementosForm[index].classList.add('is-invalid');
+                submitErrors.innerHTML = "Los campos señalados son obligatorios.";
+                errors = true;
+            }
+        }
+        if(!error){
+            console.log('Todo bien');
+            $form.submit() 
+        }
+
+    })
+    //faltan cargar validaciones de envío a domicilio//
 })
