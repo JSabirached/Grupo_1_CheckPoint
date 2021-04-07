@@ -17,7 +17,7 @@
         
            <ul>
 		
-                <a  href="/productos/seccionBebidas"><%=bebida.name%></a>
+                <a  href="/admin/comidas/<%=bebida.id%>"><%=bebida.name%></a>
               
               </ul>
           <% });%>
@@ -27,13 +27,13 @@
       
       <div class="col-3">
         <h5>POSTRES</h5>
-            <%postres.forEach(bebida => {%>
+            <%postres.forEach(postre => {%>
             
        
         
           <ul>
 		
-                <a href="/productos/seccionBebidas"><%=bebida.name%></a>
+                <a href="/admin/comidas/<%=postre.id%>"><%=postre.name%></a>
               
               </ul>
           <% });%>
@@ -41,13 +41,13 @@
     
         <div class="col-3"> 
           <h5>HAMBURGUESAS</h5>
-            <%hamburguesas.forEach(bebida => {%>
+            <%hamburguesas.forEach(hamburguesa=> {%>
             
        
         <ul>
           
 		
-                <a class="col" href="/productos/seccionBebidas"><%=bebida.name%></a>
+                <a class="col" href="/admin/comidas/<%=hamburguesa.id%>"><%=hamburguesa.name%></a>
               </ul>
                    
           <% });%>
@@ -55,13 +55,13 @@
 		
         <div class="col-3">
           <h5>PIZZA Y EMPA</h5>
-            <%pizzas.forEach(bebida => {%>
+            <%pizzas.forEach(pizza => {%>
             
        
         <ul>
           
 		
-                <a  href="/productos/seccionBebidas"><%=bebida.name%></a>
+                <a  href="/admin/comidas/<%=pizza.id%>"><%=pizza.name%></a>
               </ul>
                    
           <% });%>
