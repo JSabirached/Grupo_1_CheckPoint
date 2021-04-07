@@ -1,90 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('../partials/head')  %> 
-<body>
-  <%- include("../partials/header") %> 
-  <h2 class="oferta">VENTAS</h2>
-  <main class="container">
-        <section class="row">
-      
-          
-            <table class="table">
-                <thead>
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                 
-                </tbody>
-              </table>
+<%- include('../partials/head') %>
+
+    <body>
+        <%- include("../partials/header") %>
+            <h2 class="oferta">VENTAS</h2>
+            <div class="container">
+                <table class="table table-dark table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">fecha_Compra</th>
+                            <th scope="col">fecha_Entrega</th>
+                            <th scope="col">horario_Entrega</th>
+                            <th scope="col">Total</th>
+                            <th scope="col">Editar/Eliminar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% buys.forEach(buy=> { %>
+                            <tr>
+                                <th scope="row">"><%= buy.id %></th>
+                                <td>
+                                    <%= buy.fecha_Compra %>
+                                </td>
+                                <td>
+                                    <%= buy.fecha_Entrega%>
+                                </td>
+                                <td>
+                                    <%= buy.horario_Entrega%>
+                                </td>
+                                <th>
+                                    <%= buy.Total%>
+                                </th>
 
 
 
+                                <td class="d-flex justify-content-around">
+                                    <form action="">
+                                        <a href="/admin/edit/<%= buy.id %> "><button type="submit"
+                                                class="btn btn-primary btn-sm"><i class="fas fa-edit text-white"></i>
+                                            </button></a>
+                                    </form>
 
+                                    <form action="/admin/remove/<%= buy.id %>?_method=DELETE" method="POST"
+                                        id="delete">
+                                        <button type="submit" class="btn btn-danger btn-sm"><i
+                                                class="fas fa-trash"></i></button>
+                                    </form>
+                                </td>
+                            </tr>
 
+                            <% }); %>
 
-                      <%= Compras.fecha_Compra %> 
-                  </h6>
-                </li>
-                <li class="list-group-item">
-                  <h6>
-                    <%= Compras.fecha_Entrega %> 
-                  </h6>
-                </li>
-                <li class="list-group-item">
-                  <h6>
-                    <%= Compras.horario_Entrega%> 
-                  </h6>
-                </li>      
-                 <li class="list-group-item">
-                    <h6>
-                      <%= Compras.Total%> 
-                    </h6>
-                  </li>
-                
-                <li class="list-group-item">
-                  <div class="m-2 d-flex justify-content-around">
-                   <a href="/admin/admin/edit/<%= Compras %> " class="btn btn-primary">Editar</a>
-                   <form action="/admin/admin/delete/<%= Compras.id %>?_method=DELETE " method="POST">
-                     <button class="btn btn-primary" type="submit">Eliminar</button>
-                   </form>
-                  </div>
-                </li>
-              </ul>
-            </article>  
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal-<%= Compras.id %>" tabindex="-1" aria-labelledby="exampleModalLabel"
-              aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h6 class="modal-title" id="exampleModalLabel"><%= Compras.name %> - <%= Compras.precio %> </h6>
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    <img src="/images/<%= Compras.image %> "class="img-fluid" alt="">
-                  </div>
-                 
-                </div>
-              </div>
+                    </tbody>
+                </table>
             </div>
-        
-            <% }) %>
 
-            
-        </section>
-      </main>
-      <%- include('../partials/footer') %> 
-    
 
-</body>
+
+
+
+
+
+
+            <%= Compras.fecha_Compra %>
+                </h6>
+                </li>
+                <li class="list-group-item">
+                    <h6>
+                        <%= Compras.fecha_Entrega %>
+                    </h6>
+                </li>
+                <li class="list-group-item">
+                    <h6>
+                        <%= Compras.horario_Entrega%>
+                    </h6>
+                </li>
+                <li class="list-group-item">
+                    <h6>
+                        <%= Compras.Total%>
+                    </h6>
+                </li>
+
+                <li class="list-group-item">
+                    <div class="m-2 d-flex justify-content-around">
+                        <a href="/admin/admin/edit/<%= Compras %> " class="btn btn-primary">Editar</a>
+                        <form action="/admin/admin/delete/<%= Compras.id %>?_method=DELETE " method="POST">
+                            <button class="btn btn-primary" type="submit">Eliminar</button>
+                        </form>
+                    </div>
+                </li>
+                </ul>
+                </article>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal-<%= Compras.id %>" tabindex="-1"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h6 class="modal-title" id="exampleModalLabel">
+                                    <%= Compras.name %> - <%= Compras.precio %>
+                                </h6>
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="/images/<%= Compras.image %> " class="img-fluid" alt="">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <% }) %>
+
+
+                    </section>
+                    </main>
+                    <%- include('../partials/footer') %>
+
+
+    </body>
+
 </html>

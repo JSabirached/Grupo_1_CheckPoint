@@ -6,107 +6,59 @@
   <h2 class="oferta">-LISTA DE COMIDAS-</h2>
  
 
-  <table class="table">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">First</th>
-        <th scope="col">Last</th>
-        <th scope="col">Handle</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td colspan="2">Larry the Bird</td>
-        <td>@twitter</td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="container">
+    <table class="table table-dark table-striped">
+        <thead>
+            <tr>
+                <th class="" scope="col">ID</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Price</th>
+                <th scope="col">categoria</th>
+                <th scope="col">Descripcion</th>
+                <th scope="col">Editar/Eliminar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% foods.forEach(food=> { %>
+                <tr>
+                  <th scope="row"><%= food.id %></th>
+                    <td>
+                        <%= food.name %>
+                    </td>
+                    <td>
+                        <%=food.price%>
+                    </td>
+                    <td>
+                        <%=food.id_category%>
+                    </td>
+                    <td>
+                        <%=food.description%>
+                    </td>
 
 
 
+                    <td class="d-flex justify-content-around">
+                        <form action="">
+                            <a href="/admin/edit/<%= food.id%> "><button type="submit"
+                                    class="btn btn-primary btn-sm"><i class="fas fa-edit text-white"></i>
+                                </button></a>
+                        </form>
+
+                        <form action="/admin/remove/<%= food.id%>?_method=DELETE" method="POST"
+                            id="delete">
+                            <button type="submit" class="btn btn-danger btn-sm"><i
+                                    class="fas fa-trash"></i></button>
+                        </form>
+                    </td>
+                </tr>
+
+                <% }); %>
+
+        </tbody>
+    </table>
+</div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          <% comidas.forEach(comida=> { %>
-            <article class="col-12 col-md-4 col-lg-3 ">
-              <ul class="list-group list-group-flush my-3 ">
-                <li class="list-group-item">
-                  <h6>
-                      <%= comida.name %> 
-                  </h6>
-                </li>
-                <li class="list-group-item">
-                  <h6>
-                    <%= comida.price %> 
-                  </h6>
-                </li>
-                <li class="list-group-item">
-                  <h6>
-                    <%= comida.description%> 
-                  </h6>
-                </li>
-                <li class="list-group-item">
-                  <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal-<%= comida.id %> ">
-                  <%= comida.image %></a>
-                </li>
-                <li class="list-group-item">
-                  <div class="m-2 d-flex justify-content-around">
-                   <a href="/admin/admin/edit/<%= comida.id %> " class="btn btn-primary">Editar</a>
-                   <form action="/admin/admin/delete/<%= comida.id %>?_method=DELETE " method="POST">
-                     <button class="btn btn-primary" type="submit">Eliminar</button>
-                   </form>
-                  </div>
-                </li>
-              </ul>
-            </article>  
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal-<%= comida.id %>" tabindex="-1" aria-labelledby="exampleModalLabel"
-              aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h6 class="modal-title" id="exampleModalLabel"><%= comida.name %> - <%= comida.precio %> </h6>
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    <img src="/images/<%= comida.image %> "class="img-fluid" alt="">
-                  </div>
-                 
-                </div>
-              </div>
-            </div>
-        
-            <% }) %>
-
-            
-       
       <%- include('../partials/footer') %> 
     
 

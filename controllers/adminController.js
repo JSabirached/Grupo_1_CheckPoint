@@ -8,14 +8,14 @@ module.exports = {
     },
     comidaList: (req, res) => {
 
-        db.Food.findAll()
+        db.Comidas.findAll()
 
 
 
-            .then(food => {
+            .then(foods => {
                 res.render("admin/comidaList", {
                     title: "Lista de Comidas",
-                    food
+                    foods
 
                 })
             })
@@ -35,15 +35,15 @@ module.exports = {
     },
     ventasList: (req, res) => {
 
-        db.Buy.findAll()
+        db.Compras.findAll()
 
 
 
-            .then(buy => {
+            .then(buys => {
                 res.render("admin/ventas", {
                     title: "ventas actuales",
 
-                    buy
+                    buys
                 })
             })
             .catch(error => console.log(error))
