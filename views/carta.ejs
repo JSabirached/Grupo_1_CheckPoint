@@ -5,59 +5,70 @@
  
  <body> 
         <div class="container">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+        <div class="col-xs-12 col-sm-6 col-md-3">
 	
-        <div class="col"><h5>BEBIDAS</h5>
-            <%bebibas.forEach(bebida => {%>
+        <h5>BEBIDAS</h5>
+           <ul>
+          <%bebibas.forEach(bebida => {%>
             
        
         
           
 		
-                <a class="col" href="/productos/seccionBebidas"><%=bebida.name%></a>
+                <li><a class="col" href="/productos/seccionBebidas"><%=bebida.name%></a></li>
               
-                   <br>
+                  
           <% });%>
+        </ul>
 		</div>
+  </div>
 	
-        <div class="col"><h5>POSTRES</h5>
-            <%postres.forEach(bebida => {%>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <h5>POSTRES</h5>
+           <ul>
+          <%postres.forEach(bebida => {%>
             
        
         
           
 		
-                <a class="col" href="/productos/seccionBebidas"><%=bebida.name%></a>
+              <li>  <a class="col" href="/productos/seccionBebidas"><%=bebida.name%></a></li>
               <br>
                    
           <% });%>
-		 </div>
-        
-        <div class="col"> <h5>HAMBURGUESAS</h5>
-            <%hamburguesas.forEach(bebida => {%>
+        </ul>
+        </div>
+      </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+           <h5>HAMBURGUESAS</h5>
+           <ul>
+          <%hamburguesas.forEach(bebida => {%>
             
        
         
           
 		
-                <a class="col" href="/productos/seccionBebidas"><%=bebida.name%></a>
-              <br>
+              <li>  <a class="col" href="/productos/seccionBebidas"><%=bebida.name%></a></li>
+              
                    
           <% });%>
-		</div>
-		
-        <div class="col"><h5>PIZZA Y EMPA</h5>
-            <%pizzas.forEach(bebida => {%>
+        </ul>
+        </div>
+      </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <h5>PIZZA Y EMPA</h5>
+          <ul>
+          <%pizzas.forEach(bebida => {%>
             
        
         
           
 		
-                <a class="col" href="/productos/seccionBebidas"><%=bebida.name%></a>
-              <br>
+               <li> <a class="col" href="/productos/seccionBebidas"><%=bebida.name%></a></li>
+              
                    
           <% });%>
-		
+        </ul>
         </div></div></div>
 
   </body>
