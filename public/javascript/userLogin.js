@@ -12,15 +12,21 @@ window.addEventListener('load', function() {
     $emailErrors = qs('#emailErrors'),
 
     $Pass = qs('#pass'),
-    $passErrors = qs('#passErrors'),
+    $passErrors = qs('#passErrores'),
 
+    $form = qs("#form"),
+
+    submitErrors = qs('#submitErrors'),
+
+
+   
     regExEmail = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i,
     regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}$/;
 
  $inputEmail.addEventListener('blur', function(){
     switch (true) {
         case !$inputEmail.value.trim():
-            $emailErrors.innerHTML = 'El campo email es obligatorio';
+            $emailErrore.innerHTML = 'El campo email es obligatorio';
             $inputEmail.classList.add('invalido')
             break;
         case !regExEmail.test($inputEmail.value):
@@ -51,6 +57,18 @@ $Pass.addEventListener('blur', function(){
             $Pass.classList.add('valido');
             $passErrors.innerHTML = ''
             break;
+    }
+
+})
+$form.addEventListener('submit', function (event) {
+    let error = false;
+    event.preventDefault()
+    console.log($form.elements)
+    let elementosForm = this.elements
+    for (let index = 0; index < 3; index++) 
+    if(!error){
+        console.log('Todo bien');
+        $form.submit() 
     }
 
 })
