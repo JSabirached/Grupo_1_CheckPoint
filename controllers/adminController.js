@@ -8,25 +8,68 @@ module.exports = {
     },
     comidaList : (req,res) => {
 
-        let Food = db.Food.findAll({include:[
-            {association: 'category'},
+         db.Food.findAll({include:[
+            {association: 'food'},
         ]})
-        let category = db.category.findAll();
+        
 
-        Promise.all([categorias, food])
-        .then(([categorias, food]) => {
-                res.render("admin/productoLista", {
-                    title: "Lista de food",
-                    Food: food,
-                    imagen:food,
-                    category:food,
-                    category
+       
+        .then(food => {
+                res.render("admin/comidaList", {
+                    title: "Lista de Comidas",
+                  food
 
                 })
             })
             .catch(error => console.log(error))
-    }
-    ,
+    },
+    userList : (req,res) => {
+
+       db.User.findAll({include:[
+            {association: 'user'},
+        ]})
+        
+        .then(user => {
+                res.render("admin/userList", {
+                    title: "Lista de Usuarios",
+                  
+                 user
+                })
+            })
+            .catch(error => console.log(error))
+    },
+    ventasList : (req,res) => {
+
+       db.Buy.findAll({include:[
+            {association: 'buy'},
+        ]})
+        
+
+       
+        .then(buy => {
+                res.render("admin/ventas", {
+                    title: "ventas actuales",
+                  
+                buy
+                })
+            })
+            .catch(error => console.log(error))
+    },
+    categorias : (req,res) => {
+
+        db.Category.findAll()
+       
+
+       
+        .then(categorias => {
+                res.render("admin/categorias", {  title: "Categorias",
+           categorias     })
+            })
+            .catch(error => console.log(error))
+    },
+   
+   
+   
    
     comidaCreate : (req,res) => {
        res.render('admin/comidaCreate')
