@@ -34,22 +34,22 @@ agregarproducto:(req,res)=>{
 
 /*index*/
 cartadelivery:(req,res)=>{
-    let bebibas = db.Food.findAll({
+    let bebibas = db.Comidas.findAll({
         where : {
-            id_category : 1
+            id_category : "1"
         }
     })
-    let postres = db.Food.findAll({
+    let postres = db.Comidas.findAll({
         where : {
             id_category : 2
         }
     })
-    let hamburguesas = db.Food.findAll({
+    let hamburguesas = db.Comidas.findAll({
         where : {
             id_category : 3
         }
     })
-    let pizzas = db.Food.findAll({
+    let pizzas = db.Comidas.findAll({
         where : {
             id_category : 4
         }
@@ -61,7 +61,7 @@ cartadelivery:(req,res)=>{
     })
    })
    
-}
+},
 
 locales:(req,res)=>{
     res.render("locales",{
