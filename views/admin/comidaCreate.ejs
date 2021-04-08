@@ -10,7 +10,9 @@
         <h3 class="mb-3">Agregar</h3>
 
         <div class="row">
-          
+          <div class="col-12  col-md-6">
+            <h2>Imagen</h2>
+          </div>
           <div class="col-12  col-md-6">
             <div class="form-floating mb-3">
               <input type="text" class="form-control" id="name"  name="name"
@@ -21,42 +23,34 @@
               </spam>
               <label for="price">Nombre del Producto</label>
             </div>
-          </div>
         
 
-        <div class="col-12  col-md-6 ">
-          <div class="form-floating mb-3">
+              <div class="form-floating mb-3">
             <input type="text" class="form-control" id="price"  name="price">
             <spam class="text-danger">
               <%=(typeof errores!="undefined" && errores.price)? errores.price.msg:""%>
             </spam>
             <label for="price">Precio</label>
-          </div>
-        </div>
+              </div>
 
-        <div class="col-12  col-md-6">
-          <div class="form-floating mb-3">
+            <div class="form-floating mb-3">
             <input type="text" class="form-control" id="description"  name="description"
               value="<%= (typeof old!="undefined" && old.description) ? old.description:"" %>" >
             <label for="description">Description</label>
             <spam class="text-danger">
               <%=(typeof errores!="undefined" && errores.description)? errores.description.msg:""%>
             </spam>
-          </div>
-        </div>
-      <div class="col-12  col-md-6">
-        <div class="form-floating mb-3">
+             </div>
+            <div class="form-floating mb-3">
           <select class="form-select" name="category" id="category" aria-label="Floating label select example">
-
-           
-            <% categorias.forEach(categoria=> {%>
-              <option value="<%= categoria.id %>">
+                <% categorias.forEach(categoria=> {%>
+                   <option value="<%= categoria.id %>">
                 <%categoria.name %>
-              </option>
-              <% }) %>
+                   </option>
+                <% }) %>
           </select>
           <label for="floatingSelect">Elegí tu categoria</label>
-
+         
         </div>
       </div>
 
