@@ -148,8 +148,8 @@ window.addEventListener('load', function () {
             }
         }
         if(!error){
-            console.log('Todo bien');
-            $form.submit() 
+            console.log('Todo ok');
+            $formReg.submit();
         }
 
     })

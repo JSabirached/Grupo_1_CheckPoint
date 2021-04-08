@@ -2,158 +2,83 @@
 	<title>registro</title>
 
 
-<body>
-	<%- include('partials/header') %>
-	<div class="container">
-		<div class="row">
-			     <h1>REGISTRO EN PROCESO</h1> <!--!!!Replantear DIV DE CLASES y FORMULARIO!!!!-->
-				 <p>Página en refacción</p>	
-				 	<form action="/users/registro" method="post" id="formReg">
-				       
-						<div class="d-flex flex-column justify-content-center align-items-center mb-4">
-							<input class="form-control w-25" type="text" placeholder="Nombre "  name="name" id="name" >
-							<span class="text-danger" 
-							id="nombreErrors"><%= (typeof errores != 'undefined' && errores.name ? errores.name.msg : null) %> 
-						</span>
-						</div>
-						
-						<div class="d-flex flex-column justify-content-center align-items-center mb-4">
-							<input class="form-control w-25" type="text" placeholder="Apellido"  name="surname" id="surname" >
-							<span class="text-danger"
-							id="apellidoErrors"><%= (typeof errores != 'undefined' && errores.surname ? errores.surname.msg : null) %> 
-						</span>
-						</div>
-
-						<div class="d-flex flex-column justify-content-center align-items-center mb-4">
-							<input class="form-control w-25" type="email" placeholder="Email"  name="email" id="email" >
-							<span class="text-danger"
-							id="emailErrors"><%= (typeof errores != 'undefined' && errores.email ? errores.email.msg : null) %> 
-						</span>
-						</div>
-						
-						<div class="d-flex flex-column justify-content-center align-items-center mb-4">
-							<input class="form-control w-25" type="password" placeholder="Contraseña"  name="pass" id="pass" >
-							<span class="text-danger"
-							id="passErrors"><%= (typeof errores != 'undefined' && errores.pass ? errores.pass.msg : null) %> 
-						</span>
-						</div>
-
-						<div class="d-flex flex-column justify-content-center align-items-center mb-4">
-							<input class="form-control w-25" type="password" placeholder="Reingrese Contraseña"  name="pass2" id="pass2" >
-							<span class="text-danger"
-							id="pass2Errors"><%= (typeof errores != 'undefined' && errores.pass2 ? errores.pass2.msg : null) %> 
-						</span>
-						</div>
-
-						<div class="d-flex flex-column justify-content-center align-items-center mb-4">
-							<input class="form-control w-25" type="file" placeholder="Carga tu imagen"  name="img" id="img" >
-							<span class="text-danger"
-							id="imgErrors"><%= (typeof errores != 'undefined' && errores.img ? errores.img.msg : null) %> 
-						</span>
-						</div>
-				
-				
-						<span>↓↓↓PARA ENVÍOS A DOMICILIO↓↓↓</span>
-					
-						<div class="d-flex flex-column justify-content-center align-items-center mb-4">
-							<input class="form-control w-25 mb-2" type="text" placeholder="Provincia"  name="provincia" id="Province" >
-						</div>
-						<div class="d-flex flex-column justify-content-center align-items-center mb-4">
-							<input class="form-control w-25 mb-2" type="text" placeholder="localidad"  name="localidad" id="location" >
-						</div>
-						<div class="d-flex flex-column justify-content-center align-items-center mb-4">
-							<input class="form-control w-25 mb-2" type="text" placeholder="direccion"  name="direccion" id="address" >
-						</div>
-						<div class="d-flex flex-column justify-content-center align-items-center mb-4">
-							<input class="form-control w-25 mb-2" type="number" placeholder="Teléfono"  name="telefono" id="phonenumber" >
-						</div>
-						    <button class="btn btn-danger w-25 mb-2" type="submit" value="Enviar">Registrarme</button>
-							<span id="submitErrors"></span>
-						
-						
-						</form>
-		
-    	   
-			
-					</div>  
-                 </div>
-     </div>
-	 <h1>Nuevo formulario de registro</h1>
+ <body>
+	  <%- include('partials/header') %>
 	  <div class="container">
+		  <p>FORMULARIO DE REGISTRO</p>
 		<div class="row">
 		  <div class="col-sm">
 			<form action="/users/registro" method="post" id="formReg">
 				       
-				<div class="d-flex flex-column justify-content-center align-items-center mb-4">
+				 <div class="d-flex flex-column justify-content-center align-items-center mb-4">
 					<input class="form-control" type="text" placeholder="Nombre "  name="name" id="name" >
 					<span class="text-danger" 
 					id="nombreErrors"><%= (typeof errores != 'undefined' && errores.name ? errores.name.msg : null) %> 
-				</span>
-				</div>
-				
-				<div class="d-flex flex-column justify-content-center align-items-center mb-4">
+				    </span>
+				 </div>
+
+				 <div class="d-flex flex-column justify-content-center align-items-center mb-4">
 					<input class="form-control" type="text" placeholder="Apellido"  name="surname" id="surname" >
 					<span class="text-danger"
 					id="apellidoErrors"><%= (typeof errores != 'undefined' && errores.surname ? errores.surname.msg : null) %> 
-				</span>
-				</div>
+				 </span>
+				 </div>
 
-				<div class="d-flex flex-column justify-content-center align-items-center mb-4">
+				 <div class="d-flex flex-column justify-content-center align-items-center mb-4">
 					<input class="form-control" type="email" placeholder="Email"  name="email" id="email" >
 					<span class="text-danger"
 					id="emailErrors"><%= (typeof errores != 'undefined' && errores.email ? errores.email.msg : null) %> 
-				</span>
+				    </span>
+				   </div>
+			    </div>
+
+		     <div class="col-sm">
+			     <div class="d-flex flex-column justify-content-center align-items-center mb-4">
+				 <input class="form-control" type="password" placeholder="Contraseña"  name="pass" id="pass" >
+				 <span class="text-danger"
+				 id="passErrors"><%= (typeof errores != 'undefined' && errores.pass ? errores.pass.msg : null) %> 
+			     </span>
+			     </div>
+
+                 <div class="d-flex flex-column justify-content-center align-items-center mb-4">
+				 <input class="form-control" type="password" placeholder="Reingrese Contraseña"  name="pass2" id="pass2" >
+				 <span class="text-danger"
+				 id="pass2Errors"><%= (typeof errores != 'undefined' && errores.pass2 ? errores.pass2.msg : null) %> 
+			     </span>
+			     </div>
+
+			     <div class="d-flex flex-column justify-content-center align-items-center mb-4">
+				 <input class="form-control" type="file" placeholder="Carga tu imagen" name="img" id="img" >
+				 <p>Carga tu foto de perfil</p>
+				 <span class="text-danger"
+				 id="imgErrors"><%= (typeof errores != 'undefined' && errores.img ? errores.img.msg : null) %> 
+			     </span>
+		         </div>
+		     </div>
+
+		    <p> ENVÍO A DOMICILIO</p>
+                <div class="col-sm">
+		         <div class="d-flex flex-column justify-content-center align-items-center mb-4">
+			     <input class="form-control" type="text" placeholder="Localidad"  name="localidad" id="location" >
+		         </div>
+		         <div class="d-flex flex-column justify-content-center align-items-center mb-4">
+			     <input class="form-control" type="text" placeholder="Direccion"  name="direccion" id="address" >
+		         </div>
+		         <div class="d-flex flex-column justify-content-center align-items-center mb-4">
+			     <input class="form-control" type="number" placeholder="Teléfono"  name="telefono" id="phonenumber" >
+		         </div>
+		         <div class="d-flex flex-column justify-content-center align-items-center mb-4">
+			     <input class="form-control" type="text" placeholder="Provincia"  name="provincia" id="Province" >
+		         </div>
+			     <button class="btn btn-danger" type="submit" value="Enviar">Registrarme</button>
+			     <span id="submitErrors"></span>
 				</div>
-				
-
-		        </div>
-		        <div class="col-sm">
-			    <div class="d-flex flex-column justify-content-center align-items-center mb-4">
-				<input class="form-control" type="password" placeholder="Contraseña"  name="pass" id="pass" >
-				<span class="text-danger"
-				id="passErrors"><%= (typeof errores != 'undefined' && errores.pass ? errores.pass.msg : null) %> 
-			</span>
-			</div>
-
-			<div class="d-flex flex-column justify-content-center align-items-center mb-4">
-				<input class="form-control" type="password" placeholder="Reingrese Contraseña"  name="pass2" id="pass2" >
-				<span class="text-danger"
-				id="pass2Errors"><%= (typeof errores != 'undefined' && errores.pass2 ? errores.pass2.msg : null) %> 
-			</span>
-			</div>
-
-			<div class="d-flex flex-column justify-content-center align-items-center mb-4">
-				<input class="form-control" type="file" placeholder="Carga tu imagen" name="img" id="img" >
-				<p>Carga tu foto de perfil</p>
-				<span class="text-danger"
-				id="imgErrors"><%= (typeof errores != 'undefined' && errores.img ? errores.img.msg : null) %> 
-			</span>
-			</div>
-			
-		  </div>
-		  <p>PARA ENVÍOS A DOMICILIO</p>
-		  <div class="col-sm">
-		</div>
-		<div class="d-flex flex-column justify-content-center align-items-center mb-4">
-			<input class="form-control" type="text" placeholder="Localidad"  name="localidad" id="location" >
-		</div>
-		<div class="d-flex flex-column justify-content-center align-items-center mb-4">
-			<input class="form-control" type="text" placeholder="Direccion"  name="direccion" id="address" >
-		</div>
-		<div class="d-flex flex-column justify-content-center align-items-center mb-4">
-			<input class="form-control" type="number" placeholder="Teléfono"  name="telefono" id="phonenumber" >
-		</div>
-		<div class="d-flex flex-column justify-content-center align-items-center mb-4">
-			<input class="form-control" type="text" placeholder="Provincia"  name="provincia" id="Province" >
-		</div>
-			<button class="btn btn-danger" type="submit" value="Enviar">Registrarme</button>
-			<span id="submitErrors"></span>
-		</form>
+		    </form>
 		  </div>
 		</div>
-	  </div>
+	</div>
 
-
+	
 <%- include('partials/footer') %>
 <script src="/javascript/userRegister.js"></script>
 </body>
