@@ -14,7 +14,7 @@ window.addEventListener('load', function() {
     $Pass = qs('#pass'),
     $passErrors = qs('#passErrors'),
     
-    $form = qs("#form"),
+    $formLogin = qs("#formLogin"),
 
     submitErrors = qs('#submitErrors'),
 
@@ -62,9 +62,9 @@ $Pass.addEventListener('blur', function(){
 
 })
 
-$form.addEventListener('submit', function (event) {
+$formLogin.addEventListener('submit', function (event) {
     let error = false;
-    event.preventDefault('onsubmit')
+    event.preventDefault('')
     console.log($form.elements)
     for (let index = 0; index < 3; index++) {}
     if(!error){
@@ -74,10 +74,4 @@ $form.addEventListener('submit', function (event) {
 
 })
 
-document.form.addEventListener("submit", validarFormulario);
-
-function validarFormulario(evObject){
-    evObject.preventDefault();
-    
-}
 })
