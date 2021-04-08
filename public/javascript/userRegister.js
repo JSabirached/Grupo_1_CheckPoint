@@ -25,7 +25,7 @@ window.addEventListener('load', function () {
         $img = qs('#img'),
         $imgErrors = qs('#imgErrors'),
 
-        $form = qs('#form'),
+        formReg= qs('#formReg'),
 
         submitErrors = qs('#submitErrors'),
 
@@ -135,12 +135,12 @@ window.addEventListener('load', function () {
         }
     })
 
-    $form.addEventListener('submit', function (event) {
+    $formReg.addEventListener('submit', function (event) {
         let error = false;
         event.preventDefault()
-        console.log($form.elements)
-        let elementosForm = this.elements
-        for (let index = 0; index < 6; index++) {
+        console.log($formReg.elements)
+        let elementosForm= $formReg.elements
+        for (let index = 0; index< elementosForm.length -7 ; index++) {
             if (elementosForm[index].value == "") {
                 elementosForm[index].classList.add('is-invalid');
                 submitErrors.innerHTML = "Los campos señalados son obligatorios.";
@@ -151,12 +151,7 @@ window.addEventListener('load', function () {
             console.log('Todo bien');
             $form.submit() 
         }
-
-        document.form.addEventListener("submit", validarFormulario);
-
-         function validarFormulario(evObject){
-          evObject.preventDefault();
-         }
+        
     })
     //faltan cargar validaciones de envío a domicilio//
 })
