@@ -97,12 +97,13 @@ module.exports = {
             db.Comidas.create({
                 name: req.name,
                 price: Number(req.price),
-                image: req.files[0].filename,
+                image: req.files ? req.files[0].filename :'default.png',
                 category: req.category,
                 description: req.description
             })
                 .then(() => {
-                    res.redirect('/admin')
+                  //res.send()
+                    res.redirect('/admin/comidaCreate')
                 })
                 .catch(error => res.send(error))
 
