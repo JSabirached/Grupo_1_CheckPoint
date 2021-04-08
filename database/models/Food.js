@@ -19,7 +19,7 @@ module.exports = (sequelize , DataTypes) => {
             allowNull : false ,
         },
         image : {
-            type : DataTypes.BLOB,
+            type : DataTypes.STRING(255),
             
         },
         id_category : {

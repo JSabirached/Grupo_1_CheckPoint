@@ -80,7 +80,7 @@ CREATE TABLE `food` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(15) NOT NULL,
   `price` varchar(6) NOT NULL,
-  `image` blob,
+  `image` varchar(255) DEFAULT NULL,
   `description` varchar(180) NOT NULL,
   `created_at TIMESTAMP` datetime DEFAULT NULL,
   `updated_at TIMESTAMP` datetime DEFAULT NULL,
@@ -113,7 +113,7 @@ CREATE TABLE `user` (
   `name` varchar(45) NOT NULL,
   `email` varchar(45) NOT NULL,
   `pass` varchar(70) NOT NULL,
-  `avatar` blob,
+  `avatar` varchar(255) DEFAULT NULL,
   `category` int NOT NULL,
   `provincia` varchar(45) DEFAULT NULL,
   `localidad` varchar(45) DEFAULT NULL,
@@ -145,4 +145,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-04-02 12:44:58
+-- Dump completed on 2021-04-08  2:19:13

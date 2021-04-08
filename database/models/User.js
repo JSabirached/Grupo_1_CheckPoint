@@ -22,7 +22,7 @@ module.exports = (sequelize , DataTypes) => {
         allowNull : false ,
       },
       avatar : {
-        type : DataTypes.BLOB,
+        type : DataTypes.STRING(255),
         defaultValue : null
       },
       category : {
