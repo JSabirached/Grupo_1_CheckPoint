@@ -15,14 +15,19 @@
             <div class="usuario container  ">
                <div class="row">
                
-                  <% if (typeof users =='undefined') { %>
+                  <% if (typeof userLogin =='undefined') { %>
                    <li class="col-sm col-md col-lg-3"><a href="/users/registro">Registrate <br><i class="fas fa-sign-in-alt "></i></a></li>
                    <li class="col-sm col-md col-lg-3"><a href="/users/login">Ingresá  <br><i class="fas fa-sign-in-alt "></i></a></li>
-                  <% } %>
-                  
+                  <%= userLogin.name %> } %>
+                
                   <li class="col-sm col-md col-lg-3"><a href="https://checkpoint-restobar.blogspot.com/">Nuestro<br>Blog<i class="far fa-address-card "></i></a></li>
                   <!--<li class="col-2"><a href="/users/profile">profile <br>  <i class="far fa-address-card"></i></a></li>-->
                   
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                     <li><a class="dropdown-item" href="/users/profile">Mi perfil</a></li>
+                     <li><hr class="dropdown-divider"></li>
+                     <li><a class="dropdown-item" href="/users/logout">Cerrar sesión</a></li>
+                  </ul>
               </div>
             </div>
          </div>

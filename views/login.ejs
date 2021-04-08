@@ -11,7 +11,7 @@
             <p>INICIAR SESIÓN</p>
             <form action="/users/login" method="post" id="formLogin">
               <div class="d-flex flex-column justify-content-center align-items-center mb-4">
-                <input class="form-control w-50" type="Email" placeholder="Email"  name="email" id="email" >
+                <input class="form-control w-50" type="email" placeholder="Email"  name="email" id="email" >
                 <span class="text-danger"
                 id="emailErrors"><%= (typeof errores != 'undefined' && errores.email ? errores.email.msg : null) %> 
               </span>
