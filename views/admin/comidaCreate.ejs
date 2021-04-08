@@ -43,21 +43,23 @@
             </spam>
           </div>
         </div>
-       
-        <div class="form-floating mb-3">
-          <select name="category" id="category">
-            <option value="" selected hidden>Elegí tu categoria</option>
-            <% categorias.forEach(categoria => {%>
-            <option value= "<%= categoria.id %>"><%categoria.name %></option>
-          <% }) %>
 
+        <div class="form-floating">
+          <select class="form-select" name="category" id="category" aria-label="Floating label select example">
+
+            <option value="" selected hidden>Elegí tu categoria</option>
+            <% categorias.forEach(categoria=> {%>
+              <option value="<%= categoria.id %>">
+                <%categoria.name %>
+              </option>
+              <% }) %>
           </select>
         </div>
+       
 
 
 
-            </select>
-          </div>
+
         </div>
 
 
