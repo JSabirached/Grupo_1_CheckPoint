@@ -8,13 +8,13 @@
     <main class="container">
       <form action="/create" method="POST">
         <h3>Agregar</h3>
-        <hr>
+
         <div class="row">
           <div class="col-md-6  ">
-          <div class="form-floating mb-3">
+            <div class="form-floating mb-3">
               <input type="text" class="form-control" id="name" placeholder="Nombre" name="name"
-               value="<%=(typeof old != " undefined"&& old.name) ? old.name:"" %>">
-              
+                value="<%=(typeof old != "undefined"&& old.name) ? old.name:"" %>">
+
               <spam class="text-danger">
                 <%=(typeof errores!="undefined" && errores.name)? errores.name.msg:""%>
               </spam>
@@ -43,19 +43,19 @@
             </spam>
           </div>
         </div>
-        <div class="col-2 col-md-4  col-lg-10">
-          <div class="form-floating mb-3">
-            <input type="file" name="img">
-          </div>
-        </div>
-        <div class="col-2 col-md-4  col-lg-10">
-          <div class="form-floating mb-3">
+       
+        <div class="form-floating mb-3">
+          <select name="category" id="category">
+            <option value="" selected hidden>Elegí tu categoria</option>
+            <% categorias.forEach(categoria => {%>
+            <option value= "<%= categoria.id %>"><%categoria.name %></option>
+          <% }) %>
 
-            <select name="category" id="category">
-              <option value="" selected hidden>elegi tu categoria</option>
-              <% categorias.forEach(categoria=> { %>
-                <option value="<%= categoria.name %> "   <% }) %>></option>
-             
+          </select>
+        </div>
+
+
+
             </select>
           </div>
         </div>

@@ -78,13 +78,13 @@ module.exports = {
 
 
     comidaCreate: (req, res) => {
-        res.render('admin/comidaCreate')
+       
         db.Category.findAll()
 
 
 
         .then(categorias => {
-            res.render("admin/categorias", {
+            res.render("admin/comidaCreate", {
                 title: "Categorias",
                 categorias
             })
