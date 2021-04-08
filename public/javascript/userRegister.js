@@ -25,7 +25,7 @@ window.addEventListener('load', function () {
         $img = qs('#img'),
         $imgErrors = qs('#imgErrors'),
 
-        formReg= qs('#formReg'),
+        $formReg= qs('#formReg'),
 
         submitErrors = qs('#submitErrors'),
 
@@ -151,7 +151,7 @@ window.addEventListener('load', function () {
             console.log('Todo bien');
             $form.submit() 
         }
-        
+
     })
     //faltan cargar validaciones de envío a domicilio//
 })
