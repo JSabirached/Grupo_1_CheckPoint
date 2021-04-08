@@ -49,10 +49,6 @@ $Pass.addEventListener('blur', function(){
             $passErrors.innerHTML = 'El campo contraseña es obligatorio.';
             $Pass.classList.add('is-invalid')
             break;
-        case !regExPass.test($Pass.value):
-            $passErrors.innerHTML = 'Debe tener entre 6 y 12 caracteres, al menos una mayúscula, una minúscula y un número.'
-            $Pass.classList.add('is-invalid')
-            break;
         default:
             $Pass.classList.remove('is-invalid');
             $Pass.classList.add('is-valid');
