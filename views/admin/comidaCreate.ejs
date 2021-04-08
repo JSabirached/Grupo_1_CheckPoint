@@ -45,13 +45,18 @@
           <select class="form-select" name="category" id="category" aria-label="Floating label select example">
                 <% categorias.forEach(categoria=> {%>
                    <option value="<%= categoria.id %>">
-                <%categoria.name %>
+                <%=categoria.name %>
                    </option>
                 <% }) %>
           </select>
           <label for="floatingSelect">Elegí tu categoria</label>
          
         </div>
+        <div class="mb-3">
+          
+          <input class="form-control" type="file" id="formFile">
+        </div>
+        
       </div>
 
         </div>
@@ -64,14 +69,14 @@
 
         
 
-        <div class="d-grid gap-2">
+        <div class="d-grid gap-2 mb-2">
           <button class="btn btn-primary text-white" type="submit">Guardar</button>
         </div>
 
 
       </form>
 
-      <a href="/admin">|VOLVER ATRAS|</a>
+      <a href="/admin/comidaList">|VOLVER ATRAS|</a>
 
     </main>
     <%- include('../partials/footer') %>
