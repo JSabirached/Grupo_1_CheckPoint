@@ -13,7 +13,7 @@
           <div class="col-md-6  ">
             <div class="form-floating mb-3">
               <input type="text" class="form-control" id="name" placeholder="Nombre" name="name"
-                value="<%=(typeof old != "undefined"&& old.name) ? old.name:"" %>">
+                value="<%=(typeof old != " undefined"&& old.name) ? old.name:"" %>">
 
               <spam class="text-danger">
                 <%=(typeof errores!="undefined" && errores.name)? errores.name.msg:""%>
@@ -36,7 +36,7 @@
         <div class="col-md-6">
           <div class="form-floating mb-3">
             <input type="text" class="form-control" id="description" placeholder="description" name="description"
-              value="<%= (typeof old!="undefined" && old.description) ? old.description:"" %>" >
+              value="<%= (typeof old!=" undefined" && old.description) ? old.description:"" %>" >
             <label for="description">Description</label>
             <spam class="text-danger">
               <%=(typeof errores!="undefined" && errores.description)? errores.description.msg:""%>
@@ -55,7 +55,7 @@
               <% }) %>
           </select>
         </div>
-       
+
 
 
 
