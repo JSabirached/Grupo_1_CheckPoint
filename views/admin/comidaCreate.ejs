@@ -7,13 +7,14 @@
 
     <main class="container">
       <form action="/create" method="POST">
-        <h3>Agregar</h3>
+        <h3 class="mb-3">Agregar</h3>
 
         <div class="row">
-          <div class="col-md-6  ">
+          
+          <div class="col-12  col-md-6">
             <div class="form-floating mb-3">
               <input type="text" class="form-control" id="name" placeholder="Nombre" name="name"
-                value="<%=(typeof old != " undefined"&& old.name) ? old.name:"" %>">
+                value="<%=(typeof old != "undefined"&& old.name) ? old.name:"" %>">
 
               <spam class="text-danger">
                 <%=(typeof errores!="undefined" && errores.name)? errores.name.msg:""%>
@@ -21,9 +22,9 @@
               <label for="price">Nombre del Producto</label>
             </div>
           </div>
-        </div>
+        
 
-        <div class="col-md-6 ">
+        <div class="col-12  col-md-6 ">
           <div class="form-floating mb-3">
             <input type="text" class="form-control" id="price" placeholder="price" name="price">
             <spam class="text-danger">
@@ -33,17 +34,17 @@
           </div>
         </div>
 
-        <div class="col-md-6">
+        <div class="col-12  col-md-6">
           <div class="form-floating mb-3">
             <input type="text" class="form-control" id="description" placeholder="description" name="description"
-              value="<%= (typeof old!=" undefined" && old.description) ? old.description:"" %>" >
+              value="<%= (typeof old!="undefined" && old.description) ? old.description:"" %>" >
             <label for="description">Description</label>
             <spam class="text-danger">
               <%=(typeof errores!="undefined" && errores.description)? errores.description.msg:""%>
             </spam>
           </div>
         </div>
-
+      <div class="col-12  col-md-6">
         <div class="form-floating">
           <select class="form-select" name="category" id="category" aria-label="Floating label select example">
 
@@ -55,10 +56,7 @@
               <% }) %>
           </select>
         </div>
-
-
-
-
+      </div>
 
         </div>
 
@@ -66,12 +64,12 @@
 
 
 
-        </div>
+       
 
-        </div>
+        
 
         <div class="d-grid gap-2">
-          <button class="btn btn-primary" type="submit">Guardar</button>
+          <button class="btn btn-primary text-white" type="submit">Guardar</button>
         </div>
 
 
