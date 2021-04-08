@@ -13,7 +13,7 @@
           
           <div class="col-12  col-md-6">
             <div class="form-floating mb-3">
-              <input type="text" class="form-control" id="name" placeholder="Nombre" name="name"
+              <input type="text" class="form-control" id="name"  name="name"
                 value="<%=(typeof old != "undefined"&& old.name) ? old.name:"" %>">
 
               <spam class="text-danger">
@@ -26,7 +26,7 @@
 
         <div class="col-12  col-md-6 ">
           <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="price" placeholder="price" name="price">
+            <input type="text" class="form-control" id="price"  name="price">
             <spam class="text-danger">
               <%=(typeof errores!="undefined" && errores.price)? errores.price.msg:""%>
             </spam>
@@ -36,7 +36,7 @@
 
         <div class="col-12  col-md-6">
           <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="description" placeholder="description" name="description"
+            <input type="text" class="form-control" id="description"  name="description"
               value="<%= (typeof old!="undefined" && old.description) ? old.description:"" %>" >
             <label for="description">Description</label>
             <spam class="text-danger">
@@ -45,16 +45,18 @@
           </div>
         </div>
       <div class="col-12  col-md-6">
-        <div class="form-floating">
+        <div class="form-floating mb-3">
           <select class="form-select" name="category" id="category" aria-label="Floating label select example">
 
-            <option value="" selected hidden>Elegí tu categoria</option>
+           
             <% categorias.forEach(categoria=> {%>
               <option value="<%= categoria.id %>">
                 <%categoria.name %>
               </option>
               <% }) %>
           </select>
+          <label for="floatingSelect">Elegí tu categoria</label>
+
         </div>
       </div>
 
