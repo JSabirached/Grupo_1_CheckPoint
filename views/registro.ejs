@@ -6,8 +6,8 @@
 	<%- include('partials/header') %>
 	<div class="container">
 		<div class="row">
-			<div class="col-12">
 			     <h1>REGISTRATE</h1><!--method post creamos un formulario -->
+				 
 			        <form action="/users/registro" method="post" enctype="multipart/form-data" id="form">
 				       
 						<div class="d-flex flex-column justify-content-center align-items-center mb-4">
@@ -51,7 +51,8 @@
 							id="imgErrors"><%= (typeof errores != 'undefined' && errores.img ? errores.img.msg : null) %> 
 						</span>
 						</div>
-
+				
+				
 						<span>↓↓↓PARA ENVÍOS A DOMICILIO↓↓↓</span>
 					
 						<div class="d-flex flex-column justify-content-center align-items-center mb-4">
@@ -66,9 +67,10 @@
 						<div class="d-flex flex-column justify-content-center align-items-center mb-4">
 							<input class="form-control w-25 mb-2" type="number" placeholder="Teléfono"  name="telefono" id="phonenumber" >
 						</div>
-						    <button class="btn btn-danger mb-2" type="submit">Registrarme</button>
+						    <button class="btn btn-danger w-25 mb-2" type="submit" value="Enviar">Registrarme</button>
 							<span id="submitErrors"></span>
 						</form>
+		
     	    </div>
         </div>
     </div>

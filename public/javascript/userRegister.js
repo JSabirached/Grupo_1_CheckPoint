@@ -152,6 +152,11 @@ window.addEventListener('load', function () {
             $form.submit() 
         }
 
+        document.form.addEventListener("submit", validarFormulario);
+
+         function validarFormulario(evObject){
+          evObject.preventDefault();
+         }
     })
     //faltan cargar validaciones de envío a domicilio//
 })

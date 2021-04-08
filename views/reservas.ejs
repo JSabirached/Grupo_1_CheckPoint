@@ -13,16 +13,65 @@
      <div><h1>-RESERVÁ Y DISFRUTÁ-</h1>
         <div class="container">
           <div class="turno">
-            </form>
-               <form action="">
-               <p>Elige el dia</p>
-               <div class="d-flex flex-column justify-content-center align-items-center mb-4">
-                <input class="form-control w-25" type="text" placeholder="Martes a Domingo"  name="pass" id="pass" >
-               </div>
-               <p>Selecciona la hora</p>
-               <div class="d-flex flex-column justify-content-center align-items-center mb-4">
-                <input class="form-control w-25" type="text" placeholder="De 19:00 a 02:00"  name="pass" id="pass" >
-               </div>
+               <form action="reservas">
+                <div class="row justify-content-center align-items-center mb-4">
+                  <div class="col">
+                    <input type="text" class="form-control" placeholder="Nombre" aria-label="First name">
+                  </div>
+                  <div class="col">
+                    <input type="text" class="form-control" placeholder="Apellido" aria-label="Last name">
+                  </div>
+                </div>
+                <div class="form-floating">
+                  <select class="form-select justify-content-center align-items-center mb-4" id="floatingSelect" aria-label="Floating label select example">
+                    <option selected>Abre el Menú</option>
+                    <option value="1">Lunes</option>
+                    <option value="2">Martes</option>
+                    <option value="3">Miércoles</option>
+                    <option value="4">Jueves</option>
+                    <option value="5">Viernes</option>
+                    <option value="6">Sábado</option>
+                    </select>
+                  <label for="floatingSelect">Selecciona que día queres venir</label>
+                </div>
+
+                <div class="form-floating justify-content-center align-items-center mb-4">
+                  <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                    <option selected>Abre el menú</option>
+                    <option value="1">19:00 a 20:00</option>
+                    <option value="2">20:00 a 21.00</option>
+                    <option value="3">21:00 a 22:00</option>
+                    <option value="4">22:00 a 23:00</option>
+                    <option value="5">23:00 a 00:00</option>
+                    <option value="6">00:00 a 02:00</option>
+                  </select>
+                  <label for="floatingSelect">Selecciona el horario</label>
+                </div>
+               
+                <div class="form-floating justify-content-center align-items-center mb-4">
+                  <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                    <option selected>Abre el menú</option>
+                    <option value="1">2 Comensales</option>
+                    <option value="2">3 Comensales</option>
+                    <option value="3">4 Comensales</option>
+                    <option value="4">5 Comensales</option>
+                    <option value="5">6 Comensales</option>
+                    <option value="6">7 Comensales</option>
+                    <option value="7">8 Comensales</option>
+                    <option value="8">9 Comensales</option>
+                    <option value="9">10 Comensales</option>
+                    <option value="10">Mas de 10 comensales</option>
+                   </select>
+                  <label for="floatingSelect">Selecciona la cantidad de comensales</label>
+                </div>
+
+                <div class="form-floating">
+                  <textarea class="form-control justify-content-center align-items-center mb-4" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                  <label for="floatingTextarea"> Dejanos un número de contacto para confirmar tu ingreso</label>
+                </div>
+        
+                <button class="btn btn-danger mb-2" type="submit" value="ingresar">Enviar</button>
+                <span id="submitErrors"></span>
              </form>
             </div>
           </div>
