@@ -64,14 +64,20 @@ $Pass.addEventListener('blur', function(){
 
 $formLogin.addEventListener('submit', function (event) {
     let error = false;
-    event.preventDefault('')
-    console.log($form.elements)
-    for (let index = 0; index < 3; index++) {}
+    event.preventDefault()
+    console.log($formLogin.elements)
+    for (let index = 0; index <$formLogin.elements.length - 2; index ++) {
+    if($formLogin.elements[index].value == ""){
+        $formLogin.elements[index].classList.add('is-invalid');
+        submitErrors.innerHTML = "Los campos señadados son obligatorios";
+        error =true
+    }
+}
     if(!error){
         console.log('Todo bien');
-        $form.submit() 
+        $formLogin.submit() 
     }
-
 })
+
 
 })
