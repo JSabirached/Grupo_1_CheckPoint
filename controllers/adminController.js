@@ -3,8 +3,8 @@ const db = require('../database/models');
 const { Op } = require('sequelize');
 
 module.exports = {
-   
-    
+
+
     index: (req, res) => {
         res.render('admin/index')
     },
@@ -86,7 +86,7 @@ module.exports = {
 
     comidaStore: (req, res) => {
         let errors = validationResult(req)
-      //  res.send(errors)
+        //  res.send(errors)
         if (errors.isEmpty()) {
 
             const { name, price, image, category, description } = req.body;
@@ -105,40 +105,44 @@ module.exports = {
                 .catch(error => res.send(error))
 
 
-        }else{
+        } else {
             db.Category.findAll()
 
 
 
-            .then(categorias => {
-                res.render("admin/comidaCreate", {
-                    title: "Categorias",
-                    categorias,
-                    old :req.body,
-                    errores:errors.mapped()
+                .then(categorias => {
+                    res.render("admin/comidaCreate", {
+                        title: "Categorias",
+                        categorias,
+                        old: req.body,
+                        errores: errors.mapped()
+                    })
                 })
-            })
         }
-
-     
-    }
-    ,
-
-    comidaEdit: (req, res) => {
-        let comidas = db.Comidas.findByPk(req.params.id)
-        let categorias = db.Category.findAll()
-       // let comida = comidas.find(comida => comida.id === +req.params.id);
-
-        res.render('admin/comidaEdit', {
-           title :"Categoria",
-            id: req.params.id,
-            comidas,
-            categorias,
-            old :req.body,
-            errores:errors.mapped()
-
-        })
     },
+    comidaEdit: (req, res) => {
+        let errors = validationResult(req)
+        //  res.send(errors)
+        if (errors.isEmpty()) {
+            let comidas = db.Comidas.findByPk(req.params.id)
+             db.Category.findAll()
+
+            
+                         
+            .then(comidas, cate =>{
+                res.render('admin/comidaEdit',{
+                    title : "Edicion de Producto",
+                    id: req.params.id,
+                    comidas,
+                    categorias,
+                    old: req.body, 
+                })
+            }) 
+        }
+    },
+
+
+
     comidaUpdate: (req, res) => {
 
         const { name, price, category, description, image } = req.body;
