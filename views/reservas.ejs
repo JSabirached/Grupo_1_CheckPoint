@@ -10,7 +10,7 @@
                              
 
    <div class="container">
-     <div><h1>-RESERVÁ Y DISFRUTÁ-</h1>
+     <div><h4>RESERVÁ Y DISFRUTÁ</h4>
         <div class="container">
           <div class="turno">
                <form action="reservas">
@@ -24,7 +24,7 @@
                 </div>
                 <div class="form-floating">
                   <select class="form-select justify-content-center align-items-center mb-4" id="floatingSelect" aria-label="Floating label select example">
-                    <option selected>Abre el Menú</option>
+                    <option></option>
                     <option value="1">Lunes</option>
                     <option value="2">Martes</option>
                     <option value="3">Miércoles</option>
@@ -37,7 +37,7 @@
 
                 <div class="form-floating justify-content-center align-items-center mb-4">
                   <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-                    <option selected>Abre el menú</option>
+                    <option selected></option>
                     <option value="1">19:00 a 20:00</option>
                     <option value="2">20:00 a 21.00</option>
                     <option value="3">21:00 a 22:00</option>
@@ -50,7 +50,7 @@
                
                 <div class="form-floating justify-content-center align-items-center mb-4">
                   <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-                    <option selected>Abre el menú</option>
+                    <option></option>
                     <option value="1">2 Comensales</option>
                     <option value="2">3 Comensales</option>
                     <option value="3">4 Comensales</option>
@@ -67,11 +67,13 @@
 
                 <div class="form-floating">
                   <textarea class="form-control justify-content-center align-items-center mb-4" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-                  <label for="floatingTextarea"> Dejanos un número de contacto para confirmar tu ingreso</label>
+                  <label for="floatingTextarea"> Dejanos un número de contacto para confirmar tu reserva</label>
                 </div>
-        
-                <button class="btn btn-danger mb-2" type="submit" value="ingresar">Enviar</button>
+
+                <div class="w-25 mx-auto">
+                <button class="btn btn-outline-primary mb-2" type="submit" value="ingresar">Enviar</button>
                 <span id="submitErrors"></span>
+                </div>
              </form>
             </div>
           </div>
