@@ -26,14 +26,14 @@ module.exports = {
         } else {
 
 
-            const { name, surname, email, pass, provincia, localidad, direccion, telefono } = req.body;
+            const { name, surname, email, pass, provincia, localidad, direccion, telefono ,avatar} = req.body;
 
             db.Usuario.create({
                 name: name.trim(),
                 surname: surname.trim(),
                 email: email.trim(),
                 pass: bcrypt.hashSync(pass, 12),
-                avatar: (req.files[0]) ? req.files[0].filename : "default.png",
+                avatar: req.files ? req.files[0].filename :'default.png',
                 category: '0',
                 provincia: provincia.trim(),
                 localidad: localidad.trim(),
