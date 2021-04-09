@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <%- include('./partials/head') %>
 
     <body>
         <%- include("./partials/header") %>
-            <div>
-                <section class="detalleproducto">
-                    <article class="foto">
+            <div class="login my-4 w-75 mx-auto">
+                <section class="row">
+                    <article class="col-12 col-md-6">
                         <img src="/images/<%=producto.image%>">
                     </article>
-                    <article class="detalles">
-                        <h2>
+                    <article class="col-12 col-md-6 d-flex flex-column align-center ">
+                        <h2 class="text-center">
                             <%=producto.name%>
                         </h2>
                         <p>
@@ -19,11 +20,9 @@
                         <h4>
                             $ <%=producto.price%>
                         </h4>
-                        <input type="button" value="delivery online" class="btn btn-outline-primary">
+                        <button type="button"class="btn btn-outline-primary">Comprar</button>
                     </article>
                 </section>
             </div>
             <%- include('./partials/footer') %>
     </body>
-
-    </html>
