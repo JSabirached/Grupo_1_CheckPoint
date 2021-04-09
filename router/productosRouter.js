@@ -15,7 +15,7 @@ router.get('/seccionPizzaEmpa',productsController.seccionPizzaEmpa );
 router.get('/secciones/:id',productsController.secciones);
 //router.get('/detalles',productsController.detallesdeproducto);
 /*router index */
-
+router.get('/detalledeproducto/:id',productsController.detallesdeproducto);
 
 module.exports = router;
 

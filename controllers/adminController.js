@@ -3,18 +3,8 @@ const db = require('../database/models');
 const { Op } = require('sequelize');
 
 module.exports = {
-    comidas: (req, res) => {
-        db.Comidas.findByPk(req.params.id)
-            .then(producto => {
-                res.render("admin/comida", {
-                    producto
-
-                })
-            }).catch(error => res.send(error))
-
-
-    },
-
+   
+    
     index: (req, res) => {
         res.render('admin/index')
     },

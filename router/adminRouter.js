@@ -23,6 +23,6 @@ router.get('/edit/:id',comidaEdit);
 
 
 
-router.get('/comidas/:id',comidas);
+
 
 module.exports = router;
