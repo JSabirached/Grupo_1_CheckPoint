@@ -37,9 +37,8 @@ app.use(methodOverride('_method'));
 
 
 app.use(session({secret: "CheckPoint", resave: false, saveUninitialized: true}));
-app.use(localCheck);
 app.use(cookieCkeck);
-//app.use(cookieCkeck);
+app.use(localCheck);
 
 
 app.use('/', indexRouter);
