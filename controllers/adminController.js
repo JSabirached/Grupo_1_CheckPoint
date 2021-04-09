@@ -130,18 +130,23 @@ module.exports = {
             })
         }
 
-        /*
-
-*/
+     
     }
     ,
 
     comidaEdit: (req, res) => {
-
-        let comida = comidas.find(comida => comida.id === +req.params.id);
+        let comidas = db.Comidas.findByPk(req.params.id)
+        let categorias = db.Category.findAll()
+       // let comida = comidas.find(comida => comida.id === +req.params.id);
 
         res.render('admin/comidaEdit', {
-            id: req.params.id
+           title :"Categoria",
+            id: req.params.id,
+            comidas,
+            categorias,
+            old :req.body,
+            errores:errors.mapped()
+
         })
     },
     comidaUpdate: (req, res) => {
