@@ -59,7 +59,7 @@ body div  p.ingredientes{
 
 }
 @media(min-width:1000px){
-body div{
+body div section.detalleproducto{
     display:flex;
         flex-wrap:nowrap;
         flex-direction: column;
