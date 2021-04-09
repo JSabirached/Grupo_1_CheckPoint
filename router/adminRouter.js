@@ -23,6 +23,6 @@ router.post('/create',uploadImages.any(),addValidator,comidaStore);
 
 
 
-router.get('/comidas/:id',comidas);
+
 
 module.exports = router;

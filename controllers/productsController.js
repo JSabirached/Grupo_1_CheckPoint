@@ -95,5 +95,16 @@ seccionPizzaEmpa: (req,res) => { db.Category.findOne({
     })
 
 
-}
+},
+
+detallesdeproducto:(req,res)=>{
+    db.Comidas.findByPk(req.params.id)
+    .then(producto=>{
+     res.render("detallesdeproducto",{producto
+ 
+     })
+    }).catch(error=>res.send(error))
+    
+     
+ }
 }
