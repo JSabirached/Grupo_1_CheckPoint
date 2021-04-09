@@ -1,25 +1,29 @@
-<%- include('./partials/head')  %> 
-<body>
-    <%- include("./partials/header") %>
-    <div>
-    <section class="detalleproducto">
-    <article class="foto">
-        <h3><%=producto.title%></h3>
-        <img src="/images/<%=producto.image%>">
-    </article>
-        <article class="detalles">
-        <p><%=producto.description%></p>
-        <h3><%=producto.price%></h3>
-        <input type="button" value="delivery online" class="boton">
-        <input type="button" value="registrarse" class="boton">
-        </article>
-    
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head') %>
 
-</section>
-<p class="ingredientes">
-    pase el puntero del mause para ver los ingredientes
-</p>
-</div>
-<%- include('./partials/footer') %>
-</body>
-</html>
+    <body>
+        <%- include("./partials/header") %>
+            <div>
+                <section class="detalleproducto">
+                    <article class="foto">
+                        <img src="/images/<%=producto.image%>">
+                    </article>
+                    <article class="detalles">
+                        <h2>
+                            <%=producto.name%>
+                        </h2>
+                        <p>
+                            <%=producto.description%>
+                        </p>
+                        <h4>
+                            $ <%=producto.price%>
+                        </h4>
+                        <input type="button" value="delivery online" class="btn btn-outline-primary">
+                    </article>
+                </section>
+            </div>
+            <%- include('./partials/footer') %>
+    </body>
+
+    </html>
