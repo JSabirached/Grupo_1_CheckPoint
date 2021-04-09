@@ -42,10 +42,10 @@
 
 
                     <td class="d-flex justify-content-around">
-                        <form action="">
-                            <a href="/admin/edit/<%= food.id%> "><button type="submit"
+                        <form action="/admin/edit/<%= food.id%>">
+                         <button type="submit"
                                     class="btn btn-primary btn-sm"><i class="fas fa-edit text-white"></i>
-                                </button></a>
+                                </button>
                         </form>
 
                         <form action="/admin/remove/<%= food.id%>?_method=DELETE" method="POST"
