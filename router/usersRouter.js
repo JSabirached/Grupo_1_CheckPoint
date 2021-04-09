@@ -12,7 +12,7 @@ router.post('/registro',uploadUser.any(),registroValidator, processRegistro);
 
 router.get('/login',login);
 router.post('/login',loginValidator,processLogin);
-router.post('/logout',logout);
+router.get('/logout',logout);
 
 router.get('/profile',profileEdit);
 router.put('/profileEdit',update);
