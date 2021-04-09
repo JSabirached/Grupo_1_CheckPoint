@@ -69,38 +69,63 @@ module.exports = {
 
 
     comidaCreate: (req, res) => {
-       
+
         db.Category.findAll()
 
 
 
-        .then(categorias => {
-            res.render("admin/comidaCreate", {
-                title: "Categorias",
-                categorias
+            .then(categorias => {
+                res.render("admin/comidaCreate", {
+                    title: "Categorias",
+                    categorias
+                })
             })
-        })
 
 
     },
+
     comidaStore: (req, res) => {
+        let errors = validationResult(req)
+      //  res.send(errors)
         if (errors.isEmpty()) {
+
+            const { name, price, image, category, description } = req.body;
+
             db.Comidas.create({
-                name: req.name,
-                price: Number(req.price),
-                image: req.files ? req.files[0].filename :'default.png',
-                category: req.category,
-                description: req.description
+                name: name,
+                price: Number(price),
+                image: req.files[0] ? req.files[0].filename : 'default.png',
+                id_category: category,
+                description: description
             })
                 .then(() => {
-                  //res.send()
-                    res.redirect('/admin/comidaCreate')
+                    //  res.send()
+                    res.redirect('/admin/comidaList')
                 })
                 .catch(error => res.send(error))
 
+
+        }else{
+            db.Category.findAll()
+
+
+
+            .then(categorias => {
+                res.render("admin/comidaCreate", {
+                    title: "Categorias",
+                    categorias,
+                    old :req.body,
+                    errores:errors.mapped()
+                })
+            })
         }
+
+        /*
+
+*/
     }
     ,
+
     comidaEdit: (req, res) => {
 
         let comida = comidas.find(comida => comida.id === +req.params.id);
@@ -144,4 +169,5 @@ module.exports = {
         res.redirect('/admin');
     }
 }
+
 
