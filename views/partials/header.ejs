@@ -3,63 +3,57 @@
       <!--logo-->
       <div class="row ">
          <div class="col-6 logos">
-            <a href="/"><img src="/logo/logo.png" alt="logotipo" class="img-fluid"></a>
+            <a href="/"><img src="/logo/logo.png" alt="logotipo" class="img-fluid" style="width: 200px;" id="checkpoint"></a>
          </div>
          <!--pedi online-->
          <div class="col-6 logos">
-            <div class="col-12 ">
-               <div class="box-1">
-                  <button type="button" class="btn btn-outline-dark mt-4"><a href="../formularios/detalledecompra">Tu Pedido</a></button>
-               </div>
-            </div>
+
             <div class="usuario container  ">
                <div class="row">
-               
-                  <% if (typeof userLogin =='undefined') { %>
-                   <li class="col-sm col-md col-lg-3"><a href="/users/registro">Registrate <br><i class="fas fa-sign-in-alt "></i></a></li>
-                   <li class="col-sm col-md col-lg-3"><a href="/users/login">Ingresá  <br><i class="fas fa-sign-in-alt "></i></a></li>
-                  <% } %>
-                
-                  <li class="col-sm col-md col-lg-3"><a href="https://checkpoint-restobar.blogspot.com/">Nuestro<br>Blog<i class="far fa-address-card "></i></a></li>
-                  <!--<li class="col-2"><a href="/users/profile">profile <br>  <i class="far fa-address-card"></i></a></li>-->
-                  
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                     <li><a class="dropdown-item" href="/users/profile">Mi perfil</a></li>
-                     <li><hr class="dropdown-divider"></li>
-                     <li><a class="dropdown-item" href="/users/logout">Cerrar sesión</a></li>
-                  </ul>
-              </div>
+
+                  <% if (typeof user=='undefined' ) { %>
+                     <li class="col-sm col-md col-lg-3"><a href="/users/registro">Registrate <br><i
+                              class="fas fa-sign-in-alt "></i></a></li>
+                     <li class="col-sm col-md col-lg-3"><a href="/users/login">Ingresá <br><i
+                              class="fas fa-sign-in-alt "></i></a></li>
+                     <li class="col-sm col-md col-lg-3"><a
+                           href="https://checkpoint-restobar.blogspot.com/">Nuestro<br>Blog<i
+                              class="far fa-address-card "></i></a></li>
+
+                     <% }else{ %>
+                        <li class="nav-item dropdown">
+                           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                              data-bs-toggle="dropdown" aria-expanded="false">
+                              <%= user.name %> <%= user.surname %> 
+                           </a>
+                           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <li><a class="dropdown-item" href="/">Mi perfil</a></li>
+                              <li>
+                                 <a class="dropdown-item" href="/users/logout">Cerrar sesión</a>
+                              </li>
+                              <% if (user.category==1 ) { %>
+                                 <li>
+                                    <hr class="dropdown-divider" />
+                                 </li>
+                                 <li><a class="dropdown-item" href="/admin">Administración</a></li>
+                                 <% } %>
+                           </ul>
+
+
+                        </li>
+                        <div class="col-12 ">
+                           <div class="box-1">
+                              <button type="button" class="btn btn-outline-dark mt-4"><a
+                                    href="../formularios/detalledecompra">Tu Pedido</a></button>
+                           </div>
+                        </div>
+                        <% } %>
+               </div>
             </div>
          </div>
-        
+
       </div>
-
-         <!--secciones-->
-         <div class="row ">
-            <nav class="navbar navbar-expand-md navbar-dark navigator">
-               <div class="container-fluid">
-
-                  <button class="navbar-toggler mx-auto" type="button" data-bs-toggle="collapse"
-                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                     aria-expanded="false" aria-label="Toggle navigation">
-                     <span class="navbar-toggler-icon burger"></span>
-                  </button>
-                  <div class="collapse navbar-collapse menu" id="navbarSupportedContent">
-
-                     <li class="navi"> <a class="" href="/cartadelivery ">CARTA</a></li >
-                     <li class="navi"> <a class="" href="/locales">LOCALES</a> </li >
-                     <li class="navi"> <a class="" href="/reservas">RESERVAS</a> </li >
-                     <li class="navi"> <a class="" href="/promociones">PROMOCIONES</a></li>
-                     <li class="navi"> <a class="" href="/novedades">NOVEDADES</a> </li >
-
-
-
-                     <form class="d-flex">
-
-                     </form>
-                  </div>
-               </div>
-            </nav>
-         </div>
    </nav>
+   <%-include('./sections') %>
+
 </header>

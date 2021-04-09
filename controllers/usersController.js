@@ -33,7 +33,7 @@ module.exports = {
                 surname: surname.trim(),
                 email: email.trim(),
                 pass: bcrypt.hashSync(pass, 12),
-                avatar: req.files ? req.files[0].filename :'default.png',
+                avatar: req.files[0] ? req.files[0].filename :'default.png',
                 category: '0',
                 provincia: provincia.trim(),
                 localidad: localidad.trim(),
@@ -55,15 +55,12 @@ module.exports = {
 
         if (!errores.isEmpty()) {
 
-
             return res.render("login", {
                 errores: errores.mapped(),
                 title: "ingreso",
-
             })
 
         } else {
-
             const { email, pass, recordar } = req.body;
 
             db.Usuario.findOne({

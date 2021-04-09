@@ -1,47 +1,52 @@
-<title>ingreso</title>
-<%- include('partials/header') %>
+<%- include('partials/head') %>
+
 
   <body>
-    <%- include('partials/head') %>
+    <div style="background-color: black;">
+      <a href="/"><img src="/logo/logo.png" alt="logotipo" style="width: 100px;"></a>
 
-      <div class="container">
-        <div class="row">
+    </div>
+    <div class="container">
+      <div class="row">
 
-          <div class="login col-12 ">
-            <p>INICIAR SESIÓN</p>
-            <form action="/users/login" method="post" id="formLogin">
-              <div class="d-flex flex-column justify-content-center align-items-center mb-4">
-                <input class="form-control w-50" type="email" placeholder="Email"  name="email" id="email" >
-                <span class="text-danger"
-                id="emailErrors"><%= (typeof errores != 'undefined' && errores.email ? errores.email.msg : null) %> 
+        <div class="login col-12 mx-auto">
+          <h2>INICIAR SESIÓN</h2>
+          <form action="/users/login" method="post" id="formLogin">
+            <div class="col-12 col-md-8 col-lg-6 mx-auto mb-4">
+              <input class="form-control" type="email" placeholder="Email" name="email" id="email">
+              <span class="text-danger" id="emailErrors">
+                <%= (typeof errores !='undefined' && errores.email ? errores.email.msg : null) %>
               </span>
-              </div>
-              <div class="d-flex flex-column justify-content-center align-items-center mb-4">
-                <input class="form-control w-50" type="password" placeholder="Contraseña" name="pass" id="pass">
-                <span class="text-danger" id="passErrors">
-                  <%= (typeof errores !='undefined' && errores.pass ? errores.pass.msg : null) %>
-                </span>
-             </div>
-             <div class="d-flex flex-column justify-content-center align-items-center mb-4">
-             <label class="btn btn-primary w-50">
-             <input type="checkbox" name="recordar" value="recordar" autocomplete="off"> Recordar
-             </label>
-             </div>
             </div>
+            <div class="col-12 col-md-8 col-lg-6 mx-auto mb-4">
+              <input class="form-control" type="password" placeholder="Contraseña" name="pass" id="pass">
+              <span class="text-danger" id="passErrors">
+                <%= (typeof errores !='undefined' && errores.pass ? errores.pass.msg : null) %>
+              </span>
+            </div>
+            <div class="col-12 col-md-8 col-lg-6 mx-auto mb-4">
+              <label for="recordar" class="text-violet">
+                <input type="checkbox" name="recordar" value="recordar" autocomplete="off" id="recordar"> Recordar
+              </label>
+            </div>
+            <span id="submitErrors"></span>
 
-           <div>
-             <button class="btn btn-danger mb-2" type="submit" value="Enviar">Entrar</button>
-             <span id="submitErrors"></span>
-           </div>
+            <div class="col-12 col-md-8 col-lg-6 mx-auto mb-4">
+              <button class="btn btn-outline-primary mb-2" type="submit">Entrar</button>
+            </div>
+            <p>¿No estás registrado? registrate <a href="/users/registro">acá</a></p>
+          </form>
 
-            </form>
-          </div>
         </div>
-        <a href="/users/registro"> ¿no estas registrado? registrate aca</a>
+
+
+
       </div>
-     
-      <%- include('partials/footer') %>
-        <script src="/javascript/userLogin.js"></script>
+    </div>
+    </div>
+
+    <%- include('partials/footer') %>
+      <script src="/javascript/userLogin.js"></script>
   </body>
 
   </html>
