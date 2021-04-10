@@ -10,6 +10,11 @@ module.exports = [
 
     check('email')
     .isEmail().withMessage('Debe ser un mail valido!'),
+
+    check("pass")
+    .notEmpty().withMessage("La contraseña es requerda"),
+
+
 //validame su en userdb buscame usuarios . mail es igual al value que es email retorname falso
 body('email').custom(value => {
     return db.Usuario.findOne({

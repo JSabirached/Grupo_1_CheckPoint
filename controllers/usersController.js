@@ -61,7 +61,7 @@ module.exports = {
             })
 
         } else {
-            const { email, pass, recordar } = req.body;
+            const { email, pass, recordar} = req.body;
 
             db.Usuario.findOne({
                 where: {
