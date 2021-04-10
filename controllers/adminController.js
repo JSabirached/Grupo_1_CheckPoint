@@ -143,29 +143,43 @@ module.exports = {
         let errors = validationResult(req);
         if (errors.isEmpty()) {
 
-        const {  name, price, category, description, image } = req.body;
+            const { name, price, category, description, image } = req.body;
 
-        db.Comidas.update({
+            db.Comidas.update({
 
-            name : name,
-            price : price,
-            id_category : category,
-            description : description,
-            image : image,
-        },
-        {
-            where : {
-                id :req.params.id
+                name: name,
+                price: price,
+                id_category: category,
+                description: description,
+                image: image,
+            },
+                {
+                    where: {
+                        id: req.params.id
+                    }
+                })
+                .then(() => {
+                    return res.redirect('/admin/comidaList')
+                })
+                .catch(error => res.send(error))
+        } else {
+            let comida = db.Comidas.findByPk(req.params.id)
+            let categorias = db.Category.findAll()
+
+            Promise.all([comida, categorias])
+                .then(([comida, categorias]) => {
+                    res.render('admin/comidaEdit', {
+                        title: "Edicion de Producto",
+                        comida,
+                        categorias,
+                        errores: errors.mapped()
+                    })
+                })
             }
-        })
-        .then(()=>{
-            return res.redirect('/admin/comidaList')
-        })
-        .catch(error => res.send(error))
-        }
-},
     
-comidaDelete: (req, res) => {
+    },
+
+    comidaDelete: (req, res) => {
         comidas.forEach(comida => {
             if (comida.id === +req.params.id) {
                 var aEliminar = comidas.indexOf(comida);

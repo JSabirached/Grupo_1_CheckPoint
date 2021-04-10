@@ -1,89 +1,91 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
-<%- include('../partials/head')  %> 
-<body>
-  <div style="background-color: black;">
-    <a href="/"><img src="/logo/logo.png" alt="logotipo" style="width: 100px;"></a>
+<%- include('../partials/head') %>
 
-  </div>
+  <body>
+    <div style="background-color: black;">
+      <a href="/"><img src="/logo/logo.png" alt="logotipo" style="width: 100px;"></a>
 
-
-        <form action="/admin/update/<%=comida.id%>?_method=PUT" method="POST" enctype="multipart/form-data" id="form-update">
+    </div>
 
 
-     <main class="container login my-5">
-      <form action="/admin/create" method="POST" enctype="multipart/form-data" id="form-create">
-        <h3 class="my-3">Edicion de Productos</h3>
-<!--cuando se indexa o da formato se agrega un espacio a todos los undefined provocando un error revisar!!! -->
-        <div class="row">
-          <div class="col-12  col-md-6">
-            <h2>Imagen</h2>
+    <form action="/admin/update/<%=comida.id%>?_method=PUT" method="POST" enctype="multipart/form-data"
+      id="form-update">
+
+
+      <main class="container login my-5">
+        <form action="/admin/create" method="POST" enctype="multipart/form-data" id="form-create">
+          <h3 class="my-3">Edicion de Productos</h3>
+          <!--cuando se indexa o da formato se agrega un espacio a todos los undefined provocando un error revisar!!! -->
+          <div class="row">
+            <div class="col-12  col-md-6">
+              <h2>Imagen</h2>
+            </div>
+            <div class="col-12  col-md-6">
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="name" name="name" value="<%=comida.name %>">
+
+                <spam class="text-danger">
+                  <%=(typeof errores!="undefined" && errores.name)? errores.name.msg:""%>
+                </spam>
+                <label for="price">Nombre del Producto</label>
+              </div>
+
+
+              <div class="form-floating mb-3">
+                <input type="number" class="form-control" id="price" name="price" value="<%= comida.price%>">
+                <spam class="text-danger">
+                  <%=(typeof errores!="undefined" && errores.price)? errores.price.msg:""%>
+                </spam>
+                <label for="price">Precio</label>
+              </div>
+
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="description" name="description"
+                  value="<%= comida.description %>">
+                <label for="description">Description</label>
+                <spam class="text-danger">
+                  <%=(typeof errores!="undefined" && errores.description)? errores.description.msg:""%>
+                </spam>
+              </div>
+              <div class="form-floating mb-3">
+                <select class="form-select" name="category" id="category" aria-label="Floating label select example">
+                  <% categorias.forEach(categoria=> {%>
+                    <option <% categoria.id==comida.id_category ? "selected" : null %> value="<%=categoria.id%>"><%=
+                          categoria.name %>
+                    </option>
+                    <% })%>
+                     
+                      
+                </select>
+                <label for="floatingSelect">Elegí tu categoria</label>
+
+              </div>
+              <div class="mb-3">
+
+                <input name="image" class="form-control " type="file" id="image" value="<%=comida.image%>">
+
+              </div>
+
+              <button class="btn btn-outline-success my-3" type="submit">Guardar los cambios</button>
+            </div>
+
+
           </div>
-          <div class="col-12  col-md-6">
-            <div class="form-floating mb-3">
-              <input type="text" class="form-control" id="name" name="name" value="<%=(typeof old != "undefined"&&
-                old.name) ? old.name:"" %>">
-
-              <spam class="text-danger">
-                <%=(typeof errores!="undefined" && errores.name)? errores.name.msg:""%>
-              </spam>
-              <label for="price">Nombre del Producto</label>
-            </div>
-
-
-            <div class="form-floating mb-3">
-              <input type="text" class="form-control" id="price" name="price">
-              <spam class="text-danger">
-                <%=(typeof errores!="undefined" && errores.price)? errores.price.msg:""%>
-              </spam>
-              <label for="price">Precio</label>
-            </div>
-
-            <div class="form-floating mb-3">
-              <input type="text" class="form-control" id="description" name="description" value="<%= (typeof old!="undefined" && old.description) ? old.description:"" %>" >
-              <label for="description">Description</label>
-              <spam class="text-danger">
-                <%=(typeof errores!="undefined" && errores.description)? errores.description.msg:""%>
-              </spam>
-            </div>
-            <div class="form-floating mb-3">
-              <select class="form-select" name="category" id="category" aria-label="Floating label select example">
-                <% categorias.forEach(categoria=> {%>
-                  <option value="<%= categoria.id %>">
-                    <%=categoria.name %>
-                  </option>
-                  <% }) %>
-              </select>
-              <label for="floatingSelect">Elegí tu categoria</label>
-
-            </div>
-            <div class="mb-3">
-
-              <input name="image" class="form-control " type="file" id="image">
-             
-            </div>
-         
-            <button class="btn btn-outline-success my-3" type="submit">Guardar los cambios</button>
           </div>
-               
-                 
-                </div>
-        </div>
 
 
 
 
-        
-         
-        
-         
-          </form>
-          <a  href="/admin/comidaList">|VOLVER ATRAS|</a>
-        </main>
-    <%- include('../partials/footer')  %> 
 
-</body>
+
+
+
+        </form>
+        <a href="/admin/comidaList">|VOLVER ATRAS|</a>
+      </main>
+      <%- include('../partials/footer') %>
+
+  </body>
+
 </html>
