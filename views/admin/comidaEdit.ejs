@@ -5,31 +5,18 @@
 <html lang="en">
 <%- include('../partials/head')  %> 
 <body>
-    <header>
-        <nav class="container-fluid ">
-           <!--logo-->
-           <div class="row ">
-              <div class="col-6 logos">
-                 <img src="../../public/logo/logo.png" alt="logotipo" class="img-fluid">
-              </div>
-              <!--pedi online-->
-           
-     
-     
-     
-                          <form class="d-flex">
-     
-                          </form>
-                       </div>
-                    </div>
-                 </nav>
-              </div>
-        </nav>
-     </header><form action="/admin/admin/update/<%=id%>?_method=PUT " method="POST"></form>
+  <div style="background-color: black;">
+    <a href="/"><img src="/logo/logo.png" alt="logotipo" style="width: 100px;"></a>
 
-     <main class="container">
+  </div>
+
+
+        <form action="/admin/update/<%=comida.id%>?_method=PUT" method="POST" enctype="multipart/form-data" id="form-update">
+
+
+     <main class="container login my-5">
       <form action="/admin/create" method="POST" enctype="multipart/form-data" id="form-create">
-        <h3 class="mb-3">Agregar</h3>
+        <h3 class="my-3">Edicion de Productos</h3>
 <!--cuando se indexa o da formato se agrega un espacio a todos los undefined provocando un error revisar!!! -->
         <div class="row">
           <div class="col-12  col-md-6">
@@ -66,23 +53,25 @@
             <div class="mb-3">
 
               <input name="image" class="form-control " type="file" id="image">
+             
             </div>
-
+         
+            <button class="btn btn-outline-success my-3" type="submit">Guardar los cambios</button>
           </div>
-
+               
+                 
+                </div>
         </div>
 
 
 
 
         
-          <div class="d-grid gap-2">
-            <button class="btn btn-success" type="submit">Guardar los cambios</button>
-          </div>
+         
         
          
           </form>
-          <a href="/admin/comidaList">|VOLVER ATRAS|</a>
+          <a  href="/admin/comidaList">|VOLVER ATRAS|</a>
         </main>
     <%- include('../partials/footer')  %> 
 

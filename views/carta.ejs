@@ -2,75 +2,49 @@
 <title>Carta</title>
  <%- include('partials/head')%>
  <%- include('partials/header')%>
- 
  <body> 
         <div class="container">
-        <div class="row">
-	
-       
-          
-           <div class="col-3">
+     
+          <div class="row">
+            <h2 class="text-violet mb-4" >Nuestras Delicias</h2>
+	<div class="col-3 login" >
             <h5>BEBIDAS</h5>
+            <hr>
             <%bebibas.forEach(bebida => {%>
-            
-       
-        
-           <ul>
-		
-                <a  href="/productos/detalledeproducto/<%=bebida.id%>"><%=bebida.name%></a>
-              
-              </ul>
+        <ul>
+		 <a  href="/productos/detalledeproducto/<%=bebida.id%>"><%=bebida.name%></a>
+               </ul>
           <% });%>
 		</div>
-	
-    
-      
-      <div class="col-3">
+	 <div class="col-3 login">
         <h5>POSTRES</h5>
+        <hr>
             <%postres.forEach(postre => {%>
-            
-       
-        
-          <ul>
-		
-                <a href="/productos/detalledeproducto/<%=postre.id%>"><%=postre.name%></a>
-              
-              </ul>
+         <ul>
+		 <a href="/productos/detalledeproducto/<%=postre.id%>"><%=postre.name%></a>
+               </ul>
           <% });%>
 		 </div>
-    
-        <div class="col-3"> 
+     <div class="col-3 login"> 
           <h5>HAMBURGUESAS</h5>
+          <hr>
             <%hamburguesas.forEach(hamburguesa=> {%>
-            
-       
-        <ul>
-          
-		
-                <a class="col" href="/productos/detalledeproducto/<%=hamburguesa.id%>"><%=hamburguesa.name%></a>
+             <ul>
+         <a class="col" href="/productos/detalledeproducto/<%=hamburguesa.id%>"><%=hamburguesa.name%></a>
               </ul>
-                   
-          <% });%>
+                     <% });%>
 		</div>
-		
-        <div class="col-3">
-          <h5>PIZZA Y EMPA</h5>
+	<div class="col-3 login">
+          <h5>PIZZA Y EMPANADAS</h5>
+          <hr>
             <%pizzas.forEach(pizza => {%>
-            
-       
-        <ul>
-          
-		
-                <a  href="/productos/detalledeproducto/<%=pizza.id%>"><%=pizza.name%></a>
+            <ul>
+          <a  href="/productos/detalledeproducto/<%=pizza.id%>"><%=pizza.name%></a>
               </ul>
-                   
-          <% });%>
+                   <% });%>
 		
         </div></div></div>
-
-  </body>
-
+</body>
 	<%- include('partials/footer') %> 
- 
-</html>
+ </html>
 

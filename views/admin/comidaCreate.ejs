@@ -3,11 +3,14 @@
 <%- include('../partials/head') %>
 
   <body>
-
-
-    <main class="container">
+    <div style="background-color: black;">
+      <a href="/"><img src="/logo/logo.png" alt="logotipo" style="width: 100px;"></a>
+  
+    </div>
+  
+    <main class="container login my-5">
       <form action="/admin/create" method="POST" enctype="multipart/form-data" id="form-create">
-        <h3 class="mb-3">Agregar</h3>
+        <h3 class="my-3">Agregar</h3>
 <!--cuando se indexa o da formato se agrega un espacio a todos los undefined provocando un error revisar!!! -->
         <div class="row">
           <div class="col-12  col-md-6">
@@ -54,7 +57,8 @@
             <div class="mb-3">
 
               <input name="image" class="form-control " type="file" id="image">
-            </div>
+             <button class="btn btn-outline-primary text-white" type="submit">Guardar</button>
+        </div>
 
           </div>
 
@@ -68,9 +72,8 @@
 
 
 
-        <div class="d-grid gap-2 mb-2">
-          <button class="btn btn-primary text-white" type="submit">Guardar</button>
-        </div>
+       
+         
 
 
       </form>

@@ -121,24 +121,20 @@ module.exports = {
         }
     },
     comidaEdit: (req, res) => {
-        let errors = validationResult(req)
-        //  res.send(errors)
-        if (errors.isEmpty()) {
-            let comidas = db.Comidas.findByPk(req.params.id)
-             db.Category.findAll()
+      
+        let comida = db.Comidas.findByPk(req.params.id)
+        let categorias =  db.Category.findAll()
+        
+        Promise.all([comida,categorias])
+        .then(([comida, categorias]) =>{
+            res.render('admin/comidaEdit',{
+                title : "Edicion de Producto",
+                comida,
+                categorias
+            })
+        })
 
-            
-                         
-            .then(comidas, cate =>{
-                res.render('admin/comidaEdit',{
-                    title : "Edicion de Producto",
-                    id: req.params.id,
-                    comidas,
-                    categorias,
-                    old: req.body, 
-                })
-            }) 
-        }
+        
     },
 
 
