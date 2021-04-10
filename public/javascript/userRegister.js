@@ -58,7 +58,7 @@ window.addEventListener('load', function () {
                 $inputApellido.classList.add('is-invalid')
                 break;
             case !regExAlpha.test($inputApellido.value):
-                $apellidoErrors.innerHTML = 'NOMBRE inválido';
+                $apellidoErrors.innerHTML = 'APELLIDO inválido';
                 $inputApellido.classList.add('is-invalid')
                 break;
             default:
