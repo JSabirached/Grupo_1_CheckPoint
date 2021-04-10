@@ -22,7 +22,7 @@
 							<div class="d-flex flex-column justify-content-center align-items-center mb-4">
 								<input class="form-control" type="text" placeholder="Nombre" name="name"
 								 id="name">
-								<span class="text-danger" id="nombreErrors">
+								<span class="text-danger" id="nameErrors">
 									<%= (typeof errores !='undefined' && errores.name ? errores.name.msg : null) %>
 								</span>
 							</div>
@@ -30,7 +30,7 @@
 							<div class="d-flex flex-column justify-content-center align-items-center mb-4">
 								<input class="form-control" type="text" placeholder="Apellido" name="surname"
 									id="surname">
-								<span class="text-danger" id="apellidoErrors">
+								<span class="text-danger" id="surnameErrors">
 									<%= (typeof errores !='undefined' && errores.surname ? errores.surname.msg : null)
 										%>
 								</span>
@@ -50,7 +50,7 @@
 							<div class="d-flex flex-column justify-content-center align-items-center mb-4">
 								<input class="form-control" type="password" placeholder="Contraseña" name="pass"
 									id="pass">
-								<span class="text-danger" id="passErrors">
+								<span class="text-danger" id="pass">
 									<%= (typeof errores !='undefined' && errores.pass ? errores.pass.msg : null) %>
 								</span>
 							</div>

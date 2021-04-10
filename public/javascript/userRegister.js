@@ -7,11 +7,11 @@ let qs = function (element) {
 window.addEventListener('load', function () {
 
 
-    let $inputNombre = qs('#name'),
-        $nombreErrors = qs('#nombreErrors'),
+    let $inputName = qs('#name'),
+        $nameErrors = qs('#nameErrors'),
 
-        $inputApellido = qs('#surname'),
-        $apellidoErrors = qs('#apellidoErrors'),
+        $inputSurname = qs('#surname'),
+        $surnameErrors = qs('#surnameErrors'),
 
         $inputEmail = qs('#email'),
         $emailErrors = qs('#emailErrors'),
@@ -33,38 +33,38 @@ window.addEventListener('load', function () {
         regExEmail = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i,
         regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}$/;
 
-    $inputNombre.addEventListener('blur', function () {
+    $inputName.addEventListener('blur', function () {
         switch (true) {
-            case !$inputNombre.value.trim():
-                $nombreErrors.innerHTML = 'El NOMBRE es obligatorio';
-                $inputNombre.classList.add('is-invalid')
+            case !$inputName.value.trim():
+                $nameErrors.innerHTML = 'El NOMBRE es obligatorio';
+                $inputName.classList.add('is-invalid')
                 break;
             case !regExAlpha.test($inputNombre.value):
-                $nombreErrors.innerHTML = 'NOMBRE inválido';
-                $inputNombre.classList.add('is-invalid')
+                $nameErrors.innerHTML = 'NOMBRE inválido';
+                $inputName.classList.add('is-invalid')
                 break;
             default:
-                $inputNombre.classList.remove('is-invalid');
-                $inputNombre.classList.add('is-valid');
-                $nombreErrors.innerHTML = ''
+                $inputName.classList.remove('is-invalid');
+                $inputName.classList.add('is-valid');
+                $nameErrors.innerHTML = ''
                 break;
         }
     })
 
-    $inputApellido.addEventListener('blur', function () {
+    $inputSurname.addEventListener('blur', function () {
         switch (true) {
-            case !$inputApellido.value.trim():
-                $apellidoErrors.innerHTML = 'El APELLIDO es obligatorio';
-                $inputApellido.classList.add('is-invalid')
+            case !$inputSurname.value.trim():
+                $surnameErrors.innerHTML = 'El APELLIDO es obligatorio';
+                $inputSurname.classList.add('is-invalid')
                 break;
-            case !regExAlpha.test($inputApellido.value):
-                $apellidoErrors.innerHTML = 'APELLIDO inválido';
-                $inputApellido.classList.add('is-invalid')
+            case !regExAlpha.test($inputSurname.value):
+                $surnameErrors.innerHTML = 'APELLIDO inválido';
+                $inputSurname.classList.add('is-invalid')
                 break;
             default:
-                $inputApellido.classList.remove('is-invalid');
-                $inputApellido.classList.add('is-valid');
-                $apellidoErrors.innerHTML = ''
+                $inputSurname.classList.remove('is-invalid');
+                $inputSurname.classList.add('is-valid');
+                $surnameErrors.innerHTML = ''
                 break;
         }
     })
@@ -87,16 +87,16 @@ window.addEventListener('load', function () {
         }
     })
 
-    $Pass.addEventListener('blur', function () {
+    $Pass.addEventListener('blur', function(){
         switch (true) {
             case !$Pass.value.trim():
-                $passErrors.innerHTML = 'CONTRASEÑA obligatorio';
-                $Pass.classList.add('is-invalid')
+                $passErrors.innerHTML = 'El campo contraseña es obligatorio';
+                $Pass.classList.add('is-valid')
                 break;
-            case !regExPass.test($Pass.value):
-                $passErrors.innerHTML = 'Debe tener entre 6 y 12 caracteres, al menos una mayúscula, una minúscula y un número';
+                case !regExPass.test($Pass.value):
+                $passErrors.innerHTML = 'Debe tener entre 6 y 12 caracteres'
                 $Pass.classList.add('is-invalid')
-                break;
+                break; 
             default:
                 $Pass.classList.remove('is-invalid');
                 $Pass.classList.add('is-valid');
@@ -105,24 +105,23 @@ window.addEventListener('load', function () {
         }
     })
 
-    $Pass2.addEventListener('blur', function () {
+    $Pass2.addEventListener('blur', function(){
         switch (true) {
             case !$Pass2.value.trim():
-                $pass2Errors.innerHTML = 'REINGRESA la contraseña';
+                $passErrors.innerHTML = 'Debes REINGRESAR la contraseña';
                 $Pass2.classList.add('is-invalid')
                 break;
             case $Pass2.value != $Pass2.value:
-                $pass2Errors.innerHTML = 'Las contraseñas no coinciden';
+                $pass2Errors.innerHTML = 'Las contraseñas NO COINCIDEN'
                 $Pass2.classList.add('is-invalid')
                 break;
             default:
                 $Pass2.classList.remove('is-invalid');
-                $Pass2.classList.add('is-valid');
+                $Pass.classList.add('is-valid');
                 $pass2Errors.innerHTML = ''
                 break;
         }
     });
-
     $img.addEventListener("change", function fileValidation() {
         let filePath = $img.value,
             allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i
