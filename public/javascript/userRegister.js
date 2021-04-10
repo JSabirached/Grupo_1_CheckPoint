@@ -36,12 +36,11 @@ window.addEventListener('load', function () {
     $inputNombre.addEventListener('blur', function () {
         switch (true) {
             case !$inputNombre.value.trim():
-                $nombreErrors.innerHTML = 'El campo nombre es obligatorio';
+                $nombreErrors.innerHTML = 'El NOMBRE es obligatorio';
                 $inputNombre.classList.add('is-invalid')
                 break;
             case !regExAlpha.test($inputNombre.value):
-                $nombreErrors.innerHTML = 'Debes ingresar un nombre válido'
-
+                $nombreErrors.innerHTML = 'NOMBRE inválido';
                 $inputNombre.classList.add('is-invalid')
                 break
             default:
@@ -55,11 +54,11 @@ window.addEventListener('load', function () {
     $inputApellido.addEventListener('blur', function () {
         switch (true) {
             case !$inputApellido.value.trim():
-                $apellidoErrors.innerHTML = 'El campo apellido es obligatorio';
+                $apellidoErrors.innerHTML = 'El APELLIDO es obligatorio';
                 $inputApellido.classList.add('is-invalid')
                 break;
             case !regExAlpha.test($inputApellido.value):
-                $apellidoErrors.innerHTML = 'Debes ingresar un nombre válido'
+                $apellidoErrors.innerHTML = 'NOMBRE inválido';
                 $inputApellido.classList.add('is-invalid')
                 break;
             default:
@@ -73,11 +72,11 @@ window.addEventListener('load', function () {
     $inputEmail.addEventListener('blur', function () {
         switch (true) {
             case !$inputEmail.value.trim():
-                $emailErrors.innerHTML = 'El campo email es obligatorio';
+                $emailErrors.innerHTML = 'El EMAIL es obligatorio';
                 $inputEmail.classList.add('is-invalid')
                 break;
             case !regExEmail.test($inputEmail.value):
-                $emailErrors.innerHTML = 'Debes ingresar un Email válido'
+                $emailErrors.innerHTML = 'Email inválido';
                 $inputEmail.classList.add('is-invalid')
                 break;
             default:
@@ -91,11 +90,11 @@ window.addEventListener('load', function () {
     $Pass.addEventListener('blur', function () {
         switch (true) {
             case !$Pass.value.trim():
-                $passErrors.innerHTML = 'El campo contraseña es obligatorio';
+                $passErrors.innerHTML = 'CONTRASEÑA obligatorio';
                 $Pass.classList.add('is-invalid')
                 break;
             case !regExPass.test($Pass.value):
-                $passErrors.innerHTML = 'Debe tener entre 6 y 12 caracteres, al menos una mayúscula, una minúscula y un número'
+                $passErrors.innerHTML = 'Debe tener entre 6 y 12 caracteres, al menos una mayúscula, una minúscula y un número';
                 $Pass.classList.add('is-invalid')
                 break;
             default:
@@ -109,11 +108,11 @@ window.addEventListener('load', function () {
     $Pass2.addEventListener('blur', function () {
         switch (true) {
             case !$Pass2.value.trim():
-                $pass2Errors.innerHTML = 'Debes reingresar la contraseña';
+                $pass2Errors.innerHTML = 'REINGRESA la contraseña';
                 $Pass2.classList.add('is-invalid')
                 break;
             case $Pass2.value != $Pass2.value:
-                $pass2Errors.innerHTML = 'Las contraseñas no coinciden'
+                $pass2Errors.innerHTML = 'Las contraseñas no coinciden';
                 $Pass2.classList.add('is-invalid')
                 break;
             default:
@@ -128,7 +127,7 @@ window.addEventListener('load', function () {
         let filePath = $img.value,
             allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i
         if (!allowedExtensions.exec(filePath)) {
-            $imgErrors.innerHTML = "Carga un archivo de imagen valido, con las extensiones (.jpg - .jpeg - .png - .gif)"
+            $imgErrors.innerHTML = "Carga un archivo de imagen valido, con las extensiones (.jpg - .jpeg - .png - .gif)";
             $img.value = "";
             return false
 
