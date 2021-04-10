@@ -121,48 +121,51 @@ module.exports = {
         }
     },
     comidaEdit: (req, res) => {
-      
-        let comida = db.Comidas.findByPk(req.params.id)
-        let categorias =  db.Category.findAll()
-        
-        Promise.all([comida,categorias])
-        .then(([comida, categorias]) =>{
-            res.render('admin/comidaEdit',{
-                title : "Edicion de Producto",
-                comida,
-                categorias
-            })
-        })
 
-        
+        let comida = db.Comidas.findByPk(req.params.id)
+        let categorias = db.Category.findAll()
+
+        Promise.all([comida, categorias])
+            .then(([comida, categorias]) => {
+                res.render('admin/comidaEdit', {
+                    title: "Edicion de Producto",
+                    comida,
+                    categorias
+                })
+            })
+
+
     },
 
 
 
     comidaUpdate: (req, res) => {
+        let errors = validationResult(req);
+        if (errors.isEmpty()) {
 
-        const { name, price, category, description, image } = req.body;
+        const {  name, price, category, description, image } = req.body;
 
-        comidas.forEach(comida => {
-            if (comida.id === +req.params.id) {
-                comida.id = Number(req.params.id);
-                comida.name = name;
-                comida.price = price;
-                comida.category = category;
-                comida.description = description;
-                comida.image = image
+        db.Comidas.update({
+
+            name : name,
+            price : price,
+            id_category : category,
+            description : description,
+            image : image,
+        },
+        {
+            where : {
+                id :req.params.id
             }
-        });
-        var errores = validationResult(req)
-        if (!errores.isEmpty()) {
-
-            return res.render("admin/comidaEdit", { errores: errores.mapped(), old: req.body, id: req.params.id })
-
+        })
+        .then(()=>{
+            return res.redirect('/admin/comidaList')
+        })
+        .catch(error => res.send(error))
         }
-        fs.writeFileSync('./database/models', JSON.stringify(Comidas), 'utf-8');
-        res.redirect('/admin');
-    },
-    comidaDelete: (req, res) => {
+},
+    
+comidaDelete: (req, res) => {
         comidas.forEach(comida => {
             if (comida.id === +req.params.id) {
                 var aEliminar = comidas.indexOf(comida);
