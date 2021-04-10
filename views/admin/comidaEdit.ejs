@@ -24,8 +24,7 @@
           </div>
           <div class="col-12  col-md-6">
             <div class="form-floating mb-3">
-              <input type="text" class="form-control" id="name" name="name" value="<%=(typeof old != "undefined"&&
-                old.name) ? old.name:"" %>">
+              <input type="text" class="form-control" id="name" name="name" value="<%=comida.name %>">
 
               <spam class="text-danger">
                 <%=(typeof errores!="undefined" && errores.name)? errores.name.msg:""%>
@@ -35,7 +34,7 @@
 
 
             <div class="form-floating mb-3">
-              <input type="text" class="form-control" id="price" name="price">
+              <input type="number" class="form-control" id="price" name="price" value="<%= comida.price%>">
               <spam class="text-danger">
                 <%=(typeof errores!="undefined" && errores.price)? errores.price.msg:""%>
               </spam>
@@ -43,26 +42,27 @@
             </div>
 
             <div class="form-floating mb-3">
-              <input type="text" class="form-control" id="description" name="description" value="<%= (typeof old!="undefined" && old.description) ? old.description:"" %>" >
+              <input type="text" class="form-control" id="description" name="description" value="<%= comida.description %>" >
               <label for="description">Description</label>
               <spam class="text-danger">
                 <%=(typeof errores!="undefined" && errores.description)? errores.description.msg:""%>
               </spam>
             </div>
             <div class="form-floating mb-3">
-              <select class="form-select" name="category" id="category" aria-label="Floating label select example">
+              <select class="form-select" name="category" id="category" aria-label="Floating label select example" >
                 <% categorias.forEach(categoria=> {%>
-                  <option value="<%= categoria.id %>">
-                    <%=categoria.name %>
-                  </option>
-                  <% }) %>
+                  <option <%if (categoria.id == comida.id_category) {%>
+                  
+                   value="<%= categoria.id%>"><% categoria.name %>
+                 
+                   <% } %></option>  <% }) %>
               </select>
               <label for="floatingSelect">Elegí tu categoria</label>
 
             </div>
             <div class="mb-3">
 
-              <input name="image" class="form-control " type="file" id="image">
+              <input name="image" class="form-control " type="file" id="image" value="<%=comida.image%>">
              
             </div>
          
