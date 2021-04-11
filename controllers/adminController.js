@@ -71,13 +71,15 @@ module.exports = {
     comidaCreate: (req, res) => {
 
         db.Category.findAll()
-
+        
 
 
             .then(categorias => {
                 res.render("admin/comidaCreate", {
                     title: "Categorias",
-                    categorias
+                    categorias ,
+                    
+
                 })
             })
 
@@ -89,7 +91,7 @@ module.exports = {
         //  res.send(errors)
         if (errors.isEmpty()) {
 
-            const { name, price, image, category, description } = req.body;
+            const { name, price,  category, description } = req.body;
 
             db.Comidas.create({
                 name: name,

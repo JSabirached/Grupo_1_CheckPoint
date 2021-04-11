@@ -14,7 +14,7 @@
 <!--cuando se indexa o da formato se agrega un espacio a todos los undefined provocando un error revisar!!! -->
         <div class="row">
           <div class="col-12  col-md-6">
-            <h2>Imagen</h2>
+           <img class="img-fluid" src="" id="vistaPrevia" name="vistaPrevia" alt="">
           </div>
           <div class="col-12  col-md-6">
             <div class="form-floating mb-3">
@@ -45,6 +45,7 @@
             </div>
             <div class="form-floating mb-3">
               <select class="form-select" name="category" id="category" aria-label="Floating label select example">
+              <option value="" selected hidden>Categorias</option>
                 <% categorias.forEach(categoria=> {%>
                   <option value="<%= categoria.id %>">
                     <%=categoria.name %>
@@ -55,10 +56,15 @@
 
             </div>
             <div class="mb-3">
-
-              <input name="image" class="form-control " type="file" id="image">
-             <button class="btn btn-outline-primary text-white" type="submit">Guardar</button>
-        </div>
+                <input name="image" class="form-control " type="file" id="image">
+                 <spam class="text-danger" id="errorImage"></spam>
+             </div>
+            <div class="mb-3">
+              <spam class="text-danger" id="msgError"></spam>
+    
+              <button class="btn btn-outline-primary" type="submit">Guardar</button>
+    
+    
 
           </div>
 
@@ -82,6 +88,7 @@
 
     </main>
     <%- include('../partials/footer') %>
+    <script src="/javascript/productAdd.js"></script>
 
   </body>
 
