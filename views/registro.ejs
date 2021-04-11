@@ -1,119 +1,115 @@
 <%- include('partials/head') %>
-	<title>registro</title>
-
-
+	
 	<body>
 		<div style="background-color: black;">
 			<a href="/" ><img src="/logo/logo.png" alt="logotipo" style="width: 100px;"></a>
+       </div>
 
-		</div>
+	   <div class="container login my-2">
 
-			<div class="container login my-2">
+		<form action="/users/registro" method="post" id="formReg" enctype="multipart/form-data">
 
-				<form action="/users/registro" method="post" id="formReg" enctype="multipart/form-data">
+			<div class="row">
+				<div class="col-12 mb-4">
+					<h3>FORMULARIO DE REGISTRO</h3>
+				</div>
 
-					<div class="row">
-						<div class="col-12 mb-4">
-							<h3>FORMULARIO DE REGISTRO</h3>
-						</div>
+				<div class="col-12 col-md-6">
 
-						<div class="col-12 col-md-6">
-
-							<div class="d-flex flex-column justify-content-center align-items-center mb-4">
-								<input class="form-control" type="text" placeholder="Nombre" name="name"
-								 id="name">
-								<span class="text-danger" id="nameErrors">
-									<%= (typeof errores !='undefined' && errores.name ? errores.name.msg : null) %>
-								</span>
-							</div>
-
-							<div class="d-flex flex-column justify-content-center align-items-center mb-4">
-								<input class="form-control" type="text" placeholder="Apellido" name="surname"
-									id="surname">
-								<span class="text-danger" id="surnameErrors">
-									<%= (typeof errores !='undefined' && errores.surname ? errores.surname.msg : null)
-										%>
-								</span>
-							</div>
-
-							<div class="d-flex flex-column justify-content-center align-items-center mb-4">
-								<input class="form-control" type="email" placeholder="Email" name="email"
-								 id="email" value="<%= typeof old != 'undefined' && old.name ? old.email : null %> ">
-								<span class="text-danger" id="emailErrors">
-									<%= (typeof errores !='undefined' && errores.email ? errores.email.msg : null) %>
-								</span>
-							</div>
-						</div>
-
-							<div class="col-12 col-md-6">
-
-							<div class="d-flex flex-column justify-content-center align-items-center mb-4">
-								<input class="form-control" type="password" placeholder="Contraseña" name="pass"
-									id="pass">
-								<span class="text-danger" id="pass">
-									<%= (typeof errores !='undefined' && errores.pass ? errores.pass.msg : null) %>
-								</span>
-							</div>
-
-							<div class="d-flex flex-column justify-content-center align-items-center mb-4">
-								<input class="form-control" type="password" placeholder="Reingrese Contraseña"
-									name="pass2" id="pass2">
-								<span class="text-danger" id="pass2Errors">
-									<%= (typeof errores !='undefined' && errores.pass2 ? errores.pass2.msg : null) %>
-								</span>
-							</div>
-
-							<div class="d-flex flex-column justify-content-center align-items-center">
-								<input class="form-control" type="file" placeholder="Carga tu imagen" name="img"
-									id="img">
-								<p>Carga tu foto de perfil</p>
-								<span class="text-danger" id="imgErrors">
-									<%= (typeof errores !='undefined' && errores.img ? errores.img.msg : null) %>
-								</span>
-							</div>
-						</div>
+					<div class="d-flex flex-column justify-content-center align-items-center mb-4">
+						<input class="form-control" type="text" placeholder="Nombre" name="name"
+						 id="name">
+						<span class="text-danger" id="nameErrors">
+							<%= (typeof errores !='undefined' && errores.name ? errores.name.msg : null) %>
+						</span>
 					</div>
-					<div class="row">
-						<p>Envíos a domicilio sin cargo</p>
-						<div class="col-12 col-md-6">
 
-							<div class="d-flex flex-column justify-content-center align-items-center mb-4">
-								<input class="form-control" type="text" placeholder="Localidad" name="localidad"
-									id="location">
-							</div>
-							<div class="d-flex flex-column justify-content-center align-items-center mb-4">
-								<input class="form-control" type="text" placeholder="Direccion" name="direccion"
-									id="address">
-							</div>
-						</div>
-
-							<div class="col-12 col-md-6">
-						
-							<div class="d-flex flex-column justify-content-center align-items-center mb-4">
-								<input class="form-control" type="text" placeholder="Provincia" name="provincia"
-									id="Province">
-							</div>
-							<div class="d-flex flex-column justify-content-center align-items-center mb-4">
-								<input class="form-control" type="number" placeholder="Teléfono" name="telefono"
-									id="phonenumber">
-							</div>
-						</div>
+					<div class="d-flex flex-column justify-content-center align-items-center mb-4">
+						<input class="form-control" type="text" placeholder="Apellido" name="surname"
+							id="surname">
+						<span class="text-danger" id="surnameErrors">
+							<%= (typeof errores !='undefined' && errores.surname ? errores.surname.msg : null)
+								%>
+						</span>
 					</div>
-					<span id="submitErrors"></span>
 
-						<div class="w-25 mx-auto">
-
-							<button class="btn btn-outline-primary mb-2" type="submit">Registrarme</button>
-						</div>
-						<p>¿Estás registrado? ingresá <a href="/users/login">acá</a></p>
-
+					<div class="d-flex flex-column justify-content-center align-items-center mb-4">
+						<input class="form-control" type="email" placeholder="Email" name="email"
+						id="email" value="<%= typeof old != 'undefined' && old.name ? old.email : null %> ">
+					   <span class="text-danger" id="emailErrors">
+							<%= (typeof errores !='undefined' && errores.email ? errores.email.msg : null) %>
+						</span>
 					</div>
-				</form>
+				 </div>
+
+				 <div class="col-12 col-md-6">
+
+					<div class="d-flex flex-column justify-content-center align-items-center mb-4">
+						<input class="form-control" type= "password" placeholder="Contraseña"
+						name= "pass" id="pass">
+					
+						<span class="text-danger" id="passErrors">
+							<%= (typeof errores !='undefined' && errores.pass ? errores.pass.msg : null) %>
+						</span>
+					</div>
+
+					<div class="d-flex flex-column justify-content-center align-items-center mb-4">
+						<input class="form-control" type="" placeholder="Reingrese Contraseña" name="pass2">
+							<span class="text-danger" id="pass2Errors">
+							<%= (typeof errores !='undefined' && errores.pass2 ? errores.pass2.msg : null) %>
+						</span>
+					</div>
+
+					<div class="d-flex flex-column justify-content-center align-items-center">
+						<input class="form-control" type="file" placeholder="Carga tu imagen" name="img" 
+						id="img">
+						<p>Carga tu foto de perfil</p>
+						<span class="text-danger" id="imgErrors">
+							<%= (typeof errores !='undefined' && errores.img ? errores.img.msg : null) %>
+						</span>
+					</div>
+				</div>
 			</div>
+			<div class="row">
+				<p>Envíos a domicilio sin cargo</p>
+				<div class="col-12 col-md-6">
 
+					<div class="d-flex flex-column justify-content-center align-items-center mb-4">
+						<input class="form-control" type="text" placeholder="Localidad" name="localidad"
+							id="location">
+					</div>
+					<div class="d-flex flex-column justify-content-center align-items-center mb-4">
+						<input class="form-control" type="text" placeholder="Direccion" name="direccion"
+							id="address">
+					</div>
+				</div>
 
-			<%- include('partials/footer') %>
-				<script src="/javascript/userRegister.js"></script>
-	</body>
+					<div class="col-12 col-md-6">
+				
+					<div class="d-flex flex-column justify-content-center align-items-center mb-4">
+						<input class="form-control" type="text" placeholder="Provincia" name="provincia"
+							id="Province">
+					</div>
+					<div class="d-flex flex-column justify-content-center align-items-center mb-4">
+						<input class="form-control" type="number" placeholder="Teléfono" name="telefono"
+							id="phonenumber">
+					</div>
+				</div>
+				<span id="submitErrors"></span>
+                <div class="col-12 col-md-8 col-lg-6 mx-auto mb-4">
+                <button class="btn btn-outline-primary mb-2" type="submit">Entrar</button>
+                </div>
+			</div>
+		</form>
+		   <div>
+			<a href="/users/login">¿Ya sos parte de checkpoint? INGRESÁ ACÁ</a>
+		   </div>
+	</div>
+                
+			 
+                    									
+<%- include('partials/footer') %>
+<script src="/javascript/userRegister.js"></script>
+</body>
 
-	</html>
+</html>
