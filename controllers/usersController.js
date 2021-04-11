@@ -110,15 +110,15 @@ module.exports = {
 
     profile: (req, res) => {
 
-        db.Users.findOne({
+        db.Usuario.findOne({
             where: {
                 id: req.session.user.id
             }
         })
-            .then((result) => {
+            .then((Usuario) => {
                 res.render("profile", {
                     title: "Perfil",
-                    result
+                    Usuario
                 })
             })
     },
@@ -129,10 +129,10 @@ module.exports = {
                 id: req.session.user.id
             }
         })
-            .then((result) => {
+            .then((Usuario) => {
                 res.render("profileEdit", {
                     title: "Editar Perfil",
-                    result
+                    Usuario
                 })
             })
     },
