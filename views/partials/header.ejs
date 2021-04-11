@@ -1,3 +1,5 @@
+
+
 <header>
    <nav class="container-fluid ">
       <!--logo-->
@@ -11,7 +13,7 @@
             <div class="usuario container  ">
                <div class="row">
 
-                  <% if (typeof user=='undefined' ) { %>
+                  <% if (typeof usuario=='undefined' ) { %>
                      <li class="col-sm col-md col-lg-3"><a href="/users/registro">Registrate <br><i
                               class="fas fa-sign-in-alt "></i></a></li>
                      <li class="col-sm col-md col-lg-3"><a href="/users/login">Ingresá <br><i
@@ -27,7 +29,7 @@
                               <%= user.name %> <%= user.surname %> 
                            </a>
                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                              <li><a class="dropdown-item" href="/">Mi perfil</a></li>
+                              <li><a class="dropdown-item" href="users/profile">Mi perfil</a></li>
                               <li>
                                  <a class="dropdown-item" href="/users/logout">Cerrar sesión</a>
                               </li>
