@@ -6,16 +6,20 @@
     <%- include("partials/header") %>
     <div class="container-fluid">
       <div class="profile row ">
-        <img src="/images/userAvatar/<%= result.avatar %> " alt="">
+        <img src="/images/userAvatar/<%= Usuario.avatar %> " alt="">
         <ul class="list-group col-10 col-lg-8">
-          <li class="list-group-item"><p>Nombre : <%= result.name  %></p></li>
-          <li class="list-group-item"><p>Apellido : <%=  result.surname  %></p></li>
-          <li class="list-group-item"><p>Email : <%=  result.email  %></p></li>
+          <li class="list-group-item"><p>Nombre : <%= Usuario.name  %></p></li>
+          <li class="list-group-item"><p>Apellido : <%=  Usuario.surname  %></p></li>
+          <li class="list-group-item"><p>Email : <%=  Usuario.email  %></p></li>
         </ul>
         <ul>
-        <li class="list-group-item"><p></p></ul>
+        <li class="list-group-item"><p>Dirección : <%= Usuario.direccion %></p></ul>
+          <li class="list-group-item"><p>Localidad : <%= Usuario.localidad %></p></ul>
+            <li class="list-group-item"><p>Provincia : <%= Usuario.provincia %></p></ul>
+              <li class="list-group-item"><p>Teléfono : <%= Usuario.telefono %></p></ul>
         </ul>
-        <button class="btn-profile col-3 col-lg-2"><a href="/users/edit/<%=  result.id  %>">Editar perfil</a></button>
+
+        <button class="btn-profile col-3 col-lg-2"><a href="/users/edit/<%= Usuario.id  %>">Editar perfil</a></button>
       </div>
     </div>
       
