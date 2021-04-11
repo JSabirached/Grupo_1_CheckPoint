@@ -27,6 +27,10 @@ header nav button.burger:focus {
   outline: 1px solid white;
 }
 
+h3{
+  color: black;
+}
+
 header nav button.burger i {
   color: white;
 }
