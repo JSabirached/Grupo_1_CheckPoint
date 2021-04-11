@@ -112,7 +112,7 @@ module.exports = {
 
         db.Usuario.findOne({
             where: {
-                id: req.session.user.id
+                id: req.session.Usuario.id
             }
         })
             .then((Usuario) => {
@@ -124,9 +124,9 @@ module.exports = {
     },
     profileEdit: (req, res) => {
 
-        db.Users.findOne({
+        db.Usuario.findOne({
             where: {
-                id: req.session.user.id
+                id: req.session.Usuario.id
             }
         })
             .then((Usuario) => {
@@ -142,7 +142,7 @@ module.exports = {
         const { name, apellido, email } = req.body
 
 
-        db.Users.update({
+        db.Usuario.update({
             name: name,
             last_name: apellido,
             email: email,
@@ -158,7 +158,7 @@ module.exports = {
     },
     remove: (req, res) => {
 
-        db.Users.destroy({
+        db.Usuario.destroy({
             where: {
                 id: req.params.id
             }
