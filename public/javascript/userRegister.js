@@ -144,7 +144,7 @@ window.addEventListener('load', function () {
         event.preventDefault()
            let elementosForm= $formReg.elements
 
-        for (let index = 0; index > elementosForm.length-6 ; index++) {
+        for (let index = 0; index < elementosForm.length-6 ; index++) {
             if (elementosForm[index].value == "") {
                 elementosForm[index].classList.add('is-invalid');
                 submitErrors.innerHTML = "Los campos señalados son obligatorios.";
@@ -153,6 +153,7 @@ window.addEventListener('load', function () {
         }
         if(!error){
             console.log('Todo ok')
+            $formReg.submit()
         }
 
     })
