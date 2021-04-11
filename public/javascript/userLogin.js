@@ -27,7 +27,7 @@ window.addEventListener('load', function() {
  $inputEmail.addEventListener('blur', function(){
     switch (true) {
         case !$inputEmail.value.trim():
-            $emailErrors.innerHTML = 'El campo email es obligatorio';
+            $emailErrors.innerHTML = 'El email es obligatorio';
             $inputEmail.classList.add('is-invalid')
             break;
         case !regExEmail.test($inputEmail.value):
@@ -46,7 +46,7 @@ window.addEventListener('load', function() {
 $Pass.addEventListener('blur', function(){
     switch (true) {
         case !$Pass.value.trim():
-            $passErrors.innerHTML = 'El campo contraseña es obligatorio.';
+            $passErrors.innerHTML = 'Lacontraseña es obligatoria';
             $Pass.classList.add('is-invalid')
             break;
         default:

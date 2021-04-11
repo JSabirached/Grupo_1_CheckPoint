@@ -14,13 +14,13 @@
           <form action="/users/login" method="post" id="formLogin">
             <div class="col-12 col-md-8 col-lg-6 mx-auto mb-4">
               <input class="form-control" type="email" placeholder="Email" name="email" id="email">
-              <span class="text-danger" id="emailErrors">
+              <span class="text-violet" id="emailErrors">
                 <%= (typeof errores !='undefined' && errores.email ? errores.email.msg : null) %>
               </span>
             </div>
             <div class="col-12 col-md-8 col-lg-6 mx-auto mb-4">
               <input class="form-control" type="password" placeholder="Contraseña" name="pass" id="pass">
-              <span class="text-danger" id="passErrors">
+              <span class="text-violet" id="passErrors">
                 <%= (typeof errores !='undefined' && errores.pass ? errores.pass.msg : null) %>
               </span>
             </div>

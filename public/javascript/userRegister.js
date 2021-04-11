@@ -38,11 +38,11 @@ window.addEventListener('load', function () {
             console.log($inputName.value.trim())
             switch (true) {
                 case !$inputName.value.trim():
-                    $nameErrors.innerHTML = 'El NOMBRE es obligatorio'
+                    $nameErrors.innerHTML = 'El nombre es obligatorio'
                     $inputName.classList.add('is-invalid')
                     break;
                 case !regExAlpha.test($inputName.value):
-                    $nameErrors.innerHTML = 'Ingresar un NOMBRE válido'
+                    $nameErrors.innerHTML = 'Ingresar un nombre válido'
                     $inputName.classList.add('is-invalid')  
                     break; 
                 default:
@@ -56,11 +56,11 @@ window.addEventListener('load', function () {
     $inputSurname.addEventListener('blur', function () {
         switch (true) {
             case !$inputSurname.value.trim():
-                $surnameErrors.innerHTML = 'El APELLIDO es obligatorio';
+                $surnameErrors.innerHTML = 'El apellido es obligatorio';
                 $inputSurname.classList.add('is-invalid')
                 break;
             case !regExAlpha.test($inputSurname.value):
-                $surnameErrors.innerHTML = 'ingresar un APELLIDO válido';
+                $surnameErrors.innerHTML = 'ingresar un  válido';
                 $inputSurname.classList.add('is-invalid')
                 break;
             default:
@@ -74,7 +74,7 @@ window.addEventListener('load', function () {
     $inputEmail.addEventListener('blur', function () {
         switch (true) {
             case !$inputEmail.value.trim():
-                $emailErrors.innerHTML = 'El EMAIL es obligatorio';
+                $emailErrors.innerHTML = 'El email es obligatorio';
                 $inputEmail.classList.add('is-invalid')
                 break;
             case !regExEmail.test($inputEmail.value):
