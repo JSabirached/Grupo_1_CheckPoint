@@ -18,10 +18,10 @@
           <h3 class="my-3">Edicion de Productos</h3>
           <!--cuando se indexa o da formato se agrega un espacio a todos los undefined provocando un error revisar!!! -->
           <div class="row">
-            <div class="col-12  col-md-6">
-              <h2>Imagen</h2>
+            <div class="col-12  col-md-6 p-3">
+             <img class="img-fluid" src="/images/<%= comida.image%>" alt="">
             </div>
-            <div class="col-12  col-md-6">
+            <div class="col-12  col-md-6 p-3">
               <div class="form-floating mb-3">
                 <input type="text" class="form-control" id="name" name="name" value="<%=comida.name %>">
 

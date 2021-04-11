@@ -140,10 +140,11 @@ module.exports = {
 
 
     comidaUpdate: (req, res) => {
+        
         let errors = validationResult(req);
         if (errors.isEmpty()) {
 
-            const { name, price, category, description, image } = req.body;
+            const { name, price, category, description } = req.body;
 
             db.Comidas.update({
 
@@ -151,7 +152,7 @@ module.exports = {
                 price: price,
                 id_category: category,
                 description: description,
-                image: image,
+                image: req.files[0] ? req.files[0].filename : undefined,
             },
                 {
                     where: {
@@ -175,21 +176,28 @@ module.exports = {
                         errores: errors.mapped()
                     })
                 })
-            }
-    
+        }
+
     },
 
     comidaDelete: (req, res) => {
-        comidas.forEach(comida => {
-            if (comida.id === +req.params.id) {
-                var aEliminar = comidas.indexOf(comida);
-                comidas.splice(aEliminar, 1)
-            }
-        });
+        //   res.send(comidaDelete)
 
-        fs.writeFileSync('./database/models', JSON.stringify(Comidas), 'utf-8');
-        res.redirect('/admin');
+        db.Comidas.destroy({
+
+            where: {
+                id: req.params.id
+
+            }
+        })
+            .then(() => {
+                return res.redirect('/admin/comidaList')
+            })
+       .catch (error => res.send(error))
     }
+
+
 }
+
 
 
