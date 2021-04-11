@@ -140,10 +140,11 @@ module.exports = {
 
 
     comidaUpdate: (req, res) => {
+        
         let errors = validationResult(req);
         if (errors.isEmpty()) {
 
-            const { name, price, category, description, image } = req.body;
+            const { name, price, category, description } = req.body;
 
             db.Comidas.update({
 
@@ -151,7 +152,7 @@ module.exports = {
                 price: price,
                 id_category: category,
                 description: description,
-                image: image,
+                image: req.files[0] ? req.files[0].filename : undefined,
             },
                 {
                     where: {
@@ -190,7 +191,7 @@ module.exports = {
             }
         })
             .then(() => {
-                return res.redirect('/admin')
+                return res.redirect('/admin/comidaList')
             })
        .catch (error => res.send(error))
     }
