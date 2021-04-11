@@ -175,21 +175,28 @@ module.exports = {
                         errores: errors.mapped()
                     })
                 })
-            }
-    
+        }
+
     },
 
     comidaDelete: (req, res) => {
-        comidas.forEach(comida => {
-            if (comida.id === +req.params.id) {
-                var aEliminar = comidas.indexOf(comida);
-                comidas.splice(aEliminar, 1)
-            }
-        });
+        //   res.send(comidaDelete)
 
-        fs.writeFileSync('./database/models', JSON.stringify(Comidas), 'utf-8');
-        res.redirect('/admin');
+        db.Comidas.destroy({
+
+            where: {
+                id: req.params.id
+
+            }
+        })
+            .then(() => {
+                return res.redirect('/admin')
+            })
+       .catch (error => res.send(error))
     }
+
+
 }
+
 
 
