@@ -9,8 +9,11 @@
         <img src="/images/userAvatar/<%= result.avatar %> " alt="">
         <ul class="list-group col-10 col-lg-8">
           <li class="list-group-item"><p>Nombre : <%= result.name  %></p></li>
-          <li class="list-group-item"><p>Apellido : <%=  result.last_name  %></p></li>
+          <li class="list-group-item"><p>Apellido : <%=  result.surname  %></p></li>
           <li class="list-group-item"><p>Email : <%=  result.email  %></p></li>
+        </ul>
+        <ul>
+        <li class="list-group-item"><p></p></ul>
         </ul>
         <button class="btn-profile col-3 col-lg-2"><a href="/users/edit/<%=  result.id  %>">Editar perfil</a></button>
       </div>
@@ -20,7 +23,7 @@
 
 
       <%- include("partials/footer") %>
-        <%- include("partials/scriptBS") %>
+     
 
 
   </body>

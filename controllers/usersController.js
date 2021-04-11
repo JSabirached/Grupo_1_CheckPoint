@@ -112,7 +112,7 @@ module.exports = {
 
         db.Usuario.findOne({
             where: {
-                id: req.session.Usuario.id
+                id: req.params.id
             }
         })
             .then((Usuario) => {
