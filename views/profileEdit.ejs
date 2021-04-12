@@ -4,64 +4,86 @@
 
   <body>
     <%- include("partials/header") %>
-      <div class="container-fluid">
-        <div class="profile-edit row ">
+      <div class="container">
+        <div class="profile-edit login ">
 
-          
-          <form class=" " action="/users/update/<%= result.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
-            <section class="col-12 col-lg-4">
-              <label for="img"><img src="/images/userAvatar/<%= result.avatar %>" alt=""></label>
-                  <input class="imagenPerfil" type="file" name="image" id="img" value="<%= result.avatar %>">
-            </section>
-            <div class="">
-              <h3>Modifica tus datos personales</h3>
+
+          <form action="/users/profileEdit/<%= Usuario.id %>?_method=PUT" method="POST"
+            enctype="multipart/form-data">
+            <div class="row">
+              <div class="col-12 col-md-5">
+                <div>
+                  <img class="img-fluid w-75" src="/images/users/<%= Usuario.avatar %> " alt="">
+
+                  <div class="my-2">
+                    <input class="form-control w-75 mx-auto" type="file" id="image" name="image">
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-7">
+                <h4 class="dark-color">TUS DATOS PERSONALES</h4>
+                <div class="row ">
+                  <div class="form-floating mb-3 col-12 col-md-6">
+                    <input type="text" value="<%= Usuario.name %>" name="name" class="form-control" id="floatingInput">
+                    <label for="floatingInput">
+                      Nombre:
+                    </label>
+                  </div>
+                  <div class="form-floating mb-3 col-12 col-md-6">
+                    <input type="text" value="<%= Usuario.surname %>" name="surname" class="form-control"
+                      id="floatingtext">
+                    <label for="floatingtext">
+                      Apellido
+                    </label>
+                  </div>
+                  <div class="form-floating mb-3 col-12 col-md-6">
+                    <input type="email" value="<%= Usuario.email %>" class="form-control" name="email"
+                      id="floatingInput">
+                    <label for="floatingInput">
+                      Email
+                    </label>
+                  </div>
+                  <div class="form-floating mb-3 col-12 col-md-6">
+                    <input type="tel" value="<%= Usuario.telefono %>" class="form-control" name="telefono"
+                      id="floatingInput" ">
+                      <label for=" floatingInput">
+                    Teléfono
+                    </label>
+                  </div>
+                  <div class="form-floating mb-3 col-12">
+                    <input type="text" value="<%= Usuario.direccion %>" class="form-control" name="direccion"
+                      id="floatingInput" ">
+                      <label for=" floatingInput">
+                    Dirección
+                    </label>
+                  </div>
+                  <div class="form-floating mb-3 col-12 col-md-6">
+                    <input type="text" value="<%= Usuario.localidad %>" class="form-control" name="localidad"
+                      id="floatingInput" ">
+                      <label for=" floatingInput">
+                    Localidad
+                    </label>
+                  </div>
+                  <div class="form-floating mb-3 col-12 col-md-6">
+                    <input type="text" value="<%= Usuario.provincia %>" class="form-control" name="provincia"
+                      id="floatingInput" ">
+                      <label for=" floatingInput">
+                    Provincia
+                    </label>
+                  </div>
+                  <div class="col-12">
+                    <a class="btn btn-outline-danger">Eliminar Perfil</a>
+                    <input class="btn btn-outline-success" type="submit" value="Actualizar perfil"></input>
+                  </div>
+                </div>
+              </div>
             </div>
-            <ul class="">
-              <div class="form-floating mb-3">
-                <input type="text" value="<%= result.name %>" name="name" class="form-control" id="floatingInput" placeholder="Nombre de usuario">
-                <label for="floatingInput">
-                  Nombre
-                </label>
-              </div>
-              <div class="form-floating mb-3">
-                <input type="text" value="<%= result.last_name %>" name="apellido" class="form-control" id="floatingtext" placeholder="Apellido de usuario">
-                <label for="floatingtext">
-                  Apellido
-                </label>
-              </div>
-              <div class="form-floating mb-3">
-                <input type="email" value="<%= result.email %>" class="form-control" name="email" id="floatingInput" placeholder="Email de usuario">
-                <label for="floatingInput">
-                  Email
-                </label>
-              </div>
-              <!-- <div class="col-12 justify-content-center pregcontra">
-                <h3>Actualiza tu contraseña o ingrese la actual para confirmar los cambios</h3>
-              </div>
-              <div class="form-floating mb-3">
-                <input type="password" class="form-control" name="pass" id="floatingInput" placeholder="Contraseña">
-                <label for="floatingInput">Contraseña</label>
-              </div>
-              <div class="form-floating mb-3">
-                <input type="password" class="form-control" id="floatingInput" name="pass2" placeholder="Repetir contraseña">
-                <label for="floatingInput">Repetir Contraseña</label>
-              </div> -->
-            </ul>
-            <button class="btn-profile-edit col-4" type="submit">Actualizar</button>
           </form>
-          <form action="/users/delete/<%= result.id %>?_method=DELETE" method="POST" class="card-body__form">
-            <button class="btn-profile-eliminate col-4" type="submit">Eliminar Perfil</button>
+          <form action="/users/delete/<%= Usuario.id %>?_method=DELETE" method="POST" class="card-body__form">
           </form>
         </div>
       </div>
-
-
-
-
       <%- include("partials/footer") %>
-        <%- include("partials/scriptBS") %>
-
-
   </body>
 
 </html>

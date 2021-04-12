@@ -1,68 +1,72 @@
 <!DOCTYPE html>
 <html lang="es">
- 
-  <%- include("partials/head") %> 
-  <%- include("partials/header") %>
- <body>
- 
-      <div class=" profile-row ">
-    <section class="section about-section gray-bg" id="about">
-      <div class="container">
-          <div class="row align-items-center flex-row-reverse">
-              <div class="col-lg-6">
-                  <div class="about-text go-to">
-                      <h4 class="dark-color">TUS DATOS PERSONALES</h4>
-                      <h1 class="theme-color lead ">CheckPoint</h1>
-                      
-                      <div class="row about-list">
-                          <div class="col-md-6">
-                              <div class="media">
-                                  <label><h3>Nombre</h3></label>
-                                  <p> <%= Usuario.name  %></p>
-                              </div>
-                              <div class="media">
-                                  <label><h3>Apellido</h3></label>
-                                  <p><%=  Usuario.surname  %></p>
-                              </div>
-                              <div class="media">
-                                  <label><h3>Email</h3></label>
-                                  <p><%=  Usuario.email  %></p>
-                              </div>
-                              <div class="media">
-                                  <label><h3>Dirección</h3></label>
-                                  <p><%= Usuario.direccion %></p>
-                              </div>
-                          </div>
-                          <div class="col-md-6">
-                              <div class="media">
-                                  <label><h3>Localidad</h3></label>
-                                  <p><%= Usuario.localidad %></p>
-                              </div>
-                              <div class="media">
-                                  <label><h3>Provincia</h3></label>
-                                  <p><%= Usuario.provincia %></p>
-                              </div>
-                              <div class="media">
-                                  <label><h3>Teléfono</h3></label>
-                                  <p><%= Usuario.telefono %></p>
-                              </div>
-                              <div class="media">
-                                <p></p>
-                                <button class="btn btn-outline-primary mb-2"><a href="/users/edit/<%= Usuario.id  %>">Editar perfil</a> </button>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-lg-6">
-                  <div class="about-avatar">
-                    <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="">
-                  </div>
-              </div>
+
+<%- include("partials/head") %>
+    <%- include("partials/header") %>
+
+        <body>
+
+            <div class="container">
+                <div class="login">
+                    <div class="row">
+                        <div class="col-12 col-md-5">
+                            <div class="about-avatar">
+                                <img class="img-fluid w-75" src="/images/users/<%= Usuario.avatar %> " alt="">
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-7">
+                            <h4 class="dark-color">TUS DATOS PERSONALES</h4>
+                            <h3 class="text-violet">CheckPoint</h3>
+                            <hr>
+                            <div class="row ">
+                                <div class="col-12 col-md-6 d-flex justify-content-start">
+                                    <h5>Nombre: <span>
+                                            <%= Usuario.name %>
+                                        </span></h5>
+                                </div>
+                                <div class="col-12 col-md-6 d-flex justify-content-start">
+                                    <h5>Apellido: <span>
+                                            <%= Usuario.surname %>
+                                        </span></h5>
+                                </div>
+                                <div class="col-12 col-md-6 d-flex justify-content-start">
+                                    <h5>Email: <span>
+                                            <%= Usuario.email %>
+                                        </span></h5>
+                                </div>
+                                <div class="col-12 col-md-6 d-flex justify-content-start">
+                                    <h5>Teléfono: <span>
+                                            <%= Usuario.telefono %>
+                                        </span></h5>
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-12 d-flex justify-content-start">
+                                    <h5>Dirección: <span>
+                                            <%= Usuario.direccion %>
+                                        </span></h5>
+                                </div>
+                                <div class="col-12 col-md-6 d-flex justify-content-start">
+                                    <h5>Localidad: <span>
+                                            <%= Usuario.localidad %>
+                                        </span></h5>
+                                </div>
+                                <div class="col-12 col-md-6 d-flex justify-content-start">
+                                    <h5>Provincia: <span>
+                                            <%= Usuario.provincia %>
+                                        </span></h5>
+                                </div>
+                            </div>
+                            <hr>
+                            <a class="btn btn-outline-primary" href="/users/profileEdit/<%= Usuario.id  %>">Editar
+                                perfil</a>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-          </div>
-      </section>
-       <%- include("partials/footer") %>
-  </body>
+
+            <%- include("partials/footer") %>
+        </body>
 
 </html>

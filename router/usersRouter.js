@@ -15,7 +15,7 @@ router.post('/login',loginValidator,processLogin);
 router.get('/logout',logout);
 
 router.get('/profile/:id',profile);
-router.post("profiledit", profileEdit);
-router.put('/profileEdit',update);
+router.get("/profileEdit/:id", profileEdit);
+router.put('/profileEdit/:id',uploadUser.any(),update);
 
 module.exports = router;
