@@ -49,6 +49,16 @@ header li.navi {
 li.usuario{display: flex;
   font-size: 20px; 
 }
+ .boxs img{
+    width: 100%;
+    height: auto;
+    box-shadow: 5px 5px 15px rgb(120, 4, 253);
+ }
+ .boxs{
+  box-shadow: 5px 5px 15px rgb(120, 4, 253);
+ }
+
+  
 @media (min-width: 768px) {
   
   .menu {
