@@ -94,7 +94,7 @@ inputImage.addEventListener('change',function(e){
 
     switch (true) {
         case !regExExtensions.exec(inputImage.value) :
-            errores.foto = "Solo imagenes con extension jpg, jpeg, png, o gif"
+            errores.foto = "Solo imagenes con extension jpg, jpeg, png, jfif,webp o gif"
             errorImage.innerHTML = errores.foto;
             inputImage.classList.add('is-invalid')
             inputImage.value = '';
