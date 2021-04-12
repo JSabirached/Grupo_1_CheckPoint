@@ -7,6 +7,9 @@ a {
   text-decoration: none;
   color: rgba(240, 237, 241, 0.884);
 }
+a:hover{
+  color: rgb(253, 253, 253);
+}
 li {
   list-style: none;
 }
