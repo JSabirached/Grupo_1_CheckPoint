@@ -126,7 +126,7 @@ module.exports = {
 
         db.Usuario.findOne({
             where: {
-                id: req.session.Usuario.id
+                id: req.params.id
             }
         })
             .then((Usuario) => {
@@ -139,21 +139,24 @@ module.exports = {
 
     update: (req, res) => {
 
-        const { name, apellido, email } = req.body
-
+        const { name, surname, email, telefono, direccion, localidad, provincia } = req.body
 
         db.Usuario.update({
-            name: name,
-            last_name: apellido,
-            email: email,
-            avatar: (req.files[0]) ? req.files[0].filename : req.session.user.avatar
+            name: name.trim(),
+            surname: surname.trim(),
+            email: email.trim(),
+            telefono : telefono.trim(),
+            direccion : direccion.trim(),
+            localidad : localidad.trim(),
+            provincia : provincia.trim(),
+            avatar: req.files[0] ? req.files[0].filename : undefined
         }, {
             where: {
                 id: req.session.user.id
             }
         })
             .then(() => {
-                res.redirect("/users/profile")
+                res.redirect("/users/profile/" + req.session.user.id)
             })
     },
     remove: (req, res) => {
