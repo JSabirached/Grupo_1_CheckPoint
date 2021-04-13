@@ -138,6 +138,19 @@ module.exports = {
     },
 
     update: (req, res) => {
+        let errores = validationResult(req);
+
+        if (!errores.isEmpty()) {
+
+            return res.render('profileEdit', {
+                errores: errores.mapped(),
+                title: "Editar Perfil",
+                old : req.body,
+            })
+    
+        } else {
+
+        
 
         const { name, surname, email, telefono, direccion, localidad, provincia } = req.body
 
@@ -158,6 +171,8 @@ module.exports = {
             .then(() => {
                 res.redirect("/users/profile/" + req.session.user.id)
             })
+
+        }
     },
     remove: (req, res) => {
 
