@@ -6,6 +6,7 @@ const {registro,processRegistro,login,processLogin,logout,profile,profileEdit,up
 const registroValidator = require('../validations/registroValidator');
 const loginValidator = require('../validations/loginValidator');
 const uploadUser = require('../middlewares/uploadUser');
+const checkUser = require('../middlewares/checkUser');
 
 router.get('/registro',registro);
 router.post('/registro',uploadUser.any(),registroValidator, processRegistro);
@@ -14,8 +15,8 @@ router.get('/login',login);
 router.post('/login',loginValidator,processLogin);
 router.get('/logout',logout);
 
-router.get('/profile/:id',profile);
-router.get("/profileEdit/:id", profileEdit);
+router.get('/profile/:id',checkUser,profile);
+router.get('/profileEdit/:id', checkUser, profileEdit);
 router.put('/profileEdit/:id',uploadUser.any(),update);
 
 module.exports = router;

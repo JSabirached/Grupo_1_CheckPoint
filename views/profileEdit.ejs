@@ -5,13 +5,13 @@
   <body>
     <%- include("partials/header") %>
       <div class="container">
-        <div class="profile-edit login ">
+        <div class="profile-edit login boxs ">
 
 
           <form action="/users/profileEdit/<%= Usuario.id %>?_method=PUT" method="POST"
             enctype="multipart/form-data">
-            <div class="row">
-              <div class="col-12 col-md-5">
+            <div class="row boxs">
+              <div class="col-12 col-md-5 boxs">
                 <div>
                   <img class="img-fluid w-75" src="/images/users/<%= Usuario.avatar %> " alt="">
 
@@ -73,7 +73,7 @@
                   </div>
                   <div class="col-12">
                     <a class="btn btn-outline-danger">Eliminar Perfil</a>
-                    <input class="btn btn-outline-success" type="submit" value="Actualizar perfil"></input>
+                    <input class="btn btn-outline-success" type="submit" value="Actualizar-perfil"></input>
                   </div>
                 </div>
               </div>
@@ -84,6 +84,7 @@
         </div>
       </div>
       <%- include("partials/footer") %>
+      <script src="/javascript/profileEdit.js"></script>
   </body>
 
 </html>

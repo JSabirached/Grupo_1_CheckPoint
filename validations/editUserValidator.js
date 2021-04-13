@@ -8,4 +8,6 @@ module.exports=[
     check('localidad').isInt().withMessage("La localidad es requerida"),
     check('direccion').notEmpty().withMessage("La dirección es requerida"),
     check('telefono').notEmpty().withMessage("El teléfono es requerido"),
+    check('formEdit').notEmpty().withMessage(""),
+    
 ]
