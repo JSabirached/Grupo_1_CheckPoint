@@ -142,11 +142,19 @@ module.exports = {
 
         if (!errores.isEmpty()) {
 
-            return res.render('profileEdit', {
-                errores: errores.mapped(),
-                title: "Editar Perfil",
-                old : req.body,
+            db.Usuario.findOne({
+                where: {
+                    id: req.params.id
+                }
             })
+                .then((Usuario) => {
+                    res.render("profileEdit", {
+                        title: "Editar Perfil",
+                        Usuario,
+                        errores : errores.mapped(),
+                        old : req.body
+                    })
+                })
     
         } else {
 
