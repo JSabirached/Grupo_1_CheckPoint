@@ -6,17 +6,17 @@ const uploadImages = require("../middlewares/uploadImages");
 const addValidator = require("../validations/addValidator");
 const admin = require("../middlewares/adminCheck");
 
-router.get("/", index);
+router.get("/",admin, index);
 
-router.get('/ventas', ventasList);
-router.get('/comidalist', comidaList);
-router.get('/userlist', userList);
-router.get('/categorias', categorias);
+router.get('/ventas',admin, ventasList);
+router.get('/comidalist',admin, comidaList);
+router.get('/userlist',admin, userList);
+router.get('/categorias',admin, categorias);
 
-router.get('/create',comidaCreate);
+router.get('/create',admin,comidaCreate);
 router.post('/create',uploadImages.any(),addValidator,comidaStore);
 
-router.get('/edit/:id',comidaEdit);
+router.get('/edit/:id',admin,comidaEdit);
 router.put('/update/:id',uploadImages.any(),addValidator,comidaUpdate);
 
 router.delete('/delete/:id',comidaDelete);

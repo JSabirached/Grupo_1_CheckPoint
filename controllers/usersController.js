@@ -215,5 +215,32 @@ module.exports = {
 
         //finalizo redireccionando
         res.redirect("/");
+    },
+    adminChange :(req , res) => {
+        if(req.params.admin == true){
+            db.Usuario.update({
+                category : 1
+            },
+            {
+                where :{
+                    id :req.params.id
+                }
+            })
+            .then( () =>{
+                res.json({admin : true})
+            })
+        }else{
+            db.Usuario.update({
+                category : 0
+            },
+            {
+                where :{
+                    id :req.params.id
+                }
+            })
+            .then( () =>{
+                res.json({user : false})
+            })
+        }
     }
 }
