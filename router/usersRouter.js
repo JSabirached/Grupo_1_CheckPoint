@@ -21,7 +21,7 @@ router.get('/profile/:id',checkUser,profile);
 router.get('/profileEdit/:id', checkUser, profileEdit);
 router.put('/profileEdit/:id',uploadUser.any(),editUserValidator,update);
 
-router.get('/changeAdmin/:id/',adminChange);
+router.get('/changeAdmin/:id/:admin',adminChange);
 
 
 module.exports = router;

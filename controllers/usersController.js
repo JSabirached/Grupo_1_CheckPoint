@@ -138,6 +138,27 @@ module.exports = {
     },
 
     update: (req, res) => {
+        let errores = validationResult(req);
+
+        if (!errores.isEmpty()) {
+
+            db.Usuario.findOne({
+                where: {
+                    id: req.params.id
+                }
+            })
+                .then((Usuario) => {
+                    res.render("profileEdit", {
+                        title: "Editar Perfil",
+                        Usuario,
+                        errores : errores.mapped(),
+                        old : req.body
+                    })
+                })
+    
+        } else {
+
+        
 
         const { name, surname, email, telefono, direccion, localidad, provincia } = req.body
 
@@ -158,6 +179,8 @@ module.exports = {
             .then(() => {
                 res.redirect("/users/profile/" + req.session.user.id)
             })
+
+        }
     },
     remove: (req, res) => {
 
@@ -194,30 +217,72 @@ module.exports = {
         res.redirect("/");
     },
     adminChange :(req , res) => {
-        if(req.params.admin == true){
-            db.Usuario.update({
-                category : 1
-            },
-            {
-                where :{
-                    id :req.params.id
+        console.log('id de usuario : ' + req.params.admin)
+        if(req.params.admin == 1){
+            db.Usuario.findByPk(req.params.id)
+            .then(user => {
+                if(user.category == 0){
+                    db.Usuario.update({
+                        category : 1
+                    },
+                    {
+                        where :{
+                            id : req.params.id
+                        }
+                    })
+                    .then( (result) =>{
+                        console.log('resultado: ' +result )
+                       return res.json({admin : 1})
+                    })
+                }else{
+                    db.Usuario.update({
+                        category : 0
+                    },
+                    {
+                        where :{
+                            id : req.params.id
+                        }
+                    })
+                    .then( (result) =>{
+                        console.log('resultado: ' +result )
+                       return res.json({admin : 0})
+                    })
                 }
             })
-            .then( () =>{
-                res.json({admin : true})
-            })
+            .catch(error => console.log(error))
         }else{
-            db.Usuario.update({
-                category : 0
-            },
-            {
-                where :{
-                    id :req.params.id
+            db.Usuario.findByPk(req.params.id)
+            .then(user => {
+                if(user.category == 0){
+                    db.Usuario.update({
+                        category : 1
+                    },
+                    {
+                        where :{
+                            id : req.params.id
+                        }
+                    })
+                    .then( (result) =>{
+                        console.log('resultado: ' +result )
+                       return res.json({admin : 1})
+                    })
+                }else{
+                    db.Usuario.update({
+                        category : 0
+                    },
+                    {
+                        where :{
+                            id : req.params.id
+                        }
+                    })
+                    .then( (result) =>{
+                        console.log('resultado: ' +result )
+                       return res.json({admin : 0})
+                    })
                 }
             })
-            .then( () =>{
-                res.json({user : false})
-            })
+            .catch(error => console.log(error))
+
         }
     }
 }
