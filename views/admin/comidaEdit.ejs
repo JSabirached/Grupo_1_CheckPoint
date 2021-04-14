@@ -52,7 +52,7 @@
                 <select class="form-select" name="category" id="category" aria-label="Floating label select example">
                   <option value="" selected hidden>Categorias</option>
                   <% categorias.forEach(categoria=> {%>
-                    <option <% categoria.id==comida.id_category ? "selected" : null %> value="<%=categoria.id%>"><%=
+                    <option <%= categoria.id==comida.id_category ? "selected" : null %> value="<%=categoria.id%>"><%=
                           categoria.name %>
                     </option>
                     <% })%>
