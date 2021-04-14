@@ -138,27 +138,6 @@ module.exports = {
     },
 
     update: (req, res) => {
-        let errores = validationResult(req);
-
-        if (!errores.isEmpty()) {
-
-            db.Usuario.findOne({
-                where: {
-                    id: req.params.id
-                }
-            })
-                .then((Usuario) => {
-                    res.render("profileEdit", {
-                        title: "Editar Perfil",
-                        Usuario,
-                        errores : errores.mapped(),
-                        old : req.body
-                    })
-                })
-    
-        } else {
-
-        
 
         const { name, surname, email, telefono, direccion, localidad, provincia } = req.body
 
@@ -179,8 +158,6 @@ module.exports = {
             .then(() => {
                 res.redirect("/users/profile/" + req.session.user.id)
             })
-
-        }
     },
     remove: (req, res) => {
 
