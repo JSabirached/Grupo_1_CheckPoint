@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const {index, comidaList, comidaCreate,comidaStore, ventasList,userList,categorias,comidaEdit,comidaUpdate, comidaDelete,detalleProducto,  actualizarProducto,comidas} = require("../controllers/adminController");
+const {index, comidaList, comidaCreate,comidaStore, ventasList,userList,categorias,comidaEdit,comidaUpdate, comidaDelete,removeUser} = require("../controllers/adminController");
 
 const uploadImages = require("../middlewares/uploadImages");
 const addValidator = require("../validations/addValidator");
@@ -20,6 +20,7 @@ router.get('/edit/:id',admin,comidaEdit);
 router.put('/update/:id',uploadImages.any(),addValidator,comidaUpdate);
 
 router.delete('/delete/:id',comidaDelete);
+router.delete('/deletes/:id',removeUser);
 
 
 

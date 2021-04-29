@@ -197,7 +197,20 @@ module.exports = {
             })
        .catch (error => res.send(error))
     },
+    removeUser: (req, res) => {
+       
+        db.Usuario.destroy({
 
+            where: {
+                id: req.params.id
+
+            }
+        })
+            .then(() => {
+                return res.redirect('/admin/userList')
+            })
+       .catch (error => res.send(error))
+    },
 
 }
 

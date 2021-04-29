@@ -35,10 +35,10 @@ module.exports = {
                 pass: bcrypt.hashSync(pass, 12),
                 avatar: req.files[0] ? req.files[0].filename : 'default.png',
                 category: '0',
-                provincia: provincia.trim(),
-                localidad: localidad.trim(),
-                direccion: direccion.trim(),
-                telefono: telefono.trim(),
+                provincia: provincia,
+                localidad: localidad,
+                direccion: direccion,
+                telefono: telefono,
             })
                 .then(() => { res.redirect("/users/login") })
         }
@@ -218,20 +218,7 @@ module.exports = {
     },
 
 
-    removeUser: (req, res) => {
-       
-        db.Usuario.destroy({
-
-            where: {
-                id: req.params.id
-
-            }
-        })
-            .then(() => {
-                return res.redirect('/admin/userList')
-            })
-       .catch (error => res.send(error))
-    },
+    
 
 
 
