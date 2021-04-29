@@ -78,7 +78,7 @@ DROP TABLE IF EXISTS `food`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `food` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(15) NOT NULL,
+  `name` varchar(45) NOT NULL,
   `price` varchar(6) NOT NULL,
   `image` varchar(255) DEFAULT NULL,
   `description` varchar(180) NOT NULL,
@@ -88,7 +88,7 @@ CREATE TABLE `food` (
   PRIMARY KEY (`id`),
   KEY `fk_food_category_idx` (`id_category`),
   CONSTRAINT `fk_food_category` FOREIGN KEY (`id_category`) REFERENCES `category` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -97,7 +97,7 @@ CREATE TABLE `food` (
 
 LOCK TABLES `food` WRITE;
 /*!40000 ALTER TABLE `food` DISABLE KEYS */;
-INSERT INTO `food` VALUES (1,'Fernet','1200','image-1618187381888.jfif','Jarron lts',NULL,NULL,1),(2,'Vino','250','image-1618184442368.jfif','cosecha Mendoza1865',NULL,NULL,1),(3,'Brownie','280','image-1618184330647.jpg','Chocolate Suizo',NULL,NULL,2),(4,'Helado2bocha','300','image-1618184485191.jpg','Recorrido de Chocolate',NULL,NULL,2),(5,'DobleQueso','250','image-1618184524113.jpg','Doble con Queso y Papas',NULL,NULL,3),(6,'Completa','230','image-1618184555318.jpg','Jamon Queso Huevo  Tomate Lechuga',NULL,NULL,3),(7,'Pizza Anchoa','300','image-1618184779659.jfif','Pizza con anchoa de la mejor seleccion',NULL,NULL,4),(8,'Muzzarella','290','image-1618184847766.jpg','Muzza con extraa Queso!!',NULL,NULL,4),(9,'KamgreBurguer','200','image-1618183276061.jfif','Traída desde el fondo de Mar',NULL,NULL,3),(12,'Campari','400','image-1618181830721.jpg','Infusión de Hierbas ',NULL,NULL,1),(13,'Margarita','260','image-1618181966571.jfif',' tequila y jugo de lima ',NULL,NULL,1),(14,'Mojito','280','image-1618182102671.jfif','Originario de Cuba,',NULL,NULL,1),(15,'Mai Tai','300','image-1618182632296.jfif',' cóctel a base de ron',NULL,NULL,1),(16,'Caipirinha','310','image-1618182301385.jfif',' bebida brasileña ',NULL,NULL,1),(17,'Long Island','350','image-1618182714345.jfif','\"El Clasico Te Ingles\"',NULL,NULL,1),(18,'Especial','430','image-1618182902400.jfif','Jamon Queso huevo Cheddar y Cebolla',NULL,NULL,3),(19,'TripleCompleta','650','image-1618183173927.jfif','Tres Capas de Carne  ,Queso, Lechuga ',NULL,NULL,3),(21,'Clasica Baccon','280','image-1618183605230.jfif','Queso Peppino Cheddar Baccon',NULL,NULL,3),(22,'Mejicana','330','image-1618183782836.jpg','preparada con los mejores picantes',NULL,NULL,3),(23,'Chivito','800','image-1618183945104.jfif','tradicional Chivito Completo',NULL,NULL,3),(24,'Fruto Bosques','430','image-1618184270773.jfif','postre individual',NULL,NULL,2),(25,'Strudell','530','image-1618184961974.jpg','Echo con Manzana',NULL,NULL,2),(26,'dolche','340','image-1618185129174.jpg','Echo con Calabaza',NULL,NULL,2),(27,'Helado','700','image-1618185184032.jpg','Artezanal',NULL,NULL,2),(28,'Budin','350','image-1618185236259.jpg','Chocolate',NULL,NULL,2),(29,'Flan','350','image-1618185331158.jfif','Casero ',NULL,NULL,2),(30,'Mix16','1400','image-1618185451043.jpg',' Empanadas Car,Ver y Pollo',NULL,NULL,4),(31,'Colombiana','1200','image-1618185511030.png','Palmito y  Tomate  casera',NULL,NULL,4),(32,'Vegana','600','image-1618185575976.jpg','Mix verduras',NULL,NULL,4),(33,'Combo-3','1300','image-1618185934857.jpg','1Napo 6pollo',NULL,NULL,4),(34,'las 12','800','image-1618186072189.jfif','Docena de Carne y Pollo',NULL,NULL,4),(35,'Peperoni','900','image-1618186203843.jfif','La Clasica Peperoni',NULL,NULL,4),(39,'jsaodi','354','default.png','jbjb',NULL,NULL,1);
+INSERT INTO `food` VALUES (1,'Fernet','1200','image-1618187381888.jfif','Jarron lts',NULL,NULL,1),(2,'Vino','250','image-1618184442368.jfif','cosecha Mendoza1865',NULL,NULL,1),(3,'Brownie','280','image-1618184330647.jpg','Chocolate Suizo',NULL,NULL,2),(6,'Completa','230','image-1618184555318.jpg','Jamon Queso Huevo  Tomate Lechuga',NULL,NULL,3),(7,'Pizza Anchoa','300','image-1618184779659.jfif','Pizza con anchoa de la mejor seleccion',NULL,NULL,4),(8,'Muzzarella','290','image-1618184847766.jpg','Muzza con extraa Queso!!',NULL,NULL,4),(9,'KamgreBurguer','200','image-1618183276061.jfif','Traída desde el fondo de Mar',NULL,NULL,3),(12,'Campari','400','image-1618181830721.jpg','Infusión de Hierbas ',NULL,NULL,1),(13,'Margarita','260','image-1618181966571.jfif',' tequila y jugo de lima ',NULL,NULL,1),(14,'Mojito','280','image-1618182102671.jfif','Originario de Cuba,',NULL,NULL,1),(16,'Caipirinha','310','image-1618182301385.jfif',' bebida brasileña ',NULL,NULL,1),(17,'Long Island','350','image-1618182714345.jfif','\"El Clasico Te Ingles\"',NULL,NULL,1),(18,'Especial','430','image-1618182902400.jfif','Jamon Queso huevo Cheddar y Cebolla',NULL,NULL,3),(19,'TripleCompleta','650','image-1618183173927.jfif','Tres Capas de Carne  ,Queso, Lechuga ',NULL,NULL,3),(21,'Clasica Baccon','280','image-1618183605230.jfif','Queso Peppino Cheddar Baccon',NULL,NULL,3),(22,'Mejicana','330','image-1618183782836.jpg','preparada con los mejores picantes',NULL,NULL,3),(23,'Chivito','800','image-1618183945104.jfif','tradicional Chivito Completo',NULL,NULL,3),(24,'Fruto Bosques','430','image-1618184270773.jfif','postre individual',NULL,NULL,2),(25,'Strudell','530','image-1618184961974.jpg','Echo con Manzana',NULL,NULL,2),(26,'dolche','340','image-1618185129174.jpg','Echo con Calabaza',NULL,NULL,2),(27,'Helado','700','image-1618185184032.jpg','Artezanal',NULL,NULL,2),(28,'Budin','350','image-1618185236259.jpg','Chocolate',NULL,NULL,2),(29,'Flan','350','image-1618185331158.jfif','Casero ',NULL,NULL,2),(30,'Mix16','1400','image-1618185451043.jpg',' Empanadas Car,Ver y Pollo',NULL,NULL,4),(31,'Colombiana','1200','image-1618185511030.png','Palmito y  Tomate  casera',NULL,NULL,4),(32,'Vegana','600','image-1618185575976.jpg','Mix verduras',NULL,NULL,4),(33,'Combo-3','1300','image-1618185934857.jpg','1Napo 6pollo',NULL,NULL,4),(34,'las 12','800','image-1618186072189.jfif','Docena de Carne y Pollo',NULL,NULL,4),(35,'Peperoni','900','image-1618186203843.jfif','La Clasica Peperoni',NULL,NULL,4);
 /*!40000 ALTER TABLE `food` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -123,7 +123,7 @@ CREATE TABLE `user` (
   `created_at TIMESTAMP` datetime DEFAULT NULL,
   `surname` varchar(45) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -132,7 +132,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (4,'juan','juan@gmail.com','$2b$12$0M9D9.LZHfTtLBNElgri3eSfcU34Z66CjMBjrYTP3.WwJFSg27ewG','default.png',0,'','','','',NULL,NULL,'manuel'),(5,'miguel','miguel@gmail.com','$2b$12$XLAO3boXM790o8DS1mXAD.aW7JpDKe4AfgfgmV/p4y4xpV5x2ZyGS','default.png',0,'','','','',NULL,NULL,'miu'),(6,'lean','lean@gmail.com','$2b$12$db57wfSZb4yXrf7O3Z9Tf.hSWep/V4BemonQoqzirXovdRL8BVWtu','default.png',0,'','','','',NULL,NULL,'marcelo'),(7,'Josue','josueabirached@gmail.com','$2b$12$2DGDiWPY569OZ9KcokgbaOmZiXnrdXHY5feHbcOJNadh9.rDI5hoK','image-1618414624754.jpg',1,'','','','',NULL,NULL,'Abi Rached'),(8,'jona','jona@gmail.com','$2b$12$I7qwU46u9cMvyxa8tOhXC.nWSdxhFlp/J6Tz7eby6bVUckCUJYRtK','default.png',0,'','','','',NULL,NULL,'jona'),(12,'Matias','matiascardillo@gmail.com','$2b$12$1jaieQSAurFqAJjOHhOFbOSjs4wcmuPRzPsZAepQZDMmtpIgQ3iZC','default.png',1,'','','','',NULL,NULL,'Cardillo'),(13,'Ana','anytapatoronas@gmail.com','$2b$12$nQGI0e9gYElhKXfpSE.NPedUqP/j951XqsAtfblLmQ5rhiZ6ZbZJe','img-1618422210586.png',1,'','','','',NULL,NULL,'Rojas');
+INSERT INTO `user` VALUES (4,'juan','juan@gmail.com','$2b$12$0M9D9.LZHfTtLBNElgri3eSfcU34Z66CjMBjrYTP3.WwJFSg27ewG','default.png',0,'','','','',NULL,NULL,'manuel'),(5,'miguel','miguel@gmail.com','$2b$12$XLAO3boXM790o8DS1mXAD.aW7JpDKe4AfgfgmV/p4y4xpV5x2ZyGS','default.png',0,'','','','',NULL,NULL,'miu'),(6,'lean','lean@gmail.com','$2b$12$db57wfSZb4yXrf7O3Z9Tf.hSWep/V4BemonQoqzirXovdRL8BVWtu','default.png',0,'','','','',NULL,NULL,'marcelo'),(7,'Josue','josueabirached@gmail.com','$2b$12$2DGDiWPY569OZ9KcokgbaOmZiXnrdXHY5feHbcOJNadh9.rDI5hoK','image-1618414624754.jpg',1,'China','Lanus','la casa de josu','1123920244',NULL,NULL,'Abi Rached'),(8,'jonathan','jona@gmail.com','$2b$12$I7qwU46u9cMvyxa8tOhXC.nWSdxhFlp/J6Tz7eby6bVUckCUJYRtK','default.png',0,'Aires','banfield','micasa123','112365522',NULL,NULL,'cespedes'),(12,'Mati','matiascardillo@gmail.com','$2b$12$1jaieQSAurFqAJjOHhOFbOSjs4wcmuPRzPsZAepQZDMmtpIgQ3iZC','default.png',1,'Amba','Escalada','la casa de mati','1123546',NULL,NULL,'Cardillo'),(13,'Ana','anytapatoronas@gmail.com','$2b$12$nQGI0e9gYElhKXfpSE.NPedUqP/j951XqsAtfblLmQ5rhiZ6ZbZJe','img-1618422210586.png',1,'','','','',NULL,NULL,'Rojas'),(14,'mikaSA','mikasa@gmail.com','$2b$12$1OBQl3v8liccC11YRleLVe6Fxj4.CqyA.CGM.sI6ZvY0XUSdq0BGm','default.png',0,'','','','',NULL,NULL,'AKAME'),(15,'Nacho','nacho@gmail.com','$2b$12$cvN6/a/dmP1YwOktOSbW9OLPf4xMaeceKofS3we2bI0SAUVuddukm','image-1618489545868.jpg',1,'bsas','Floridad','mi casa123','112390',NULL,NULL,'Vuotto');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -145,4 +145,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-04-14 16:32:31
+-- Dump completed on 2021-04-27 23:19:11

@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-const {registro,processRegistro,login,processLogin,logout,profile,profileEdit,update ,adminChange} = require('../controllers/usersController');
+const {registro,processRegistro,login,processLogin,logout,profile,profileEdit,update ,adminChange,removeUser} = require('../controllers/usersController');
 
 const registroValidator = require('../validations/registroValidator');
 const loginValidator = require('../validations/loginValidator');
@@ -20,8 +20,10 @@ router.get('/logout',logout);
 router.get('/profile/:id',checkUser,profile);
 router.get('/profileEdit/:id', checkUser, profileEdit);
 router.put('/profileEdit/:id',uploadUser.any(),editUserValidator,update);
+router.delete('/delete/:id',removeUser);
 
 router.get('/changeAdmin/:id/:admin',adminChange);
+
 
 
 module.exports = router;

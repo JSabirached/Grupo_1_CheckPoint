@@ -11,7 +11,7 @@ module.exports = (sequelize , DataTypes) => {
             autoIncrement :true 
         },
         name : {
-            type : DataTypes.STRING(15),
+            type : DataTypes.STRING(45),
             allowNull : false ,
         },
         price : {

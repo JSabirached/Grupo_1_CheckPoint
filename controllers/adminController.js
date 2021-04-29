@@ -196,7 +196,7 @@ module.exports = {
                 return res.redirect('/admin/comidaList')
             })
        .catch (error => res.send(error))
-    }
+    },
 
 
 }

@@ -26,14 +26,14 @@ module.exports = {
         } else {
 
 
-            const { name, surname, email, pass, provincia, localidad, direccion, telefono ,avatar} = req.body;
+            const { name, surname, email, pass, provincia, localidad, direccion, telefono, avatar } = req.body;
 
             db.Usuario.create({
                 name: name.trim(),
                 surname: surname.trim(),
                 email: email.trim(),
                 pass: bcrypt.hashSync(pass, 12),
-                avatar: req.files[0] ? req.files[0].filename :'default.png',
+                avatar: req.files[0] ? req.files[0].filename : 'default.png',
                 category: '0',
                 provincia: provincia.trim(),
                 localidad: localidad.trim(),
@@ -61,7 +61,7 @@ module.exports = {
             })
 
         } else {
-            const { email, pass, recordar} = req.body;
+            const { email, pass, recordar } = req.body;
 
             db.Usuario.findOne({
                 where: {
@@ -151,34 +151,34 @@ module.exports = {
                     res.render("profileEdit", {
                         title: "Editar Perfil",
                         Usuario,
-                        errores : errores.mapped(),
-                        old : req.body
+                        errores: errores.mapped(),
+                        old: req.body
                     })
                 })
-    
+
         } else {
 
-        
 
-        const { name, surname, email, telefono, direccion, localidad, provincia } = req.body
 
-        db.Usuario.update({
-            name: name.trim(),
-            surname: surname.trim(),
-            email: email.trim(),
-            telefono : telefono.trim(),
-            direccion : direccion.trim(),
-            localidad : localidad.trim(),
-            provincia : provincia.trim(),
-            avatar: req.files[0] ? req.files[0].filename : undefined
-        }, {
-            where: {
-                id: req.session.user.id
-            }
-        })
-            .then(() => {
-                res.redirect("/users/profile/" + req.session.user.id)
+            const { name, surname, email, telefono, direccion, localidad, provincia } = req.body
+
+            db.Usuario.update({
+                name: name.trim(),
+                surname: surname.trim(),
+                email: email.trim(),
+                telefono: telefono.trim(),
+                direccion: direccion.trim(),
+                localidad: localidad.trim(),
+                provincia: provincia.trim(),
+                avatar: req.files[0] ? req.files[0].filename : undefined
+            }, {
+                where: {
+                    id: req.session.user.id
+                }
             })
+                .then(() => {
+                    res.redirect("/users/profile/" + req.session.user.id)
+                })
 
         }
     },
@@ -216,72 +216,91 @@ module.exports = {
         //finalizo redireccionando
         res.redirect("/");
     },
-    adminChange :(req , res) => {
+
+
+    removeUser: (req, res) => {
+       
+        db.Usuario.destroy({
+
+            where: {
+                id: req.params.id
+
+            }
+        })
+            .then(() => {
+                return res.redirect('/admin/userList')
+            })
+       .catch (error => res.send(error))
+    },
+
+
+
+    adminChange: (req, res) => {
         console.log('id de usuario : ' + req.params.admin)
-        if(req.params.admin == 1){
+        if (req.params.admin == 1) {
             db.Usuario.findByPk(req.params.id)
-            .then(user => {
-                if(user.category == 0){
-                    db.Usuario.update({
-                        category : 1
-                    },
-                    {
-                        where :{
-                            id : req.params.id
-                        }
-                    })
-                    .then( (result) =>{
-                        console.log('resultado: ' +result )
-                       return res.json({admin : 1})
-                    })
-                }else{
-                    db.Usuario.update({
-                        category : 0
-                    },
-                    {
-                        where :{
-                            id : req.params.id
-                        }
-                    })
-                    .then( (result) =>{
-                        console.log('resultado: ' +result )
-                       return res.json({admin : 0})
-                    })
-                }
-            })
-            .catch(error => console.log(error))
-        }else{
+                .then(user => {
+                    if (user.category == 0) {
+                        db.Usuario.update({
+                            category: 1
+                        },
+                            {
+                                where: {
+                                    id: req.params.id
+                                }
+                            })
+                            .then((result) => {
+                                console.log('resultado: ' + result)
+                                return res.json({ admin: 1 })
+                            })
+                    } else {
+                        db.Usuario.update({
+                            category: 0
+                        },
+                            {
+                                where: {
+                                    id: req.params.id
+                                }
+                            })
+                            .then((result) => {
+                                console.log('resultado: ' + result)
+                                return res.json({ admin: 0 })
+                            })
+                    }
+                })
+                .catch(error => console.log(error))
+        } else {
             db.Usuario.findByPk(req.params.id)
-            .then(user => {
-                if(user.category == 0){
-                    db.Usuario.update({
-                        category : 1
-                    },
-                    {
-                        where :{
-                            id : req.params.id
-                        }
-                    })
-                    .then( (result) =>{
-                        console.log('resultado: ' +result )
-                       return res.json({admin : 1})
-                    })
-                }else{
-                    db.Usuario.update({
-                        category : 0
-                    },
-                    {
-                        where :{
-                            id : req.params.id
-                        }
-                    })
-                    .then( (result) =>{
-                        console.log('resultado: ' +result )
-                       return res.json({admin : 0})
-                    })
-                }
-            })
-            .catch(error => console.log(error))
+                .then(user => {
+                    if (user.category == 0) {
+                        db.Usuario.update({
+                            category: 1
+                        },
+                            {
+                                where: {
+                                    id: req.params.id
+                                }
+                            })
+                            .then((result) => {
+                                console.log('resultado: ' + result)
+                                return res.json({ admin: 1 })
+                            })
+                    } else {
+                        db.Usuario.update({
+                            category: 0
+                        },
+                            {
+                                where: {
+                                    id: req.params.id
+                                }
+                            })
+                            .then((result) => {
+                                console.log('resultado: ' + result)
+                                return res.json({ admin: 0 })
+                            })
+                    }
+                })
+                .catch(error => console.log(error))
 
         }
     }
